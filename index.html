@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    if (window.self !== window.top) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'poli-theme') {
+          document.documentElement.setAttribute('data-theme', e.data.light ? 'light' : 'dark');
+        }
+      });
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Decode tattoo ink ingredients against EU Regulation 2020/2081. Enter pigment names, CAS numbers, or CI numbers to check compliance with the EU tattoo ink restriction.">
+  <meta name="keywords" content="tattoo ink ingredient decoder, EU 2020/2081, restricted pigments, CI number check, CAS number lookup, tattoo ink compliance, pigment blue 15, pigment green 7">
+  <title>Tattoo Ink Ingredient Decoder | EU 2020/2081 Compliance | Poli International</title>
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Tattoo Ink Ingredient Decoder | Poli International">
+  <meta property="og:description" content="Check tattoo ink pigments and additives against EU Regulation 2020/2081. Identify banned CI numbers and restricted substances instantly.">
+  <meta property="og:url"         content="https://poliinternational.com/ink-ingredient-decoder/">
+  <meta property="og:site_name"   content="Poli International">
+  <meta property="og:image"       content="https://poliinternational.com/uploads/branding/poli-international-company-logo.png">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Tattoo Ink Ingredient Decoder | Poli International">
+  <meta name="twitter:description" content="Instantly flag banned and restricted tattoo ink pigments under EU 2020/2081.">
+  <meta name="twitter:image"       content="https://poliinternational.com/uploads/branding/poli-international-company-logo.png">
+
+  <link rel="stylesheet" href="/tools/ink-ingredient-decoder/css/style.css">
+</head>
+<body>
+
+<div class="tool-wrapper">
+
+  <!-- Header -->
+  <header class="tool-header">
+    <div class="tool-header__badge">
+      <span>🎨</span> EU 2020/2081 Compliance
+    </div>
+    <h1>Tattoo Ink Ingredient Decoder</h1>
+    <p>
+      Decode pigment names, CAS numbers, and CI numbers against
+      EU Regulation 2020/2081 (Annex XVII, Entry 75) —
+      the EU restriction on hazardous substances in tattoo inks and permanent make-up.
+    </p>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="search" role="tab" aria-selected="true">
+      🔍 Search ingredient
+    </button>
+    <button class="tab-btn" data-tab="bulk" role="tab" aria-selected="false">
+      📋 Decode ingredient list
+    </button>
+  </div>
+
+  <!-- ── Search tab ─────────────────────────────────────────────── -->
+  <div id="panel-search" class="tab-panel active">
+    <div class="input-card">
+      <label class="input-label" for="search-input">Pigment name, CAS number, or CI number</label>
+      <div class="search-row">
+        <input
+          type="text"
+          id="search-input"
+          class="input-field"
+          placeholder="e.g. Pigment Blue 15, CI 74160, 147-14-8, Phthalo Blue, Carbon Black…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button id="search-btn" class="btn btn-primary">Decode</button>
+      </div>
+      <p class="input-hint">
+        Accepts pigment trade names, Colour Index (CI) numbers, CAS numbers, and common aliases.
+        Covers banned pigments, restricted additives, and heavy metal limits under EU 2020/2081.
+      </p>
+    </div>
+    <div id="search-results"></div>
+  </div>
+
+  <!-- ── Bulk decode tab ────────────────────────────────────────── -->
+  <div id="panel-bulk" class="tab-panel">
+    <div class="input-card">
+      <label class="input-label" for="bulk-input">Full ingredient list</label>
+      <textarea
+        id="bulk-input"
+        class="input-field"
+        placeholder="Paste the full ingredient list here. Include CI numbers and/or CAS numbers for best results.&#10;&#10;Example:&#10;Aqua, Glycerin, Carbon Black (CI 77266), Pigment Blue 15 (147-14-8),&#10;CI 74260, Isopropyl Alcohol (67-63-0), Benzalkonium Chloride…"
+        spellcheck="false"
+      ></textarea>
+      <p class="input-hint">
+        Extracts CI numbers (e.g. <code>CI 74160</code>), CAS numbers (e.g. <code>147-14-8</code>),
+        and ingredient names. Works with INCI lists, product labels, and SDS Section 3.
+      </p>
+      <div style="display:flex;gap:0.5rem;margin-top:0.75rem">
+        <button id="bulk-scan-btn" class="btn btn-primary">🎨 Decode All</button>
+        <button id="bulk-clear-btn" class="btn btn-secondary">Clear</button>
+      </div>
+    </div>
+    <div id="bulk-results"></div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <strong>Legal disclaimer:</strong> This tool covers substances restricted or prohibited under
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R2081" target="_blank" rel="noopener noreferrer">EU Regulation 2020/2081</a>
+    (Annex XVII, Entry 75, effective 4 January 2022) and
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1545" target="_blank" rel="noopener noreferrer">EU Regulation 2023/1545</a>.
+    A negative result does not constitute regulatory clearance.
+    Always verify with your supplier's EU compliance certificate and consult the
+    <a href="https://echa.europa.eu/substances-restricted-under-reach" target="_blank" rel="noopener noreferrer">ECHA restriction database</a>.
+    Not a substitute for professional regulatory advice.
+  </div>
+
+</div>
+
+<script src="/tools/ink-ingredient-decoder/js/pigment-data.js"></script>
+<script src="/tools/ink-ingredient-decoder/js/app.js"></script>
+</body>
+</html>
