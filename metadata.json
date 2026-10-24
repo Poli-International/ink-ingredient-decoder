@@ -1,0 +1,11 @@
+{
+  "name": "Tattoo Ink Ingredient Decoder-V2",
+  "description": "Decode pigment names, CAS numbers, and Colour Index numbers against EU Regulation 2020/2081 with custom profile photo upload and offline database synchronization.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
