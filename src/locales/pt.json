@@ -1,0 +1,2034 @@
+{
+  "app": {
+    "title": "Descodificador de Ingredientes de Tintas REACH | Poli International",
+    "subtitle": "Verifique ingredientes de tintas de tatuagem e maquilhagem definitiva (PMU) ao abrigo do Regulamento (UE) 2020/2081 (REACH Anexo XVII entrada 75). Cole a lista de ingredientes, o rotulo do frasco ou a seccao 3 da FDS para verificar entradas regulatorias, limites de concentracao e rotulagem obrigatoria.",
+    "version_tag": "v2 · UE 2020/2081 entrada 75",
+    "offline_badge": "Pronto sem ligacao"
+  },
+  "nav": {
+    "aria_nav": "Navegacao da aplicacao",
+    "paste_label": "Descodificador Rotulo e FDS",
+    "database": "Base de dados regulatoria",
+    "alternatives": "Alternativas permitidas",
+    "expiry": "Lotes e Validades",
+    "sessions": "Registo de sessoes",
+    "metals": "Calculadora de metais",
+    "shortlist": "Lista selecionada",
+    "blue_green": "Dossier Azul 15 e Verde 7",
+    "plain_language": "Guia em linguagem clara",
+    "maker_questions": "Questoes para o fabricante",
+    "mixtures": "Misturas & Diluições",
+    "recall": "Recolha de Lotes",
+    "jurisdictions": "Regulamentos Globais"
+  },
+  "status": {
+    "prohibited": "Proibido",
+    "restricted": "Restrito",
+    "watch": "Sob observacao",
+    "not_covered": "Nao restrito",
+    "unrecognised": "Elemento nao reconhecido",
+    "under_review": "Em revisao"
+  },
+  "header": {
+    "sync_title": "Estado de sincronizacao da base local",
+    "local_ready": "Base local pronta",
+    "offline": "Modo sem ligacao",
+    "local_db_singular": "Base local ({count} tinta guardada)",
+    "local_db_plural": "Base local ({count} tintas guardadas)",
+    "switch_light": "Ativar modo claro",
+    "switch_dark": "Ativar modo escuro",
+    "profile_title": "Perfil do tatuador e estudio",
+    "default_artist": "Tatuador do estudio",
+    "default_studio": "Foto de perfil"
+  },
+  "decoder": {
+    "heading": "Descodificador de ingredientes de tintas REACH",
+    "subheading": "Analise a formulacao quimica de uma tinta face aos limiares e proibicoes da entrada 75 do regulamento REACH (Regulamento UE 2020/2081).",
+    "input_label": "Ingredientes do rotulo (CI, CAS, nomes quimicos ou percentagens da FDS):",
+    "input_placeholder": "Cole a composicao do rotulo ou da seccao 3 da FDS aqui... Ex.: Aqua, Glycerin, CI 77891, CI 74160, Hamamelis Virginiana Extract, Isopropyl Alcohol, CI 12477",
+    "load_examples": "Carregar formulacao de exemplo:",
+    "sample_banned_blue": "Azul ftalo 15:3 e Verde 7",
+    "sample_restricted_black": "Negro de fumo e impurezas metalicas",
+    "sample_market_black": "Negro padrao da industria",
+    "sample_unrecognised": "Rotulo com termos nao reconhecidos",
+    "sample_clean_carrier": "Dioxido de titanio e veiculo conforme",
+    "clear_button": "Limpar texto",
+    "decode_button": "Descodificar ingredientes",
+    "audit_id_title": "Identificador de verificacao: {id}",
+    "label_bottle_audit": "Auditoria de rotulo e frasco",
+    "status_compliant": "CONFORME / NAO RESTRITO",
+    "status_restricted_sub": "Restricao UE 2020/2081 abaixo do limiar",
+    "status_restricted_exceeded": "RESTRITO - Limite de concentracao ultrapassado",
+    "status_prohibited": "PROIBIDO (UE 2020/2081)",
+    "traceability_qr": "Codigo QR de rastreabilidade",
+    "print_label": "Imprimir rotulo",
+    "save_audit_record": "Guardar relatorio de auditoria",
+    "saved_to_station": "Guardado no posto de trabalho",
+    "formulation_details": "Detalhes da formulacao",
+    "brand_maker": "Marca / Fabricante",
+    "brand_placeholder": "Ex.: Dynamic, World Famous, Kuro Sumi",
+    "ink_name_shade": "Nome da tinta / Tom",
+    "ink_name_placeholder": "Ex.: Triple Black 30 ml",
+    "batch_lot_label": "Numero de lote / LOTE (obrigatorio para rastreabilidade)",
+    "batch_lot_placeholder": "Ex.: LOT-2024-8891",
+    "summary_title": "Discriminacao da formulacao ({total} substancias identificadas)",
+    "summary_prohibited_badge": "Proibidas: {count}",
+    "summary_restricted_badge": "Restritas: {count}",
+    "summary_not_covered_badge": "Nao restritas: {count}",
+    "summary_unrecognised_badge": "Nao reconhecidas: {count}",
+    "extracted_items_heading": "Componentes extraidos da formulacao",
+    "summary_prohibited": "Proibidas segundo a Entrada 75: {count}",
+    "summary_restricted": "Restritas (aplicam-se limites de concentracao): {count}",
+    "summary_not_covered": "Nao abrangidas pela Entrada 75: {count}",
+    "summary_unrecognised": "Nao reconhecidas / nao catalogadas: {count}",
+    "table_query": "Termo extraido",
+    "table_detected": "Substancia identificada",
+    "table_ci": "Colour Index (CI)",
+    "table_cas": "Numero CAS",
+    "table_status": "Estado Entrada 75",
+    "table_limit": "Limite exato (Entrada 75)",
+    "table_quote": "Referencia juridica / Apendice",
+    "save_to_shortlist": "Guardar esta formulacao na lista do estudio",
+    "shortlist_brand_label": "Marca / Fabricante da tinta:",
+    "shortlist_name_label": "Nome da tinta / Tom:",
+    "shortlist_batch_label": "Numero de lote / Lote:",
+    "save_shortlist_btn": "Guardar na lista do estudio",
+    "saved_success_toast": "Guardado com sucesso na lista selecionada do estudio.",
+    "sds_support_note": " (Suporta percentagens da seccao 3 da FDS, ex. 'CI 74160 8.5%')",
+    "samples_label": "Exemplos:",
+    "stat_prohibited": "Proibido",
+    "stat_restricted": "Restrito",
+    "stat_not_covered": "Nao restrito",
+    "stat_unrecognised": "Nao reconhecido",
+    "unrecognised_desc": "Nao constante da base de dados (nao sao feitas deduces arbitrarias)",
+    "limit_label": "Limite:",
+    "note_label": "Nota:",
+    "limit_check_reg": "consultar o texto regulamentar",
+    "verify_sds_note": "Verifique a identidade quimica na seccao 3 da FDS do fabricante",
+    "sds_concentration_label": "Concentracao segundo a seccao 3 da FDS:",
+    "col_ci": "Colour Index",
+    "col_cas": "Numero CAS",
+    "col_sds_pct": "% FDS",
+    "label_limit": "Limite de concentracao: ",
+    "label_legal_ref": "Referencia juridica: ",
+    "field_brand": "Marca / Fabricante da tinta:",
+    "field_ink_name": "Nome da tinta / Tom:",
+    "field_batch_number": "Numero de lote / Lote:",
+    "placeholder_brand": "Ex.: World Famous, Eternal",
+    "placeholder_ink_name": "Ex.: Lining Black #2",
+    "placeholder_batch_number": "Ex.: LOT-2024-001",
+    "offline_save_desc": "Guarda a formulacao verificada na base de dados local do posto de trabalho.",
+    "view_shortlist_link": "Ver lista selecionada →",
+    "save_button": "Guardar esta formulacao",
+    "default_untitled_ink": "Tinta sem titulo",
+    "default_unknown_brand": "Marca desconhecida",
+    "no_substances_evaluated": "Nenhuma substancia avaliada",
+    "prohibited_suffix": "{count} proibida",
+    "restricted_suffix": "{count} restrita",
+    "not_covered_suffix": "{count} nao restrita",
+    "unrecognised_suffix": "{count} nao reconhecida",
+    "unrecognised_banner_title": "Ingredientes nao identificados detetados ({count})",
+    "unrecognised_banner_desc": "Alguns termos nao puderam ser associados a um numero CI ou CAS na base de dados regulatoria REACH. Verifique a grafia ou solicite ao fabricante a composicao quimica detalhada.",
+    "generate_question_sheet_btn": "Gerar questionario para o fabricante",
+    "rule_says_heading": "O que diz rigorosamente a regulamentacao",
+    "view_details": "Inspecionar regra e limites",
+    "hide_details": "Recolher",
+    "matched_by_label": "Identificado atraves de:",
+    "plain_language_rule": "Guia em linguagem clara para o estudio:",
+    "table_rule_details": "Detalhes da regra",
+    "never_guessed_note": "Sem suposicoes arbitrarias ao abrigo do Regulamento UE 2020/2081",
+    "inspect_btn": "Inspecionar",
+    "btn_multi_jurisdiction_matrix": "Matriz Multijurisdicional",
+    "qr_scan_btn": "Escanear QR / Rótulo",
+    "voice_dictate_btn": "Ditar ingredientes",
+    "voice_listening": "Ouvindo...",
+    "voice_stop": "Parar ditado",
+    "voice_hint": "Ouvindo... dite os ingredientes (ex. \"Aqua, CI 77266, Glycerin\")",
+    "voice_error_permission": "Acesso ao microfone negado. Conceda permissão no navegador.",
+    "voice_error_unsupported": "O reconhecimento de voz não é compatível com este navegador.",
+    "unrecognised_reason": "Não consta da entrada 75 do anexo XVII do REACH nem do índice habitual de pigmentos cosméticos para tatuagem"
+  },
+  "result_card": {
+    "svhc_banned": "SVHC / Proibido",
+    "banned_eu": "Proibido (UE 2020/2081)",
+    "restricted_limits": "Restrito (aplicam-se limites)",
+    "under_review": "Sob observacao regulatoria",
+    "no_restriction": "Sem restricao UE",
+    "match_cas": "Correspondencia por CAS: {query}",
+    "match_ci": "Correspondencia por Colour Index: {query}",
+    "match_alias": "Correspondencia por sinónimo / nome comercial",
+    "max_limit": "Limiar maximo {ppm} µg/g",
+    "ci_label": "Colour Index: {ci}",
+    "cas_label": " · CAS: {cas}",
+    "regulatory_instrument": "Instrumento regulamentar",
+    "colour_group": "Grupo cromatico",
+    "restriction_rationale": "Motivo da restricao e limites",
+    "default_regulated_note": "Regulado nos termos do Regulamento UE 2020/2081.",
+    "match_method": "Metodo de detecao",
+    "cas_reference": "Referencia CAS",
+    "synonyms": "Nomes comerciais e sinonimos",
+    "typically_found_in": "Habitualmente utilizado em",
+    "echa_reference": "Referencia ECHA: CAS {cas}",
+    "in_studio_inventory": "Em inventario do estudio",
+    "add_to_studio_inventory": "Adicionar ao inventario do estudio"
+  },
+  "database": {
+    "title": "Base de dados regulatoria REACH Entrada 75",
+    "subtitle": "Explore os {count} pigmentos, corantes e metais pesados catalogados ao abrigo do Regulamento (UE) 2020/2081.",
+    "search_placeholder": "Pesquise por nome, numero CI (ex. 74160), numero CAS ou designacao INCI...",
+    "search_clear_title": "Limpar pesquisa",
+    "search_clear_aria": "Limpar pesquisa",
+    "status_filter_label": "Filtrar por estado legal",
+    "status_opt_all": "Todos os estados regulatorios ({count})",
+    "status_opt_compliant": "Conformes / Permitidos ({count})",
+    "status_opt_restricted": "Restritos (Limites Entrada 75) ({count})",
+    "status_opt_banned": "Proibidos (REACH Entrada 75) ({count})",
+    "status_opt_watch": "Sob observacao / Em revisao ({count})",
+    "group_filter_label": "Filtrar por familia quimica de cor",
+    "group_opt_all": "Todas as familias quimicas",
+    "quick_filter_label": "Filtro rapido:",
+    "pill_all": "Todos ({count})",
+    "pill_compliant": "Conformes ({count})",
+    "pill_restricted": "Restritos ({count})",
+    "pill_banned": "Proibidos ({count})",
+    "pill_watch": "Em observacao ({count})",
+    "reset_filters": "Repor filtros",
+    "showing_summary": "A mostrar",
+    "of_substances": "de {total} substancias na base de dados local",
+    "filtered_by_label": " · Filtrado por:",
+    "group_label": " · Grupo:",
+    "search_label": " · Pesquisa:",
+    "indexed_offline_note": "Indexado sem ligacao segundo o Regulamento UE 2020/2081 Entrada 75",
+    "no_matches_title": "Nenhum pigmento corresponde aos criterios selecionados",
+    "no_matches_desc": "Tente alterar os termos de pesquisa ou repor os filtros de estado e cor.",
+    "reset_all_btn": "Repor todos os filtros",
+    "search_aria": "Pesquisar substancias",
+    "status_filter": "Filtro de estado",
+    "status_all": "Todos os estados",
+    "status_prohibited": "Proibido",
+    "status_restricted": "Restrito",
+    "status_review": "Em revisao",
+    "status_safe": "Sem restricao",
+    "color_group": "Familia cromatica",
+    "color_all": "Todas as cores",
+    "color_blue": "Azul",
+    "color_green": "Verde",
+    "color_red": "Vermelho",
+    "color_yellow": "Amarelo",
+    "color_orange": "Laranja",
+    "color_violet": "Violeta / Roxo",
+    "color_black": "Preto",
+    "color_white": "Branco",
+    "color_brown": "Castanho",
+    "showing_count_singular": "{count} substancia apresentada",
+    "showing_count_plural": "{count} substancias apresentadas",
+    "filtered_from": "(filtradas de {total})",
+    "empty_heading": "Nenhuma substancia correspondente",
+    "empty_desc": "Nenhuma substancia coincide com os filtros aplicados. Experimente alargar os criterios de pesquisa."
+  },
+  "alternatives": {
+    "title": "Matriz de alternativas a pigmentos proibidos e restritos",
+    "subtitle": "Consulte os pigmentos e corantes substitutos conformes com o Regulamento REACH (UE) 2020/2081 para substituir componentes proibidos como Pigment Blue 15 e Pigment Green 7.",
+    "matrix_title": "Matriz de alternativas para corantes conformes com o REACH",
+    "matrix_desc": "Compare os pigmentos sujeitos a restricao (como Pigment Blue 15:3 e Pigment Green 7) com corantes minerais e policiclicos legalmente permitidos segundo o Regulamento (UE) 2020/2081.",
+    "matrix_badge": "Matriz Entrada 75",
+    "search_placeholder": "Pesquise por nome de pigmento, numero CI (ex. CI 74160) ou alternativa...",
+    "restricted_list_heading": "Pigmentos sujeitos a restricao ou proibidos ({count})",
+    "status_prohibited": "Proibido",
+    "prohibited_under_entry75": "Proibido segundo a Entrada 75 do REACH",
+    "ci_number_label": "Numero CI: {ci}",
+    "cas_number_label": "CAS: {cas}",
+    "transition_expired": "Periodo de transicao terminado",
+    "legal_context_prefix": "Enquadramento regulatorio: ",
+    "compliant_substitutes_heading": "Corantes substitutos conformes na UE",
+    "color_shade_label": "Tom de cor:",
+    "reg_status_label": "Estado regulatorio:",
+    "allowed_status": "Permitido segundo o Anexo XVII Entrada 75",
+    "filter_color": "Filtrar por cor:",
+    "hue_all": "Todos os tons",
+    "hue_blue": "Azul",
+    "hue_green": "Verde",
+    "hue_red": "Vermelho",
+    "hue_yellow": "Amarelo",
+    "restricted_heading": "Pigmento restrito ou proibido",
+    "status_label": "Estado legal:",
+    "status_banned": "Proibido segundo o Regulamento UE 2020/2081",
+    "why_restricted": "Motivo da restricao:",
+    "compliant_heading": "Corante alternativo conforme",
+    "properties_label": "Propriedades:",
+    "available_in": "Disponivel em:",
+    "inspect_btn": "Inspecionar no registo"
+  },
+  "expiry": {
+    "title": "Controlo de frascos, lotes e prazos de validade",
+    "subtitle": "Gira o inventario de frascos de tinta do estudio, monitorize os periodos apos abertura (PAO) e arquive a rastreabilidade de lotes segundo os requisitos de higiene e seguranca.",
+    "close_form": "Fechar formulario",
+    "log_bottle_btn": "Registar frasco de tinta",
+    "overview_heading": "Resumo do inventario do estudio",
+    "total_inks": "Total de tintas registadas",
+    "active_fresh": "Ativas / Validas",
+    "expiring_soon": "Prestes a caducar (30 dias)",
+    "expired_action": "Ver frascos a retirar",
+    "form_heading": "Registar novo frasco de tinta",
+    "ink_name_label": "Nome da tinta e tom:",
+    "ink_name_placeholder": "Ex.: True Black, Lining Red, Tribal Cyan...",
+    "brand_label": "Marca / Fabricante:",
+    "brand_placeholder": "Ex.: Eternal Ink, Intenze, Kuro Sumi, Panthera...",
+    "batch_label": "Numero de lote (indicado no frasco):",
+    "batch_placeholder": "Ex.: LOT-2024-08-99B",
+    "size_label": "Capacidade do frasco:",
+    "size_placeholder": "Ex.: 30 ml (1 oz), 60 ml, 120 ml",
+    "status_label": "Estado de conformidade normativa:",
+    "status_compliant": "Conforme com o REACH (UE 2020/2081)",
+    "status_restricted": "Restrito (verificar relatorios analiticos)",
+    "status_banned": "Nao conforme (nao utilizar)",
+    "date_opened_label": "Data de primeira abertura do frasco:",
+    "pao_label": "Periodo apos abertura (PAO):",
+    "pao_none": "Nao especificado no frasco",
+    "pao_6m": "6 meses (simbolo de boiao aberto 6M)",
+    "pao_12m": "12 meses (simbolo de boiao aberto 12M)",
+    "pao_24m": "24 meses (simbolo de boiao aberto 24M)",
+    "mfg_expiry_label": "Prazo de validade original (frasco selado):",
+    "notes_label": "Notas internas e localizacao:",
+    "notes_placeholder": "Localizacao no armazem, fornecedor, numero de fatura...",
+    "cancel_btn": "Cancelar",
+    "save_bottle_btn": "Guardar frasco",
+    "empty_heading": "Nenhum frasco de tinta registado",
+    "empty_desc": "Registe os seus frascos de tinta para assegurar um controlo rigoroso dos prazos de validade e da rastreabilidade dos lotes no estudio.",
+    "badge_expired": "CADUCADO",
+    "badge_expiring_soon": "VALIDADE IMINENTE",
+    "badge_active": "ATIVO / CONFORME",
+    "item_status": "Estado:",
+    "item_lot": "Lote:",
+    "item_size": "Capacidade:",
+    "item_opened": "Aberto em: {opened}",
+    "item_pao": "PAO: {pao}M",
+    "item_mfg": "Validade fabricante: {date}",
+    "mark_opened_today": "Marcar aberto hoje",
+    "delete_bottle_aria": "Eliminar este frasco",
+    "default_pao_notes": "Verificar o simbolo do boiao e o prazo de validade aposto no frasco.",
+    "col_ink_brand": "Tinta e Fabricante",
+    "col_batch_lot": "Numero de lote",
+    "col_opened": "Data de abertura",
+    "col_mfg_expiry": "Validade fabricante",
+    "col_status": "Estado",
+    "col_actions": "Acoes",
+    "status_no_date": "Data nao especificada",
+    "status_expired_days": "Caducado (ha {days} dias)",
+    "status_expiring_days": "Caduca (em {days} dias)",
+    "status_good_days": "Valido (restam {days} dias)",
+    "unopened": "Fechado",
+    "pao_3m": "3 meses (3M)",
+    "pao_12m_standard": "12 meses (Padrao)",
+    "default_stock": "Frasco no armazem geral",
+    "default_lot": "LOTE-NAO-CONHECIDO",
+    "action_req_expired": "Retirar do posto de trabalho",
+    "expiring_within_30": "Consumir prioritariamente",
+    "active_fresh_stock": "Existencias validas",
+    "bottles_require_quarantine": "{count} frasco requer quarentena / verificação",
+    "view_expired_btn": "Filtrar Stock Caducado",
+    "show_all_filter": "Mostrar Todos ({count})",
+    "logged_bottles": "Frascos Registados no Estúdio",
+    "ink_name": "Nome da Tinta",
+    "placeholder_ink_name": "ex. True Black",
+    "brand_mfg": "Marca / Fabricante",
+    "placeholder_brand": "ex. Eternal Ink",
+    "batch_lot": "Número de Lote",
+    "opened_date": "Data de Abertura (Local)",
+    "pao_months": "PAO (Meses)",
+    "factory_expiry": "Data de Validade de Fábrica"
+  },
+  "sessions": {
+    "title": "Rastreabilidade de sessoes de tatuagem e fichas de clientes",
+    "subtitle": "Associe os numeros de lote das tintas utilizadas a cada ficha de cliente para garantir uma rastreabilidade documental irrepreensivel perante as autoridades.",
+    "close_logger": "Fechar registo de sessoes",
+    "log_new_session": "Registar nova sessao",
+    "record_procedure": "Registar sessao de tatuagem ou maquilhagem definitiva",
+    "consent_ref_label": "Referencia do termo de consentimento:",
+    "consent_placeholder": "Ex.: CONS-2026-0412",
+    "client_name_label": "Nome ou codigo de cliente:",
+    "client_name_placeholder": "Ex.: Tiago Silva ou Ref. anonimizada TS-409",
+    "placement_label": "Zona anatomica do procedimento:",
+    "placement_placeholder": "Ex.: Antebraco esquerdo, omoplata direita, sobrancelhas...",
+    "attach_inks": "Selecione as tintas e lotes utilizados durante a sessao:",
+    "select_ink_placeholder": "Escolher frasco disponivel em armazem...",
+    "audited_ink_option": "[Verificado] {brand} - {inkName} (LOTE: {batch})",
+    "usage_linework": "Traco / Linhas",
+    "usage_shading": "Sombra",
+    "usage_color": "Preenchimento de cor",
+    "usage_highlight": "Pontos de luz / Brancos",
+    "add_ink_btn": "Adicionar esta tinta a sessao",
+    "remove_ink_btn": "Remover",
+    "cancel_btn": "Cancelar",
+    "save_session_btn": "Guardar sessao",
+    "empty_heading": "Nao ha sessoes registadas",
+    "empty_desc": "Registe as tintas aplicadas em cada cliente para imprimir ou arquivar um comprovativo de rastreabilidade conforme com as inspecoes sanitarias.",
+    "date_prefix": "Data: {date}",
+    "placement_prefix": "Zona: {placement}",
+    "print_card_btn": "Imprimir ficha de rastreabilidade",
+    "delete_session_aria": "Eliminar sessao",
+    "default_selected_ink": "Tinta nao especificada",
+    "default_brand": "Fabricante desconhecido",
+    "default_na": "Nao aplicavel",
+    "default_lot": "LOTE-NAO-INDICADO",
+    "default_client": "Cliente confidencial",
+    "default_artist": "Tatuador residente",
+    "default_studio": "Estudio de tatuagens",
+    "default_placement": "Zona nao indicada"
+  },
+  "metals": {
+    "title": "Calculadora de impurezas de metais pesados (Apendice 13)",
+    "subtitle": "Compare os resultados analiticos laboratoriais das fichas de seguranca (FDS) face aos limites maximos fixados pelo Apendice 13 do Anexo XVII do REACH.",
+    "close_calculator": "Fechar calculadora",
+    "evaluate_new_coa": "Avaliar novo certificado de analise (COA)",
+    "form_heading": "Introducao de valores laboratoriais medidos",
+    "batch_label": "Numero de lote analisado:",
+    "batch_placeholder": "Ex.: BATCH-2026-X4",
+    "ink_name_label": "Nome da tinta / tom:",
+    "ink_name_placeholder": "Ex.: Pitch Black, Aztec Gold...",
+    "brand_label": "Fabricante / Marca:",
+    "brand_placeholder": "Ex.: Intenze, World Famous, Kuro Sumi...",
+    "lab_label": "Laboratorio de ensaio acreditado:",
+    "lab_placeholder": "Ex.: CTL GmbH Bielefeld, Eurofins, SGS...",
+    "input_heading": "Concentracoes detetadas em laboratorio (mg/kg ou ppm):",
+    "limit_prefix": "Limite: ≤ {limit} ppm",
+    "ppm_placeholder": "0.0",
+    "pass": "CONFORME",
+    "fail": "LIMITE ULTRAPASSADO",
+    "cancel_btn": "Cancelar",
+    "calculate_save_btn": "Calcular e guardar avaliacao",
+    "empty_heading": "Nao ha analises de metais registadas",
+    "empty_desc": "Introduza os valores dos seus certificados analiticos para verificar automaticamente o cumprimento dos limites do Apendice 13.",
+    "compliant_badge": "CONFORME COM O APENDICE 13",
+    "fail_badge": "LIMITE LEGAL ULTRAPASSADO",
+    "lab_date_meta": "• Laboratorio: {lab} • Data do ensaio: {date}",
+    "delete_coa_aria": "Eliminar esta avaliacao",
+    "result_pill": "{substance}: {measured} ppm (Max: {max} ppm)",
+    "default_manufacturer": "Fabricante nao indicado",
+    "default_lab": "Laboratorio independente",
+    "hide_parser": "Ocultar Analisador de Texto",
+    "open_text_parser": "Analisar Texto Bruto do COA / Relatório Lab",
+    "parser_title": "Analisador de Texto Bruto COA & Relatório PDF",
+    "load_sample_coa": "Carregar Certificado de Exemplo",
+    "parser_placeholder": "Cole relatório de análise química, certificado de laboratório ou leitura OCR...",
+    "btn_extract_data": "Extrair Limites Químicos",
+    "btn_apply_to_form": "Preencher Formulário com Valores Extraídos",
+    "parsed_detected_heading": "Resultados de Impurezas Extraídos",
+    "metals_found_count": "Detetados {count} valores de metais pesados regulamentados"
+  },
+  "bottle_qr": {
+    "title": "Rotulo de lote imprimivel para o frasco",
+    "lot_prefix": "LOTE: {batch}",
+    "audited_verified": "Verificado em: {date} - face ao UE 2020/2081",
+    "instructions": "Imprima este rotulo e cole-o no frasco ou no dispensador de pigmento. Contem a tinta, a marca, o LOTE, a data da verificacao e o regulamento de referencia. E o registo do seu estudio, nao uma verificacao por qualquer autoridade. Use Copiar dados JSON para guardar os mesmos dados no seu sistema.",
+    "copied": "Copiado para a area de transferencia!",
+    "copy_json": "Copiar dados JSON",
+    "print_label": "Imprimir rotulo adesivo"
+  },
+  "profile": {
+    "title": "Perfil do estudio e configuracoes locais",
+    "close_aria": "Fechar configuracao de perfil",
+    "photo_processed": "Foto processada localmente ({size} KB).",
+    "process_failed": "Erro ao processar a imagem. Tente com um ficheiro PNG ou JPG comum.",
+    "photo_removed": "Foto de perfil removida.",
+    "profile_saved": "Configuracoes de perfil guardadas com sucesso.",
+    "save_failed": "Erro ao guardar o perfil.",
+    "custom_photo_heading": "Foto de identificacao do tatuador ou estudio",
+    "profile_alt": "Foto de perfil",
+    "no_photo": "Sem foto guardada",
+    "drop_instructions": "Arraste uma foto para aqui ou clique para selecionar",
+    "processing": "Processamento local...",
+    "upload_btn": "Escolher foto",
+    "remove_title": "Eliminar foto atual",
+    "remove_btn": "Eliminar",
+    "offline_spec": "Redimensionamento local para 256x256 WebP no navegador. Nenhum dado e transmitido para o exterior.",
+    "name_label": "Nome do tatuador ou responsavel de qualidade:",
+    "name_placeholder": "Ex.: Andreia Santos",
+    "studio_label": "Nome do estudio de tatuagens / atelier:",
+    "studio_placeholder": "Ex.: Lusitania Tattoo Porto",
+    "role_label": "Funcao no estudio:",
+    "role_artist": "Tatuador residente",
+    "role_owner": "Proprietario do estudio / Gerente",
+    "role_compliance": "Responsavel de higiene e conformidade",
+    "role_guest": "Artista convidado (Guest)",
+    "role_pmu": "Especialista em maquilhagem definitiva / PMU",
+    "jurisdiction_label": "Ambito territorial:",
+    "jurisdiction_placeholder": "Portugal (Uniao Europeia)",
+    "notes_label": "Notas internas e dados sanitarios:",
+    "notes_placeholder": "Licenciamento municipal, NIF, notificacoes da autoridade de saude...",
+    "cancel_btn": "Cancelar",
+    "save_btn": "Guardar alteracoes",
+    "default_artist": "Tatuador do estudio",
+    "default_studio": "Estudio de tatuagens",
+    "default_jurisdiction": "Uniao Europeia (REACH)"
+  },
+  "sync": {
+    "title": "Copia de seguranca local e transferencia segura de dados",
+    "pw_min_length": "A palavra-passe deve ter pelo menos 8 caracteres para encriptar a copia de seguranca.",
+    "encrypted_export_success": "Copia encriptada exportada com sucesso (AES-GCM de 256 bits).",
+    "standard_export_success": "Copia JSON normal exportada com sucesso.",
+    "export_failed": "Erro ao exportar os dados locais.",
+    "import_success": "Dados importados com sucesso na base local.",
+    "import_failed": "Ficheiro de importacao invalido ou danificado.",
+    "decrypt_success": "Copia desencriptada e restaurada com sucesso.",
+    "decrypt_failed": "Palavra-passe incorreta ou dados danificados.",
+    "clear_success": "Todos os dados locais do estudio foram eliminados.",
+    "clear_failed": "Erro ao eliminar os dados.",
+    "network_status": "Estado da ligacao:",
+    "online": "Online (Modo autonomo local)",
+    "offline": "Sem ligacao (Operacional sem rede)",
+    "stored_audits": "Verificacoes de conformidade guardadas:",
+    "count_record": "ficha",
+    "count_records": "fichas",
+    "studio_inks": "Frascos de tinta registados:",
+    "count_item": "frasco",
+    "count_items": "frascos",
+    "sync_engine": "Motor de armazenamento:",
+    "sync_engine_val": "Base de dados encriptada IndexedDB do navegador",
+    "last_synced": "Ultima copia guardada localmente:",
+    "encrypted_detected": "Copia de seguranca encriptada detetada",
+    "enter_pw_desc": "Este ficheiro esta protegido por palavra-passe. Insira a chave para restaurar os dados:",
+    "enter_pw_placeholder": "Palavra-passe de desencriptacao...",
+    "decrypt_btn": "Desencriptar e importar",
+    "transfer_heading": "Copia de seguranca e restauracao",
+    "encrypt_checkbox": "Proteger a copia com palavra-passe (AES-GCM)",
+    "pw_label": "Palavra-passe de protecao:",
+    "pw_placeholder": "Escolha uma palavra-passe segura...",
+    "crypto_spec": "Derivacao PBKDF2 (100.000 iteracoes SHA-256) + AES-GCM de 256 bits executado localmente via Web Crypto API.",
+    "export_encrypted": "Descarregar copia encriptada",
+    "export_json": "Descarregar copia JSON simples",
+    "import_btn": "Importar uma copia",
+    "clear_audits_btn": "Eliminar todas as fichas locais do estudio",
+    "confirm_clear_prompt": "Tem a certeza de que pretende eliminar todas as verificacoes e dados de lotes guardados neste dispositivo? Esta operacao nao pode ser anulada.",
+    "confirm_clear_btn": "Confirmar eliminacao definitiva",
+    "cancel_btn": "Cancelar",
+    "tab_file_backup": "Cópia em Ficheiro & JSON",
+    "tab_p2p_sync": "Sincronização Direta Posto a Posto (P2P)",
+    "p2p_send_heading": "Exportar Pacote de Sincronização Direta",
+    "p2p_send_desc": "Transfira formulações, auditorias e stock diretamente para outro computador do estúdio sem recorrer à nuvem.",
+    "p2p_btn_generate": "Gerar Pacote de Sincronização Offline",
+    "p2p_send_instruction": "Copie este pacote seguro e cole-o no computador de destino:",
+    "p2p_sync_token_label": "Token de Transferência Direta:",
+    "copy": "Copiar Pacote",
+    "copied": "Copiado!",
+    "p2p_receive_heading": "Importar Pacote de Sincronização",
+    "p2p_receive_desc": "Cole o token de transferência do computador emissor para integrar os registos nesta base de dados local.",
+    "p2p_receive_placeholder": "Cole o token de transferência aqui...",
+    "p2p_btn_merge_data": "Combinar Registos na Base de Dados Local",
+    "p2p_import_success": "Importação concluída: Foram combinados {count} registos na base de dados local.",
+    "p2p_invalid_payload": "Formato de token inválido. Verifique o pacote de origem.",
+    "p2p_gen_failed": "Falha ao gerar pacote. Verifique os registos locais."
+  },
+  "blue_green": {
+    "title": "Dossier normativo: Pigment Blue 15 e Pigment Green 7",
+    "subtitle": "Analise tecnica e cronologia da proibicao europeia das ftalocianinas de cobre em tintas de tatuagem ao abrigo do Regulamento (UE) 2020/2081.",
+    "date_highlight_title": "Data determinante: 4 de janeiro de 2023",
+    "date_highlight_body": "O periodo de transicao de 24 meses concedido pela alinea c) do ponto 4 da entrada 75 terminou a 4 de janeiro de 2023. Desde essa data, qualquer tinta que contenha Pigment Blue 15 (CI 74160) ou Pigment Green 7 (CI 74260) acima de 0,1% esta estritamente proibida para venda e utilizacao na UE.",
+    "pb15_title": "Pigment Blue 15 / 15:3 (Azul de ftalocianina de cobre)",
+    "pb15_desc": "Corante azul vivo utilizado durante decadas em tons ciano, turquesa e azul profundo. Proibido devido a inclusao historica no Anexo II do Regulamento de Cosmeticos (CE) n.° 1223/2009 para produtos em mucosas.",
+    "pg7_title": "Pigment Green 7 (Verde de ftalocianina de cobre policlorado)",
+    "pg7_desc": "Corante verde intenso presente na grande maioria dos verdes tradicionais de tatuagem. Sujeito a mesma proibicao por remissao ao Anexo II aplicada ao Pigment Blue 15.",
+    "prohibited_since": "Proibido na UE desde: 4 de janeiro de 2023",
+    "chemical_class_label": "Classe quimica:",
+    "pb15_chemical_val": "Ftalocianina de cobre (modificacao alfa / beta)",
+    "pg7_chemical_val": "Ftalocianina de cobre policlorada",
+    "cosmetic_annex_label": "Remissao ao Anexo de Cosmeticos:",
+    "pb15_cosmetic_val": "Regulamento (CE) n.° 1223/2009, Anexo II, numero de ordem 1368",
+    "pg7_cosmetic_val": "Regulamento (CE) n.° 1223/2009, Anexo II, numero de ordem 1369",
+    "entry75_label": "Disposicoes da Entrada 75:",
+    "derogation_expired_val": "Alinea c) do ponto 4: periodo de transicao terminado",
+    "status_today_heading": "Situacao juridica atual nos estudios europeus:",
+    "status_today_item1": "Qualquer frasco que contenha Pigment Blue 15 ou Pigment Green 7 e ilegal para qualquer procedimento de tatuagem ou maquilhagem definitiva na Uniao Europeia.",
+    "status_today_item2": "Os inspetores de saude e seguranca economica fiscalizam estes codigos CI (74160 e 74260) nas vistorias aos estudios.",
+    "source_reference": "Fonte oficial: Jornal Oficial da Uniao Europeia, L 423/6, Regulamento (UE) 2020/2081 da Comissao de 14 de dezembro de 2020.",
+    "test_decoder_btn": "Testar uma amostra azul no descodificador"
+  },
+  "maker_questions": {
+    "title": "Questoes para o fabricante de tintas: Ficha de auditoria",
+    "subtitle": "Nao existe qualquer 'certificado REACH oficial' emitido pela UE. A conformidade comprova-se mediante a documentacao tecnica do fabricante, a ficha de dados de seguranca (FDS) e os relatorios de ensaios laboratoriais. Descarregue ou imprima este questionario para os seus fornecedores.",
+    "print_btn": "Imprimir questionario para o fabricante",
+    "sheet_doc_title": "Pedido de conformidade normativa para tintas de tatuagem e PMU",
+    "sheet_doc_desc": "Questionario tipo para tatuadores e estudios enviarem a fabricantes e distribuidores de tintas.",
+    "studio_info_heading": "Informacoes do estudio e do fornecedor",
+    "studio_name": "Nome do estudio:",
+    "studio_placeholder": "Nome do seu estudio de tatuagens",
+    "auditor_name": "Tatuador / Responsavel:",
+    "auditor_placeholder": "Nome do tatuador ou proprietario",
+    "ink_maker": "Fabricante / Marca da tinta:",
+    "ink_maker_placeholder": "Nome da marca ou laboratorio",
+    "ink_name": "Nome da tinta e tom:",
+    "ink_name_placeholder": "Nome exato do tom",
+    "batch_no": "Numero de lote no frasco:",
+    "batch_placeholder": "Numero de LOTE / Batch",
+    "date_checked": "Data da verificacao:",
+    "date_placeholder": "AAAA-MM-DD",
+    "checklist_heading": "Verificacoes obrigatorias segundo o Regulamento (UE) 2020/2081 Entrada 75",
+    "q1_title": "1. Declaracao de conformidade com a Entrada 75 do REACH",
+    "q1_desc": "O fabricante dispoe de declaracao escrita que certifique que este lote especifico cumpre todos os limites e proibicoes do Anexo XVII entrada 75 do REACH?",
+    "q2_title": "2. Composicao detalhada e codigos CAS (Seccao 3 da FDS)",
+    "q2_desc": "A seccao 3 da FDS discrimina a relacao integral de substancias com os seus numeros CAS e CI exatos, incluindo todos os corantes a partir de 0,1%?",
+    "q3_title": "3. Relatorios de ensaio de impurezas de metais pesados (Apendice 13)",
+    "q3_desc": "Pode o fabricante facultar relatorios de laboratorio independente acreditado comprovando o respeito pelos limites estritos (Chumbo ≤ 0,7 ppm, Arsenio ≤ 0,5 ppm, Cadmio ≤ 0,5 ppm, Niquel ≤ 5 ppm, Mercurio ≤ 0,5 ppm)?",
+    "q4_title": "4. Determinacao de aminas aromaticas primarias (PAA)",
+    "q4_desc": "Existem ensaios analiticos comprovando que as aminas aromaticas cancerigenas listadas no Apendice 13 (o-anisidina, 4-aminobifenilo, etc.) nao ultrapassam individualmente 5 mg/kg?",
+    "q5_title": "5. Hidrocarbonetos aromaticos policiclicos (HAP) em tintas pretas",
+    "q5_desc": "Se a tinta contem negro de fumo (Carbon Black / CI 77266), a analise de lote garante benzo[a]pireno ≤ 5 µg/kg (5 ppb) e a soma total de HAP ≤ 0,5 mg/kg?",
+    "q6_title": "6. Dizeres obrigatorios no rotulo fisico do frasco",
+    "q6_desc": "Consta fisicamente do frasco: (a) a mencao 'Mistura para utilizacao em tatuagens ou maquilhagem definitiva', (b) um numero de lote identificativo unico, (c) a lista completa de ingredientes, (d) as advertencias de seguranca sobre niquel e cromio, (e) o prazo de validade ou o simbolo de periodo apos abertura?",
+    "provided": "Facultado",
+    "missing": "Em falta",
+    "notes_area": "Respostas do fornecedor e observacoes:",
+    "notes_placeholder": "Registe aqui as respostas do fabricante, referencias de relatorios de ensaio ou pedidos pendentes...",
+    "signature_block": "Verificado por (Assinatura e Data):",
+    "date_block": "Data:",
+    "inquiry_box_title": "Modelo de correio eletronico para consultas ao fabricante",
+    "inquiry_box_desc": "Copie este texto num correio eletronico para remeter ao fabricante ou distribuidor da tinta a fim de solicitar os documentos de conformidade:",
+    "copy_email_btn": "Copiar texto de email",
+    "copied_email_toast": "Texto copiado para a area de transferencia",
+    "unrecognised_items_heading": "Ingredientes nao identificados pendentes de esclarecimento:",
+    "add_unrecognised_item": "Adicionar ingrediente",
+    "remove_item_aria": "Remover este ingrediente",
+    "empty_unrecognised_items": "Nao existem ingredientes por identificar. Introduza os dados da tinta acima ou importe-os do Descodificador.",
+    "standard_studio_inquiry_line": "O rotulo da vossa tinta {inkName} refere {items}. Solicitamos cordialmente que nos indiquem o numero CAS, o numero CI e a classificacao deste ingrediente ao abrigo da entrada 75 do REACH para instruir o nosso dossier de rastreabilidade.",
+    "standard_studio_inquiry_prefix": "Pedido tipo do estudio:",
+    "item_placeholder": "Ex.: CI 77999 ou nome comercial"
+  },
+  "shortlist": {
+    "title": "Lista selecionada de tintas verificadas do estudio",
+    "subtitle": "Consulte e exporte a selecao de tintas verificadas e aprovadas para utilizacao no seu estudio.",
+    "export_csv": "Exportar lista (CSV)",
+    "download_csv": "Descarregar CSV",
+    "download_json": "Descarregar JSON",
+    "download_json_title": "Descarregar os dados da lista em formato JSON",
+    "clear_all": "Esvaziar lista",
+    "empty_state": "A lista selecionada esta atualmente vazia. Verifique tintas no descodificador e clique em 'Guardar na lista do estudio' para as adicionar aqui.",
+    "col_date": "Data verificacao",
+    "col_brand": "Marca",
+    "col_ink": "Tinta e Tom",
+    "col_batch": "Numero de lote",
+    "col_items": "Ingredientes",
+    "col_findings": "Resultado verificacao",
+    "col_actions": "Acoes",
+    "delete_item": "Eliminar da lista",
+    "lot_prefix": "LOTE: {batch}",
+    "trace_qr": "QR de rastreabilidade",
+    "print_label": "Imprimir rotulo",
+    "copied_json": "Dados JSON copiados!",
+    "copy_json": "Copiar em JSON",
+    "export_json": "Exportar em JSON",
+    "confirm_clear": "Deseja realmente eliminar todos os elementos da lista selecionada do estudio?",
+    "download_csv_title": "Exportar a lista selecionada em ficheiro CSV",
+    "loading": "A carregar lista...",
+    "date_logged": "Data de registo:",
+    "batch_lot": "Lote:",
+    "detected_substances": "Substancias detetadas:",
+    "traceability_qr": "Rotulo de rastreabilidade do frasco",
+    "qr_label_title": "Rotulo de rastreabilidade de tinta",
+    "qr_label_btn": "Rotulo do lote",
+    "csv_studio_label": "Estúdio: {studio}",
+    "csv_export_date_label": "Data de exportação: {date}",
+    "csv_disclaimer": "Este relatório é apenas para fins informativos.",
+    "default_studio": "Estúdio Independente"
+  },
+  "session_logger": {
+    "heading": "Rastreabilidade de sessoes de tatuagem",
+    "subheading": "Associe frascos e numeros de lote aos clientes para assegurar o integral cumprimento das normas de rastreabilidade.",
+    "close_logger": "Fechar registo",
+    "log_new_session": "Registar sessao",
+    "record_procedure_title": "Nova ficha de sessao",
+    "client_ref_label": "Referencia ou codigo de cliente:",
+    "client_ref_placeholder": "Ex.: Codigo de cliente ou nome",
+    "client_name_label": "Nome do cliente:",
+    "client_name_placeholder": "Nome do cliente",
+    "placement_label": "Localizacao anatomica:",
+    "placement_placeholder": "Ex.: Coxa direita, antebraco...",
+    "attach_inks_heading": "Selecione as tintas utilizadas:",
+    "select_ink_placeholder": "Selecionar do inventario do estudio...",
+    "audited_prefix": "[Verificado]",
+    "purpose_outline": "Traco",
+    "purpose_shading": "Sombra",
+    "purpose_color_fill": "Preenchimento de cor",
+    "purpose_highlight": "Pontos de luz / Branco",
+    "add_ink_btn": "Adicionar tinta",
+    "remove_ink_btn": "Remover",
+    "cancel_btn": "Cancelar",
+    "save_session_btn": "Guardar sessao",
+    "empty_sessions_title": "Nao ha sessoes arquivadas",
+    "empty_sessions_desc": "As sessoes de tatuagem registadas com os respetivos numeros de lote serao apresentadas aqui.",
+    "date_label": "Data: {date}",
+    "placement_summary": "Localizacao: {placement}",
+    "print_card_btn": "Imprimir ficha",
+    "delete_session_aria": "Eliminar sessao",
+    "default_ink": "Tinta generica",
+    "default_brand": "Marca nao especificada",
+    "default_client": "Cliente confidencial",
+    "default_artist": "Tatuador do estudio",
+    "default_studio": "Estudio",
+    "default_placement": "Zona nao especificada",
+    "summary_bar_title": "Resumo mensal de procedimentos",
+    "current_month_sessions_label": "Sessões registradas este mês",
+    "current_month_summary_desc": "{count} procedimentos de tatuagem de clientes documentados em {month}",
+    "summary_all_time_total": "Histórico: {total} sessões no total",
+    "summary_unique_clients": "{count} clientes únicos",
+    "summary_inks_applied": "{count} aplicações de tinta"
+  },
+  "plain_language_panel": {
+    "title": "Compreender o Regulamento REACH para tintas de tatuagem",
+    "subtitle": "Guia explicativo em linguagem clara do Regulamento (UE) 2020/2081 (Anexo XVII, entrada 75) para tatuadores, piercers e profissionais de maquilhagem definitiva.",
+    "section1_title": "1. Quem e responsavel por que?",
+    "section1_lead": "A legislacao europeia estabelece com clareza as obrigacoes de produtores e utilizadores profissionais.",
+    "section1_maker_title": "Obrigacoes do fabricante e distribuidor:",
+    "section1_maker_desc": "Devem formular tintas conformes, ensaiar as impurezas em laboratorios acreditados, facultar uma ficha de dados de seguranca (FDS) rigorosa e apor os dizeres obrigatorios no rotulo.",
+    "section1_artist_title": "Obrigacoes do tatuador e do proprietario do estudio:",
+    "section1_artist_desc": "E estritamente proibido utilizar tintas nao conformes. E obrigatorio verificar os rotulos, confirmar a presenca das mencoes exigidas e conservar a rastreabilidade dos lotes utilizados em cada cliente.",
+    "section2_title": "2. As mencoes obrigatorias em cada frasco",
+    "section2_lead": "Antes de abrir um frasco no estudio, verifique com atencao a presenca fisica da seguinte informacao no rotulo:",
+    "section2_item1": "A mencao exata em lingua portuguesa: 'Mistura para utilizacao em tatuagens ou maquilhagem definitiva'.",
+    "section2_item2": "Um numero de lote de referencia unico que permita ligar o produto aos respetivos ensaios analiticos.",
+    "section2_item3": "A lista integral de todos os ingredientes por ordem decrescente de peso.",
+    "section2_item4": "A advertencia 'Contem niquel. Pode provocar uma reacao alergica.' se o niquel for superior a 0,0005%.",
+    "section2_item5": "A advertencia 'Contem cromio (VI). Pode provocar uma reacao alergica.' se o cromio hexavalente for superior a 0,00005%.",
+    "section2_item6": "As instrucoes de seguranca, o prazo de validade ou o simbolo de periodo apos abertura (PAO).",
+    "section3_title": "3. A verdade sobre os supostos 'certificados REACH'",
+    "section3_lead": "Cuidado com os certificados comerciais enganosos que circulam no mercado.",
+    "section3_desc1": "Nenhuma entidade oficial da Uniao Europeia emite certificados individuais de aprovacao para tintas de tatuagem. Documentos com titulos pomposos como 'REACH Compliance Certificate' sao meras pecas publicitarias sem qualquer valor legal.",
+    "section3_desc2": "A conformidade de uma tinta comprova-se unicamente atraves do processo tecnico do fabricante, da declaracao de conformidade com a Entrada 75, de uma FDS em conformidade com o REACH e de relatorios analiticos de laboratorio independente acreditado.",
+    "section4_title": "4. As tres categorias de substancias quimicas",
+    "section4_prohibited_title": "Substancias proibidas:",
+    "section4_prohibited_desc": "Componentes cancerigenos, mutagenicos ou toxicos para a reproducao (CMR 1A/1B), corantes proibidos em cosmeticos (Anexo II do Regulamento 1223/2009), incluindo Pigment Blue 15 e Pigment Green 7.",
+    "section4_restricted_title": "Substancias restritas (limites maximos de concentracao):",
+    "section4_restricted_desc": "Metais pesados (chumbo, arsenio, cadmio, mercurio, etc.), aminas aromaticas primarias e conservantes. Apenas sao tolerados como residuos minimos tecnicamente inevitaveis abaixo dos limites do Apendice 13.",
+    "section4_not_covered_title": "Substancias permitidas / nao restritas:",
+    "section4_not_covered_desc": "Ingredientes seguros utilizados como veiculos ou solventes (agua purificada, glicerina vegetal, alcool isopropilico, extrato de hamamelia) e pigmentos minerais ou organicos autorizados.",
+    "section5_title": "5. O que fazer perante uma vistoria das autoridades de saude / fiscalizacao?",
+    "section5_lead": "Durante uma inspecao das entidades fiscalizadoras:",
+    "section5_desc1": "Apresente o registo de sessoes com os lotes utilizados, as fichas de dados de seguranca atualizadas fornecidas pelos distribuidores e os registos de controlo dos frascos.",
+    "section5_desc2": "Separe de imediato qualquer frasco com prazo caducado ou nao verificado num recipiente claramente identificado com 'Nao utilizar' para prevenir qualquer contaminacao com o material de trabalho.",
+    "cta_test_decoder": "Testar um rotulo no descodificador"
+  },
+  "cross_links": {
+    "heading": "Outras ferramentas gratuitas da Poli International para estudios:",
+    "svhc": "Verificador de substancias candidatas REACH SVHC",
+    "mixer": "Calculadora de misturas e diluicao de tintas de tatuagem",
+    "patch": "Protocolo e documentacao de testes epicutaneos para alergias"
+  },
+  "disclaimer": {
+    "note": "Ferramenta tecnica e documental de apoio ao cumprimento normativo para estudios de tatuagem e piercing. Desenvolvida pela Poli International, fabricante de joalharia de piercing BioFlex(R)."
+  },
+  "footer": {
+    "publisher": "Poli International • Ferramentas gratuitas para artistas tatuadores, piercers e proprietarios de estudios",
+    "reg_tag": "Referencia: Regulamento (UE) 2020/2081 que altera o Anexo XVII do REACH",
+    "storage_tag": "Dados 100% locais no seu navegador • Sem transmissao para os nossos servidores",
+    "telemetry_tag": "Sem cookies de terceiros nem rastreadores externos"
+  },
+  "substance_rule_modal": {
+    "close_aria": "Fechar ficha de substancia",
+    "exact_concentration_limit_heading": "Limite legal exato de concentracao:",
+    "regulatory_quoted_provision_heading": "Disposicao legal aplicavel (Regulamento UE 2020/2081):",
+    "reference_label": "Referencia regulamentar: {ref}",
+    "detailed_rationale_heading": "Fundamentacao toxicologica e enquadramento juridico:",
+    "unrecognised_box_title": "Substancia nao catalogada na base de dados REACH",
+    "unrecognised_box_desc1_prefix": "Este componente nao foi associado a nenhum pigmento ou aditivo regulamentado ao abrigo da entrada 75.",
+    "unrecognised_box_desc1_suffix": "Verifique se se trata de uma designacao comercial ou de um erro de escrita no rotulo.",
+    "unrecognised_box_desc2": "Solicite ao fabricante o numero CAS exato ou a correspondente ficha de dados de seguranca.",
+    "close_btn": "Fechar"
+  },
+  "data_metals": {
+    "lead": {
+      "substance": "Chumbo e compostos de chumbo",
+      "description": "Toxico para a reproducao (CMR 1A). Proibido como ingrediente intencional; limiar maximo de impureza residual tolerada: 0,7 mg/kg (ppm)."
+    },
+    "arsenic": {
+      "substance": "Arsenio e compostos de arsenio",
+      "description": "Cancerigeno 1A. Limite maximo de impureza elementar residual: 0,5 mg/kg (ppm)."
+    },
+    "cadmium": {
+      "substance": "Cadmio e compostos de cadmio",
+      "description": "Cancerigeno 1B, Mutagenico 1B, Toxico para a reproducao 1B. Limite maximo de impureza: 0,5 mg/kg (ppm)."
+    },
+    "antimony": {
+      "substance": "Antimonio e compostos de antimonio",
+      "description": "Impureza toxica resultante da sintese de materias-primas. Limite maximo: 0,5 mg/kg (ppm)."
+    },
+    "mercury": {
+      "substance": "Mercurio e compostos de mercurio",
+      "description": "Toxico para a reproducao (Repr. 1B) e potente neurotoxico. Limite maximo: 0,5 mg/kg (ppm)."
+    },
+    "nickel": {
+      "substance": "Niquel e compostos de niquel",
+      "description": "Sensibilizante cutaneo de categoria 1 e cancerigeno 2. Limite maximo de impureza soluvel / total admissivel: 5,0 mg/kg (ppm)."
+    },
+    "chromium_vi": {
+      "substance": "Cromio VI (Cromio hexavalente)",
+      "description": "Cancerigeno 1A, Mutagenico 1B, Sensibilizante cutaneo 1. Limite maximo rigoroso: 0,5 mg/kg (ppm)."
+    },
+    "barium": {
+      "substance": "Bario e compostos soluveis de bario",
+      "description": "Limite maximo admissivel de impureza em bario soluvel: 500 mg/kg (ppm)."
+    },
+    "copper": {
+      "substance": "Cobre (compostos soluveis)",
+      "description": "Concentracao maxima de cobre soluvel: 250 mg/kg (ppm)."
+    },
+    "zinc": {
+      "substance": "Zinco e compostos soluveis de zinco",
+      "description": "Limite maximo de impureza em zinco soluvel: 2 000 mg/kg (ppm)."
+    },
+    "selenium": {
+      "substance": "Selenio e compostos de selenio",
+      "description": "Limite maximo de impureza tolerada: 2,0 mg/kg (ppm)."
+    },
+    "tin": {
+      "substance": "Compostos organoestanicos (Estanho)",
+      "description": "Limite maximo de compostos organoestanicos: 0,5 mg/kg (ppm)."
+    },
+    "cobalt": {
+      "substance": "Cobalto e compostos de cobalto",
+      "description": "Cancerigeno 1B, Toxico para a reproducao 1B, Sensibilizante cutaneo 1. Limite maximo: 0,5 mg/kg (ppm)."
+    },
+    "bap": {
+      "substance": "Benzo[a]pireno (BaP)",
+      "description": "Hidrocarboneto aromatico policiclico (HAP) presente no negro de fumo nao purificado. Cancerigeno 1B. Limite maximo: 0,005 mg/kg (5 µg/kg ou 5 ppb)."
+    },
+    "pahs_total": {
+      "substance": "Hidrocarbonetos aromaticos policiclicos (HAP, soma dos 8)",
+      "description": "Soma dos 8 HAP cancerigenos chave segundo o REACH (Criseno, Benzo[a]antraceno, etc.). Limite maximo acumulado: 0,5 mg/kg (ppm)."
+    }
+  },
+  "data_alternatives": {
+    "alt_pb15": {
+      "problematic_pigment": "Pigment Blue 15 / Pigment Blue 15:3",
+      "restriction_reason": "Proibido em tintas de tatuagem na UE desde 4 de janeiro de 2023 ao abrigo da entrada 75 do REACH por remissao ao Anexo II de Cosmeticos.",
+      "legal_status": "Proibido (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Pigment Blue 60 (Azul de indantrona)",
+          "color_shade": "Azul marinho profundo / azul real",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Corante de cuba com excelente solidez a luz e notavel estabilidade quimica; nao incluido no Anexo II do Regulamento (CE) n.° 1223/2009."
+        },
+        "alt_1": {
+          "name": "Azul ultramarino (Aluminossilicato de sodio polissulfurado)",
+          "color_shade": "Azul cobalto mineral brilhante",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Pigmento mineral inorganico comummente empregue em formulacoes cosmeticas; permitido segundo o Anexo IV sem restricoes para tatuagem."
+        },
+        "alt_2": {
+          "name": "Pigment Blue 28 (Azul de cobalto)",
+          "color_shade": "Azul ciano mineral classico",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Espinela inorganica de oxidos mistos de metais. Deve ser ensaiado para verificar que a libertacao de cobalto cumpre os limites de impurezas soluveis do Apendice 13 (<0,5 mg/kg)."
+        }
+      }
+    },
+    "alt_pg7": {
+      "problematic_pigment": "Pigment Green 7 (Verde de ftalocianina)",
+      "restriction_reason": "Proibido em tintas de tatuagem na UE desde 4 de janeiro de 2023 ao abrigo da entrada 75 do REACH por remissao cruzada ao Anexo II.",
+      "legal_status": "Proibido (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Oxido de cromio verde",
+          "color_shade": "Verde azeitona a verde floresta",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Oxido de cromio trivalente Cr(III). Completamente distinto do cromio hexavalente Cr(VI) toxico. Excecionalmente inerte, insoluvel e estavel a luz."
+        },
+        "alt_1": {
+          "name": "Sesquioxido de cromio hidratado (Verde esmeralda / Viridian)",
+          "color_shade": "Verde esmeralda luminoso",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Pigmento inorganico autorizado. Deve cumprir o limite residual de Cr(VI) (<0,5 mg/kg soluvel)."
+        },
+        "alt_2": {
+          "name": "Verde de cobalto (Pigment Green 19 / 26)",
+          "color_shade": "Verde azulado frio / verde turquesa",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Espinela inorganica de cobalto e zinco de grande estabilidade; requer controlo de lote para impurezas metalicas."
+        }
+      }
+    },
+    "alt_pr22": {
+      "problematic_pigment": "Pigment Red 22 (Vermelho azoico)",
+      "restriction_reason": "Liberta por cisao redutora a amina aromatica p-toluidina (Cancerigeno 1B). Formalmente restrito e proibido.",
+      "legal_status": "Proibido (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Oxido de ferro vermelho (Oxido ferrico sintetico)",
+          "color_shade": "Vermelho tijolo terroso / terracota",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Oxido de ferro mineral inorganico padrao. Nao azoico, sem risco de cisao de aminas aromaticas cancerigenas. Conforme com os criterios de pureza do REACH."
+        },
+        "alt_1": {
+          "name": "Pigment Red 254 (Vermelho pirrolo / Vermelho DPP)",
+          "color_shade": "Vermelho escarlate vivo brilhante",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Quimica dicetopirrolopirrolo (DPP). Mecanismo nao azoico; extremamente estavel e permitido ao abrigo do Anexo XVII entrada 75."
+        },
+        "alt_2": {
+          "name": "Pigment Red 122 (Magenta quinacridona)",
+          "color_shade": "Magenta vivo / vermelho rosado",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Pigmento policiclico de quinacridona. Elevado poder de coloracao sem qualquer risco de decomposicao em aminas."
+        }
+      }
+    },
+    "alt_py14": {
+      "problematic_pigment": "Pigment Yellow 14 (Amarelo diarilida)",
+      "restriction_reason": "O amarelo diarilida liberta por cisao 3,3'-diclorobenzidina (Cancerigeno 1B). Proibido segundo a entrada 75.",
+      "legal_status": "Proibido (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Oxido de ferro amarelo (Oxido de ferro hidratado)",
+          "color_shade": "Ocre / amarelo dourado quente",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Pigmento inorganico estavel. Perfil seguro, sem cisao de aminas aromaticas."
+        },
+        "alt_1": {
+          "name": "Pigment Yellow 150 (Amarelo azometina de niquel)",
+          "color_shade": "Amarelo luminoso brilhante",
+          "status": "Permitido sem proibicoes",
+          "technical_notes": "Elevada transparencia e excelente solidez a luz; requer ensaios de lote para niquel livre extraivel (<5 mg/kg)."
+        }
+      }
+    }
+  },
+  "data_pigments": {
+    "pigment_blue_15": {
+      "name": "Pigment Blue 15",
+      "exact_limit": "Limite geral de 0,1% em peso (1 000 mg/kg); proibicao em vigor desde 4 de janeiro de 2023",
+      "entry_reference": "Entrada 75, ponto 1, alinea c), e ponto 4, alinea c); Anexo II do Regulamento (CE) n.° 1223/2009",
+      "notes": "Azul de ftalocianina de cobre. O periodo transitorio da alinea c) do ponto 4 expirou a 4 de janeiro de 2023. Proibido em todas as tintas de tatuagem e PMU comercializadas ou utilizadas na UE.",
+      "also_known_as": [
+        "Azul de ftalocianina",
+        "Ftalocianina de cobre",
+        "PB15",
+        "Azul ftalo"
+      ],
+      "found_in": [
+        "tintas azuis de tatuagem",
+        "tons turquesa",
+        "misturas de verde"
+      ]
+    },
+    "pigment_blue_15_3": {
+      "name": "Pigment Blue 15:3",
+      "exact_limit": "Limite geral de 0,1% em peso (1 000 mg/kg); proibicao em vigor desde 4 de janeiro de 2023",
+      "entry_reference": "Entrada 75, ponto 1, alinea c), e ponto 4, alinea c); Anexo II do Regulamento (CE) n.° 1223/2009",
+      "notes": "Ftalocianina de cobre em modificacao cristalina alfa. Mesmo CI 74160 e mesma proibicao que o PB15. O periodo de transicao terminou a 4 de janeiro de 2023.",
+      "also_known_as": [
+        "PB15:3",
+        "Ftalocianina de cobre alfa",
+        "Azul ftalo tom esverdeado",
+        "Pigment Blue 15:3"
+      ],
+      "found_in": [
+        "ciano e tintas azuis claras de tatuagem"
+      ]
+    },
+    "pigment_green_7": {
+      "name": "Pigment Green 7",
+      "exact_limit": "Limite geral de 0,1% em peso (1 000 mg/kg); proibicao em vigor desde 4 de janeiro de 2023",
+      "entry_reference": "Entrada 75, ponto 1, alinea c), e ponto 4, alinea c); Anexo II do Regulamento (CE) n.° 1223/2009",
+      "notes": "Verde de ftalocianina de cobre policlorado. O periodo de transicao de 24 meses expirou a 4 de janeiro de 2023. Proibido na UE em tintas de tatuagem e PMU.",
+      "also_known_as": [
+        "Verde ftalo",
+        "PG7",
+        "Cloroftalocianina de cobre",
+        "Pigment Green 7"
+      ],
+      "found_in": [
+        "tons de verde",
+        "tons azul-esverdeados",
+        "misturas escuras"
+      ]
+    },
+    "pigment_green_36": {
+      "name": "Pigment Green 36",
+      "exact_limit": "Limite geral de 0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea c); Anexo II do Regulamento (CE) n.° 1223/2009",
+      "notes": "Ftalocianina de cobre bromada e clorada. Nao beneficiou do periodo de transicao especial do PG7; proibido em misturas de tatuagem na UE desde 4 de janeiro de 2022.",
+      "also_known_as": [
+        "PG36",
+        "Verde ftalo tom amarelado"
+      ],
+      "found_in": [
+        "tons verde lima",
+        "verdes quentes"
+      ]
+    },
+    "pigment_violet_23": {
+      "name": "Pigment Violet 23",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Regulamento CLP (CE) n.° 1272/2008 Anexo VI",
+      "notes": "Violeta de dioxazina. Restrito segundo as classificacoes harmonizadas e impurezas de sintese.",
+      "also_known_as": [
+        "PV23",
+        "Violeta de dioxazina",
+        "Violeta de carbazol"
+      ],
+      "found_in": [
+        "tintas violetas",
+        "tons roxos",
+        "misturas magenta"
+      ]
+    },
+    "pigment_red_22": {
+      "name": "Pigment Red 22",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13 (Aminas aromaticas primarias)",
+      "notes": "Corante azoico. Pode decompor-se gerando 2-metil-5-nitroanilina ou outras aminas aromaticas. Proibido pela entrada 75.",
+      "also_known_as": [
+        "PR22",
+        "Vermelho brilhante",
+        "Vermelho rapido"
+      ],
+      "found_in": [
+        "tintas vermelhas vivas de tatuagem",
+        "tons escarlate"
+      ]
+    },
+    "pigment_red_17": {
+      "name": "Pigment Red 17",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Corante azoico Naftol AS. Risco de clivagem com libertacao de aminas aromaticas cancerigenas.",
+      "also_known_as": [
+        "PR17"
+      ],
+      "found_in": [
+        "tintas vermelhas tradicionais"
+      ]
+    },
+    "pigment_red_149": {
+      "name": "Pigment Red 149",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Pigmento de perileno. Geralmente nao sujeito a proibicao especifica, dependendo da pureza da materia-prima.",
+      "also_known_as": [
+        "PR149"
+      ],
+      "found_in": [
+        "tintas vermelhas escuras",
+        "tons bordeu"
+      ]
+    },
+    "pigment_orange_13": {
+      "name": "Pigment Orange 13",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13 (Aminas aromaticas primarias)",
+      "notes": "Corante disazoico de diarilida. Cliva gerando 3,3'-diclorobenzidina (Cancerigeno 1B). Proibido na UE.",
+      "also_known_as": [
+        "PO13"
+      ],
+      "found_in": [
+        "tons laranja",
+        "misturas quentes"
+      ]
+    },
+    "pigment_orange_16": {
+      "name": "Pigment Orange 16",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Laranja de dianisidina. Corante disazoico que cliva em o-dianisidina (Cancerigeno 1B). Proibido nos termos da entrada 75.",
+      "also_known_as": [
+        "PO16",
+        "Laranja diazo"
+      ],
+      "found_in": [
+        "tintas laranja brilhantes"
+      ]
+    },
+    "pigment_yellow_1": {
+      "name": "Pigment Yellow 1",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Amarelo monoazoico (Hansa Yellow G). Pode libertar o-nitroanilina. Sujeito a limites estritos para aminas aromaticas.",
+      "also_known_as": [
+        "PY1",
+        "Hansa Yellow G"
+      ],
+      "found_in": [
+        "tons amarelos",
+        "amarelo dourado"
+      ]
+    },
+    "pigment_yellow_3": {
+      "name": "Pigment Yellow 3",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Amarelo monoazoico (Hansa Yellow 10G). Risco de libertacao de cloroanilina.",
+      "also_known_as": [
+        "PY3",
+        "Hansa Yellow 10G"
+      ],
+      "found_in": [
+        "amarelo limao",
+        "amarelos frios"
+      ]
+    },
+    "carbon_black": {
+      "name": "Negro de fumo (Carbon Black)",
+      "exact_limit": "HAP totais ≤ 0,5 mg/kg; Benzo[a]pireno ≤ 5 µg/kg (5 ppb)",
+      "entry_reference": "Entrada 75, Apendice 13 (Impurezas de HAP)",
+      "notes": "Pigmento preto de referencia. Totalmente conforme desde que respeite os rigorosos limites de pureza para hidrocarbonetos aromaticos policiclicos (HAP) e benzo[a]pireno.",
+      "also_known_as": [
+        "CI 77266",
+        "Negro de carbono",
+        "Negro de acetileno",
+        "Negro termico",
+        "Carbon Black CI 77266",
+        "Lamp Black",
+        "Furnace Black",
+        "CI 77266"
+      ],
+      "found_in": [
+        "Lining Black",
+        "Shading Black",
+        "tons de cinzento",
+        "Black Wash"
+      ]
+    },
+    "titanium_dioxide": {
+      "name": "Dioxido de titanio",
+      "exact_limit": "Nao proibido em estado liquido para tatuagens; limites de impurezas metalicas do Apendice 13",
+      "entry_reference": "Regulamento (CE) n.° 1272/2008; Regulamento (UE) 2020/2081",
+      "notes": "O pigmento branco universal de referencia. A classificacao Carc. 2 por inalacao aplica-se exclusivamente a po inalavel; o uso em tintas liquidas de tatuagem e legal e conforme.",
+      "also_known_as": [
+        "CI 77891",
+        "Branco de titanio",
+        "Oxido de titanio (IV)",
+        "Anatase",
+        "Rutilo",
+        "titanium white",
+        "CI 77891"
+      ],
+      "found_in": [
+        "tintas brancas",
+        "pontos de luz",
+        "tons pastel",
+        "misturas opacas"
+      ]
+    },
+    "bkc": {
+      "name": "Cloreto de benzalconio (BKC)",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Classificacao CLP",
+      "notes": "Tensioativo cationico e conservante de amonio quaternario. Em concentracoes elevadas e corrosivo cutaneo e provoca lesoes oculares graves.",
+      "also_known_as": [
+        "BKC",
+        "Cloreto de alquildimetilbenzilamonio",
+        "alkyldimethylbenzylammonium chloride"
+      ],
+      "found_in": [
+        "conservantes em tinta",
+        "solucoes antisseticas"
+      ]
+    },
+    "propylene_glycol": {
+      "name": "Propilenoglicol",
+      "exact_limit": "Nao sujeito a restricao especifica na Entrada 75; veiculo autorizado",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Humectante, veiculo e solvente comummente utilizado em tintas de tatuagem. Conforme com a entrada 75.",
+      "also_known_as": [
+        "1,2-propanodiol",
+        "Metiletilenoglicol",
+        "propane-1,2-diol"
+      ],
+      "found_in": [
+        "veiculos de tinta",
+        "diluentes",
+        "solucoes de sombra"
+      ]
+    },
+    "isopropyl_alcohol": {
+      "name": "Alcool isopropilico",
+      "exact_limit": "Nao proibido na Entrada 75; solvente autorizado",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Solvente contabilizado como veiculo volatil e agente antimicrobiano em formulacoes correntes.",
+      "also_known_as": [
+        "Isopropanol",
+        "IPA",
+        "Propan-2-ol"
+      ],
+      "found_in": [
+        "veiculos de tinta",
+        "fluidos volateis",
+        "misturas estereis"
+      ]
+    },
+    "glycerin": {
+      "name": "Glicerina vegetal",
+      "exact_limit": "Nao restrita na Entrada 75; veiculo liquido autorizado",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Humectante natural que regula a viscosidade e impede que a tinta seque prematuramente no batoque durante o trabalho.",
+      "also_known_as": [
+        "Glicerol",
+        "Glicerina",
+        "Propano-1,2,3-triol"
+      ],
+      "found_in": [
+        "veiculos de tinta",
+        "dispersoes",
+        "reguladores de fluidez"
+      ]
+    },
+    "hamamelis": {
+      "name": "Extrato de hamamelia (Hamamelis / Witch Hazel)",
+      "exact_limit": "Nao restrito na Entrada 75; extrato vegetal autorizado",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Extrato vegetal adstringente frequentemente utilizado como diluente para sombras e solucoes de wash.",
+      "also_known_as": [
+        "Hamamelis Virginiana",
+        "Agua de hamamelia"
+      ],
+      "found_in": [
+        "Washing Solutions",
+        "Shading Solutions",
+        "agua de mistura"
+      ]
+    },
+    "water_aqua": {
+      "name": "Agua purificada (Aqua)",
+      "exact_limit": "Nao restrita; solvente aquoso primario",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Constituinte principal das formulacoes de tintas de base aquosa.",
+      "also_known_as": [
+        "Aqua",
+        "Agua desionizada",
+        "Agua esteril"
+      ],
+      "found_in": [
+        "todas as tintas aquosas de tatuagem"
+      ]
+    },
+    "formaldehyde": {
+      "name": "Formaldeido",
+      "exact_limit": "0,05% em peso (500 mg/kg); conservante rigorosamente regulamentado",
+      "entry_reference": "Entrada 75, Apendice 13; Regulamento (UE) 2020/2081",
+      "notes": "Cancerigeno 1B e potente sensibilizante cutaneo. Pode estar presente como residuo de libertadores de formaldeido.",
+      "also_known_as": [
+        "Formol",
+        "Metanal",
+        "Oxido de metileno"
+      ],
+      "found_in": [
+        "impurezas de conservantes",
+        "biocidas"
+      ]
+    },
+    "arsenic": {
+      "name": "Arsenio e compostos de arsenio",
+      "exact_limit": "Limite maximo de impureza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Metal pesado altamente toxico e cancerigeno. Proibido como ingrediente intencional; impurezas rigorosamente limitadas.",
+      "also_known_as": [
+        "Arsenio elementar",
+        "Compostos de arsenio"
+      ],
+      "found_in": [
+        "impurezas em pigmentos minerais em bruto"
+      ]
+    },
+    "barium": {
+      "name": "Bario (compostos soluveis)",
+      "exact_limit": "Limite para bario soluvel: 500 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "O bario soluvel e sistematicamente toxico. O sulfato de bario insoluvel e permitido desde que o teor de bario livre cumpra a norma.",
+      "also_known_as": [
+        "Bario soluvel",
+        "Sais de bario"
+      ],
+      "found_in": [
+        "impurezas em lacas e corantes",
+        "some red/orange colorants"
+      ]
+    },
+    "cadmium_ink": {
+      "name": "Cadmio e compostos de cadmio",
+      "exact_limit": "Limite maximo de impureza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Cancerigeno 1B e toxico para a reproducao. Os pigmentos historicos de sulfeto de cadmio estao estritamente proibidos.",
+      "also_known_as": [
+        "Amarelo de cadmio",
+        "Vermelho de cadmio",
+        "Sais de cadmio"
+      ],
+      "found_in": [
+        "impurezas em pigmentos minerais amarelos e vermelhos",
+        "trace mineral impurities"
+      ]
+    },
+    "chromium_vi": {
+      "name": "Cromio VI (Cromio hexavalente)",
+      "exact_limit": "Limite maximo de impureza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Cancerigeno 1A, mutagenico e potente alergenico cutaneo. Distingue-se rigorosamente do cromio trivalente Cr(III) insoluvel e inofensivo.",
+      "also_known_as": [
+        "Cromio hexavalente",
+        "Cr(VI)",
+        "Cromatos"
+      ],
+      "found_in": [
+        "impurezas em oxidos de cromio em bruto",
+        "metal oxide impurities"
+      ]
+    },
+    "cobalt_ink": {
+      "name": "Cobalto e compostos de cobalto",
+      "exact_limit": "Limite para cobalto soluvel: 0,5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Cancerigeno 1B e sensibilizante cutaneo. Pigmentos de espinela de cobalto nao devem libertar ioes livres acima do limiar legal.",
+      "also_known_as": [
+        "Azul de cobalto",
+        "Sais de cobalto"
+      ],
+      "found_in": [
+        "pigmentos minerais azuis",
+        "impurezas metalicas"
+      ]
+    },
+    "copper_ink": {
+      "name": "Cobre (compostos soluveis)",
+      "exact_limit": "Limite para cobre soluvel: 250 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "O cobre soluvel esta limitado a 250 mg/kg. O cobre firmemente ligado a estrutura da ftalocianina nao contava como soluvel antes da proibicao total.",
+      "also_known_as": [
+        "Cobre soluvel",
+        "Sais de cobre"
+      ],
+      "found_in": [
+        "impurezas em pigmentos sinteticos",
+        "copper complexes"
+      ]
+    },
+    "lead_ink": {
+      "name": "Chumbo e compostos de chumbo",
+      "exact_limit": "Limite maximo de impureza: 0,7 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Potente neurotoxico e toxico reprodutivo (CMR 1A). Vestigios tecnicamente inevitaveis estao limitados a 0,7 ppm.",
+      "also_known_as": [
+        "Chumbo elementar",
+        "Sais de chumbo",
+        "plumbum"
+      ],
+      "found_in": [
+        "impurezas em pigmentos minerais antigos"
+      ]
+    },
+    "mercury_ink": {
+      "name": "Mercurio e compostos de mercurio",
+      "exact_limit": "Limite maximo de impureza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Metal pesado bioacumulavel e grave neurotoxina. O vermilhao tradicional (sulfureto de mercurio) esta estritamente proibido.",
+      "also_known_as": [
+        "Cinabrio",
+        "Sais de mercurio",
+        "cinnabar"
+      ],
+      "found_in": [
+        "tintas tradicionais antigas",
+        "vestigios"
+      ]
+    },
+    "nickel_ink": {
+      "name": "Niquel e compostos de niquel",
+      "exact_limit": "Limite maximo de impureza: 5,0 mg/kg (ppm); advertencia obrigatoria a partir de 0,0005% (5 ppm)",
+      "entry_reference": "Entrada 75, ponto 6, alinea d), e Apendice 13",
+      "notes": "Causa principal de alergia de contacto a metais. Se o teor em niquel for igual ou superior a 5 ppm, o frasco deve ostentar a advertencia obrigatoria.",
+      "also_known_as": [
+        "Niquel elementar",
+        "Sais de niquel"
+      ],
+      "found_in": [
+        "impurezas em oxidos de ferro",
+        "oxidos minerais"
+      ]
+    },
+    "selenium_ink": {
+      "name": "Selenio e compostos de selenio",
+      "exact_limit": "Limite maximo de impureza: 2,0 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Oligoelemento toxico em concentracoes elevadas. Limite maximo fixado em 2,0 mg/kg.",
+      "also_known_as": [
+        "Selenio elementar",
+        "Compostos de selenio"
+      ],
+      "found_in": [
+        "impurezas em corantes minerais"
+      ]
+    },
+    "aniline": {
+      "name": "Anilina",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Regulamento CLP",
+      "notes": "Cancerigeno 2 e mutagenico 2. Materia-prima de sintese e produto de degradacao de aminas aromaticas primarias.",
+      "also_known_as": [
+        "Fenilamina",
+        "Aminobenzeno",
+        "benzenamine"
+      ],
+      "found_in": [
+        "residuos de sintese de corantes azoicos",
+        "dye synthesis precursor"
+      ]
+    },
+    "o_toluidine": {
+      "name": "o-Toluidina",
+      "exact_limit": "Concentracao maxima de impureza: 5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13 (Amina aromatica primaria)",
+      "notes": "Cancerigeno comprovado (1B). Amina aromatica primaria libertada pela clivagem redutora de pigmentos azoicos vermelhos e amarelos.",
+      "also_known_as": [
+        "2-metilanilina",
+        "orto-toluidina"
+      ],
+      "found_in": [
+        "produtos de degradacao azoica",
+        "impurezas"
+      ]
+    },
+    "pigment_red_48_2": {
+      "name": "Pigment Red 48:2",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Sal calcico de Pigment Red 48. Restrito segundo os requisitos de pureza para precursores de aminas.",
+      "also_known_as": [
+        "PR48:2",
+        "Permanent Red 2B sal de calcio",
+        "Lithol Rubine BK"
+      ],
+      "found_in": [
+        "tons rubi",
+        "misturas magenta"
+      ]
+    },
+    "pigment_red_53_1": {
+      "name": "Pigment Red 53:1",
+      "exact_limit": "0,1% em peso (1 000 mg/kg); cliva em 2-cloro-5-toluidina",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Laca de bario de Pigment Red 53 (Red Lake C). Proibido pela presenca de bario soluvel e pelo risco de decomposicao em aminas aromaticas.",
+      "also_known_as": [
+        "PR53:1",
+        "Red Lake C",
+        "D&C Red No. 9 sal de bario"
+      ],
+      "found_in": [
+        "tintas vermelhas alaranjadas vivas"
+      ]
+    },
+    "pigment_yellow_74": {
+      "name": "Pigment Yellow 74",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Amarelo monoazoico moderno. Permitido desde que as aminas aromaticas livres respeitem os limites do Apendice 13.",
+      "also_known_as": [
+        "PY74",
+        "Permanent Yellow 5GX",
+        "Hansa Yellow 5GX"
+      ],
+      "found_in": [
+        "amarelos primarios",
+        "tons amarelo ouro"
+      ]
+    },
+    "pigment_red_170": {
+      "name": "Pigment Red 170",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Pigmento vermelho de naftol de grande solidez a luz. Muito utilizado em tintas conformes com o REACH mediante ensaios analiticos de lote.",
+      "also_known_as": [
+        "PR170",
+        "Vermelho de naftol F5RK",
+        "PR-170",
+        "Naphthol Red",
+        "CI 12475",
+        "C.I. 12475",
+        "CI12475"
+      ],
+      "found_in": [
+        "vermelho carmim",
+        "vermelhos neutros",
+        "ruby shades"
+      ]
+    },
+    "pigment_red_254": {
+      "name": "Pigment Red 254 (Vermelho DPP)",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Pigmento dicetopirrolopirrolo (DPP). Nao azoico, excecional solidez a luz e sem libertacao de aminas cancerigenas. Totalmente conforme com o REACH.",
+      "also_known_as": [
+        "PR254",
+        "Vermelho Ferrari",
+        "Vermelho pirrolo",
+        "DPP Red",
+        "DPP Red",
+        "Ferrari Red",
+        "CI 56110",
+        "C.I. 56110",
+        "CI56110"
+      ],
+      "found_in": [
+        "vermelhos brilhantes",
+        "escarlate opaco"
+      ]
+    },
+    "pigment_red_101": {
+      "name": "Oxido de ferro vermelho (CI 77491)",
+      "exact_limit": "Nao proibido; limites de impurezas metalicas do Apendice 13",
+      "entry_reference": "Entrada 75, Apendice 13",
+      "notes": "Pigmento mineral inorganico sintetico ou natural. Seguro e quimicamente inerte desde que os teores de metais pesados cumpram as normas.",
+      "also_known_as": [
+        "CI 77491",
+        "Oxido ferrico",
+        "Vermelho ingles",
+        "Oxido de ferro",
+        "Ferric Oxide",
+        "Red Iron Oxide",
+        "CI 77491",
+        "C.I. 77491",
+        "CI77491"
+      ],
+      "found_in": [
+        "tons terra",
+        "castanhos",
+        "tons de pele",
+        "tintas PMU"
+      ]
+    },
+    "pigment_yellow_14": {
+      "name": "Pigment Yellow 14",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Corante disazoico de diarilida. Cliva gerando 3,3'-diclorobenzidina (Cancerigeno 1B). Proibido em tintas de tatuagem na UE.",
+      "also_known_as": [
+        "PY14",
+        "Diarylide Yellow AAOT",
+        "PY-14",
+        "Diarylide Yellow AAOT",
+        "CI 21095",
+        "C.I. 21095",
+        "CI21095"
+      ],
+      "found_in": [
+        "formulacoes antigas de tintas amarelas vivas",
+        "green ink mixes"
+      ]
+    },
+    "pigment_yellow_83": {
+      "name": "Pigment Yellow 83",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Apendice 13",
+      "notes": "Amarelo de diarilida HR. Proibido devido ao risco de clivagem azoica com libertacao de aminas aromaticas cancerigenas.",
+      "also_known_as": [
+        "PY83",
+        "Diarylide Yellow HR",
+        "PY-83",
+        "Diarylide Yellow HR",
+        "CI 21108",
+        "C.I. 21108",
+        "CI21108"
+      ],
+      "found_in": [
+        "antigos amarelos quentes e laranjas",
+        "orange blends"
+      ]
+    },
+    "pigment_yellow_138": {
+      "name": "Pigment Yellow 138",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Pigmento amarelo de quinoftalona. Nao azoico, extraordinario comportamento a luz e elevada resistencia quimica.",
+      "also_known_as": [
+        "PY138",
+        "Amarelo de quinoftalona",
+        "PY-138",
+        "Quinophthalone Yellow",
+        "CI 56300",
+        "C.I. 56300",
+        "CI56300"
+      ],
+      "found_in": [
+        "tons amarelo vivo esverdeado",
+        "lime greens"
+      ]
+    },
+    "ethanol": {
+      "name": "Etanol (Alcool etilico)",
+      "exact_limit": "Nao proibido na Entrada 75; solvente farmaceutico autorizado",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Solvente alcoolico tradicional para favorecer a fluidez da tinta e a estabilidade microbiologica.",
+      "also_known_as": [
+        "Alcool etilico",
+        "Alcool desnaturado",
+        "Alcohol Denat",
+        "Denatured Alcohol",
+        "Alcohol"
+      ],
+      "found_in": [
+        "dispersoes de cor",
+        "solventes"
+      ]
+    },
+    "benzyl_alcohol": {
+      "name": "Alcool benzilico",
+      "exact_limit": "0,1% em peso (1 000 mg/kg); conservante declaravel",
+      "entry_reference": "Entrada 75; Regulamento (UE) 2023/1545",
+      "notes": "Conservante aromatico e co-solvente. Pode provocar sensibilizacao cutanea em teores elevados.",
+      "also_known_as": [
+        "Fenilcarbinol",
+        "Alcool benzilico",
+        "CAS 100-51-6"
+      ],
+      "found_in": [
+        "sistemas conservantes",
+        "estabilizadores de cor"
+      ]
+    },
+    "phenoxyethanol": {
+      "name": "Fenoxietanol",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Glicol eter amplamente empregue como conservante antimicrobiano de largo espetro.",
+      "also_known_as": [
+        "2-fenoxietanol",
+        "Eter monofenilico de etilenoglicol"
+      ],
+      "found_in": [
+        "conservantes em tinta aquosa"
+      ]
+    },
+    "polyethylene_glycol": {
+      "name": "Polietilenoglicol (PEG)",
+      "exact_limit": "Nao sujeito a restricao especifica; veiculo polimerico autorizado",
+      "entry_reference": "Regulamento (CE) n.° 1907/2006",
+      "notes": "Emulsionante, humectante e espessante em produtos cosmeticos e farmaceuticos.",
+      "also_known_as": [
+        "PEG",
+        "Macrogol",
+        "Polioxietileno",
+        "Macrogol",
+        "Polyoxyethylene"
+      ],
+      "found_in": [
+        "reguladores de viscosidade",
+        "estabilizadores"
+      ]
+    },
+    "benzoic_acid": {
+      "name": "Acido benzoico",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1",
+      "notes": "Conservante organico que atua como regulador de pH e inibidor de proliferacao bacteriana.",
+      "also_known_as": [
+        "Acido benzenocarboxilico",
+        "E210",
+        "E210",
+        "E211"
+      ],
+      "found_in": [
+        "sistemas de conservacao acidos"
+      ]
+    },
+    "rosin_colophonium": {
+      "name": "Colofonia (Rosin)",
+      "exact_limit": "0,1% em peso (1 000 mg/kg)",
+      "entry_reference": "Entrada 75, ponto 1, alinea a); Classificacao CLP (Skin Sens. 1)",
+      "notes": "Resina natural de pinheiro. Forte alergenico de contacto (causa frequente de eczema). Rigorosamente restrita em tintas de tatuagem.",
+      "also_known_as": [
+        "Colofonia",
+        "Resina de pinho",
+        "Pez louro",
+        "Wood Rosin"
+      ],
+      "found_in": [
+        "aglomerantes em formulas tradicionais antigas de tinta",
+        "legacy ink formulations"
+      ]
+    },
+    "o_anisidine": {
+      "name": "o-Anisidina",
+      "exact_limit": "Concentracao maxima de impureza: 5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13 (Amina aromatica primaria)",
+      "notes": "Cancerigeno 1B e mutagenico 2. Amina aromatica primaria gerada pela clivagem redutora de corantes azoicos.",
+      "also_known_as": [
+        "2-metoxianilina",
+        "orto-anisidina"
+      ],
+      "found_in": [
+        "impurezas de sintese",
+        "cisao azoica"
+      ]
+    },
+    "benzidine": {
+      "name": "Benzidina",
+      "exact_limit": "Concentracao maxima de impureza: 5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13 (Amina aromatica primaria)",
+      "notes": "Cancerigeno humano comprovado (1A) (cancro da bexiga). Corantes derivados da benzidina estao categoricamente proibidos.",
+      "also_known_as": [
+        "4,4'-diaminobifenilo",
+        "1,1'-bifenil-4,4'-diamina"
+      ],
+      "found_in": [
+        "produtos de degradacao de corantes azoicos proibidos"
+      ]
+    },
+    "dichlorobenzidine": {
+      "name": "3,3'-Diclorobenzidina",
+      "exact_limit": "Concentracao maxima de impureza: 5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13 (Amina aromatica primaria)",
+      "notes": "Cancerigeno 1B comprovado. Amina libertada pela degradacao de pigmentos azoicos de diarilida (amarelos e laranjas).",
+      "also_known_as": [
+        "3,3'-diclorobifenil-4,4'-diamina",
+        "DCB"
+      ],
+      "found_in": [
+        "produto de decomposicao de Pigment Yellow 14, 83 e Orange 13"
+      ]
+    },
+    "chloroaniline": {
+      "name": "4-Cloroanilina (p-Cloroanilina)",
+      "exact_limit": "Concentracao maxima de impureza: 5 mg/kg (ppm)",
+      "entry_reference": "Entrada 75, Apendice 13 (Amina aromatica primaria)",
+      "notes": "Cancerigeno 1B comprovado. Amina aromatica primaria originada pela degradacao de pigmentos monoazoicos clorados.",
+      "also_known_as": [
+        "para-cloroanilina",
+        "PCA",
+        "4-clorobenzenamina"
+      ],
+      "found_in": [
+        "impurezas de sintese",
+        "produto de cisao azoica"
+      ]
+    }
+  },
+  "parser_matches": {
+    "colour_index": "Colour Index (CI {num})",
+    "colour_index_pb15_3": "Colour Index (CI 74160) · Pigment Blue 15:3",
+    "trade_shorthand": "Denominacao comercial ({displayLabel})",
+    "matched_synonym": "Sinonimo reconhecido: {matchLabel}",
+    "fuzzy_matched": "Correspondencia aproximada '{query}' → {target}",
+    "cas_reconstructed": "CAS {cas} (reconstruido a partir de formato com espacos)",
+    "matched_via": "Identificado atraves de '{label}'"
+  },
+  "scanner": {
+    "open_scanner_btn": "Ler Código de Barras / QR",
+    "modal_title": "Leitor de Código de Barras & QR do Frasco",
+    "modal_sub": "Leia códigos de barras 1D ou códigos QR 2D em frascos de tinta, embalagens ou fichas FDS.",
+    "aria_close": "Fechar leitor",
+    "err_no_media_devices": "Câmara inacessível neste ambiente.",
+    "err_camera_access": "Não foi possível ativar a câmara ótica. Verifique as permissões do navegador.",
+    "camera_unavailable_title": "Câmara Não Disponível",
+    "manual_entry_prompt": "Introduza ou cole o código de barras ou número de lote manualmente:",
+    "align_barcode": "Enquadre o código de barras ou código QR no visor",
+    "scan_success": "Código Lido com Sucesso",
+    "detected_content": "Código de Barras / Lote Detetado:",
+    "copied": "Copiado!",
+    "copy": "Copiar",
+    "manual_label": "Entrada Manual do Código:",
+    "manual_placeholder": "ex. 071234567890 ou LOT-2024-09",
+    "apply_manual": "Aplicar Código",
+    "scan_again": "Ler Outro",
+    "cancel": "Cancelar",
+    "confirm_use": "Aplicar aos Dados"
+  },
+  "mixtures": {
+    "heading": "Misturas de Tintas & Diluições Personalizadas",
+    "subheading": "Registe graywashes, soluções de sombreamento e misturas de cor com rastreabilidade de lotes de tintas base e diluentes conformes com o REACH.",
+    "btn_new_mixture": "Registar Nova Mistura",
+    "btn_cancel": "Cancelar",
+    "form_title": "Registar Formulação Personalizada / Diluição",
+    "label_name": "Nome da Mistura *",
+    "placeholder_name": "ex. Graywash Retratos 4 Gotas",
+    "label_type": "Tipo de Mistura *",
+    "type_greywash": "Graywash (Sombreamento)",
+    "type_lining_wash": "Lining Wash (Traços)",
+    "type_color_blend": "Diluição / Mistura de Cor",
+    "type_custom_shading": "Solução de Sombreamento à Medida",
+    "label_lot": "Número de Lote Atribuído *",
+    "label_prepared_date": "Data de Preparação (Local) *",
+    "label_shelf_life_days": "Prazo de Conservação (Dias)",
+    "label_artist": "Tatuador que Prepara",
+    "placeholder_artist": "ex. Tatuador Residente",
+    "placeholder_notes": "Instruções de dosagem, proporções de gotas ou tonalidades...",
+    "heading_base_inks": "Tintas Base Utilizadas",
+    "btn_add_base_ink": "Adicionar Linha de Tinta Base",
+    "pick_from_stock": "Selecionar do inventário do estúdio...",
+    "placeholder_ink_brand": "Marca (ex. Dynamic)",
+    "placeholder_ink_name": "Nome Tinta (ex. Triple Black)",
+    "placeholder_ink_lot": "Lote (ex. LOT-2024-X)",
+    "placeholder_proportion": "Proporção (ex. 4 gotas)",
+    "heading_diluent": "Diluente / Veículo Utilizado",
+    "diluent_water": "Água Destilada / Estéril (Ph. Eur.)",
+    "diluent_witch_hazel": "Hamamélis (Hamamelis Virginiana)",
+    "diluent_glycerin": "Glicerina (Vegetal EP/USP)",
+    "diluent_mixing_solution": "Solução de Mistura do Fabricante",
+    "placeholder_diluent_brand": "Marca / Fornecedor Diluente",
+    "placeholder_diluent_lot": "Lote / Validade Diluente",
+    "placeholder_diluent_volume": "Volume / Gotas (ex. 20 gotas)",
+    "btn_save_mixture": "Guardar Receita da Mistura",
+    "empty_title": "Sem Misturas Registadas",
+    "empty_desc": "Registe aqui os seus graywashes e diluições para manter a rastreabilidade total de lotes com os seus clientes.",
+    "badge_days_left": "{days} d restantes",
+    "badge_expired": "Prazo de Conservação Expirado",
+    "field_prepared": "Preparado",
+    "field_expires": "Validade",
+    "field_artist": "Tatuador",
+    "field_type": "Tipo",
+    "field_notes": "Notas",
+    "btn_copy_recipe": "Copiar Receita",
+    "btn_use_in_session": "Usar na Sessão",
+    "btn_delete": "Eliminar Mistura",
+    "copied": "Copiado!"
+  },
+  "recall": {
+    "heading": "Auditor de Segurança & Recolha de Lotes",
+    "subheading": "Verifique de imediato sessões de clientes e inventário do estúdio contra avisos de recolha de fabricantes e autoridades.",
+    "search_placeholder": "Introduza número de lote suspeito (ex. LOT-2023-04)...",
+    "clear_search": "Limpar",
+    "export_csv": "Exportar Auditoria CSV",
+    "copy_report": "Copiar Relatório de Rastreabilidade",
+    "copied": "Copiado!",
+    "known_studio_lots": "Lotes Registados no Estúdio:",
+    "prompt_search_title": "Pronto para Auditar Lotes",
+    "prompt_search_desc": "Introduza acima o número de lote recolhido para auditar clientes atendidos e frascos em stock.",
+    "kpi_clients": "Clientes Afetados",
+    "kpi_sessions": "Atos Realizados",
+    "kpi_mixtures": "Misturas Associadas",
+    "kpi_inventory_bottles": "Frascos em Stock",
+    "quarantine_notice_title": "AÇÃO REQUERIDA: Lote Encontrado no Inventário",
+    "quarantine_notice_desc": "Existem frascos com este número de lote no inventário ativo do estúdio. Isole-os e coloque-os de imediato em quarentena.",
+    "usage_window": "Período de Atos em Clientes:",
+    "affected_sessions_heading": "Sessões de Clientes com este Lote",
+    "no_affected_clients_title": "Nenhum Cliente Encontrado",
+    "no_affected_clients_desc": "Nenhuma sessão gravada neste dispositivo contém este código de lote.",
+    "col_date": "Data do Ato",
+    "col_client_ref": "Ref / ID Cliente",
+    "col_placement": "Local anatómico",
+    "col_artist": "Tatuador",
+    "col_ink_details": "Detalhes da Tinta",
+    "affected_mixtures_heading": "Misturas Elaboradas com este Lote",
+    "mix_prepared": "Preparado:",
+    "mix_artist": "Tatuador:",
+    "report_title": "RELATÓRIO DE AUDITORIA E RASTREABILIDADE DE RECOLHA DE LOTES",
+    "report_date": "Auditoria Gerada (Local): {date}",
+    "recalled_lot": "Lote Recolhido / Suspeito: {lot}",
+    "affected_clients_count": "Clientes Afetados: {count}",
+    "total_sessions_count": "Total de Sessões Documentadas: {count}",
+    "period_active": "Período de Atos: {start} a {end}",
+    "affected_artists": "Tatuadores: {artists}",
+    "disclaimer_audit": "Dados compilados a partir do armazenamento local do navegador. A Poli International não armazena dados de clientes."
+  },
+  "jurisdictions": {
+    "tab_title": "Matriz Regulatoria Multijurisdicional",
+    "tab_subtitle": "Analise comparativa dos requisitos para tintas de tatuagem e PMU na UE (REACH), EUA (FDA/MoCRA), Australia (AICIS) e Sudeste Asiatico",
+    "btn_matrix": "Matriz Regulatoria",
+    "btn_divergence": "Guia de Divergencias",
+    "eu": {
+      "name": "Uniao Europeia",
+      "region": "UE / EEE"
+    },
+    "us": {
+      "name": "Estados Unidos",
+      "region": "America do Norte"
+    },
+    "au": {
+      "name": "Australia",
+      "region": "Australasia"
+    },
+    "asean": {
+      "name": "Sudeste Asiatico",
+      "region": "Estados Membros da ASEAN"
+    },
+    "filter_jurisdiction_label": "Filtrar por Jurisdicao",
+    "filter_all_regions": "Comparacao de Todas as Regioes",
+    "search_placeholder": "Pesquisar por nome de substancia, numero CI (ex. CI 74160) ou CAS...",
+    "group_all": "Todas as Substancias",
+    "group_pigments": "Pigmentos Coloridos",
+    "group_metals": "Metais e Impurezas",
+    "group_carriers": "Veiculos e Solventes",
+    "substances_count": "{count} substancias avaliadas",
+    "click_row_hint": "Clique na linha para ver enquadramento juridico e acoes do estudio",
+    "matrix_action_label": "Acao do Estudio",
+    "status": {
+      "eu_compliant": "Conforme com REACH",
+      "eu_restricted": "Restrito por REACH",
+      "eu_banned": "Proibido por REACH / SVHC",
+      "us_mocra_listed": "Produto Registado no MoCRA",
+      "us_unapproved_color": "Corante nao Aprovado",
+      "us_contaminant_concern": "Alerta de Contaminacao",
+      "au_aiic_listed": "Quimico Listado no AIIC",
+      "au_prohibited_chemical": "Quimico Proibido",
+      "au_impurity_alert": "Alerta de Impureza",
+      "asean_non_harmonized": "Tintas nao Harmonizadas",
+      "asean_acd_annex_banned": "Proibido no Anexo II da ACD",
+      "asean_cosmetic_limit_applied": "Limite Cosmetico Topico"
+    },
+    "eval": {
+      "eu_compliant_desc": "Permitido em formulacoes de tatuagem e PMU dentro dos limites de concentracao da Entrada 75 do Anexo XVII do REACH.",
+      "eu_compliant_action": "Verificar a Seccao 3 da FDS e conservar o lote na ficha do cliente durante 5 anos.",
+      "eu_bluegreen_desc": "O periodo de derrogacao para CI 74160 e CI 74260 terminou a 4 de janeiro de 2023. Proibido acima de 0,1 % na UE.",
+      "eu_bluegreen_action": "Nao injetar em territorio da UE. Mudar para formulacoes alternativas conformes.",
+      "eu_banned_desc": "Estritamente proibido em misturas para tatuagem nos termos da Entrada 75 ou da lista de substancias candidatas SVHC.",
+      "eu_banned_action": "Colocar o frasco de quarentena imediatamente e avisar o fornecedor do estudio.",
+      "eu_restricted_desc": "Sujeito a um limite maximo legal explicito na tabela do Apendice 13.",
+      "eu_restricted_action": "Verificar o Certificado de Analise (COA) para garantir que a concentracao esta abaixo do limite em ppm.",
+      "us_standard_desc": "Regulamentado pela Lei FD&C e MoCRA. Sujeito a registo obrigatorio de instalacoes e listagem de produtos.",
+      "us_standard_action": "Registar o lote na ficha do cliente e manter por pelo menos 3 anos para rastreabilidade.",
+      "us_color_paradox_desc": "Aditivo corante sob FD&C Act sem aprovacao de injecao pela FDA. Comercializado por tolerancia sob MoCRA.",
+      "us_color_paradox_action": "Assegurar que o fabricante concluiu o registo de produto cosmetico e a comprovacao de seguranca.",
+      "us_metal_desc": "A FDA CFSAN monitoriza impurezas de metais pesados e emite alertas sobre lotes adulterados.",
+      "us_metal_action": "Verificar os relatorios de pureza do fabricante e consultar os avisos de recolha da FDA.",
+      "au_listed_desc": "Introducao regulada pela AICIS. A substancia consta do inventario quimico australiano (AIIC).",
+      "au_listed_action": "Registar o lote no livro de procedimentos de penetracao cutanea exigido pela lei estadual.",
+      "au_metal_desc": "Toxicidade de metais avaliada no quadro de risco da AICIS; leis estaduais proíbem materiais nao seguros.",
+      "au_metal_action": "Confirmar que o importador submeteu a categorizacao na AICIS e guardar o COA no estudio.",
+      "au_banned_desc": "Substancia proibida ou restrita pelos padroes de quimicos perigosos da AICIS.",
+      "au_banned_action": "Nao utilizar em atos com penetracao cutanea. Separar as unidades.",
+      "asean_standard_desc": "Tintas intradermicas nao estao harmonizadas sob a Diretiva Cosmetica ASEAN (ACD). Aplicam-se leis nacionais.",
+      "asean_standard_action": "Cumprir as licencas municipais do estudio e as normas aduaneiras de importacao.",
+      "asean_metal_desc": "Limites da ACD aplicam-se a cosmeticos topicos; autoridades de saude inspecionam a pureza intradermica.",
+      "asean_metal_action": "Solicitar certificados internacionais de pureza alinhados com padroes de referencia da UE ou EUA.",
+      "asean_banned_desc": "Substancia constante do Anexo II da ACD (ingredientes proibidos) ou das listas nacionais de venenos.",
+      "asean_banned_action": "Proibido para atos esteticos e cosmeticos nos estados membros."
+    },
+    "divergence_overview_title": "Fundamentos Estatutarios e Divergencia de Limites Quimicos",
+    "divergence_overview_desc": "A regulamentacao de tintas de tatuagem e micropigmentacao difere substancialmente no mundo. Enquanto a Uniao Europeia adota limites quimicos vinculativos em ppm, os Estados Unidos, a Australia e o Sudeste Asiatico controlam as tintas por registos de instalacoes, inventarios industriais ou normas de saude publica.",
+    "divergence": {
+      "cat_statutory": "Ambito Legislativo",
+      "statutory_title": "Classificacao do Produto e Quadro Juridico",
+      "eu_statutory_summary": "Restricao quimica especifica ao abrigo de REACH Anexo XVII Entrada 75.",
+      "eu_statutory_specifics": "Misturas de tatuagem formam categoria propria no direito quimico europeu, vinculando 27 estados e o EEE.",
+      "us_statutory_summary": "Cosmeticos sob FD&C Act e lei MoCRA (2022).",
+      "us_statutory_specifics": "Tintas sao consideradas cosmeticos; pigmentos sao aditivos corantes segundo o Artigo 721 do FD&C Act.",
+      "au_statutory_summary": "Quimicos industriais (federal) e padroes de penetracao cutanea (estadual).",
+      "au_statutory_specifics": "O regime federal AICIS regula importacao e producao; normas estaduais regem o procedimento no estudio.",
+      "asean_statutory_summary": "Cosmeticos topicos (ACD) sem tintas intradermicas harmonizadas.",
+      "asean_statutory_specifics": "A Diretiva Cosmetica ASEAN abrange apenas produtos topicos; tintas intradermicas dependem de leis locais.",
+      "cat_thresholds": "Limites de Concentracao",
+      "thresholds_title": "Limiares Quimicos (ppm) face a Conformidade Procedimental",
+      "eu_thresholds_summary": "Limites estritos em ppm codificados no Apendice 13.",
+      "eu_thresholds_specifics": "Fixa 0,00005 % para substancias CMR, 0,1 % geral e valores maximos para 19 metais pesados.",
+      "us_thresholds_summary": "Sem tabela legal de ppm; foco em adulteracao e falsidade de rotulo.",
+      "us_thresholds_specifics": "Os Artigos 601 e 602 proíbem substancias nocivas, mas a lei federal nao contem tabela numerica de ppm para pigmentos.",
+      "au_thresholds_summary": "Sem tabela de ppm para tintas sob AICIS.",
+      "au_thresholds_specifics": "A AICIS avalia introducoes por bandas de risco a saude e nao por limites fixos de ppm no produto acabado.",
+      "asean_thresholds_summary": "Sem limites regionais de ppm para formulacoes intradermicas.",
+      "asean_thresholds_specifics": "Os anexos da ACD definem limites para cosmeticos topicos que nao vinculam legalmente tintas de tatuagem.",
+      "cat_pigments": "Aprovacao de Pigmentos",
+      "pigments_title": "Regras de Pigmentos e o Paradoxo dos Corantes nos EUA",
+      "eu_pigments_summary": "O Apendice 13 proíbe milhares de substancias e corantes CI especificos.",
+      "eu_pigments_specifics": "Proíbe corantes azoicos que libertem aminas aromaticas cancerigenas e substancias dos Anexos II e IV de cosmeticos.",
+      "us_pigments_summary": "O Paradoxo: nao aprovados, mas comercializados sob MoCRA.",
+      "us_pigments_specifics": "Nenhum corante foi aprovado pela FDA para injecao na pele. Circulam por tolerancia administrativa.",
+      "au_pigments_summary": "Cumprimento do inventario quimico AIIC obrigatorio.",
+      "au_pigments_specifics": "Pigmentos devem constar do AIIC ou entrar por categoria aprovada na AICIS. Nao existe lista positiva.",
+      "asean_pigments_summary": "Desalfandegamento e normas nacionais de importacao.",
+      "asean_pigments_specifics": "Sem lista positiva comum; os estudios utilizam sobretudo produtos certificados na UE ou nos EUA.",
+      "cat_metals": "Metais Pesados",
+      "metals_title": "Padroes para Metais Pesados e Contaminacao Bacteriana",
+      "eu_metals_summary": "19 metais pesados e impurezas com limites maximos rigorosos em ppm.",
+      "eu_metals_specifics": "O Apendice 13 estabelece valores limite inderrogaveis, incluindo Chumbo a 0,7 mg/kg e Arsenio a 0,5 mg/kg.",
+      "us_metals_summary": "Alertas de seguranca da FDA e monitorizacao de recolhas bacterianas.",
+      "us_metals_specifics": "A FDA publica avisos e determina recolhas quando sao identificadas contaminacoes por micobacterias.",
+      "au_metals_summary": "Avaliacao do risco quimico e dever geral de seguranca sanitaria.",
+      "au_metals_specifics": "Os servicos estaduais de saude inspecionam estudios e podem apreender produtos perigosos.",
+      "asean_metals_summary": "Os limites para cosmeticos topicos servem de referencia voluntaria.",
+      "asean_metals_specifics": "As autoridades podem usar os criterios da ACD como guia durante averigüacoes de queixas sanitarias.",
+      "cat_facility": "Deveres do Fabricante",
+      "facility_title": "Obrigacoes Imputadas a Fabricantes e Importadores",
+      "eu_facility_summary": "Classificacao CLP, FDS conforme Anexo II e rotulagem INCI completa.",
+      "eu_facility_specifics": "Os frascos devem ostentar a mencao 'Mistura para utilizacao em tatuagens ou maquilhagem definitiva'.",
+      "us_facility_summary": "Registo obrigatorio de instalacoes e produtos sob MoCRA.",
+      "us_facility_specifics": "As instalacoes devem registar-se na FDA, listar produtos cosmeticos e notificar eventos adversos graves.",
+      "au_facility_summary": "Registo comercial na AICIS e declaracoes anuais.",
+      "au_facility_specifics": "Os importadores devem estar registados na AICIS, submeter declaracoes anuais e guardar dados 5 anos.",
+      "asean_facility_summary": "Registo comercial nacional e declaracoes aduaneiras.",
+      "asean_facility_specifics": "Os importadores registam-se junto dos ministerios do comercio e da saude locais.",
+      "cat_records": "Rastreabilidade no Estudio",
+      "records_title": "Obrigacoes de Rastreabilidade e Arquivo no Estudio",
+      "eu_records_summary": "Verificacao do rotulo REACH e arquivo de lotes por cliente.",
+      "eu_records_specifics": "O estudio deve verificar o rotulo e arquivar o lote utilizado segundo os decretos sanitarios nacionais.",
+      "us_records_summary": "Conservacao recomendada de numeros de lote durante 3 anos.",
+      "us_records_specifics": "Com MoCRA, os estudios devem guardar marca e lote no consentimento do cliente por pelo menos 3 anos.",
+      "au_records_summary": "Registo obrigatorio no livro de penetracao cutanea.",
+      "au_records_specifics": "As leis estaduais exigem registo de clientes, esterilizacao e lote do pigmento para auditorias locais.",
+      "asean_records_summary": "Registos municipais e formularios de consentimento.",
+      "asean_records_specifics": "Os estudios arquivam consentimentos assinados e faturas de compra de acordo com os regulamentos locais.",
+      "cat_pmu": "PMU e Microblading",
+      "pmu_title": "Disposicoes para Maquilhagem Definitiva e Microblading",
+      "eu_pmu_summary": "Limites quimicos identicos para micropigmentacao e tatuagem corporal.",
+      "eu_pmu_specifics": "O Regulamento (UE) 2020/2081 abrange de igual forma todas as misturas corantes intradermicas.",
+      "us_pmu_summary": "Regulado como cosmeticos sob a lei MoCRA.",
+      "us_pmu_specifics": "Pigmentos de PMU estao sujeitos a registo de produto cosmetico e declaracao de eventos adversos.",
+      "au_pmu_summary": "Regulado por licencas de servicos com penetracao cutanea.",
+      "au_pmu_specifics": "Os profissionais de PMU devem ser titulares de unidades acreditadas de controlo de infecao.",
+      "asean_pmu_summary": "Diretrizes para saloes de beleza e normas topicas da ACD.",
+      "asean_pmu_specifics": "Os saloes devem cumprir as regras municipais; anestesicos topicos regem-se pela lei farmaceutica."
+    },
+    "checklist_heading": "Listas de Verificacao de Conformidade por Regiao",
+    "checklist_subheading": "Passos operacionais essenciais para manter registos verificados em cada jurisdicao regulamentar",
+    "checklist_eu_title": "Uniao Europeia (REACH Entrada 75)",
+    "checklist_eu_item_1": "Verificar se o frasco apresenta 'Mistura para utilizacao em tatuagens ou maquilhagem definitiva' e lote.",
+    "checklist_eu_item_2": "Obter e arquivar a Ficha de Dados de Seguranca (FDS) do fabricante com a composicao do Anexo II.",
+    "checklist_eu_item_3": "Anotar o numero de lote e a data do procedimento no processo de cada cliente.",
+    "checklist_us_title": "Estados Unidos (FDA / MoCRA)",
+    "checklist_us_item_1": "Confirmar que o fabricante concluiu o registo da instalacao e a listagem de produtos no MoCRA.",
+    "checklist_us_item_2": "Registar a marca da tinta, tom e numero de lote no documento de consentimento do cliente.",
+    "checklist_us_item_3": "Conservar registos dos clientes por pelo menos 3 anos e formalizar protocolo de reporte de eventos adversos.",
+    "checklist_au_title": "Australia (AICIS e Saude Estadual)",
+    "checklist_au_item_1": "Verificar se as substancias estao no AIIC ou foram importadas por empresa registada na AICIS.",
+    "checklist_au_item_2": "Anotar dados do cliente, data e lote do pigmento no livro de penetracao cutanea.",
+    "checklist_au_item_3": "Manter atualizados os certificados de controlo de infecoes de todos os artistas do estudio.",
+    "checklist_asean_title": "Sudeste Asiatico (ASEAN / Nacional)",
+    "checklist_asean_item_1": "Guardar no estudio faturas comerciais do fornecedor e documentos de desalfandegamento.",
+    "checklist_asean_item_2": "Garantir que solucoes topicas de limpeza e cuidados pos-tatuagem cumprem as normas da ACD.",
+    "checklist_asean_item_3": "Conservar consentimentos informados assinados e certidoes municipais de inspecao sanitaria.",
+    "modal_title": "Avaliacao Regulatoria Multijurisdicional",
+    "modal_subtitle": "Analise de ingredientes reconhecidos perante os quadros quimicos globais",
+    "modal_summary_heading": "Comparacao entre Sistemas Regulatorios",
+    "modal_summary_text": "Os componentes das tintas de tatuagem recebem qualificacoes juridicas distintas no mundo. Abaixo detalha-se o enquadramento de cada substancia reconhecida na UE (REACH), EUA (MoCRA), Australia (AICIS) e Sudeste Asiatico.",
+    "modal_no_substances": "Nenhuma substancia reconhecida encontrada nesta formulacao para avaliar.",
+    "col_ingredient": "Ingrediente e Identificacao",
+    "modal_footer_disclaimer": "Matriz informativa. Os estudios devem consultar as autoridades de saude locais para as regras vigentes no seu territorio."
+  },
+  "languages": {
+    "select_label": "Idioma",
+    "switch_to": "Mudar idioma para {lang}",
+    "current": "Idioma atual: {lang}",
+    "change_notice": "Interface traduzida para {lang}",
+    "en": "Inglês",
+    "de": "Alemão",
+    "es": "Espanhol",
+    "fr": "Francês",
+    "it": "Italiano",
+    "nl": "Holandês",
+    "pt": "Português",
+    "th": "Tailandês"
+  },
+  "qr_scanner": {
+    "modal_title": "Escanear documentação QR ou rótulo",
+    "modal_sub": "Aponte a câmera para o certificado QR impresso, ficha de lote ou rótulo do frasco",
+    "align_qr_hint": "Alinhe o código QR dentro da mira",
+    "err_no_media_devices": "Nenhuma câmera encontrada ou API de mídia indisponível.",
+    "err_camera_access": "Permissão de câmera negada ou câmera em uso por outro aplicativo.",
+    "camera_unavailable_title": "Câmera indisponível",
+    "manual_entry_prompt": "Você pode enviar uma foto do código ou colar o texto do QR abaixo.",
+    "detected_label": "Lote e formulação detectados",
+    "field_brand": "Marca / Fabricante",
+    "placeholder_brand": "ex. Dynamic, Eternal",
+    "field_ink": "Nome da tinta / Tom",
+    "placeholder_ink": "ex. Lining Black",
+    "field_batch": "Lote / N.º LOT",
+    "placeholder_batch": "ex. LOT-2024-91",
+    "field_ingredients": "Ingredientes analisados",
+    "placeholder_ingredients": "Ingredientes extraídos da documentação...",
+    "btn_apply_to_decoder": "Aplicar ao decodificador e analisar",
+    "btn_cancel": "Cancelar",
+    "scan_again": "Escanear novamente",
+    "or_upload_photo": "Ou selecione um arquivo de imagem com código QR:",
+    "btn_browse_photo": "Enviar imagem",
+    "err_file_parse": "Nenhum código QR detectado na imagem. Use uma foto mais nítida ou cole o texto.",
+    "manual_paste_placeholder": "Cole o texto do código QR ou URL aqui...",
+    "btn_parse": "Processar texto",
+    "aria_torch": "Alternar lanterna da câmera",
+    "aria_switch_camera": "Alternar câmera"
+  }
+}
