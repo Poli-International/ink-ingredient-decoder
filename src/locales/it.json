@@ -1,0 +1,2034 @@
+{
+  "app": {
+    "title": "Decodificatore ingredienti inchiostri da tatuaggio REACH | Poli International",
+    "subtitle": "Decodifica gli ingredienti degli inchiostri da tatuaggio e PMU in conformità al Regolamento (UE) 2020/2081 (REACH Allegato XVII, voce 75). Incolla una lista ingredienti, l'etichetta del flacone o la sezione 3 della SDS per verificare voci normative, limiti di concentrazione e diciture obbligatorie.",
+    "version_tag": "v2 · UE 2020/2081 voce 75",
+    "offline_badge": "Pronto offline"
+  },
+  "nav": {
+    "aria_nav": "Navigazione applicazione",
+    "paste_label": "Decodificatore Etichetta & SDS",
+    "database": "Banca dati normativa",
+    "alternatives": "Alternative consentite",
+    "expiry": "Lotti & Scadenze",
+    "sessions": "Registro sedute",
+    "metals": "Calcolatore metalli",
+    "shortlist": "Elenco selezionato",
+    "blue_green": "Dossier Blu 15 & Verde 7",
+    "plain_language": "Guida in linguaggio chiaro",
+    "maker_questions": "Domande per il produttore",
+    "mixtures": "Miscele & Diluizioni",
+    "recall": "Richiamo Lotti",
+    "jurisdictions": "Normative Globali"
+  },
+  "status": {
+    "prohibited": "Vietato",
+    "restricted": "Soggetto a restrizioni",
+    "watch": "Sotto osservazione normativa",
+    "not_covered": "Non soggetto a restrizioni",
+    "unrecognised": "Elemento non riconosciuto",
+    "under_review": "In corso di revisione"
+  },
+  "header": {
+    "sync_title": "Stato sincronizzazione archivio locale",
+    "local_ready": "Archivio locale pronto",
+    "offline": "Modalità offline",
+    "local_db_singular": "Archivio locale ({count} inchiostro salvato)",
+    "local_db_plural": "Archivio locale ({count} inchiostri salvati)",
+    "switch_light": "Attiva la modalità chiara",
+    "switch_dark": "Attiva la modalità scura",
+    "profile_title": "Profilo artista & studio",
+    "default_artist": "Artista dello studio",
+    "default_studio": "Foto profilo"
+  },
+  "decoder": {
+    "heading": "Decodificatore ingredienti inchiostri REACH",
+    "subheading": "Analizza la formulazione chimica di un inchiostro rispetto alle soglie e ai divieti della voce 75 del regolamento REACH (Regolamento UE 2020/2081).",
+    "input_label": "Ingredienti del flacone (CI, CAS, denominazioni chimiche o percentuali SDS) :",
+    "input_placeholder": "Incolla la composizione dell'etichetta o la sezione 3 della SDS... Es.: Aqua, Glycerin, CI 77891, CI 74160, Hamamelis Virginiana Extract, Isopropyl Alcohol, CI 12477",
+    "load_examples": "Carica un esempio di inchiostro:",
+    "sample_banned_blue": "Blu ftalo 15:3 & Verde 7",
+    "sample_restricted_black": "Nero di carbonio & metalli in tracce",
+    "sample_market_black": "Nero stile Eternal / World Famous",
+    "sample_unrecognised": "Etichetta con termini non riconosciuti",
+    "sample_clean_carrier": "Biossido di titanio & veicolo conforme",
+    "clear_button": "Cancella testo",
+    "decode_button": "Decodifica ingredienti",
+    "audit_id_title": "Identificativo di verifica: {id}",
+    "label_bottle_audit": "Audit etichetta e flacone",
+    "status_compliant": "CONFORME / NON SOGGETTO",
+    "status_restricted_sub": "Restrizione UE 2020/2081 sotto la soglia",
+    "status_restricted_exceeded": "SOGGETTO A RESTRIZIONE - Limite di concentrazione superato",
+    "status_prohibited": "VIETATO (UE 2020/2081)",
+    "traceability_qr": "QR code di tracciabilità",
+    "print_label": "Stampa etichetta",
+    "save_audit_record": "Salva scheda di audit",
+    "saved_to_station": "Salvato sulla postazione",
+    "formulation_details": "Dettagli della formulazione",
+    "brand_maker": "Marca / Produttore",
+    "brand_placeholder": "Es.: Dynamic, World Famous, Kuro Sumi",
+    "ink_name_shade": "Nome inchiostro / Tonalità",
+    "ink_name_placeholder": "Es.: Triple Black 30 ml",
+    "batch_lot_label": "Numero di lotto / LOT # (Richiesto per la tracciabilità)",
+    "batch_lot_placeholder": "Es.: LOT-2024-8891",
+    "summary_title": "Scomposizione della formulazione ({total} ingredienti identificati)",
+    "summary_prohibited_badge": "Vietati: {count}",
+    "summary_restricted_badge": "Soggetti a restrizioni: {count}",
+    "summary_not_covered_badge": "Non soggetti a restrizioni: {count}",
+    "summary_unrecognised_badge": "Non riconosciuti: {count}",
+    "extracted_items_heading": "Componenti estratti dalla formulazione",
+    "summary_prohibited": "Vietati ai sensi della Voce 75: {count}",
+    "summary_restricted": "Soggetti a restrizioni (si applicano limiti di concentrazione): {count}",
+    "summary_not_covered": "Non soggetti alla Voce 75: {count}",
+    "summary_unrecognised": "Non riconosciuti / sconosciuti: {count}",
+    "table_query": "Componente estratto",
+    "table_detected": "Sostanza identificata",
+    "table_ci": "Colour Index (CI)",
+    "table_cas": "Numero CAS",
+    "table_status": "Stato Voce 75",
+    "table_limit": "Limite esatto (Voce 75)",
+    "table_quote": "Riferimento normativo / Appendice",
+    "save_to_shortlist": "Salva questa formulazione nell'elenco dello studio",
+    "shortlist_brand_label": "Marca / Produttore dell'inchiostro:",
+    "shortlist_name_label": "Nome inchiostro / Tonalità:",
+    "shortlist_batch_label": "Numero di lotto / Batch:",
+    "save_shortlist_btn": "Salva nell'elenco dello studio",
+    "saved_success_toast": "Salvato nell'elenco selezionato del tuo studio.",
+    "sds_support_note": " (Supporta percentuali della sezione 3 della SDS, es. « CI 74160 8.5% »)",
+    "samples_label": "Esempi:",
+    "stat_prohibited": "Vietato",
+    "stat_restricted": "Soggetto a restrizioni",
+    "stat_not_covered": "Non soggetto a restrizioni",
+    "stat_unrecognised": "Non riconosciuto",
+    "unrecognised_desc": "Non presente nella banca dati (non dedotto arbitrariamente)",
+    "limit_label": "Limite:",
+    "note_label": "Nota:",
+    "limit_check_reg": "consultare il testo normativo",
+    "verify_sds_note": "Verifica l'identità chimica nella sezione 3 della SDS del produttore",
+    "sds_concentration_label": "Concentrazione sezione 3 SDS:",
+    "col_ci": "Colour Index",
+    "col_cas": "Numero CAS",
+    "col_sds_pct": "% SDS",
+    "label_limit": "Limite di concentrazione: ",
+    "label_legal_ref": "Riferimento legale: ",
+    "field_brand": "Marca / Produttore dell'inchiostro:",
+    "field_ink_name": "Nome inchiostro / Tonalità:",
+    "field_batch_number": "Numero di lotto / Batch:",
+    "placeholder_brand": "Es.: World Famous, Eternal",
+    "placeholder_ink_name": "Es.: Lining Black #2",
+    "placeholder_batch_number": "Es.: LOT-2024-001",
+    "offline_save_desc": "Salva l'intera formulazione verificata nell'archivio locale della postazione.",
+    "view_shortlist_link": "Visualizza elenco selezionato →",
+    "save_button": "Salva questa formulazione",
+    "default_untitled_ink": "Inchiostro senza titolo",
+    "default_unknown_brand": "Marca sconosciuta",
+    "no_substances_evaluated": "Nessuna sostanza valutata",
+    "prohibited_suffix": "{count} vietato",
+    "restricted_suffix": "{count} soggetto a restrizioni",
+    "not_covered_suffix": "{count} non soggetto a restrizioni",
+    "unrecognised_suffix": "{count} non riconosciuto",
+    "unrecognised_banner_title": "Rilevati ingredienti non riconosciuti ({count})",
+    "unrecognised_banner_desc": "Alcuni termini o denominazioni non sono stati ricollegati a un numero CI o CAS presente nella banca dati normativa REACH. Controlla l'ortografia o richiedi al produttore la scheda di composizione chimica.",
+    "generate_question_sheet_btn": "Genera questionario per il produttore",
+    "rule_says_heading": "Cosa stabilisce esattamente la norma",
+    "view_details": "Ispeziona regola & limiti",
+    "hide_details": "Comprimi",
+    "matched_by_label": "Identificato tramite:",
+    "plain_language_rule": "Guida in linguaggio chiaro per lo studio:",
+    "table_rule_details": "Dettagli della regola",
+    "never_guessed_note": "Nessuna supposizione arbitraria ai sensi del regolamento UE 2020/2081",
+    "inspect_btn": "Ispeziona",
+    "btn_multi_jurisdiction_matrix": "Matrice Multigiurisdizionale",
+    "qr_scan_btn": "Scansiona QR / Etichetta",
+    "voice_dictate_btn": "Ditta ingredienti",
+    "voice_listening": "Ascolto in corso...",
+    "voice_stop": "Ferma dettatura",
+    "voice_hint": "In ascolto... pronuncia ingredienti (es. \"Aqua, CI 77266, Glycerin\")",
+    "voice_error_permission": "Accesso al microfono negato. Consenti il microfono nelle impostazioni del browser.",
+    "voice_error_unsupported": "Il riconoscimento vocale non è supportato in questo browser.",
+    "unrecognised_reason": "Non elencato nella voce 75 dell'allegato XVII REACH né nell'indice comune dei pigmenti cosmetici per tatuaggi"
+  },
+  "result_card": {
+    "svhc_banned": "SVHC / Vietato",
+    "banned_eu": "Vietato (UE 2020/2081)",
+    "restricted_limits": "Soggetto a restrizioni (si applicano limiti)",
+    "under_review": "Sotto osservazione normativa",
+    "no_restriction": "Nessuna restrizione UE",
+    "match_cas": "Corrispondenza CAS: {query}",
+    "match_ci": "Corrispondenza Colour Index: {query}",
+    "match_alias": "Corrispondenza nome / denominazione commerciale",
+    "max_limit": "Soglia massima {ppm} µg/g",
+    "ci_label": "Colour Index: {ci}",
+    "cas_label": " · CAS: {cas}",
+    "regulatory_instrument": "Strumento normativo",
+    "colour_group": "Gruppo cromatico",
+    "restriction_rationale": "Motivo della restrizione & limiti",
+    "default_regulated_note": "Regolamentato ai sensi del regolamento UE 2020/2081.",
+    "match_method": "Metodo di individuazione",
+    "cas_reference": "Riferimento CAS",
+    "synonyms": "Denominazioni commerciali e sinonimi",
+    "typically_found_in": "Comunemente utilizzato in",
+    "echa_reference": "Riferimento ECHA: CAS {cas}",
+    "in_studio_inventory": "Presente nell'inventario dello studio",
+    "add_to_studio_inventory": "Aggiungi all'inventario dello studio"
+  },
+  "database": {
+    "title": "Banca dati normativa REACH Voce 75",
+    "subtitle": "Esplora tutti i {count} pigmenti, coloranti e metalli pesanti catalogati ai sensi del regolamento (UE) 2020/2081.",
+    "search_placeholder": "Cerca per nome, numero CI (es. 74160), numero CAS o denominazione INCI...",
+    "search_clear_title": "Cancella ricerca",
+    "search_clear_aria": "Cancella ricerca",
+    "status_filter_label": "Filtra per stato normativo",
+    "status_opt_all": "Tutti gli stati normativi ({count})",
+    "status_opt_compliant": "Conformi / Consentiti ({count})",
+    "status_opt_restricted": "Soggetti a restrizioni (Limiti Voce 75) ({count})",
+    "status_opt_banned": "Vietati (REACH Voce 75) ({count})",
+    "status_opt_watch": "Sotto osservazione / In revisione ({count})",
+    "group_filter_label": "Filtra per famiglia chimica di colore",
+    "group_opt_all": "Tutte le famiglie chimiche",
+    "quick_filter_label": "Filtro rapido:",
+    "pill_all": "Tutti ({count})",
+    "pill_compliant": "Conformi ({count})",
+    "pill_restricted": "Soggetti a restrizioni ({count})",
+    "pill_banned": "Vietati ({count})",
+    "pill_watch": "Sotto osservazione ({count})",
+    "reset_filters": "Reimposta filtri",
+    "showing_summary": "Visualizzazione di",
+    "of_substances": "su {total} sostanze nella banca dati locale",
+    "filtered_by_label": " · Filtrato per:",
+    "group_label": " · Gruppo:",
+    "search_label": " · Ricerca:",
+    "indexed_offline_note": "Indicizzato offline ai sensi del regolamento UE 2020/2081 Voce 75",
+    "no_matches_title": "Nessun pigmento corrisponde ai criteri selezionati",
+    "no_matches_desc": "Prova a modificare i termini di ricerca o a reimpostare i filtri di stato e colore.",
+    "reset_all_btn": "Reimposta tutti i filtri",
+    "search_aria": "Cerca sostanze",
+    "status_filter": "Filtro di stato",
+    "status_all": "Tutti gli stati",
+    "status_prohibited": "Vietato / Proibito",
+    "status_restricted": "Soggetto a restrizioni",
+    "status_review": "In revisione",
+    "status_safe": "Nessuna restrizione",
+    "color_group": "Famiglia cromatica",
+    "color_all": "Tutti i colori",
+    "color_blue": "Blu",
+    "color_green": "Verde",
+    "color_red": "Rosso",
+    "color_yellow": "Giallo",
+    "color_orange": "Arancione",
+    "color_violet": "Viola / Porpora",
+    "color_black": "Nero",
+    "color_white": "Bianco",
+    "color_brown": "Marrone",
+    "showing_count_singular": "{count} sostanza visualizzata",
+    "showing_count_plural": "{count} sostanze visualizzate",
+    "filtered_from": "(filtrate da {total})",
+    "empty_heading": "Nessuna sostanza corrispondente",
+    "empty_desc": "Nessuna sostanza corrisponde ai filtri impostati. Prova ad ampliare i criteri di ricerca."
+  },
+  "alternatives": {
+    "title": "Matrice delle alternative ai pigmenti vietati & soggetti a restrizioni",
+    "subtitle": "Consulta i pigmenti e coloranti sostitutivi conformi al regolamento REACH (UE) 2020/2081 per rimpiazzare i componenti vietati come Pigment Blue 15 e Pigment Green 7.",
+    "matrix_title": "Matrice delle alternative per coloranti conformi REACH",
+    "matrix_desc": "Metti a confronto i pigmenti soggetti a restrizioni (come Pigment Blue 15:3 e Pigment Green 7) con coloranti minerali e policiclici legalmente consentiti ai sensi del regolamento (UE) 2020/2081.",
+    "matrix_badge": "Matrice Voce 75",
+    "search_placeholder": "Cerca per nome pigmento, numero CI (es. CI 74160) o alternativa...",
+    "restricted_list_heading": "Pigmenti soggetti a restrizione o vietati ({count})",
+    "status_prohibited": "Vietato",
+    "prohibited_under_entry75": "Vietato ai sensi della Voce 75 di REACH",
+    "ci_number_label": "Numero CI: {ci}",
+    "cas_number_label": "CAS: {cas}",
+    "transition_expired": "Deroga transitoria scaduta",
+    "legal_context_prefix": "Quadro normativo: ",
+    "compliant_substitutes_heading": "Coloranti sostitutivi conformi UE",
+    "color_shade_label": "Tonalità di colore:",
+    "reg_status_label": "Stato normativo:",
+    "allowed_status": "Consentito ai sensi dell'Allegato XVII Voce 75",
+    "filter_color": "Filtra per colore:",
+    "hue_all": "Tutte le tonalità",
+    "hue_blue": "Blu",
+    "hue_green": "Verde",
+    "hue_red": "Rosso",
+    "hue_yellow": "Giallo",
+    "restricted_heading": "Pigmento soggetto a restrizione o vietato",
+    "status_label": "Stato legale:",
+    "status_banned": "Vietato ai sensi del regolamento UE 2020/2081",
+    "why_restricted": "Motivo della restrizione:",
+    "compliant_heading": "Colorante alternativo conforme",
+    "properties_label": "Proprietà:",
+    "available_in": "Disponibile in:",
+    "inspect_btn": "Ispeziona nel registro"
+  },
+  "expiry": {
+    "title": "Monitoraggio flaconi, numeri di lotto & date di scadenza",
+    "subtitle": "Gestisci l'inventario dei flaconi d'inchiostro dello studio, monitora i periodi dopo l'apertura (PAO) e archivia la tracciabilità dei lotti in conformità ai requisiti igienico-sanitari.",
+    "close_form": "Chiudi modulo",
+    "log_bottle_btn": "Registra flacone di inchiostro",
+    "overview_heading": "Panoramica inventario dello studio",
+    "total_inks": "Totale inchiostri registrati",
+    "active_fresh": "Attivi / Validi",
+    "expiring_soon": "In scadenza a breve (30 gg)",
+    "expired_action": "Visualizza flaconi da ritirare",
+    "form_heading": "Registra un nuovo flacone di inchiostro",
+    "ink_name_label": "Nome inchiostro & tonalità:",
+    "ink_name_placeholder": "Es.: True Black, Lining Red, Tribal Cyan...",
+    "brand_label": "Marca / Produttore:",
+    "brand_placeholder": "Es.: Eternal Ink, Intenze, Kuro Sumi, Panthera...",
+    "batch_label": "Numero di lotto (riportato sul flacone):",
+    "batch_placeholder": "Es.: LOT-2024-08-99B",
+    "size_label": "Capienza del flacone:",
+    "size_placeholder": "Es.: 30 ml (1 oz), 60 ml, 120 ml",
+    "status_label": "Stato di conformità normativa:",
+    "status_compliant": "Conforme REACH (UE 2020/2081)",
+    "status_restricted": "Soggetto a restrizioni (verificare analisi lotto)",
+    "status_banned": "Non conforme (non utilizzare)",
+    "date_opened_label": "Data di prima apertura del flacone:",
+    "pao_label": "Periodo dopo l'apertura (PAO):",
+    "pao_none": "Non specificato sul flacone",
+    "pao_6m": "6 mesi (simbolo vasetto aperto 6M)",
+    "pao_12m": "12 mesi (simbolo vasetto aperto 12M)",
+    "pao_24m": "24 mesi (simbolo vasetto aperto 24M)",
+    "mfg_expiry_label": "Data di scadenza originale (flacone sigillato):",
+    "notes_label": "Note interne & osservazioni:",
+    "notes_placeholder": "Posizione in magazzino, fornitore, numero di fattura...",
+    "cancel_btn": "Annulla",
+    "save_bottle_btn": "Salva flacone",
+    "empty_heading": "Nessun flacone di inchiostro registrato",
+    "empty_desc": "Inizia a registrare i tuoi flaconi di inchiostro per garantire un controllo rigoroso delle scadenze e la tracciabilità dei lotti in studio.",
+    "badge_expired": "SCADUTO",
+    "badge_expiring_soon": "SCADENZA IMMINENTE",
+    "badge_active": "ATTIVO / CONFORME",
+    "item_status": "Stato:",
+    "item_lot": "Lotto:",
+    "item_size": "Formato:",
+    "item_opened": "Aperto il: {opened}",
+    "item_pao": "PAO: {pao}M",
+    "item_mfg": "Scadenza produttore: {date}",
+    "mark_opened_today": "Segna aperto oggi",
+    "delete_bottle_aria": "Elimina questo flacone",
+    "default_pao_notes": "Verificare il simbolo del vasetto aperto e la data di scadenza sul flacone.",
+    "col_ink_brand": "Inchiostro & Produttore",
+    "col_batch_lot": "Numero di lotto",
+    "col_opened": "Data di apertura",
+    "col_mfg_expiry": "Scadenza produttore",
+    "col_status": "Stato",
+    "col_actions": "Azioni",
+    "status_no_date": "Data non specificata",
+    "status_expired_days": "Scaduto (da {days} gg)",
+    "status_expiring_days": "In scadenza (tra {days} gg)",
+    "status_good_days": "Valido (ancora {days} gg)",
+    "unopened": "Non aperto",
+    "pao_3m": "3 mesi (3M)",
+    "pao_12m_standard": "12 mesi (Standard)",
+    "default_stock": "Flacone in deposito generale",
+    "default_lot": "LOTTO-NON-NOTO",
+    "action_req_expired": "Rimuovere dalla postazione di lavoro",
+    "expiring_within_30": "Da utilizzare prioritariamente",
+    "active_fresh_stock": "Scorta valida",
+    "bottles_require_quarantine": "{count} flacone richiede quarantena / verifica",
+    "view_expired_btn": "Filtra Scorte Scadute",
+    "show_all_filter": "Mostra Tutti ({count})",
+    "logged_bottles": "Flaconi Registrati in Studio",
+    "ink_name": "Nome Inchiostro",
+    "placeholder_ink_name": "es. True Black",
+    "brand_mfg": "Marca / Produttore",
+    "placeholder_brand": "es. Eternal Ink",
+    "batch_lot": "Numero di Lotto",
+    "opened_date": "Data Apertura (Locale)",
+    "pao_months": "PAO (Mesi)",
+    "factory_expiry": "Data di Scadenza di Fabbrica"
+  },
+  "sessions": {
+    "title": "Tracciabilità delle sedute di tatuaggio & schede clienti",
+    "subtitle": "Associa i numeri di lotto degli inchiostri utilizzati a ciascuna scheda cliente per garantire una tracciabilità documentale ineccepibile.",
+    "close_logger": "Chiudi registro sedute",
+    "log_new_session": "Registra una nuova seduta",
+    "record_procedure": "Registra una seduta di tatuaggio o trucco permanente",
+    "consent_ref_label": "Riferimento modulo di consenso informato:",
+    "consent_placeholder": "Es.: CONS-2026-0412",
+    "client_name_label": "Nome o codice cliente:",
+    "client_name_placeholder": "Es.: Mario Rossi o Rif. anonimizzato MR-409",
+    "placement_label": "Zona anatomica dell'intervento:",
+    "placement_placeholder": "Es.: Avambraccio sinistro, scapola destra, sopracciglia...",
+    "attach_inks": "Seleziona gli inchiostri e i lotti utilizzati durante la seduta:",
+    "select_ink_placeholder": "Scegli un flacone presente nelle scorte...",
+    "audited_ink_option": "[Verificato] {brand} - {inkName} (LOTTO: {batch})",
+    "usage_linework": "Linee / Tratteggio",
+    "usage_shading": "Sfumature",
+    "usage_color": "Riempimento colore",
+    "usage_highlight": "Punti luce / Dettagli bianchi",
+    "add_ink_btn": "Aggiungi questo inchiostro alla seduta",
+    "remove_ink_btn": "Rimuovi",
+    "cancel_btn": "Annulla",
+    "save_session_btn": "Salva seduta",
+    "empty_heading": "Nessuna seduta registrata",
+    "empty_desc": "Registra gli inchiostri utilizzati su ciascun cliente per stampare o archiviare una scheda di tracciabilità conforme alle ispezioni sanitarie.",
+    "date_prefix": "Data: {date}",
+    "placement_prefix": "Zona: {placement}",
+    "print_card_btn": "Stampa scheda di tracciabilità",
+    "delete_session_aria": "Elimina seduta",
+    "default_selected_ink": "Inchiostro non specificato",
+    "default_brand": "Produttore sconosciuto",
+    "default_na": "Non specificato",
+    "default_lot": "LOTTO-NON-INDICATO",
+    "default_client": "Cliente riservato",
+    "default_artist": "Artista residente",
+    "default_studio": "Studio di tatuaggi",
+    "default_placement": "Zona non indicata"
+  },
+  "metals": {
+    "title": "Calcolatore impurezze metalli pesanti (Appendice 13)",
+    "subtitle": "Verifica i risultati analitici di laboratorio delle schede di sicurezza (SDS) rispetto alle soglie massime stabilite dall'Appendice 13 dell'Allegato XVII del regolamento REACH.",
+    "close_calculator": "Chiudi calcolatore",
+    "evaluate_new_coa": "Valuta un nuovo certificato di analisi (COA)",
+    "form_heading": "Inserimento concentrazioni riscontrate in laboratorio",
+    "batch_label": "Numero di lotto analizzato:",
+    "batch_placeholder": "Es.: BATCH-2026-X4",
+    "ink_name_label": "Nome inchiostro / tonalità:",
+    "ink_name_placeholder": "Es.: Pitch Black, Aztec Gold...",
+    "brand_label": "Produttore / Marca:",
+    "brand_placeholder": "Es.: Intenze, World Famous, Kuro Sumi...",
+    "lab_label": "Laboratorio di analisi accreditato:",
+    "lab_placeholder": "Es.: CTL GmbH Bielefeld, Eurofins, SGS...",
+    "input_heading": "Concentrazioni rilevate in laboratorio (mg/kg o ppm):",
+    "limit_prefix": "Limite: ≤ {limit} ppm",
+    "ppm_placeholder": "0.0",
+    "pass": "CONFORME",
+    "fail": "SOGLIA SUPERATA",
+    "cancel_btn": "Annulla",
+    "calculate_save_btn": "Calcola & Salva valutazione",
+    "empty_heading": "Nessuna analisi metalli registrata",
+    "empty_desc": "Inserisci i valori dei tuoi certificati di analisi per controllare in modo automatico la conformità ai limiti dell'Appendice 13.",
+    "compliant_badge": "CONFORME APPENDICE 13",
+    "fail_badge": "SUPERAMENTO DELLA SOGLIA LEGALE",
+    "lab_date_meta": "• Laboratorio: {lab} • Data prova: {date}",
+    "delete_coa_aria": "Elimina questa valutazione",
+    "result_pill": "{substance}: {measured} ppm (Max: {max} ppm)",
+    "default_manufacturer": "Produttore non indicato",
+    "default_lab": "Laboratorio indipendente",
+    "hide_parser": "Nascondi Analizzatore di Testo",
+    "open_text_parser": "Analizza Testo Grezzo COA / Rapporto Lab",
+    "parser_title": "Analizzatore di Testo Grezzo COA & PDF",
+    "load_sample_coa": "Carica Certificato di Esempio",
+    "parser_placeholder": "Incolla rapporto chimico, certificato di laboratorio o testo OCR del COA...",
+    "btn_extract_data": "Estrai Limiti Chimici",
+    "btn_apply_to_form": "Compila Modulo con i Valori Estratti",
+    "parsed_detected_heading": "Risultati Impurezze Rilevati",
+    "metals_found_count": "Rilevati {count} valori di metalli pesanti regolamentati"
+  },
+  "bottle_qr": {
+    "title": "Etichetta di lotto stampabile per il flacone",
+    "lot_prefix": "LOTTO: {batch}",
+    "audited_verified": "Controllato il: {date} - rispetto al UE 2020/2081",
+    "instructions": "Stampa questa etichetta e applicala sul flacone o sul dosatore di pigmento. Riporta inchiostro, marca, LOTTO, la data del controllo e il regolamento di riferimento. E la registrazione del tuo studio, non una verifica da parte di un ente. Usa Copia dati JSON per conservare gli stessi dati nel tuo sistema.",
+    "copied": "Copiato negli appunti!",
+    "copy_json": "Copia dati JSON",
+    "print_label": "Stampa etichetta adesiva"
+  },
+  "profile": {
+    "title": "Profilo dello studio & impostazioni locali",
+    "close_aria": "Chiudi impostazioni profilo",
+    "photo_processed": "Foto elaborata localmente ({size} KB).",
+    "process_failed": "Elaborazione dell'immagine non riuscita. Riprova con un normale file PNG o JPG.",
+    "photo_removed": "Foto profilo rimossa.",
+    "profile_saved": "Impostazioni del profilo salvate con successo.",
+    "save_failed": "Errore durante il salvataggio del profilo.",
+    "custom_photo_heading": "Foto identificativa artista / studio",
+    "profile_alt": "Foto del profilo",
+    "no_photo": "Nessuna foto salvata",
+    "drop_instructions": "Trascina una foto qui oppure fai clic per scegliere un file",
+    "processing": "Elaborazione locale...",
+    "upload_btn": "Scegli foto",
+    "remove_title": "Rimuovi foto attuale",
+    "remove_btn": "Rimuovi",
+    "offline_spec": "Ridimensionamento locale in 256x256 WebP nel browser. Nessun dato viene trasmesso all'esterno.",
+    "name_label": "Nome dell'artista o del responsabile qualità:",
+    "name_placeholder": "Es.: Marco Bianchi",
+    "studio_label": "Nome dello studio di tatuaggi / atelier:",
+    "studio_placeholder": "Es.: Studio Tatuaggi Roma",
+    "role_label": "Ruolo all'interno dello studio:",
+    "role_artist": "Tatuatore residente",
+    "role_owner": "Titolare dello studio / Gestore",
+    "role_compliance": "Responsabile igiene & conformità",
+    "role_guest": "Artista ospite (Guest)",
+    "role_pmu": "Operatore trucco permanente / Dermo",
+    "jurisdiction_label": "Territorio di esercizio:",
+    "jurisdiction_placeholder": "Italia (Unione Europea)",
+    "notes_label": "Note interne & comunicazioni ASL:",
+    "notes_placeholder": "Comunicazione SCIA, protocolli igienico-sanitari ASL, P.IVA...",
+    "cancel_btn": "Annulla",
+    "save_btn": "Salva modifiche",
+    "default_artist": "Artista dello studio",
+    "default_studio": "Studio di tatuaggi",
+    "default_jurisdiction": "Unione Europea (REACH)"
+  },
+  "sync": {
+    "title": "Backup locale & trasferimento sicuro dei dati",
+    "pw_min_length": "La password deve contenere almeno 8 caratteri per crittografare l'archivio.",
+    "encrypted_export_success": "Archivio crittografato esportato con successo (AES-GCM 256 bit).",
+    "standard_export_success": "Backup JSON esportato con successo.",
+    "export_failed": "Esportazione dei dati locali non riuscita.",
+    "import_success": "Dati importati con successo nell'archivio locale.",
+    "import_failed": "File di importazione non valido o danneggiato.",
+    "decrypt_success": "Archivio decifrato e ripristinato con successo.",
+    "decrypt_failed": "Password errata o dati danneggiati.",
+    "clear_success": "Tutti i dati locali dello studio sono stati cancellati.",
+    "clear_failed": "Errore durante la cancellazione dei dati.",
+    "network_status": "Stato della connessione:",
+    "online": "Online (Modalità autonoma locale)",
+    "offline": "Offline (Operativo senza rete)",
+    "stored_audits": "Verifiche di conformità archiviate:",
+    "count_record": "scheda",
+    "count_records": "schede",
+    "studio_inks": "Flaconi di inchiostro registrati:",
+    "count_item": "flacone",
+    "count_items": "flaconi",
+    "sync_engine": "Motore di archiviazione:",
+    "sync_engine_val": "Database crittografato IndexedDB del browser",
+    "last_synced": "Ultimo salvataggio locale:",
+    "encrypted_detected": "Rilevato backup crittografato",
+    "enter_pw_desc": "Questo file è protetto da password. Inserisci la chiave per ripristinare i dati:",
+    "enter_pw_placeholder": "Password di decifrazione...",
+    "decrypt_btn": "Decifra & Importa",
+    "transfer_heading": "Backup & Ripristino",
+    "encrypt_checkbox": "Proteggi il backup con password (AES-GCM)",
+    "pw_label": "Password di protezione:",
+    "pw_placeholder": "Inserisci una password sicura...",
+    "crypto_spec": "Crittografia PBKDF2 (100.000 iterazioni SHA-256) + AES-GCM 256 bit eseguita localmente tramite Web Crypto API.",
+    "export_encrypted": "Scarica archivio crittografato",
+    "export_json": "Scarica backup JSON semplice",
+    "import_btn": "Importa un backup",
+    "clear_audits_btn": "Cancella tutte le schede locali dello studio",
+    "confirm_clear_prompt": "Sei sicuro di voler cancellare tutte le verifiche e i dati dei lotti salvati su questo dispositivo? L'operazione non è reversibile.",
+    "confirm_clear_btn": "Conferma eliminazione definitiva",
+    "cancel_btn": "Annulla",
+    "tab_file_backup": "Backup File & JSON",
+    "tab_p2p_sync": "Sincronizzazione Diretta Postazione-Postazione (P2P)",
+    "p2p_send_heading": "Esporta Pacchetto Sincronizzazione Diretta",
+    "p2p_send_desc": "Trasferisci formulazioni, audit e scorte direttamente su un altro computer dello studio senza passare da cloud.",
+    "p2p_btn_generate": "Genera Pacchetto di Sincronizzazione Offline",
+    "p2p_send_instruction": "Copia questo pacchetto sicuro e incollalo sulla postazione ricevente:",
+    "p2p_sync_token_label": "Token di Trasferimento Diretto:",
+    "copy": "Copia Pacchetto",
+    "copied": "Copiato!",
+    "p2p_receive_heading": "Importa Pacchetto Sincronizzazione",
+    "p2p_receive_desc": "Incolla il token di trasferimento del computer mittente per unire i dati nel database locale.",
+    "p2p_receive_placeholder": "Incolla qui il token di trasferimento...",
+    "p2p_btn_merge_data": "Unisci Record nel Database Locale",
+    "p2p_import_success": "Importazione completata: Uniti {count} record nel database locale.",
+    "p2p_invalid_payload": "Formato del token non valido. Verifica il pacchetto di origine.",
+    "p2p_gen_failed": "Creazione pacchetto non riuscita. Controlla i dati locali."
+  },
+  "blue_green": {
+    "title": "Dossier normativo: Pigment Blue 15 & Pigment Green 7",
+    "subtitle": "Analisi tecnica e cronistoria del divieto europeo delle ftalocianine di rame negli inchiostri per tatuaggio ai sensi del regolamento (UE) 2020/2081.",
+    "date_highlight_title": "Data cardine: 4 gennaio 2023",
+    "date_highlight_body": "Il periodo transitorio di 24 mesi concesso dal paragrafo 4(c) della voce 75 si è concluso il 4 gennaio 2023. Da tale data, qualsiasi inchiostro contenente Pigment Blue 15 (CI 74160) o Pigment Green 7 (CI 74260) oltre lo 0,1% è severamente vietato per la vendita e per l'utilizzo nell'UE.",
+    "pb15_title": "Pigment Blue 15 / 15:3 (Blu di ftalocianina di rame)",
+    "pb15_desc": "Colorante blu brillante impiegato per decenni nelle sfumature ciano, turchese e blu intenso. Vietato a causa dell'inclusione storica nell'Allegato II del regolamento cosmetici (CE) n. 1223/2009 per prodotti applicati su mucose.",
+    "pg7_title": "Pigment Green 7 (Verde di ftalocianina di rame clorurato)",
+    "pg7_desc": "Colorante verde brillante presente nella quasi totalità dei verdi da tatuaggio tradizionali. Soggetto al medesimo divieto per rinvio dell'Allegato II applicato al Pigment Blue 15.",
+    "prohibited_since": "Vietato nell'UE dal: 4 gennaio 2023",
+    "chemical_class_label": "Classe chimica:",
+    "pb15_chemical_val": "Ftalocianina di rame (forma alfa / beta)",
+    "pg7_chemical_val": "Ftalocianina di rame policlorurata",
+    "cosmetic_annex_label": "Rinvio Allegato Cosmetici:",
+    "pb15_cosmetic_val": "Regolamento (CE) n. 1223/2009, Allegato II, voce numero 1368",
+    "pg7_cosmetic_val": "Regolamento (CE) n. 1223/2009, Allegato II, voce numero 1369",
+    "entry75_label": "Disposizioni della Voce 75:",
+    "derogation_expired_val": "Paragrafo 4(c): deroga transitoria scaduta",
+    "status_today_heading": "Situazione legale attuale negli studi europei:",
+    "status_today_item1": "Qualsiasi flacone contenente Pigment Blue 15 o Pigment Green 7 è illegale per qualsiasi prestazione di tatuaggio o trucco permanente eseguita nell'Unione Europea.",
+    "status_today_item2": "Gli organi di vigilanza sanitaria (NAS, ASL in Italia) verificano la presenza di questi codici CI (74160 e 74260) durante i controlli negli studi.",
+    "source_reference": "Fonte ufficiale: Gazzetta ufficiale dell'Unione europea, L 423/6, Regolamento (UE) 2020/2081 della Commissione del 14 dicembre 2020.",
+    "test_decoder_btn": "Testa un campione blu nel decodificatore"
+  },
+  "maker_questions": {
+    "title": "Domande da porre al produttore di inchiostro: Scheda di audit",
+    "subtitle": "Non esiste alcun « certificato di conformità ufficiale » rilasciato dall'UE. La conformità si dimostra con la documentazione tecnica del produttore, la scheda di sicurezza (SDS) e i rapporti di prova di laboratorio. Scarica o stampa questo questionario per i tuoi fornitori.",
+    "print_btn": "Stampa questionario per il produttore",
+    "sheet_doc_title": "Richiesta conformità normativa inchiostri per tatuaggio & PMU",
+    "sheet_doc_desc": "Questionario tipo per tatuatori e studi da inviare a produttori e distributori di inchiostri.",
+    "studio_info_heading": "Informazioni sullo studio & sul fornitore",
+    "studio_name": "Nome dello studio:",
+    "studio_placeholder": "Nome dello studio di tatuaggi",
+    "auditor_name": "Tatuatore / Responsabile:",
+    "auditor_placeholder": "Nome del tatuatore o titolare",
+    "ink_maker": "Produttore / Marca dell'inchiostro:",
+    "ink_maker_placeholder": "Nome della marca o laboratorio",
+    "ink_name": "Nome inchiostro & tonalità:",
+    "ink_name_placeholder": "Nome esatto della sfumatura",
+    "batch_no": "Numero di lotto sul flacone:",
+    "batch_placeholder": "Numero di LOTTO / Batch",
+    "date_checked": "Data della verifica:",
+    "date_placeholder": "AAAA-MM-GG",
+    "checklist_heading": "Verifiche obbligatorie ai sensi del regolamento (UE) 2020/2081 Voce 75",
+    "q1_title": "1. Dichiarazione di conformità alla Voce 75 di REACH",
+    "q1_desc": "Il produttore ha rilasciato una dichiarazione scritta attestante che questo specifico lotto rispetta tutti i limiti e divieti dell'Allegato XVII voce 75 di REACH?",
+    "q2_title": "2. Composizione dettagliata & codici CAS (Sezione 3 della SDS)",
+    "q2_desc": "La sezione 3 della scheda di sicurezza riporta l'elenco completo delle sostanze costituenti con i relativi numeri CAS e CI esatti, compresi i coloranti presenti in quantità superiore allo 0,1%?",
+    "q3_title": "3. Rapporti di prova su impurezze da metalli pesanti (Appendice 13)",
+    "q3_desc": "Il produttore può esibire rapporti analitici di un laboratorio indipendente accreditato che certifichino il rispetto delle soglie rigide (Piombo ≤ 0,7 mg/kg, Arsenico ≤ 0,5 mg/kg, Cadmio ≤ 0,5 mg/kg, Nichel ≤ 5 mg/kg, Mercurio ≤ 0,5 mg/kg)?",
+    "q4_title": "4. Ricerca delle ammine aromatiche primarie (PAA)",
+    "q4_desc": "Esistono analisi di laboratorio comprovanti che le ammine aromatiche cancerogene elencate nell'Appendice 13 (o-anisidina, 4-amminobifenile, ecc.) non superano singolarmente i 5 mg/kg?",
+    "q5_title": "5. Idrocarburi policiclici aromatici (IPA) nei neri",
+    "q5_desc": "Se l'inchiostro contiene nero di carbonio (Carbon Black / CI 77266), l'analisi del lotto garantisce una concentrazione di benzo[a]pirene ≤ 5 µg/kg (5 ppb) e una somma totale di IPA ≤ 0,5 mg/kg?",
+    "q6_title": "6. Diciture obbligatorie sull'etichetta fisica del flacone",
+    "q6_desc": "Il flacone riporta fisicamente: (a) la dicitura « Miscela per tatuaggi o trucco permanente », (b) un numero di riferimento del lotto univoco, (c) l'elenco completo degli ingredienti, (d) le eventuali avvertenze di sicurezza relative a nichel e cromo, (e) la data di scadenza o il simbolo del periodo dopo l'apertura?",
+    "provided": "Fornito",
+    "missing": "Mancante",
+    "notes_area": "Risposte del fornitore & note:",
+    "notes_placeholder": "Annota qui le risposte del produttore, i codici dei certificati di analisi o i solleciti inviati...",
+    "signature_block": "Verificato da (Firma & Data):",
+    "date_block": "Data:",
+    "inquiry_box_title": "Modello email per richiesta chiarimenti al produttore",
+    "inquiry_box_desc": "Copia questo testo in un'email da inviare al produttore o al distributore dell'inchiostro per ottenere la documentazione di conformità:",
+    "copy_email_btn": "Copia testo email",
+    "copied_email_toast": "Email copiata negli appunti",
+    "unrecognised_items_heading": "Ingredienti non identificati da chiarire:",
+    "add_unrecognised_item": "Aggiungi ingrediente",
+    "remove_item_aria": "Rimuovi questo ingrediente",
+    "empty_unrecognised_items": "Nessun ingrediente non identificato. Inserisci i dati dell'inchiostro qui sopra oppure importali dalla scheda Decodificatore.",
+    "standard_studio_inquiry_line": "L'etichetta del vostro inchiostro {inkName} riporta {items}. Vi chiediamo cortesemente di fornirci il numero CAS, il numero CI e lo stato di questo ingrediente ai sensi della voce 75 di REACH al fine di completare il nostro registro di tracciabilità.",
+    "standard_studio_inquiry_prefix": "Richiesta tipo dello studio:",
+    "item_placeholder": "Es.: CI 77999 o denominazione commerciale"
+  },
+  "shortlist": {
+    "title": "Elenco selezionato degli inchiostri verificati dello studio",
+    "subtitle": "Consulta ed esporta la selezione di inchiostri verificati e approvati per l'utilizzo all'interno del tuo studio.",
+    "export_csv": "Esporta elenco (CSV)",
+    "download_csv": "Scarica CSV",
+    "download_json": "Scarica JSON",
+    "download_json_title": "Scarica i dati dell'elenco in formato JSON",
+    "clear_all": "Svuota elenco",
+    "empty_state": "L'elenco selezionato è attualmente vuoto. Verifica gli inchiostri nel decodificatore e fai clic su « Salva nell'elenco dello studio » per aggiungerli qui.",
+    "col_date": "Data verifica",
+    "col_brand": "Marca",
+    "col_ink": "Inchiostro & Tonalità",
+    "col_batch": "Numero di lotto",
+    "col_items": "Ingredienti",
+    "col_findings": "Esito verifica",
+    "col_actions": "Azioni",
+    "delete_item": "Rimuovi dall'elenco",
+    "lot_prefix": "LOTTO: {batch}",
+    "trace_qr": "QR code di tracciabilità",
+    "print_label": "Stampa etichetta",
+    "copied_json": "Dati JSON copiati!",
+    "copy_json": "Copia in JSON",
+    "export_json": "Esporta in JSON",
+    "confirm_clear": "Vuoi davvero cancellare tutti gli elementi presenti nell'elenco selezionato dello studio?",
+    "download_csv_title": "Esporta l'elenco selezionato in formato CSV",
+    "loading": "Caricamento elenco...",
+    "date_logged": "Data di registrazione:",
+    "batch_lot": "Lotto:",
+    "detected_substances": "Sostanze rilevate:",
+    "traceability_qr": "Etichetta di tracciabilità del flacone",
+    "qr_label_title": "Etichetta tracciabilità inchiostro",
+    "qr_label_btn": "Etichetta del lotto",
+    "csv_studio_label": "Studio: {studio}",
+    "csv_export_date_label": "Data di esportazione: {date}",
+    "csv_disclaimer": "Questo rapporto è fornito solo a scopo informativo.",
+    "default_studio": "Studio Indipendente"
+  },
+  "session_logger": {
+    "heading": "Tracciabilità delle sedute di tatuaggio",
+    "subheading": "Associa flaconi e numeri di lotto ai clienti per garantire la piena conformità con le norme igienico-sanitarie di tracciabilità.",
+    "close_logger": "Chiudi registro",
+    "log_new_session": "Registra una seduta",
+    "record_procedure_title": "Nuova scheda seduta",
+    "client_ref_label": "Riferimento o codice cliente:",
+    "client_ref_placeholder": "Es.: Codice cliente o nominativo",
+    "client_name_label": "Nome del cliente:",
+    "client_name_placeholder": "Nome del cliente",
+    "placement_label": "Posizione anatomica:",
+    "placement_placeholder": "Es.: Coscia destra, avambraccio...",
+    "attach_inks_heading": "Seleziona gli inchiostri impiegati:",
+    "select_ink_placeholder": "Scegli tra gli inchiostri in inventario...",
+    "audited_prefix": "[Verificato]",
+    "purpose_outline": "Linee",
+    "purpose_shading": "Sfumatura",
+    "purpose_color_fill": "Campitura colore",
+    "purpose_highlight": "Punti luce / Bianco",
+    "add_ink_btn": "Aggiungi inchiostro",
+    "remove_ink_btn": "Rimuovi",
+    "cancel_btn": "Annulla",
+    "save_session_btn": "Salva seduta",
+    "empty_sessions_title": "Nessuna seduta archiviata",
+    "empty_sessions_desc": "Le sedute di tatuaggio registrate con i relativi numeri di lotto appariranno qui.",
+    "date_label": "Data: {date}",
+    "placement_summary": "Posizione: {placement}",
+    "print_card_btn": "Stampa scheda",
+    "delete_session_aria": "Elimina seduta",
+    "default_ink": "Inchiostro generico",
+    "default_brand": "Marca non specificata",
+    "default_client": "Cliente riservato",
+    "default_artist": "Artista dello studio",
+    "default_studio": "Studio",
+    "default_placement": "Zona non specificata",
+    "summary_bar_title": "Riepilogo mensile delle procedure",
+    "current_month_sessions_label": "Sessioni registrate questo mese",
+    "current_month_summary_desc": "{count} procedure di tatuaggio cliente documentate a {month}",
+    "summary_all_time_total": "Totale storico: {total} sessioni complessive",
+    "summary_unique_clients": "{count} clienti unici",
+    "summary_inks_applied": "{count} applicazioni di inchiostro"
+  },
+  "plain_language_panel": {
+    "title": "Comprendere il regolamento REACH per gli inchiostri da tatuaggio",
+    "subtitle": "Guida esplicativa in linguaggio chiaro del regolamento (UE) 2020/2081 (Allegato XVII, voce 75) per tatuatori, piercer e professionisti del trucco permanente.",
+    "section1_title": "1. Chi è responsabile di cosa?",
+    "section1_lead": "La normativa europea ripartisce con precisione gli obblighi tra produttori e operatori.",
+    "section1_maker_title": "Obblighi del produttore & distributore:",
+    "section1_maker_desc": "Devono formulare inchiostri conformi, sottoporre a test di laboratorio accreditato le impurezze, fornire una scheda di sicurezza (SDS) completa e inserire le diciture obbligatorie sull'etichetta.",
+    "section1_artist_title": "Obblighi del tatuatore & del titolare di studio:",
+    "section1_artist_desc": "È fatto espresso divieto di utilizzare inchiostri non conformi. È obbligatorio verificare le etichette, accertarsi della presenza delle diciture richieste e conservare la tracciabilità dei lotti utilizzati per ogni cliente.",
+    "section2_title": "2. Le diciture obbligatorie su ogni flacone",
+    "section2_lead": "Prima di aprire un flacone nel tuo studio, controlla attentamente la presenza fisica delle seguenti informazioni:",
+    "section2_item1": "La dicitura esatta in lingua italiana: « Miscela per tatuaggi o trucco permanente ».",
+    "section2_item2": "Un numero di riferimento del lotto univoco che consenta di risalire alle analisi di produzione.",
+    "section2_item3": "L'elenco integrale di tutti gli ingredienti in ordine ponderale decrescente.",
+    "section2_item4": "L'avvertenza « Contiene nichel. Può provocare una reazione allergica » se il nichel supera lo 0,0005%.",
+    "section2_item5": "L'avvertenza « Contiene cromo (VI). Può provocare una reazione allergica » se il cromo esavalente supera lo 0,00005%.",
+    "section2_item6": "Le istruzioni di sicurezza, la data di scadenza o il simbolo del periodo dopo l'apertura (PAO).",
+    "section3_title": "3. La verità sui presunti « certificati REACH »",
+    "section3_lead": "Attenzione ai falsi certificati commerciali diffusi in rete.",
+    "section3_desc1": "Nessun organismo ufficiale dell'Unione Europea rilascia certificati individuali di conformità per gli inchiostri da tatuaggio. I documenti con intestazioni pompose come « REACH Certificate » sono mere trovate pubblicitarie prive di valore giuridico.",
+    "section3_desc2": "La conformità di un inchiostro si attesta unicamente mediante il fascicolo tecnico del produttore, la dichiarazione di conformità alla Voce 75, una SDS redatta a norma REACH e i rapporti di prova di un laboratorio terzo accreditato.",
+    "section4_title": "4. Le tre categorie di sostanze chimiche",
+    "section4_prohibited_title": "Sostanze vietate:",
+    "section4_prohibited_desc": "Componenti cancerogeni, mutageni o tossici per la riproduzione (CMR 1A/1B), coloranti vietati nei cosmetici (Allegato II del regolamento 1223/2009), inclusi Pigment Blue 15 e Pigment Green 7.",
+    "section4_restricted_title": "Sostanze soggette a restrizione (soglie massime):",
+    "section4_restricted_desc": "Metalli pesanti (piombo, arsenico, cadmio, mercurio, ecc.), ammine aromatiche primarie e conservanti. Sono tollerati esclusivamente come tracce minime inferiori alle severe soglie dell'Appendice 13.",
+    "section4_not_covered_title": "Sostanze consentite / non soggette a restrizioni:",
+    "section4_not_covered_desc": "Ingredienti atossici impiegati come veicoli o solventi (acqua purificata, glicerina vegetale, alcol isopropilico, estratto di amamelide) e pigmenti minerali o organici autorizzati.",
+    "section5_title": "5. Cosa fare in caso di ispezione sanitaria nello studio?",
+    "section5_lead": "Durante un controllo degli organi di vigilanza (ASL, NAS in Italia):",
+    "section5_desc1": "Esibisci il registro delle sedute con i lotti impiegati, le schede dati di sicurezza aggiornate fornite dai distributori e le registrazioni di verifica dei flaconi.",
+    "section5_desc2": "Isola immediatamente qualsiasi flacone scaduto o non verificato in un contenitore contrassegnato con « Non utilizzabile » per evitare qualsiasi confusione con il materiale in uso.",
+    "cta_test_decoder": "Testa un'etichetta nel decodificatore"
+  },
+  "cross_links": {
+    "heading": "Altri strumenti gratuiti Poli International per gli studi:",
+    "svhc": "Verificatore sostanze candidate REACH SVHC",
+    "mixer": "Calcolatore miscelazione & diluizione inchiostri da tatuaggio",
+    "patch": "Protocollo & documentazione patch test allergie"
+  },
+  "disclaimer": {
+    "note": "Strumento tecnico e documentale di supporto alla conformità per studi di tatuaggio e piercing. Prodotto da Poli International, produttore di gioielleria per piercing BioFlex(R)."
+  },
+  "footer": {
+    "publisher": "Poli International • Strumenti liberi per artisti tatuatori, piercer e titolari di studi",
+    "reg_tag": "Riferimento: Regolamento (UE) 2020/2081 che modifica l'Allegato XVII di REACH",
+    "storage_tag": "Dati 100% locali nel browser • Nessuna trasmissione ai nostri server",
+    "telemetry_tag": "Zero cookie di terze parti o tracciatori esterni"
+  },
+  "substance_rule_modal": {
+    "close_aria": "Chiudi scheda sostanza",
+    "exact_concentration_limit_heading": "Limite di concentrazione legale esatto:",
+    "regulatory_quoted_provision_heading": "Disposizione normativa applicabile (Regolamento UE 2020/2081):",
+    "reference_label": "Riferimento normativo: {ref}",
+    "detailed_rationale_heading": "Motivazione tossicologica & classificazione normativa:",
+    "unrecognised_box_title": "Sostanza non catalogata nella banca dati REACH",
+    "unrecognised_box_desc1_prefix": "Questo componente non è stato collegato a un pigmento o additivo regolamentato ai sensi della voce 75.",
+    "unrecognised_box_desc1_suffix": "Verifica se si tratta di un marchio commerciale o di un refuso sull'etichetta.",
+    "unrecognised_box_desc2": "Richiedi al produttore il numero CAS esatto o la scheda dati di sicurezza corrispondente.",
+    "close_btn": "Chiudi"
+  },
+  "data_metals": {
+    "lead": {
+      "substance": "Piombo e composti del piombo",
+      "description": "Tossico per la riproduzione (CMR 1A). Vietato come ingrediente intenzionale; soglia massima di impurezza tollerata: 0,7 mg/kg (ppm)."
+    },
+    "arsenic": {
+      "substance": "Arsenico e composti dell'arsenico",
+      "description": "Cancerogeno 1A. Soglia massima di impurezza residua elementare: 0,5 mg/kg (ppm)."
+    },
+    "cadmium": {
+      "substance": "Cadmio e composti del cadmio",
+      "description": "Cancerogeno 1B, Mutageno 1B, Reprotossico 1B. Soglia massima di impurezza: 0,5 mg/kg (ppm)."
+    },
+    "antimony": {
+      "substance": "Antimonio e composti dell'antimonio",
+      "description": "Impurezza tossica derivante dalla fabbricazione dei pigmenti grezzi. Soglia massima: 0,5 mg/kg (ppm)."
+    },
+    "mercury": {
+      "substance": "Mercurio e composti del mercurio",
+      "description": "Tossico per la riproduzione (Repr. 1B) e grave neurotossico. Soglia massima: 0,5 mg/kg (ppm)."
+    },
+    "nickel": {
+      "substance": "Nichel e composti del nichel",
+      "description": "Sensibilizzante cutaneo di categoria 1 e cancerogeno 2. Soglia massima di impurezza solubile / totale ammissibile: 5,0 mg/kg (ppm)."
+    },
+    "chromium_vi": {
+      "substance": "Cromo VI (Cromo esavalente)",
+      "description": "Cancerogeno 1A, Mutageno 1B, Sensibilizzante cutaneo 1. Soglia massima rigorosa: 0,5 mg/kg (ppm)."
+    },
+    "barium": {
+      "substance": "Bario e composti solubili del bario",
+      "description": "Soglia massima di impurezza in bario solubile ammissibile: 500 mg/kg (ppm)."
+    },
+    "copper": {
+      "substance": "Rame (composti solubili)",
+      "description": "Tenore limite di rame solubile: 250 mg/kg (ppm)."
+    },
+    "zinc": {
+      "substance": "Zinco e composti solubili dello zinco",
+      "description": "Soglia massima di impurezza in zinco solubile: 2 000 mg/kg (ppm)."
+    },
+    "selenium": {
+      "substance": "Selenio e composti del selenio",
+      "description": "Soglia massima di impurezza tollerata: 2,0 mg/kg (ppm)."
+    },
+    "tin": {
+      "substance": "Composti organostannici (Stagno)",
+      "description": "Soglia massima per composti organostannici: 0,5 mg/kg (ppm)."
+    },
+    "cobalt": {
+      "substance": "Cobalto e composti del cobalto",
+      "description": "Cancerogeno 1B, Reprotossico 1B, Sensibilizzante cutaneo 1. Soglia massima: 0,5 mg/kg (ppm)."
+    },
+    "bap": {
+      "substance": "Benzo[a]pirene (BaP)",
+      "description": "Idrocarburo policiclico aromatico (IPA) presente nel nero di carbonio non purificato. Cancerogeno 1B. Soglia: 0,005 mg/kg (5 µg/kg o 5 ppb)."
+    },
+    "pahs_total": {
+      "substance": "Idrocarburi policiclici aromatici (IPA, somma degli 8)",
+      "description": "Somma degli 8 IPA cancerogeni REACH (Crisene, Benzo[a]antracene, ecc.). Soglia massima cumulativa: 0,5 mg/kg (ppm)."
+    }
+  },
+  "data_alternatives": {
+    "alt_pb15": {
+      "problematic_pigment": "Pigment Blue 15 / Pigment Blue 15:3",
+      "restriction_reason": "Vietato negli inchiostri per tatuaggio dell'UE dal 4 gennaio 2023 in virtù della voce 75 di REACH per rinvio all'Allegato II dei cosmetici.",
+      "legal_status": "Vietato (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Pigment Blue 60 (Blu indantrene)",
+          "color_shade": "Blu notte profondo / blu reale",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Colorante al tino ad altissima resistenza alla luce e notevole stabilità chimica; non iscritto nell'Allegato II del regolamento (CE) n. 1223/2009."
+        },
+        "alt_1": {
+          "name": "Blu oltremare (Alluminosilicato di sodio polisolfurato)",
+          "color_shade": "Blu cobalto minerale vivace",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Pigmento minerale inorganico impiegato comunemente nelle formulazioni cosmetiche; consentito ai sensi dell'Allegato IV senza divieti per il tatuaggio."
+        },
+        "alt_2": {
+          "name": "Pigment Blue 28 (Blu cobalto)",
+          "color_shade": "Blu ciano minerale classico",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Spinello inorganico di ossidi misti di metalli. Deve essere testato per accertare che il rilascio di cobalto rispetti i limiti di impurezze solubili dell'Appendice 13 (<0,5 mg/kg)."
+        }
+      }
+    },
+    "alt_pg7": {
+      "problematic_pigment": "Pigment Green 7 (Verde di ftalocianina)",
+      "restriction_reason": "Vietato negli inchiostri da tatuaggio dell'UE dal 4 gennaio 2023 in virtù della voce 75 di REACH per rinvio all'Allegato II dei cosmetici.",
+      "legal_status": "Vietato (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Ossido di cromo verde",
+          "color_shade": "Verde oliva / verde bosco",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Ossido di cromo trivalente Cr(III). Totalmente distinto dal cromo esavalente Cr(VI) tossico. Eccezionalmente inerte, insolubile e stabile alla luce."
+        },
+        "alt_1": {
+          "name": "Sesquiossido di cromo idrato (Verde smeraldo / Viridian)",
+          "color_shade": "Verde smeraldo luminoso",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Pigmento inorganico autorizzato. Deve rispettare il limite di Cr(VI) residuo (<0,5 mg/kg solubile)."
+        },
+        "alt_2": {
+          "name": "Verde cobalto (Pigment Green 19 / 26)",
+          "color_shade": "Verde acqua freddo / verde turchese",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Spinello inorganico di cobalto e zinco ad alta stabilità; controllo di lotto richiesto per le impurezze metalliche."
+        }
+      }
+    },
+    "alt_pr22": {
+      "problematic_pigment": "Pigment Red 22 (Rosso azoico)",
+      "restriction_reason": "Rilascia per scissione l'ammina aromatica p-toluidina (Cancerogeno 1B). Formalmente soggetto a restrizione e vietato.",
+      "legal_status": "Vietato (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Ossido di ferro rosso (Ossido ferrico sintetico)",
+          "color_shade": "Rosso mattone terroso / terracotta",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Ossido di ferro minerale inorganico standard. Non azoico, nessuna scissione in ammine aromatiche cancerogene. Conforme ai criteri di purezza REACH."
+        },
+        "alt_1": {
+          "name": "Pigment Red 254 (Rosso pirrolo / Rosso DPP)",
+          "color_shade": "Rosso scarlatto vivo brillante",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Chimica dichetopirrolopirrolo (DPP). Meccanismo non azoico; estremamente stabile e consentito ai sensi dell'Allegato XVII voce 75."
+        },
+        "alt_2": {
+          "name": "Pigment Red 122 (Magenta chinacridone)",
+          "color_shade": "Magenta vivo / rosso rosato",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Pigmento policiclico di chinacridone. Grande potere colorante senza alcun rischio di scissione di ammine."
+        }
+      }
+    },
+    "alt_py14": {
+      "problematic_pigment": "Pigment Yellow 14 (Giallo diarylide)",
+      "restriction_reason": "Il giallo diarylide rilascia per scissione la 3,3'-diclorobenzidina (Cancerogeno 1B). Vietato secondo la voce 75.",
+      "legal_status": "Vietato (UE 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Ossido di ferro giallo (Ossido di ferro idrato)",
+          "color_shade": "Ocra / giallo caldo dorato",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Pigmento inorganico stabile. Profilo sicuro, nessuna scissione di ammine aromatiche."
+        },
+        "alt_1": {
+          "name": "Pigment Yellow 150 (Giallo azometina di nichel)",
+          "color_shade": "Giallo luminoso brillante",
+          "status": "Consentito senza divieti",
+          "technical_notes": "Elevata trasparenza ed eccellente solidità alla luce; richiede analisi di lotto per verificare il nichel estraibile libero (<5 mg/kg)."
+        }
+      }
+    }
+  },
+  "data_pigments": {
+    "pigment_blue_15": {
+      "name": "Pigment Blue 15",
+      "exact_limit": "Soglia generale dello 0,1% in peso (1 000 mg/kg); divieto in vigore dal 4 gennaio 2023",
+      "entry_reference": "Voce 75, paragrafo 1(c) e paragrafo 4(c); Allegato II del regolamento (CE) n. 1223/2009",
+      "notes": "Blu di ftalocianina di rame. Il periodo transitorio previsto dal paragrafo 4(c) si è concluso il 4 gennaio 2023. Vietato nelle miscele per tatuaggi o trucco permanente immesse sul mercato o utilizzate nell'UE.",
+      "also_known_as": [
+        "Blu ftalocianina",
+        "Ftalocianina di rame",
+        "PB15",
+        "Blu ftalo"
+      ],
+      "found_in": [
+        "inchiostri da tatuaggio blu",
+        "inchiostri turchesi",
+        "miscele verdi"
+      ]
+    },
+    "pigment_blue_15_3": {
+      "name": "Pigment Blue 15:3",
+      "exact_limit": "Soglia generale dello 0,1% in peso (1 000 mg/kg); divieto in vigore dal 4 gennaio 2023",
+      "entry_reference": "Voce 75, paragrafo 1(c) e paragrafo 4(c); Allegato II del regolamento (CE) n. 1223/2009",
+      "notes": "Ftalocianina di rame in forma cristallina alfa. Stesso numero CI 74160 e medesimo divieto legale del PB15. La deroga transitoria ex paragrafo 4(c) è scaduta il 4 gennaio 2023.",
+      "also_known_as": [
+        "PB15:3",
+        "Ftalocianina di rame alfa",
+        "Blu ftalo tonalità verde",
+        "Pigment Blue 15:3"
+      ],
+      "found_in": [
+        "inchiostri ciano e inchiostri blu brillante"
+      ]
+    },
+    "pigment_green_7": {
+      "name": "Pigment Green 7",
+      "exact_limit": "Soglia generale dello 0,1% in peso (1 000 mg/kg); divieto in vigore dal 4 gennaio 2023",
+      "entry_reference": "Voce 75, paragrafo 1(c) e paragrafo 4(c); Allegato II del regolamento (CE) n. 1223/2009",
+      "notes": "Verde di ftalocianina di rame clorurato. La deroga di 24 mesi è terminata il 4 gennaio 2023. Vietato in tutti gli inchiostri per tatuaggio e trucco permanente nell'UE.",
+      "also_known_as": [
+        "Verde ftalo",
+        "PG7",
+        "Cloroftalocianina di rame",
+        "Pigment Green 7"
+      ],
+      "found_in": [
+        "inchiostri verdi",
+        "inchiostri verde acqua",
+        "miscele scure"
+      ]
+    },
+    "pigment_green_36": {
+      "name": "Pigment Green 36",
+      "exact_limit": "Soglia generale dello 0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(c); Allegato II del regolamento (CE) n. 1223/2009",
+      "notes": "Ftalocianina di rame bromo-clorurata. Non coperta dalla deroga temporanea del PG7; formalmente vietata negli inchiostri per tatuaggi dell'UE dal 4 gennaio 2022.",
+      "also_known_as": [
+        "PG36",
+        "Verde ftalo sfumatura gialla"
+      ],
+      "found_in": [
+        "inchiostri verde lime",
+        "verdi caldi"
+      ]
+    },
+    "pigment_violet_23": {
+      "name": "Pigment Violet 23",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Regolamento CLP (CE) n. 1272/2008 Allegato VI",
+      "notes": "Viola di diossazina. Soggetto a restrizioni secondo la classificazione armonizzata e i residui di sintesi.",
+      "also_known_as": [
+        "PV23",
+        "Porpora di diossazina",
+        "Viola di carbazolo"
+      ],
+      "found_in": [
+        "inchiostri viola",
+        "inchiostri porpora",
+        "inchiostri magenta"
+      ]
+    },
+    "pigment_red_22": {
+      "name": "Pigment Red 22",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13 (Ammine aromatiche primarie)",
+      "notes": "Colorante azoico. Può rilasciare 2-metil-5-nitroanilina o altre ammine aromatiche per scissione riduttiva del legame azoico. Vietato ai sensi della voce 75.",
+      "also_known_as": [
+        "PR22",
+        "Rosso brillante",
+        "Rosso solido"
+      ],
+      "found_in": [
+        "inchiostri rossi accesi",
+        "inchiostri scarlatto"
+      ]
+    },
+    "pigment_red_17": {
+      "name": "Pigment Red 17",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Colorante azoico naftolo AS. Rischio di degradazione per scissione in ammine aromatiche cancerogene.",
+      "also_known_as": [
+        "PR17"
+      ],
+      "found_in": [
+        "inchiostri rossi tradizionali"
+      ]
+    },
+    "pigment_red_149": {
+      "name": "Pigment Red 149",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Pigmento di perilene. Generalmente non soggetto a divieti specifici, subordinatamente alla purezza delle materie prime.",
+      "also_known_as": [
+        "PR149"
+      ],
+      "found_in": [
+        "inchiostri rosso scuro",
+        "inchiostri bordeaux"
+      ]
+    },
+    "pigment_orange_13": {
+      "name": "Pigment Orange 13",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13 (Ammine aromatiche primarie)",
+      "notes": "Colorante disazoico diarylide. Rilascia per scissione la 3,3'-diclorobenzidina (Cancerogeno 1B). Formalmente vietato nell'UE.",
+      "also_known_as": [
+        "PO13"
+      ],
+      "found_in": [
+        "inchiostri arancioni",
+        "miscele calde"
+      ]
+    },
+    "pigment_orange_16": {
+      "name": "Pigment Orange 16",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Arancio di dianisidina. Colorante disazoico che libera o-dianisidina (Cancerogeno 1B). Formalmente vietato secondo la voce 75.",
+      "also_known_as": [
+        "PO16",
+        "Arancio diazoico"
+      ],
+      "found_in": [
+        "inchiostri arancione brillante"
+      ]
+    },
+    "pigment_yellow_1": {
+      "name": "Pigment Yellow 1",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Giallo monoazoico (Hansa Yellow G). Può liberare o-nitroanilina. Soggetto a restrizioni rigorose sulle ammine aromatiche.",
+      "also_known_as": [
+        "PY1",
+        "Hansa Yellow G"
+      ],
+      "found_in": [
+        "inchiostri gialli",
+        "inchiostri oro"
+      ]
+    },
+    "pigment_yellow_3": {
+      "name": "Pigment Yellow 3",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Giallo monoazoico (Hansa Yellow 10G). Rischio di liberazione di cloroanilina per scissione.",
+      "also_known_as": [
+        "PY3",
+        "Hansa Yellow 10G"
+      ],
+      "found_in": [
+        "inchiostri giallo limone",
+        "tonalità fredde"
+      ]
+    },
+    "carbon_black": {
+      "name": "Nero di carbonio (Carbon Black)",
+      "exact_limit": "IPA totali ≤ 0,5 mg/kg; Benzo[a]pirene ≤ 5 µg/kg (5 ppb)",
+      "entry_reference": "Voce 75, Appendice 13 (Impurezze IPA)",
+      "notes": "Pigmento nero universale di base. Pienamente autorizzato a condizione di rispettare rigorosamente i limiti di idrocarburi policiclici aromatici (IPA) e di benzo[a]pirene.",
+      "also_known_as": [
+        "CI 77266",
+        "Nero termico",
+        "Nero di fornace",
+        "Nero d'acetilene",
+        "Carbon Black CI 77266",
+        "Lamp Black",
+        "Furnace Black",
+        "CI 77266"
+      ],
+      "found_in": [
+        "inchiostri neri da linea",
+        "inchiostri da sfumatura",
+        "inchiostri grigi",
+        "black wash"
+      ]
+    },
+    "titanium_dioxide": {
+      "name": "Biossido di titanio",
+      "exact_limit": "Non vietato in forma liquida per inchiostri da tatuaggio; impurezze di metalli pesanti secondo l'Appendice 13",
+      "entry_reference": "Regolamento (CE) n. 1272/2008; Regolamento (UE) 2020/2081",
+      "notes": "Pigmento bianco universale di riferimento. La classificazione Carc. 2 per inalazione si applica alle polveri secche respirabili e non impedisce l'impiego in dispersione liquida per tatuaggio.",
+      "also_known_as": [
+        "CI 77891",
+        "Bianco di titanio",
+        "Ossido di titanio(IV)",
+        "Anatasio",
+        "Rutilo",
+        "titanium white",
+        "CI 77891"
+      ],
+      "found_in": [
+        "inchiostri bianchi",
+        "punti luce",
+        "colori pastello",
+        "miscele coprenti"
+      ]
+    },
+    "bkc": {
+      "name": "Cloruro di benzalconio (BKC)",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Classificazione armonizzata CLP",
+      "notes": "Tensioattivo e conservante cationico a base di ammonio quaternario. Corrosivo per la cute e grave irritante oculare oltre le soglie limite.",
+      "also_known_as": [
+        "BKC",
+        "Cloruro di alchildimetilbenzilammonio",
+        "alkyldimethylbenzylammonium chloride"
+      ],
+      "found_in": [
+        "conservanti per inchiostri",
+        "soluzioni antisettiche"
+      ]
+    },
+    "propylene_glycol": {
+      "name": "Glicole propilenico",
+      "exact_limit": "Non regolamentato specificamente dalla Voce 75; eccipiente autorizzato",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Umettante, veicolo e solvente standard per inchiostri da tatuaggio. Pienamente autorizzato senza restrizioni ai sensi della voce 75.",
+      "also_known_as": [
+        "1,2-propandiolo",
+        "Metiletilglicole",
+        "propane-1,2-diol"
+      ],
+      "found_in": [
+        "veicoli per inchiostri",
+        "solventi di diluizione",
+        "soluzioni da sfumatura"
+      ]
+    },
+    "isopropyl_alcohol": {
+      "name": "Alcol isopropilico",
+      "exact_limit": "Non vietato dalla Voce 75; solvente standard autorizzato",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Solvente vettore volatile e agente antimicrobico comunemente impiegato nella formulazione degli inchiostri.",
+      "also_known_as": [
+        "Isopropanolo",
+        "IPA",
+        "Propan-2-olo"
+      ],
+      "found_in": [
+        "veicoli per inchiostri",
+        "solventi volatili",
+        "soluzioni sterili"
+      ]
+    },
+    "glycerin": {
+      "name": "Glicerina vegetale",
+      "exact_limit": "Non regolamentata dalla Voce 75; ingrediente veicolo consentito",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Umettante naturale che regola la viscosità ed evita l'essiccazione del pigmento nel tappino.",
+      "also_known_as": [
+        "Glicerolo",
+        "Propan-1,2,3-triolo",
+        "Propan-1,2,3-triol"
+      ],
+      "found_in": [
+        "veicoli per inchiostri",
+        "soluzioni di dispersione",
+        "additivi fluidificanti"
+      ]
+    },
+    "hamamelis": {
+      "name": "Estratto di amamelide (Witch Hazel)",
+      "exact_limit": "Non regolamentato dalla Voce 75; estratto vegetale autorizzato",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Estratto vegetale astringente naturale frequentemente utilizzato come diluente per sfumature e lavature grigie.",
+      "also_known_as": [
+        "Hamamelis Virginiana",
+        "Acqua di amamelide"
+      ],
+      "found_in": [
+        "diluenti da lavaggio",
+        "soluzioni di sfumatura",
+        "acque di miscelazione"
+      ]
+    },
+    "water_aqua": {
+      "name": "Acqua purificata (Aqua)",
+      "exact_limit": "Non regolamentata; solvente acquoso primario autorizzato",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Veicolo liquido principale in tutte le formulazioni di inchiostri da tatuaggio a base d'acqua.",
+      "also_known_as": [
+        "Aqua",
+        "Acqua distillata",
+        "Acqua sterile"
+      ],
+      "found_in": [
+        "tutti gli inchiostri da tatuaggio a base acquosa"
+      ]
+    },
+    "formaldehyde": {
+      "name": "Formaldeide",
+      "exact_limit": "0,05% in peso (500 mg/kg); conservante severamente regolamentato",
+      "entry_reference": "Voce 75, Appendice 13; Regolamento (UE) 2020/2081",
+      "notes": "Cancerogeno 1B e potente sensibilizzante cutaneo. Presente talvolta come impurezza di conservanti che rilasciano formaldeide.",
+      "also_known_as": [
+        "Formolo",
+        "Metanale",
+        "Ossido di metilene"
+      ],
+      "found_in": [
+        "impurezze di conservanti",
+        "biocidi industriali"
+      ]
+    },
+    "arsenic": {
+      "name": "Arsenico e composti dell'arsenico",
+      "exact_limit": "Soglia massima di impurezza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Metallo pesante altamente tossico e cancerogeno. Vietato come componente intenzionale; impurezza rigidamente limitata.",
+      "also_known_as": [
+        "Arsenico elementare",
+        "Composti dell'arsenico"
+      ],
+      "found_in": [
+        "impurezze di pigmenti minerali grezzi"
+      ]
+    },
+    "barium": {
+      "name": "Bario (composti solubili)",
+      "exact_limit": "Soglia massima di impurezza solubile: 500 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Il bario solubile è tossico a livello sistemico. Il solfato di bario insolubile è tollerato a condizione di verificare il tenore di bario libero solubile.",
+      "also_known_as": [
+        "Bario solubile",
+        "Sali di bario"
+      ],
+      "found_in": [
+        "impurezze di lacche pigmentarie",
+        "some red/orange colorants"
+      ]
+    },
+    "cadmium_ink": {
+      "name": "Cadmio e composti del cadmio",
+      "exact_limit": "Soglia massima di impurezza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Cancerogeno 1B e tossico per la riproduzione. I pigmenti storici al solfuro di cadmio sono formalmente vietati.",
+      "also_known_as": [
+        "Giallo di cadmio",
+        "Rosso di cadmio",
+        "Sali di cadmio"
+      ],
+      "found_in": [
+        "impurezze di pigmenti minerali gialli e rossi",
+        "trace mineral impurities"
+      ]
+    },
+    "chromium_vi": {
+      "name": "Cromo VI (Cromo esavalente)",
+      "exact_limit": "Soglia massima di impurezza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Cancerogeno 1A, mutageno e forte sensibilizzante cutaneo. Da distinguere assolutamente dal cromo trivalente Cr(III) insolubile e non tossico.",
+      "also_known_as": [
+        "Cromo esavalente",
+        "Cr(VI)",
+        "Cromati"
+      ],
+      "found_in": [
+        "impurezze di ossidi di cromo grezzi",
+        "metal oxide impurities"
+      ]
+    },
+    "cobalt_ink": {
+      "name": "Cobalto e composti del cobalto",
+      "exact_limit": "Soglia massima di impurezza solubile: 0,5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Cancerogeno 1B e sensibilizzante cutaneo. I pigmenti a base di spinelli di cobalto devono garantire un rilascio ionico nullo.",
+      "also_known_as": [
+        "Blu cobalto",
+        "Sali di cobalto"
+      ],
+      "found_in": [
+        "pigmenti blu minerali",
+        "impurezze metalliche"
+      ]
+    },
+    "copper_ink": {
+      "name": "Rame (composti solubili)",
+      "exact_limit": "Soglia massima di rame solubile: 250 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Il rame solubile è limitato a 250 mg/kg. Il rame chelato e insolubile nella ftalocianina era escluso da questo calcolo fino al divieto generale.",
+      "also_known_as": [
+        "Rame solubile",
+        "Sali di rame"
+      ],
+      "found_in": [
+        "impurezze di pigmenti sintetici",
+        "copper complexes"
+      ]
+    },
+    "lead_ink": {
+      "name": "Piombo e composti del piombo",
+      "exact_limit": "Soglia massima di impurezza: 0,7 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Grave neurotossico e tossico per la riproduzione (CMR 1A). Tolleranza di impurezza tecnica rigorosamente limitata a 0,7 ppm.",
+      "also_known_as": [
+        "Piombo elementare",
+        "Sali di piombo",
+        "plumbum"
+      ],
+      "found_in": [
+        "impurezze di vecchi pigmenti minerali"
+      ]
+    },
+    "mercury_ink": {
+      "name": "Mercurio e composti del mercurio",
+      "exact_limit": "Soglia massima di impurezza: 0,5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Tossico da accumulo e neurotossico. Il cinabro tradizionale (solfuro di mercurio) è severamente vietato.",
+      "also_known_as": [
+        "Cinabro",
+        "Sali mercurici",
+        "cinnabar"
+      ],
+      "found_in": [
+        "vecchi inchiostri tradizionali",
+        "impurezze"
+      ]
+    },
+    "nickel_ink": {
+      "name": "Nichel e composti del nichel",
+      "exact_limit": "Soglia massima di impurezza: 5,0 mg/kg (ppm); etichettatura obbligatoria a partire da 0,0005% (5 ppm)",
+      "entry_reference": "Voce 75, paragrafo 6(d) e Appendice 13",
+      "notes": "Allergene cutaneo da contatto più comune. Se la concentrazione raggiunge 5 ppm, il flacone deve riportare obbligatoriamente l'avvertenza di sicurezza sul nichel.",
+      "also_known_as": [
+        "Nichel elementare",
+        "Sali di nichel"
+      ],
+      "found_in": [
+        "impurezze di ossidi di ferro",
+        "ossidi minerali"
+      ]
+    },
+    "selenium_ink": {
+      "name": "Selenio e composti del selenio",
+      "exact_limit": "Soglia massima di impurezza: 2,0 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Oligoelemento tossico ad alte concentrazioni. Limite di impurezza fissato a 2,0 mg/kg.",
+      "also_known_as": [
+        "Selenio elementare",
+        "Composti del selenio"
+      ],
+      "found_in": [
+        "impurezze di coloranti minerali"
+      ]
+    },
+    "aniline": {
+      "name": "Anilina",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Regolamento CLP",
+      "notes": "Cancerogeno 2 e mutageno 2. Precursore chimico e sottoprodotto di scissione di ammine aromatiche primarie.",
+      "also_known_as": [
+        "Fenilammina",
+        "Amminobenzene",
+        "benzenamine"
+      ],
+      "found_in": [
+        "residui di sintesi di coloranti azoici",
+        "dye synthesis precursor"
+      ]
+    },
+    "o_toluidine": {
+      "name": "o-Toluidina",
+      "exact_limit": "Soglia massima di impurezza: 5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13 (Ammina aromatica primaria)",
+      "notes": "Cancerogeno accertato 1B. Ammina aromatica primaria derivante dalla degradazione di pigmenti azoici rossi e gialli.",
+      "also_known_as": [
+        "2-metilanilina",
+        "orto-toluidina"
+      ],
+      "found_in": [
+        "scissione di coloranti azoici",
+        "impurezze"
+      ]
+    },
+    "pigment_red_48_2": {
+      "name": "Pigment Red 48:2",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Sale di calcio del pigmento rosso 48. Soggetto a restrizioni a seconda della purezza delle ammine aromatiche precursori.",
+      "also_known_as": [
+        "PR48:2",
+        "Permanent Red 2B sale di calcio",
+        "Lithol Rubine BK"
+      ],
+      "found_in": [
+        "inchiostri rosso rubino",
+        "inchiostri magenta"
+      ]
+    },
+    "pigment_red_53_1": {
+      "name": "Pigment Red 53:1",
+      "exact_limit": "0,1% in peso (1 000 mg/kg); rilascia 2-cloro-5-toluidina",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Sale di bario del pigmento rosso 53 (Red Lake C). Vietato a causa del bario solubile e del rischio di scissione aromatica.",
+      "also_known_as": [
+        "PR53:1",
+        "Red Lake C",
+        "D&C Red No. 9 sale di bario"
+      ],
+      "found_in": [
+        "inchiostri rosso aranciato brillanti"
+      ]
+    },
+    "pigment_yellow_74": {
+      "name": "Pigment Yellow 74",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Giallo monoazoico moderno. Autorizzato a condizione che i residui di ammine aromatiche libere rispettino i limiti dell'Appendice 13.",
+      "also_known_as": [
+        "PY74",
+        "Permanent Yellow 5GX",
+        "Hansa Yellow 5GX"
+      ],
+      "found_in": [
+        "inchiostri giallo primario",
+        "tonalità dorate"
+      ]
+    },
+    "pigment_red_170": {
+      "name": "Pigment Red 170",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Pigmento naftolo rosso ad alta solidità. Comunemente utilizzato in inchiostri conformi corredati da analisi di purezza del lotto.",
+      "also_known_as": [
+        "PR170",
+        "Naphtol Red F5RK",
+        "PR-170",
+        "Naphthol Red",
+        "CI 12475",
+        "C.I. 12475",
+        "CI12475"
+      ],
+      "found_in": [
+        "inchiostri rosso carminio",
+        "rossi neutri",
+        "ruby shades"
+      ]
+    },
+    "pigment_red_254": {
+      "name": "Pigment Red 254 (Rosso DPP)",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Pigmento dichetopirrolopirrolo (DPP). Non azoico, eccezionale resistenza alla luce e nessuna scissione in ammine cancerogene. Conforme REACH.",
+      "also_known_as": [
+        "PR254",
+        "Rosso Ferrari",
+        "Rosso pirrolo",
+        "DPP Red",
+        "DPP Red",
+        "Ferrari Red",
+        "CI 56110",
+        "C.I. 56110",
+        "CI56110"
+      ],
+      "found_in": [
+        "inchiostri rosso vivo",
+        "inchiostri scarlatto ad alta densità"
+      ]
+    },
+    "pigment_red_101": {
+      "name": "Ossido di ferro rosso (CI 77491)",
+      "exact_limit": "Non vietato; impurezze di metalli pesanti secondo l'Appendice 13",
+      "entry_reference": "Voce 75, Appendice 13",
+      "notes": "Pigmento inorganico minerale naturale o sintetico. Sicuro e chimicamente inerte previa verifica analitica delle impurezze da metalli pesanti.",
+      "also_known_as": [
+        "CI 77491",
+        "Ossido ferrico",
+        "Rosso inglese",
+        "Ossido di ferro rosso",
+        "Ferric Oxide",
+        "Red Iron Oxide",
+        "CI 77491",
+        "C.I. 77491",
+        "CI77491"
+      ],
+      "found_in": [
+        "inchiostri marroni",
+        "tonalità terracotta",
+        "toni pelle",
+        "inchiostri dermopigmentazione PMU"
+      ]
+    },
+    "pigment_yellow_14": {
+      "name": "Pigment Yellow 14",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Colorante disazoico diarylide. Rilascia 3,3'-diclorobenzidina (Cancerogeno 1B). Formalmente vietato negli inchiostri da tatuaggio dell'UE.",
+      "also_known_as": [
+        "PY14",
+        "Diarylide Yellow AAOT",
+        "PY-14",
+        "Diarylide Yellow AAOT",
+        "CI 21095",
+        "C.I. 21095",
+        "CI21095"
+      ],
+      "found_in": [
+        "vecchie formulazioni di inchiostri gialli accesi",
+        "green ink mixes"
+      ]
+    },
+    "pigment_yellow_83": {
+      "name": "Pigment Yellow 83",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Appendice 13",
+      "notes": "Giallo di diarylide HR. Vietato per il rischio di scissione azoica con liberazione di ammine aromatiche cancerogene.",
+      "also_known_as": [
+        "PY83",
+        "Diarylide Yellow HR",
+        "PY-83",
+        "Diarylide Yellow HR",
+        "CI 21108",
+        "C.I. 21108",
+        "CI21108"
+      ],
+      "found_in": [
+        "vecchi inchiostri giallo caldo e arancione",
+        "orange blends"
+      ]
+    },
+    "pigment_yellow_138": {
+      "name": "Pigment Yellow 138",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Pigmento giallo di chinoftalone. Non azoico, elevatissima resistenza alla luce e notevole stabilità chimica.",
+      "also_known_as": [
+        "PY138",
+        "Giallo di chinoftalone",
+        "PY-138",
+        "Quinophthalone Yellow",
+        "CI 56300",
+        "C.I. 56300",
+        "CI56300"
+      ],
+      "found_in": [
+        "inchiostri giallo verdastro brillanti",
+        "lime greens"
+      ]
+    },
+    "ethanol": {
+      "name": "Etanolo (Alcol etilico)",
+      "exact_limit": "Non vietato dalla Voce 75; solvente di grado farmaceutico autorizzato",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Solvente alcolico vettore tradizionale che assicura fluidità di stesura del pigmento e conservazione antimicrobica.",
+      "also_known_as": [
+        "Alcol etilico",
+        "Alcol denaturato",
+        "Alcohol Denat",
+        "Denatured Alcohol",
+        "Alcohol"
+      ],
+      "found_in": [
+        "mezzi di dispersione per inchiostri",
+        "solventi"
+      ]
+    },
+    "benzyl_alcohol": {
+      "name": "Alcol benzilico",
+      "exact_limit": "0,1% in peso (1 000 mg/kg); conservante soggetto a etichettatura",
+      "entry_reference": "Voce 75; Regolamento (UE) 2023/1545",
+      "notes": "Conservante e solvente aromatico. Può agire come sensibilizzante cutaneo oltre le soglie prescritte.",
+      "also_known_as": [
+        "Fenilcarbinolo",
+        "Alcol benzilico",
+        "CAS 100-51-6"
+      ],
+      "found_in": [
+        "sistemi conservanti",
+        "stabilizzatori di inchiostri"
+      ]
+    },
+    "phenoxyethanol": {
+      "name": "Fenossietanolo",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Etere di glicole comunemente utilizzato come conservante antimicrobico ad ampio spettro.",
+      "also_known_as": [
+        "2-fenossietanolo",
+        "Etilenglicolemonofeniletere"
+      ],
+      "found_in": [
+        "conservanti per inchiostri a base acquosa"
+      ]
+    },
+    "polyethylene_glycol": {
+      "name": "Polietilenglicole (PEG)",
+      "exact_limit": "Non regolamentato specificamente; polimero eccipiente autorizzato",
+      "entry_reference": "Regolamento (CE) n. 1907/2006",
+      "notes": "Agente emulsionante, umettante e addensante per formulazioni cosmetiche e farmaceutiche.",
+      "also_known_as": [
+        "PEG",
+        "Macrogol",
+        "Polioxietilene",
+        "Macrogol",
+        "Polyoxyethylene"
+      ],
+      "found_in": [
+        "modificatori di viscosità",
+        "stabilizzanti"
+      ]
+    },
+    "benzoic_acid": {
+      "name": "Acido benzoico",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1",
+      "notes": "Conservante organico che regola il pH e previene lo sviluppo batterico.",
+      "also_known_as": [
+        "Acido benzenecarbossilico",
+        "E210",
+        "E210",
+        "E211"
+      ],
+      "found_in": [
+        "sistemi conservanti acidi"
+      ]
+    },
+    "rosin_colophonium": {
+      "name": "Colofonia (Rosin)",
+      "exact_limit": "0,1% in peso (1 000 mg/kg)",
+      "entry_reference": "Voce 75, paragrafo 1(a); Classificazione armonizzata CLP (Sens. cutaneo 1)",
+      "notes": "Resina naturale di pino. Forte sensibilizzante cutaneo (frequente allergene da contatto). Severamente limitata negli inchiostri per tatuaggio.",
+      "also_known_as": [
+        "Colofonia",
+        "Resina di pino",
+        "Pece greca",
+        "Wood Rosin"
+      ],
+      "found_in": [
+        "leganti di vecchi inchiostri tradizionali",
+        "legacy ink formulations"
+      ]
+    },
+    "o_anisidine": {
+      "name": "o-Anisidina",
+      "exact_limit": "Soglia massima di impurezza: 5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13 (Ammina aromatica primaria)",
+      "notes": "Cancerogeno 1B e mutageno 2. Ammina aromatica primaria prodotta dalla scissione riduttiva di coloranti azoici.",
+      "also_known_as": [
+        "2-metossianilina",
+        "orto-anisidina"
+      ],
+      "found_in": [
+        "impurezze di sintesi",
+        "scissione azoica"
+      ]
+    },
+    "benzidine": {
+      "name": "Benzidina",
+      "exact_limit": "Soglia massima di impurezza: 5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13 (Ammina aromatica primaria)",
+      "notes": "Cancerogeno 1A accertato per l'uomo (cancro della vescica). I coloranti derivati dalla benzidina sono rigorosamente vietati.",
+      "also_known_as": [
+        "4,4'-diamminobifenile",
+        "1,1'-bifenil-4,4'-diammina"
+      ],
+      "found_in": [
+        "scissione di coloranti azoici vietati"
+      ]
+    },
+    "dichlorobenzidine": {
+      "name": "3,3'-Diclorobenzidina",
+      "exact_limit": "Soglia massima di impurezza: 5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13 (Ammina aromatica primaria)",
+      "notes": "Cancerogeno 1B accertato. Ammina liberata per scissione di pigmenti azoici diarylide (gialli e arancioni).",
+      "also_known_as": [
+        "3,3'-diclorobifenil-4,4'-diammina",
+        "DCB"
+      ],
+      "found_in": [
+        "scissione di Pigment Yellow 14, 83 e Orange 13"
+      ]
+    },
+    "chloroaniline": {
+      "name": "4-Cloroanilina (p-Cloroanilina)",
+      "exact_limit": "Soglia massima di impurezza: 5 mg/kg (ppm)",
+      "entry_reference": "Voce 75, Appendice 13 (Ammina aromatica primaria)",
+      "notes": "Cancerogeno 1B accertato. Ammina aromatica primaria prodotta dalla scissione di pigmenti monoazoici clorati.",
+      "also_known_as": [
+        "para-cloroanilina",
+        "PCA",
+        "4-clorobenzenammina"
+      ],
+      "found_in": [
+        "impurezze di sintesi",
+        "scissione di coloranti azoici"
+      ]
+    }
+  },
+  "parser_matches": {
+    "colour_index": "Colour Index (CI {num})",
+    "colour_index_pb15_3": "Colour Index (CI 74160) · Pigment Blue 15:3",
+    "trade_shorthand": "Denominazione commerciale ({displayLabel})",
+    "matched_synonym": "Sinonimo riconosciuto: {matchLabel}",
+    "fuzzy_matched": "Corrispondenza approssimativa '{query}' → {target}",
+    "cas_reconstructed": "CAS {cas} (ricostruito dal formato spaziato)",
+    "matched_via": "Identificato tramite '{label}'"
+  },
+  "scanner": {
+    "open_scanner_btn": "Scansione Barcode / QR",
+    "modal_title": "Scanner Codici a Barre & QR Flacone",
+    "modal_sub": "Scansiona codici a barre 1D o codici QR 2D su flaconi di inchiostro, scatole o schede SDS.",
+    "aria_close": "Chiudi scanner",
+    "err_no_media_devices": "Fotocamera non accessibile in questo ambiente.",
+    "err_camera_access": "Impossibile attivare la fotocamera ottica. Verifica i permessi del browser.",
+    "camera_unavailable_title": "Flusso Fotocamera Non Disponibile",
+    "manual_entry_prompt": "Inserisci o incolla manualmente il codice a barre o numero di lotto:",
+    "align_barcode": "Inquadra il codice a barre o QR code nel mirino",
+    "scan_success": "Codice Acquisito con Successo",
+    "detected_content": "Codice a Barre / Lotto Rilevato:",
+    "copied": "Copiato!",
+    "copy": "Copia",
+    "manual_label": "Inserimento Manuale Codice:",
+    "manual_placeholder": "es. 071234567890 o LOT-2024-09",
+    "apply_manual": "Applica Codice",
+    "scan_again": "Scansiona Altro",
+    "cancel": "Annulla",
+    "confirm_use": "Applica ai Dati"
+  },
+  "mixtures": {
+    "heading": "Miscele & Diluizioni di Inchiostri Personalizzate",
+    "subheading": "Registra graywash, soluzioni di sfumatura e miscele colore tracciando i lotti degli inchiostri base e diluenti a norma REACH.",
+    "btn_new_mixture": "Registra Nuova Miscela",
+    "btn_cancel": "Annulla",
+    "form_title": "Registra Formulazione Personalizzata / Diluizione",
+    "label_name": "Nome Miscela *",
+    "placeholder_name": "es. Graywash Ritratti 4 Gocce",
+    "label_type": "Tipo Miscela *",
+    "type_greywash": "Graywash (Sfumatura)",
+    "type_lining_wash": "Lining Wash (Linee)",
+    "type_color_blend": "Diluizione / Miscela Colore",
+    "type_custom_shading": "Soluzione Sfumatura su Misura",
+    "label_lot": "Numero di Lotto Assegnato *",
+    "label_prepared_date": "Data Preparazione (Locale) *",
+    "label_shelf_life_days": "Giorni di Validità",
+    "label_artist": "Tatuatore Preparatore",
+    "placeholder_artist": "es. Tatuatore Residente",
+    "placeholder_notes": "Istruzioni di dosaggio, rapporti di gocce o tonalità...",
+    "heading_base_inks": "Inchiostri Base Utilizzati",
+    "btn_add_base_ink": "Aggiungi Riga Inchiostro Base",
+    "pick_from_stock": "Seleziona dalle scorte di studio...",
+    "placeholder_ink_brand": "Marca (es. Dynamic)",
+    "placeholder_ink_name": "Nome Inchiostro (es. Triple Black)",
+    "placeholder_ink_lot": "N° Lotto (es. LOT-2024-X)",
+    "placeholder_proportion": "Proporzione (es. 4 gocce)",
+    "heading_diluent": "Diluente / Vettore Utilizzato",
+    "diluent_water": "Acqua Distillata / Sterile (Ph. Eur.)",
+    "diluent_witch_hazel": "Amamelide (Hamamelis Virginiana)",
+    "diluent_glycerin": "Glicerina (Vegetale EP/USP)",
+    "diluent_mixing_solution": "Soluzione di Miscelazione Produttore",
+    "placeholder_diluent_brand": "Marca / Fonte Diluente",
+    "placeholder_diluent_lot": "Lotto / Scadenza Diluente",
+    "placeholder_diluent_volume": "Volume / Gocce (es. 20 gocce)",
+    "btn_save_mixture": "Salva Ricetta Miscela",
+    "empty_title": "Nessuna Miscela Registrata",
+    "empty_desc": "Registra qui le tue diluizioni e graywash per garantire la piena tracciabilità dei lotti con i clienti.",
+    "badge_days_left": "{days} gg rimasti",
+    "badge_expired": "Finestra di Utilizzo Scaduta",
+    "field_prepared": "Preparato",
+    "field_expires": "Scadenza",
+    "field_artist": "Tatuatore",
+    "field_type": "Tipo",
+    "field_notes": "Note",
+    "btn_copy_recipe": "Copia Ricetta",
+    "btn_use_in_session": "Usa in Seduta",
+    "btn_delete": "Elimina Miscela",
+    "copied": "Copiato!"
+  },
+  "recall": {
+    "heading": "Audit di Sicurezza & Richiamo Lotti",
+    "subheading": "Verifica all'istante le sedute dei clienti e le scorte di studio a fronte di richiami ufficiali e avvisi di sicurezza.",
+    "search_placeholder": "Inserisci lotto sospetto (es. LOT-2023-04)...",
+    "clear_search": "Cancella",
+    "export_csv": "Esporta Audit CSV",
+    "copy_report": "Copia Rapporto Tracciabilità",
+    "copied": "Copiato!",
+    "known_studio_lots": "Lotti Registrati in Studio:",
+    "prompt_search_title": "Pronto per l'Audit dei Lotti",
+    "prompt_search_desc": "Inserisci sopra il numero di lotto oggetto di richiamo per verificare clienti trattati e flaconi a magazzino.",
+    "kpi_clients": "Clienti Coinvolti",
+    "kpi_sessions": "Trattamenti Eseguiti",
+    "kpi_mixtures": "Miscele Interessate",
+    "kpi_inventory_bottles": "Flaconi a Magazzino",
+    "quarantine_notice_title": "AZIONE RICHIESTA: Lotto Presente tra le Scorte",
+    "quarantine_notice_desc": "I flaconi con questo lotto risultano attualmente presenti nel magazzino attivo. Isola e metti immediatamente in quarantena.",
+    "usage_window": "Intervallo Date Trattamenti:",
+    "affected_sessions_heading": "Sedute Clienti con questo Lotto",
+    "no_affected_clients_title": "Nessun Trattamento Trovato",
+    "no_affected_clients_desc": "Nessuna seduta memorizzata su questo dispositivo contiene questo codice di lotto.",
+    "col_date": "Data Trattamento",
+    "col_client_ref": "Rif / ID Cliente",
+    "col_placement": "Zona",
+    "col_artist": "Tatuatore",
+    "col_ink_details": "Dettagli Inchiostro",
+    "affected_mixtures_heading": "Miscele Preparate con questo Lotto",
+    "mix_prepared": "Preparato:",
+    "mix_artist": "Tatuatore:",
+    "report_title": "RAPPORTO DI AUDIT E TRACCIABILITÀ RICHIAMO LOTTI",
+    "report_date": "Audit Generato (Locale): {date}",
+    "recalled_lot": "Lotto Richiamato / Sospetto: {lot}",
+    "affected_clients_count": "Clienti Coinvolti: {count}",
+    "total_sessions_count": "Totale Sedute Documentate: {count}",
+    "period_active": "Intervallo Date: {start} - {end}",
+    "affected_artists": "Tatuatori: {artists}",
+    "disclaimer_audit": "Dati ricavati dalla memoria locale del browser. Poli International non archivia né riceve dati dei clienti."
+  },
+  "jurisdictions": {
+    "tab_title": "Matrice Regolatoria Multigiurisdizionale",
+    "tab_subtitle": "Analisi comparativa dei requisiti per inchiostri da tatuaggio e PMU in UE (REACH), USA (FDA/MoCRA), Australia (AICIS) e Sud-Est Asiatico",
+    "btn_matrix": "Matrice Regolatoria",
+    "btn_divergence": "Guida alle Divergenze",
+    "eu": {
+      "name": "Unione Europea",
+      "region": "UE / SEE"
+    },
+    "us": {
+      "name": "Stati Uniti",
+      "region": "Nord America"
+    },
+    "au": {
+      "name": "Australia",
+      "region": "Australasia"
+    },
+    "asean": {
+      "name": "Sud-Est Asiatico",
+      "region": "Stati Membri ASEAN"
+    },
+    "filter_jurisdiction_label": "Filtra per Giurisdizione",
+    "filter_all_regions": "Confronto Tutte le Regioni",
+    "search_placeholder": "Cerca per nome sostanza, numero CI (es. CI 74160) o CAS...",
+    "group_all": "Tutte le Sostanze",
+    "group_pigments": "Pigmenti Colorati",
+    "group_metals": "Metalli e Impurezze",
+    "group_carriers": "Solventi ed Eccipienti",
+    "substances_count": "{count} sostanze valutate",
+    "click_row_hint": "Fai clic sulla riga per dettagli normativi e azioni operative",
+    "matrix_action_label": "Azione per lo Studio",
+    "status": {
+      "eu_compliant": "Conforme a REACH",
+      "eu_restricted": "Limitato da REACH",
+      "eu_banned": "Vietato da REACH / SVHC",
+      "us_mocra_listed": "Prodotto Elencato MoCRA",
+      "us_unapproved_color": "Colorante non Approvato",
+      "us_contaminant_concern": "Allerta Contaminante",
+      "au_aiic_listed": "Sostanza Elencata in AIIC",
+      "au_prohibited_chemical": "Chimico Proibito",
+      "au_impurity_alert": "Allerta Impurezza",
+      "asean_non_harmonized": "Inchiostri non Armonizzati",
+      "asean_acd_annex_banned": "Vietato Allegato II ACD",
+      "asean_cosmetic_limit_applied": "Limite Cosmetico Topico"
+    },
+    "eval": {
+      "eu_compliant_desc": "Consentito nelle formulazioni per tatuaggio e PMU entro i limiti di concentrazione della Voce 75 dell'Allegato XVII del REACH.",
+      "eu_compliant_action": "Verificare la Sezione 3 della SDS e archiviare il numero di lotto nella scheda cliente per 5 anni.",
+      "eu_bluegreen_desc": "Il periodo di deroga per CI 74160 e CI 74260 e scaduto il 4 gennaio 2023. Vietato oltre lo 0,1 % in peso nell'UE.",
+      "eu_bluegreen_action": "Non iniettare nel territorio dell'UE. Passare a formulazioni alternative conformi.",
+      "eu_banned_desc": "Rigorosamente vietato nelle miscele per tatuaggi ai sensi della Voce 75 o dell'elenco delle sostanze candidate SVHC.",
+      "eu_banned_action": "Isolare immediatamente il flacone e contattare il fornitore dello studio.",
+      "eu_restricted_desc": "Soggetto a un limite normativo esplicito nella tabella dell'Appendice 13.",
+      "eu_restricted_action": "Verificare il Certificato di Analisi (COA) per accertare che la concentrazione sia inferiore alla soglia in ppm.",
+      "us_standard_desc": "Regolamentato ai sensi del FD&C Act e del MoCRA. Soggetto all'obbligo di registrazione degli stabilimenti e dei prodotti.",
+      "us_standard_action": "Annotare il lotto del flacone nella cartella cliente e conservare per almeno 3 anni per tracciabilita.",
+      "us_color_paradox_desc": "Additivo colorante secondo il FD&C Act privo di approvazione FDA per iniezione. Circola per tolleranza amministrativa sotto MoCRA.",
+      "us_color_paradox_action": "Accertarsi che il produttore abbia registrato il cosmetico sotto MoCRA e dimostrato la sicurezza.",
+      "us_metal_desc": "FDA CFSAN monitora le impurezze da metalli pesanti ed emette avvisi di sicurezza su lotti adulterati.",
+      "us_metal_action": "Verificare i referti di purezza del produttore e consultare il registro dei richiami della FDA.",
+      "au_listed_desc": "Introduzione regolata da AICIS. La sostanza e presente nell'inventario chimico australiano (AIIC).",
+      "au_listed_action": "Annotare il numero di lotto nel registro delle procedure di penetrazione cutanea prescritto dalla legge statale.",
+      "au_metal_desc": "Tossicita dei metalli valutata sotto il framework AICIS; le leggi sanitarie statali vietano sostanze non sicure.",
+      "au_metal_action": "Verificare la dichiarazione AICIS dell'importatore e conservare il COA nello studio.",
+      "au_banned_desc": "Sostanza vietata o limitata secondo i criteri AICIS per l'introduzione di sostanze chimiche pericolose.",
+      "au_banned_action": "Non impiegare in procedure che comportano penetrazione cutanea. Separare le scorte.",
+      "asean_standard_desc": "Gli inchiostri intradermici non sono armonizzati sotto la Direttiva Cosmetica ASEAN (ACD). Valgono le leggi nazionali.",
+      "asean_standard_action": "Rispettare le licenze municipali dello studio e i requisiti doganali di importazione.",
+      "asean_metal_desc": "I limiti ACD si applicano ai cosmetici topici; le autorita sanitarie ispezionano la purezza intradermica in sede di vigilanza.",
+      "asean_metal_action": "Richiedere certificati internazionali di purezza conformi agli standard di riferimento UE o USA.",
+      "asean_banned_desc": "Sostanza inclusa nell'Allegato II dell'ACD (ingredienti cosmetici vietati) o nei registri nazionali dei veleni.",
+      "asean_banned_action": "Vietato per procedure estetiche e cosmetiche negli stati membri."
+    },
+    "divergence_overview_title": "Fondamenti Giuridici e Divergenza delle Soglie Chimiche",
+    "divergence_overview_desc": "La regolamentazione degli inchiostri per tatuaggio e trucco permanente differisce profondamente nel mondo. L'Unione Europea stabilisce soglie chimiche vincolanti in ppm, mentre Stati Uniti, Australia e Sud-Est Asiatico disciplinano gli inchiostri tramite registri di stabilimenti, inventari industriali o norme igieniche generali.",
+    "divergence": {
+      "cat_statutory": "Ambito Giuridico",
+      "statutory_title": "Classificazione del Prodotto e Quadro Giuridico",
+      "eu_statutory_summary": "Restrizione chimica specifica ai sensi di REACH Allegato XVII Voce 75.",
+      "eu_statutory_specifics": "Le miscele per tatuaggi costituiscono una categoria a se stante nella legge chimica europea, vincolante per 27 paesi e il SEE.",
+      "us_statutory_summary": "Cosmetici ai sensi del FD&C Act e della legge MoCRA (2022).",
+      "us_statutory_specifics": "Gli inchiostri sono considerati cosmetici; i pigmenti sono additivi coloranti ai sensi della Sezione 721 del FD&C Act.",
+      "au_statutory_summary": "Sostanze chimiche industriali (federale) e norme per penetrazione cutanea (statale).",
+      "au_statutory_specifics": "Il sistema federale AICIS disciplina importazione e fabbricazione; le leggi sanitarie statali regolano l'attivita in studio.",
+      "asean_statutory_summary": "Cosmetici topici (ACD) senza armonizzazione per inchiostri intradermici.",
+      "asean_statutory_specifics": "La Direttiva Cosmetica ASEAN riguarda i preparati topici; gli inchiostri intradermici dipendono dalle normative sanitarie locali.",
+      "cat_thresholds": "Limiti di Concentrazione",
+      "thresholds_title": "Soglie Chimiche (ppm) rispetto alla Conformita Procedurale",
+      "eu_thresholds_summary": "Soglie di legge precise in ppm codificate nell'Appendice 13.",
+      "eu_thresholds_specifics": "Fissa lo 0,00005 % per sostanze CMR, limite generale dello 0,1 % e massimali per 19 metalli pesanti.",
+      "us_thresholds_summary": "Nessuna tabella legale di ppm; controllo su adulterazione ed etichettatura ingannevole.",
+      "us_thresholds_specifics": "Gli Articoli 601 e 602 vietano sostanze nocive, ma la legge federale non contiene tabelle numeriche in ppm.",
+      "au_thresholds_summary": "Nessuna tabella di ppm per inchiostri sotto AICIS.",
+      "au_thresholds_specifics": "AICIS valuta le introduzioni in base a fasce di rischio per la salute e non tramite ppm fissi nel composto finito.",
+      "asean_thresholds_summary": "Nessuna soglia regionale in ppm per inchiostri intradermici.",
+      "asean_thresholds_specifics": "Gli allegati ACD stabiliscono limiti per cosmetici topici che non vincolano legalmente gli inchiostri.",
+      "cat_pigments": "Approvazione dei Pigmenti",
+      "pigments_title": "Regole sui Pigmenti e il Paradosso dei Coloranti negli USA",
+      "eu_pigments_summary": "L'Appendice 13 vieta migliaia di sostanze e coloranti CI specifici.",
+      "eu_pigments_specifics": "Vieta azocoloranti che rilasciano ammine aromatiche cancerogene e sostanze degli Allegati II e IV dei cosmetici.",
+      "us_pigments_summary": "Il Paradosso: non approvati, ma venduti sotto MoCRA.",
+      "us_pigments_specifics": "Nessun colorante e stato approvato dalla FDA per iniezione nella pelle. Vengono commercializzati per tolleranza.",
+      "au_pigments_summary": "Conformita all'inventario chimico AIIC obbligatoria.",
+      "au_pigments_specifics": "I pigmenti devono essere presenti in AIIC o introdotti sotto una categoria approvata da AICIS. Nessuna lista positiva.",
+      "asean_pigments_summary": "Sdoganamento e normative nazionali di importazione.",
+      "asean_pigments_specifics": "Nessuna lista positiva comune; gli studi impiegano prevalentemente forniture certificate UE o USA.",
+      "cat_metals": "Metalli Pesanti",
+      "metals_title": "Standard per Metalli Pesanti e Contaminazioni Batteriche",
+      "eu_metals_summary": "19 metalli pesanti e impurezze con tetti rigorosi in ppm.",
+      "eu_metals_specifics": "L'Appendice 13 prescrive limiti massimi inderogabili, tra cui Piombo a 0,7 mg/kg e Arsenico a 0,5 mg/kg.",
+      "us_metals_summary": "Allerte di sicurezza FDA e monitoraggio richiami batterici.",
+      "us_metals_specifics": "La FDA dirama avvisi e ordina richiami in presenza di contaminazioni da micobatteri o adulterazioni gravi.",
+      "au_metals_summary": "Valutazione del rischio chimico e dovere generale di sicurezza sanitaria.",
+      "au_metals_specifics": "Gli ispettori sanitari statali controllano gli studi e possono sequestrare prodotti pericolosi.",
+      "asean_metals_summary": "I limiti per cosmetici topici costituiscono riferimento volontario.",
+      "asean_metals_specifics": "Le autorita possono prendere a riferimento i criteri ACD come guida durante le verifiche igienico-sanitarie.",
+      "cat_facility": "Doveri del Produttore",
+      "facility_title": "Obblighi a Carico di Produttori e Importatori",
+      "eu_facility_summary": "Classificazione CLP, SDS conforme ad Allegato II, dicitura INCI completa.",
+      "eu_facility_specifics": "I flaconi devono recare la dicitura 'Miscela per tatuaggi o trucco permanente' e l'elenco decrescente degli ingredienti.",
+      "us_facility_summary": "Registrazione obbligatoria di stabilimenti e prodotti MoCRA.",
+      "us_facility_specifics": "Le strutture devono registrarsi presso la FDA, notificare i prodotti e segnalare reazioni avverse gravi.",
+      "au_facility_summary": "Registrazione commerciale AICIS e dichiarazioni annuali.",
+      "au_facility_specifics": "Gli importatori devono essere registrati in AICIS, inviare dichiarazioni annuali e conservare i dati per 5 anni.",
+      "asean_facility_summary": "Registrazione commerciale nazionale e dichiarazioni doganali.",
+      "asean_facility_specifics": "Gli importatori si accreditano presso i ministeri del commercio e della sanita locali.",
+      "cat_records": "Tracciabilita nello Studio",
+      "records_title": "Obblighi di Tracciabilita e Tenuta Registri per lo Studio",
+      "eu_records_summary": "Verifica dicitura REACH e annotazione lotto per ciascun cliente.",
+      "eu_records_specifics": "Lo studio deve verificare l'etichetta e archiviare il lotto impiegato in base ai decreti sanitari nazionali.",
+      "us_records_summary": "Conservazione raccomandata dei numeri di lotto per 3 anni.",
+      "us_records_specifics": "Con MoCRA, gli studi devono conservare marca e lotto nel consenso informato per almeno 3 anni.",
+      "au_records_summary": "Tenuta obbligatoria del registro di penetrazione cutanea.",
+      "au_records_specifics": "Le leggi statali impongono di registrare dati cliente, sterilizzazione e lotto del pigmento per le ispezioni.",
+      "asean_records_summary": "Registri clienti municipali e moduli di consenso informato.",
+      "asean_records_specifics": "Gli studi archiviano i consensi firmati e le fatture di acquisto conformemente alle ordinanze comunali.",
+      "cat_pmu": "PMU e Microblading",
+      "pmu_title": "Disposizioni Specifiche per Trucco Permanente e Microblading",
+      "eu_pmu_summary": "Identici limiti chimici per trucco permanente e tatuaggio corpo.",
+      "eu_pmu_specifics": "Il Regolamento (UE) 2020/2081 disciplina indistintamente tutte le miscele coloranti per uso intradermico.",
+      "us_pmu_summary": "Disciplinato come cosmetici ai sensi del MoCRA.",
+      "us_pmu_specifics": "I pigmenti per trucco permanente sono soggetti a registrazione di prodotto e segnalazione di eventi avversi.",
+      "au_pmu_summary": "Regolato dalle licenze per servizi con penetrazione cutanea.",
+      "au_pmu_specifics": "Gli operatori di PMU devono essere in possesso di unita accreditate di controllo delle infezioni.",
+      "asean_pmu_summary": "Linee guida per saloni estetici e conformita topica ACD.",
+      "asean_pmu_specifics": "I centri devono conformarsi alle norme locali; gli anestetici topici ricadono nella disciplina farmaceutica."
+    },
+    "checklist_heading": "Liste di Controllo di Conformita per lo Studio per Regione",
+    "checklist_subheading": "Passaggi operativi fondamentali per mantenere registri verificati in ciascun ordinamento normativo",
+    "checklist_eu_title": "Unione Europea (REACH Voce 75)",
+    "checklist_eu_item_1": "Verificare che il flacone rechi la dicitura 'Miscela per tatuaggi o trucco permanente' e il numero di lotto.",
+    "checklist_eu_item_2": "Ottenere e archiviare la Scheda di Dati di Sicurezza (SDS) del produttore conforme all'Allegato II.",
+    "checklist_eu_item_3": "Registrare il numero di lotto del flacone e la data della seduta nella scheda del cliente.",
+    "checklist_us_title": "Stati Uniti (FDA / MoCRA)",
+    "checklist_us_item_1": "Verificare che il produttore abbia completato la registrazione della struttura e il listing MoCRA.",
+    "checklist_us_item_2": "Annotare marca dell'inchiostro, tonalita e numero di lotto nel consenso informato.",
+    "checklist_us_item_3": "Conservare le schede cliente per almeno 3 anni e formalizzare la procedura di notifica reazioni avverse.",
+    "checklist_au_title": "Australia (AICIS e Sanita Statale)",
+    "checklist_au_item_1": "Verificare che le sostanze siano presenti in AIIC o importate da un soggetto registrato AICIS.",
+    "checklist_au_item_2": "Annotare dati del cliente, data e lotto del pigmento nel registro di penetrazione cutanea.",
+    "checklist_au_item_3": "Mantenere aggiornati i certificati di controllo delle infezioni per tutti i tatuatori operanti.",
+    "checklist_asean_title": "Sud-Est Asiatico (ASEAN / Nazionale)",
+    "checklist_asean_item_1": "Archiviare nello studio le fatture commerciali del fornitore e le bolle doganali.",
+    "checklist_asean_item_2": "Accertare che detergenti, soluzioni preparatorie e dopocura rispettino i requisiti ACD.",
+    "checklist_asean_item_3": "Conservare i consensi informati firmati e le autorizzazioni igieniche comunali.",
+    "modal_title": "Valutazione Regolatoria Multigiurisdizionale",
+    "modal_subtitle": "Analisi degli ingredienti identificati rispetto ai quadri chimici internazionali",
+    "modal_summary_heading": "Confronto tra i Sistemi Normativi",
+    "modal_summary_text": "I componenti degli inchiostri per tatuaggi sono soggetti a differenti qualificazioni giuridiche nel mondo. Di seguito e illustrato come ciascuna sostanza rilevata e trattata in UE (REACH), USA (MoCRA), Australia (AICIS) e Sud-Est Asiatico.",
+    "modal_no_substances": "Nessuna sostanza riconosciuta trovata in questa formulazione da valutare.",
+    "col_ingredient": "Ingrediente e Identificativo",
+    "modal_footer_disclaimer": "Matrice informativa. Gli studi devono fare riferimento alle autorita sanitarie locali per i requisiti vigenti sul territorio."
+  },
+  "languages": {
+    "select_label": "Lingua",
+    "switch_to": "Cambia lingua in {lang}",
+    "current": "Lingua corrente: {lang}",
+    "change_notice": "Interfaccia tradotta in {lang}",
+    "en": "Inglese",
+    "de": "Tedesco",
+    "es": "Spagnolo",
+    "fr": "Francese",
+    "it": "Italiano",
+    "nl": "Olandese",
+    "pt": "Portoghese",
+    "th": "Thailandese"
+  },
+  "qr_scanner": {
+    "modal_title": "Scansiona documentazione QR o etichetta",
+    "modal_sub": "Inquadra il certificato QR stampato, scheda lotto o etichetta del flacone",
+    "align_qr_hint": "Allinea il codice QR nel mirino",
+    "err_no_media_devices": "Nessuna fotocamera trovata o API multimediale non disponibile.",
+    "err_camera_access": "Permesso fotocamera negato o fotocamera utilizzata da un'altra app.",
+    "camera_unavailable_title": "Fotocamera non disponibile",
+    "manual_entry_prompt": "Puoi caricare una foto del codice o incollare il testo QR sotto.",
+    "detected_label": "Lotto e formulazione rilevati",
+    "field_brand": "Marca / Produttore",
+    "placeholder_brand": "es. Dynamic, Eternal",
+    "field_ink": "Nome inchiostro / Tonalità",
+    "placeholder_ink": "es. Lining Black",
+    "field_batch": "Lotto / N. LOT",
+    "placeholder_batch": "es. LOT-2024-91",
+    "field_ingredients": "Ingredienti estratti",
+    "placeholder_ingredients": "Ingredienti estratti dalla documentazione...",
+    "btn_apply_to_decoder": "Applica al decodificatore e analizza",
+    "btn_cancel": "Annulla",
+    "scan_again": "Scansiona di nuovo",
+    "or_upload_photo": "Oppure seleziona un file immagine con codice QR:",
+    "btn_browse_photo": "Carica immagine",
+    "err_file_parse": "Nessun codice QR rilevato nell'immagine. Prova una foto più nitida o incolla il testo.",
+    "manual_paste_placeholder": "Incolla testo del codice QR o URL qui...",
+    "btn_parse": "Analizza testo",
+    "aria_torch": "Attiva torcia della fotocamera",
+    "aria_switch_camera": "Cambia fotocamera"
+  }
+}
