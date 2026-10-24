@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* ─── Theme Variables ───────────────────────────────────────────── */
+:root {
+  --brand-cyan: #0693e3;
+  --brand-hover: #0578c8;
+  --accent: #0693e3;
+
+  --danger: #e53e3e;
+  --danger-bg: rgba(229, 62, 62, 0.12);
+  --danger-border: rgba(229, 62, 62, 0.35);
+  --danger-text: #fc8181;
+
+  --warning: #dd6b20;
+  --warning-bg: rgba(221, 107, 32, 0.12);
+  --warning-border: rgba(221, 107, 32, 0.35);
+  --warning-text: #f6ad55;
+
+  --watch-clr: #805ad5;
+  --watch-bg: rgba(128, 90, 213, 0.12);
+  --watch-border: rgba(128, 90, 213, 0.35);
+  --watch-text: #d6bcfa;
+
+  --safe: #38a169;
+  --safe-bg: rgba(56, 161, 105, 0.12);
+  --safe-border: rgba(56, 161, 105, 0.35);
+  --safe-text: #68d391;
+
+  --info: #3182ce;
+  --info-bg: rgba(49, 130, 206, 0.12);
+  --info-border: rgba(49, 130, 206, 0.35);
+  --info-text: #90cdf4;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-muted: #949494;
+
+  --bg-page: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --bg-input: #222222;
+  --bg-hover: #2a2a2a;
+  --bg-tag: #2c2c2c;
+  --bg-base: #141414;
+  --bg-subtle: #202020;
+
+  --border: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-focus: var(--brand-cyan);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.55);
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+}
+
+[data-theme="light"] {
+  --brand-cyan: #0369a1;
+  --brand-hover: #075985;
+  --accent: #0369a1;
+
+  --danger: #dc2626;
+  --danger-bg: #fee2e2;
+  --danger-border: #fca5a5;
+  --danger-text: #991b1b;
+
+  --warning: #d97706;
+  --warning-bg: #fef3c7;
+  --warning-border: #fcd34d;
+  --warning-text: #92400e;
+
+  --watch-clr: #7c3aed;
+  --watch-bg: #ede9fe;
+  --watch-border: #c4b5fd;
+  --watch-text: #5b21b6;
+
+  --safe: #16a34a;
+  --safe-bg: #dcfce7;
+  --safe-border: #86efac;
+  --safe-text: #166534;
+
+  --info: #0369a1;
+  --info-bg: #e0f2fe;
+  --info-border: #7dd3fc;
+  --info-text: #075985;
+
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #4b5563;
+
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-tag: #e2e8f0;
+  --bg-base: #ffffff;
+  --bg-subtle: #f8fafc;
+
+  --border: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --border-focus: var(--brand-cyan);
+
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .tool-wrapper {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Prevent page breaks inside important sections */
+  #printable_questionnaire_sheet {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #printable_questionnaire_sheet .border,
+  #printable_questionnaire_sheet .border-t,
+  #printable_questionnaire_sheet .border-b {
+    border-color: #d1d5db !important;
+  }
+
+  /* Ink-saving adjustments */
+  .bg-\[var\(--bg-card\)\],
+  .bg-\[var\(--bg-subtle\)\],
+  .bg-\[var\(--bg-base\)\],
+  .bg-\[var\(--bg-input\)\] {
+    background: transparent !important;
+  }
+}
