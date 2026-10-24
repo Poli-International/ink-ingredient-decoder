@@ -1,0 +1,2034 @@
+{
+  "app": {
+    "title": "ตัวถอดรหัสส่วนผสมหมึกสัก (Tattoo Ink Ingredient Decoder)",
+    "subtitle": "ถอดรหัสส่วนผสมหมึกสักและ PMU เทียบกับ EU Regulation 2020/2081 (REACH Annex XVII, Entry 75) วางรายการส่วนผสม ฉลากขวด หรือหัวข้อ 3 ของ SDS เพื่อตรวจสอบรายการตามกฎระเบียบ ค่าจำกัดความเข้มข้น และข้อมูลที่ผู้ผลิตต้องเปิดเผย",
+    "version_tag": "v2 · EU 2020/2081 entry 75",
+    "offline_badge": "ใช้ได้เฉพาะในเบราว์เซอร์ในเครื่อง · ไม่มีการเรียกใช้เครือข่าย"
+  },
+  "nav": {
+    "aria_nav": "การนำทางแอป",
+    "paste_label": "ตัวถอดรหัสฉลากและ SDS",
+    "database": "ทะเบียนสาร",
+    "alternatives": "เมทริกซ์ทางเลือก",
+    "expiry": "วันหมดอายุและ PAO",
+    "sessions": "เซสชันลูกค้า",
+    "metals": "สิ่งเจือปนตาม COA",
+    "shortlist": "หมึกที่บันทึกไว้ของสตูดิโอ",
+    "blue_green": "Pigment Blue 15:3 และ Green 7",
+    "plain_language": "คู่มือกฎฉบับภาษาทั่วไป",
+    "maker_questions": "แบบสอบถามถึงผู้ผลิต",
+    "mixtures": "สูตรผสมที่กำหนดเอง",
+    "recall": "การเรียกคืนตามล็อต",
+    "jurisdictions": "กฎระเบียบทั่วโลก"
+  },
+  "status": {
+    "prohibited": "ห้ามใช้ (Banned)",
+    "restricted": "จำกัดการใช้",
+    "watch": "อยู่ระหว่างการทบทวนตามกฎระเบียบ",
+    "not_covered": "ไม่อยู่ในขอบเขตของ Entry 75",
+    "unrecognised": "ไม่พบในฐานข้อมูล",
+    "under_review": "อยู่ระหว่างการทบทวน"
+  },
+  "header": {
+    "sync_title": "คลิกเพื่อดูสถานะการจัดเก็บข้อมูลออฟไลน์ในเครื่อง",
+    "local_ready": "ในเครื่อง (พร้อมใช้งาน)",
+    "offline": "ออฟไลน์",
+    "local_db_singular": "ฐานข้อมูลในเครื่อง ({count} หมึกที่บันทึก)",
+    "local_db_plural": "ฐานข้อมูลในเครื่อง ({count} หมึกที่บันทึก)",
+    "switch_light": "สลับเป็นโหมดสว่าง",
+    "switch_dark": "สลับเป็นโหมดมืด",
+    "profile_title": "แก้ไขโปรไฟล์ช่างสักและสตูดิโอ / รูปที่กำหนดเอง",
+    "default_artist": "ช่างสักของสตูดิโอ",
+    "default_studio": "รูปโปรไฟล์"
+  },
+  "decoder": {
+    "heading": "วางฉลากหรือ SDS หัวข้อ 3",
+    "subheading": "ดึงหมายเลข Colour Index (CI) หมายเลข CAS และชื่อส่วนประกอบ สารทุกชนิดที่จดจำได้จะถูกเทียบกับ REACH Annex XVII Entry 75 รายการที่ไม่พบในฐานข้อมูลจะแสดงอย่างชัดเจนว่าไม่พบ และจะไม่มีการคาดเดา",
+    "input_label": "วางรายการส่วนประกอบ ข้อความ SDS หัวข้อ 3 หรือการถอดความจากขวด:",
+    "input_placeholder": "Example:\nAqua, Glycerin, Pigment Blue 15:3 (CI 74160, CAS 147-14-8), CI 74260 (Pigment Green 7), Carbon Black (CI 77266), Hamamelis Virginiana Water, Isopropyl Alcohol (CAS 67-63-0), Lead (CAS 7439-92-1)...",
+    "load_examples": "โหลดตัวอย่างด่วน:",
+    "sample_banned_blue": "Phthalo Blue 15:3 และ Green 7",
+    "sample_restricted_black": "Carbon Black และโลหะร่องรอย (Trace Metals)",
+    "sample_market_black": "Eternal / World Famous รุ่น Style Black",
+    "sample_unrecognised": "ฉลากที่มีรายการที่ไม่พบในฐานข้อมูล",
+    "sample_clean_carrier": "Titanium Dioxide และตัวพา (Carrier)",
+    "clear_button": "ล้างข้อมูลที่กรอก",
+    "decode_button": "วิเคราะห์ส่วนประกอบ",
+    "audit_id_title": "รหัสการตรวจสอบ: {id}",
+    "label_bottle_audit": "การตรวจสอบฉลากและขวด",
+    "status_compliant": "เป็นไปตาม EU 2020/2081 Entry 75",
+    "status_restricted_sub": "จำกัดการใช้ตาม EU 2020/2081 (ต่ำกว่าค่าจำกัดความเข้มข้น)",
+    "status_restricted_exceeded": "จำกัดการใช้ - เกินค่าจำกัดความเข้มข้น",
+    "status_prohibited": "ตรวจพบสารที่ห้ามใช้",
+    "traceability_qr": "QR สำหรับการสืบย้อนกลับ",
+    "print_label": "พิมพ์ฉลาก",
+    "save_audit_record": "บันทึกผลการตรวจสอบ",
+    "saved_to_station": "บันทึกลงสถานีแล้ว",
+    "formulation_details": "รายละเอียดสูตร",
+    "brand_maker": "แบรนด์ / ผู้ผลิต",
+    "brand_placeholder": "e.g. Dynamic, World Famous, Kuro Sumi",
+    "ink_name_shade": "ชื่อหมึก / เฉดสี",
+    "ink_name_placeholder": "e.g. Triple Black 30ml",
+    "batch_lot_label": "ล็อต / LOT # (จำเป็นสำหรับการสืบย้อนกลับ)",
+    "batch_lot_placeholder": "e.g. LOT-2024-8891",
+    "summary_title": "รายละเอียดสูตร (รายการที่ดึงมาได้ {total} รายการ)",
+    "summary_prohibited_badge": "ห้ามใช้: {count}",
+    "summary_restricted_badge": "จำกัดการใช้: {count}",
+    "summary_not_covered_badge": "ไม่อยู่ในขอบเขต: {count}",
+    "summary_unrecognised_badge": "ไม่พบในฐานข้อมูล: {count}",
+    "extracted_items_heading": "รายการสูตรที่ดึงมาได้",
+    "summary_prohibited": "ห้ามใช้ตาม Entry 75: {count}",
+    "summary_restricted": "จำกัดการใช้ (ใช้ค่าจำกัดความเข้มข้น): {count}",
+    "summary_not_covered": "ไม่อยู่ในขอบเขต Entry 75: {count}",
+    "summary_unrecognised": "ไม่พบในฐานข้อมูล / ไม่ทราบ: {count}",
+    "table_query": "รายการที่ดึงมา",
+    "table_detected": "สารที่ระบุได้",
+    "table_ci": "ดัชนีสี (Colour Index)",
+    "table_cas": "หมายเลข CAS",
+    "table_status": "สถานะ Entry 75",
+    "table_limit": "ค่าจำกัดที่แน่นอน (Entry 75)",
+    "table_quote": "อ้างอิงรายการ / ภาคผนวกในกฎระเบียบ",
+    "save_to_shortlist": "บันทึกสูตรนี้ลงรายการที่บันทึกไว้ของสตูดิโอ",
+    "shortlist_brand_label": "แบรนด์ / ผู้ผลิตหมึก:",
+    "shortlist_name_label": "ชื่อหมึก / เฉดสี:",
+    "shortlist_batch_label": "หมายเลขล็อต:",
+    "save_shortlist_btn": "บันทึกลงรายการที่บันทึกไว้ในเบราว์เซอร์ของสตูดิโอ",
+    "saved_success_toast": "บันทึกลงรายการที่บันทึกไว้ของสตูดิโอในอุปกรณ์แล้ว",
+    "sds_support_note": " (รองรับเปอร์เซ็นต์จาก SDS หัวข้อ 3 เช่น \"CI 74160 8.5%\")",
+    "samples_label": "ตัวอย่าง:",
+    "stat_prohibited": "ห้ามใช้",
+    "stat_restricted": "จำกัดการใช้",
+    "stat_not_covered": "ไม่อยู่ในขอบเขต",
+    "stat_unrecognised": "ไม่พบในฐานข้อมูล",
+    "unrecognised_desc": "ไม่พบในฐานข้อมูล (ไม่คาดเดา)",
+    "limit_label": "ค่าจำกัด:",
+    "note_label": "หมายเหตุ:",
+    "limit_check_reg": "ตรวจสอบข้อความในกฎระเบียบ",
+    "verify_sds_note": "ตรวจสอบเอกลักษณ์ทางเคมีกับ SDS หัวข้อ 3 ของผู้ผลิต",
+    "sds_concentration_label": "ความเข้มข้นใน SDS หัวข้อ 3:",
+    "col_ci": "ดัชนีสี (Colour Index)",
+    "col_cas": "หมายเลข CAS",
+    "col_sds_pct": "% ใน SDS",
+    "label_limit": "ค่าจำกัดความเข้มข้น: ",
+    "label_legal_ref": "อ้างอิงทางกฎหมาย: ",
+    "field_brand": "แบรนด์ / ผู้ผลิตหมึก:",
+    "field_ink_name": "ชื่อหมึก / เฉดสี:",
+    "field_batch_number": "หมายเลขล็อต:",
+    "placeholder_brand": "e.g. World Famous, Eternal",
+    "placeholder_ink_name": "e.g. Lining Black #2",
+    "placeholder_batch_number": "e.g. LOT-2024-001",
+    "offline_save_desc": "บันทึกสูตรที่ตรวจสอบแล้วทั้งหมดลงฐานข้อมูลของสถานีแบบออฟไลน์",
+    "view_shortlist_link": "ดูรายการที่บันทึกไว้ →",
+    "save_button": "บันทึกสูตรนี้",
+    "default_untitled_ink": "หมึกที่ยังไม่ได้ตั้งชื่อ",
+    "default_unknown_brand": "ไม่ทราบแบรนด์",
+    "no_substances_evaluated": "ยังไม่มีสารที่ประเมิน",
+    "prohibited_suffix": "ห้ามใช้ {count} รายการ",
+    "restricted_suffix": "จำกัดการใช้ {count} รายการ",
+    "not_covered_suffix": "ไม่อยู่ในขอบเขต {count} รายการ",
+    "unrecognised_suffix": "ไม่พบในฐานข้อมูล {count} รายการ",
+    "unrecognised_banner_title": "ตรวจพบส่วนประกอบที่ไม่พบในฐานข้อมูล ({count})",
+    "unrecognised_banner_desc": "รายการเหล่านี้ไม่สามารถจับคู่กับ Entry 75 หรือทะเบียนเม็ดสีทั่วไปได้ รายการที่ไม่พบในฐานข้อมูลจะไม่มีการคาดเดา โปรดขอการระบุทางเคมีที่แน่นอนจากผู้ผลิต",
+    "generate_question_sheet_btn": "สร้างแบบสอบถามถึงผู้ผลิต",
+    "rule_says_heading": "ข้อกำหนดในกฎระเบียบระบุไว้จริงว่าอย่างไร",
+    "view_details": "ตรวจสอบกฎและค่าจำกัด",
+    "hide_details": "ย่อ",
+    "matched_by_label": "จับคู่โดย:",
+    "plain_language_rule": "คำแนะนำสำหรับสตูดิโอ (ภาษาทั่วไป):",
+    "table_rule_details": "รายละเอียดกฎ",
+    "never_guessed_note": "ไม่มีการคาดเดา ตาม EU 2020/2081",
+    "inspect_btn": "ตรวจสอบ",
+    "btn_multi_jurisdiction_matrix": "ตารางเปรียบเทียบหลายเขตอำนาจ",
+    "qr_scan_btn": "สแกน QR / ฉลาก",
+    "voice_dictate_btn": "ป้อนส่วนประกอบด้วยเสียง",
+    "voice_listening": "กำลังฟัง...",
+    "voice_stop": "หยุดการป้อนด้วยเสียง",
+    "voice_hint": "กำลังฟัง... พูดส่วนประกอบของหมึก (เช่น \"Aqua, CI 77266, Glycerin\")",
+    "voice_error_permission": "ไม่ได้รับอนุญาตให้เข้าถึงไมโครโฟน โปรดอนุญาตการใช้ไมโครโฟนในเบราว์เซอร์",
+    "voice_error_unsupported": "เบราว์เซอร์นี้ไม่รองรับการจดจำเสียงพูด",
+    "unrecognised_reason": "ไม่อยู่ในรายการ EU REACH Annex XVII Entry 75 และไม่อยู่ในดัชนีเม็ดสีเครื่องสำอางสำหรับการสักที่ใช้ทั่วไป"
+  },
+  "result_card": {
+    "svhc_banned": "SVHC / ห้ามใช้",
+    "banned_eu": "ห้ามใช้ (EU 2020/2081)",
+    "restricted_limits": "จำกัดการใช้ (มีค่าจำกัด)",
+    "under_review": "อยู่ระหว่างการทบทวนตามกฎระเบียบ",
+    "no_restriction": "ไม่มีข้อจำกัดของ EU",
+    "match_cas": "ตรงกับ CAS: {query}",
+    "match_ci": "ตรงกับ Colour Index: {query}",
+    "match_alias": "ตรงกับชื่อ / ชื่อทางการค้า",
+    "max_limit": "สูงสุด {ppm} µg/g",
+    "ci_label": "ดัชนีสี (Colour Index): {ci}",
+    "cas_label": "· CAS: {cas}",
+    "regulatory_instrument": "เครื่องมือทางกฎระเบียบ",
+    "colour_group": "กลุ่มสี",
+    "restriction_rationale": "เหตุผลและค่าจำกัดของการจำกัดการใช้",
+    "default_regulated_note": "ควบคุมภายใต้ Regulation EU 2020/2081",
+    "match_method": "วิธีการจับคู่",
+    "cas_reference": "อ้างอิง CAS",
+    "synonyms": "ชื่อเรียกอื่น (คำพ้องความหมาย)",
+    "typically_found_in": "มักพบใน",
+    "echa_reference": "อ้างอิงทะเบียน ECHA: CAS {cas}",
+    "in_studio_inventory": "อยู่ในสินค้าคงคลังของสตูดิโอ",
+    "add_to_studio_inventory": "เพิ่มเข้าสินค้าคงคลังของสตูดิโอ"
+  },
+  "database": {
+    "title": "ทะเบียนสารในหมึกสักของ EU REACH",
+    "subtitle": "เรียกดู {count} รายการของเม็ดสี สารให้สี และโลหะหนักปริมาณน้อยที่ถูกควบคุมภายใต้ Regulation (EU) 2020/2081 Entry 75",
+    "search_placeholder": "ค้นหาด้วยชื่อเม็ดสี Colour Index (เช่น CI 74160) หมายเลข CAS หรือชื่อเรียกอื่น...",
+    "search_clear_title": "ล้างคำค้นหา",
+    "search_clear_aria": "ล้างการค้นหา",
+    "status_filter_label": "กรองตามสถานะกฎระเบียบ",
+    "status_opt_all": "สถานะกฎระเบียบทั้งหมด ({count})",
+    "status_opt_compliant": "เป็นไปตามข้อกำหนด / ได้รับอนุญาต (ปลอดภัย) ({count})",
+    "status_opt_restricted": "จำกัดการใช้ (ค่าจำกัด Entry 75) ({count})",
+    "status_opt_banned": "ห้ามใช้ (REACH Entry 75) ({count})",
+    "status_opt_watch": "อยู่ระหว่างการทบทวน / รายการเฝ้าระวัง ({count})",
+    "group_filter_label": "กรองตามกลุ่มสีทางเคมี",
+    "group_opt_all": "กลุ่มเคมีทั้งหมด",
+    "quick_filter_label": "กรองด่วน:",
+    "pill_all": "ทั้งหมด ({count})",
+    "pill_compliant": "เป็นไปตามข้อกำหนด ({count})",
+    "pill_restricted": "จำกัดการใช้ ({count})",
+    "pill_banned": "ห้ามใช้ ({count})",
+    "pill_watch": "อยู่ระหว่างการทบทวน ({count})",
+    "reset_filters": "รีเซ็ตตัวกรอง",
+    "showing_summary": "แสดง",
+    "of_substances": "จาก {total} สารในฐานข้อมูลออฟไลน์",
+    "filtered_by_label": "· กรองโดย:",
+    "group_label": "· กลุ่ม:",
+    "search_label": "· ค้นหา:",
+    "indexed_offline_note": "จัดทำดัชนีแบบออฟไลน์ตาม EU Regulation 2020/2081 Entry 75",
+    "no_matches_title": "ไม่มีเม็ดสีที่ตรงกับเงื่อนไขตัวกรองของคุณ",
+    "no_matches_desc": "ลองปรับคำค้นหา หรือรีเซ็ตตัวกรองสถานะและสี",
+    "reset_all_btn": "รีเซ็ตตัวกรองทั้งหมด",
+    "search_aria": "ค้นหาสาร",
+    "status_filter": "ตัวกรองสถานะ",
+    "status_all": "ทุกสถานะ",
+    "status_prohibited": "ห้ามใช้ / ต้องห้าม",
+    "status_restricted": "จำกัดการใช้",
+    "status_review": "อยู่ระหว่างการทบทวน",
+    "status_safe": "ไม่มีข้อจำกัด",
+    "color_group": "กลุ่มสี",
+    "color_all": "ทุกสี",
+    "color_blue": "น้ำเงิน",
+    "color_green": "เขียว",
+    "color_red": "แดง",
+    "color_yellow": "เหลือง",
+    "color_orange": "ส้ม",
+    "color_violet": "ม่วงไวโอเลต / ม่วง",
+    "color_black": "ดำ",
+    "color_white": "ขาว",
+    "color_brown": "น้ำตาล",
+    "showing_count_singular": "แสดง {count} สาร",
+    "showing_count_plural": "แสดง {count} สาร",
+    "filtered_from": "(กรองจาก {total})",
+    "empty_heading": "ไม่มีสารที่ตรงกับตัวกรองปัจจุบัน",
+    "empty_desc": "ลองปรับคำค้นหาหรือเงื่อนไขสถานะ"
+  },
+  "alternatives": {
+    "title": "เมทริกซ์เม็ดสีที่เป็นไปตาม EU REACH และทางเลือกที่ปลอดภัยกว่า",
+    "subtitle": "เมทริกซ์แทนที่โดยตรงสำหรับเม็ดสีที่ห้ามใช้หรือจำกัดการใช้ภายใต้ Regulation (EU) 2020/2081 Entry 75 รวมถึงสารให้สีที่เป็นไปตามข้อกำหนดสำหรับสีน้ำเงิน เขียว แดง และเหลือง",
+    "matrix_title": "เมทริกซ์ทางเลือกสารให้สีที่เป็นไปตาม EU REACH",
+    "matrix_desc": "เทียบเม็ดสีที่จำกัดการใช้ (เช่น Pigment Blue 15:3 และ Pigment Green 7) กับสารให้สีประเภทแร่และโพลีไซคลิกที่ได้รับอนุญาตตามกฎหมายและไม่อยู่ในรายการห้ามใช้ ภายใต้ Regulation (EU) 2020/2081",
+    "matrix_badge": "เมทริกซ์ Entry 75",
+    "search_placeholder": "ค้นหาด้วยชื่อเม็ดสี หมายเลข CI (เช่น CI 74160) หรือทางเลือก...",
+    "restricted_list_heading": "เม็ดสีที่จำกัดการใช้ ({count})",
+    "status_prohibited": "ห้ามใช้",
+    "prohibited_under_entry75": "ห้ามใช้ตาม REACH Entry 75",
+    "ci_number_label": "หมายเลข CI: {ci}",
+    "cas_number_label": "CAS: {cas}",
+    "transition_expired": "หมดระยะเวลาผ่อนผันการเปลี่ยนผ่านแล้ว",
+    "legal_context_prefix": "บริบททางกฎหมาย: ",
+    "compliant_substitutes_heading": "สารให้สีทดแทนของ EU ที่เป็นไปตามข้อกำหนด",
+    "color_shade_label": "เฉดสี:",
+    "reg_status_label": "สถานะกฎระเบียบ:",
+    "allowed_status": "อนุญาตภายใต้ Annex XVII Entry 75",
+    "filter_color": "กรองตามสี:",
+    "hue_all": "ทุกเฉดสี",
+    "hue_blue": "น้ำเงิน",
+    "hue_green": "เขียว",
+    "hue_red": "แดง",
+    "hue_yellow": "เหลือง",
+    "restricted_heading": "เม็ดสีที่จำกัดการใช้ / ห้ามใช้",
+    "status_label": "สถานะ:",
+    "status_banned": "ห้ามใช้ภายใต้ EU 2020/2081",
+    "why_restricted": "เหตุผลที่จำกัดการใช้:",
+    "compliant_heading": "สารให้สีทางเลือกที่เป็นไปตามข้อกำหนด",
+    "properties_label": "คุณสมบัติ:",
+    "available_in": "มีในรูปแบบ:",
+    "inspect_btn": "ตรวจสอบในทะเบียน"
+  },
+  "expiry": {
+    "title": "ติดตามอายุการเก็บรักษาและวันหมดอายุ PAO ของสตูดิโอ",
+    "subtitle": "ติดตามวันหมดอายุที่ผู้ผลิตกำหนดและระยะเวลาหลังเปิดใช้ (PAO) ของขวดสีที่เปิดแล้ว ป้องกันการใช้หมึกที่เสื่อมสภาพหรือหมดอายุ",
+    "close_form": "ปิดฟอร์ม",
+    "log_bottle_btn": "บันทึกขวดหมึกของสตูดิโอ",
+    "overview_heading": "ภาพรวมสต็อกหมึกของสตูดิโอ",
+    "total_inks": "จำนวนหมึกที่บันทึกทั้งหมด",
+    "active_fresh": "ใช้งานได้ / ยังสด",
+    "expiring_soon": "ใกล้หมดอายุ (30 วัน)",
+    "expired_action": "หมดอายุ / ต้องดำเนินการ",
+    "form_heading": "ลงทะเบียนขวดหมึก",
+    "ink_name_label": "ชื่อหมึก / เฉดสี *",
+    "ink_name_placeholder": "e.g. Dynamic Triple Black",
+    "brand_label": "ยี่ห้อ / ผู้ผลิต *",
+    "brand_placeholder": "e.g. Dynamic, World Famous",
+    "batch_label": "หมายเลขล็อต / LOT *",
+    "batch_placeholder": "e.g. LOT-2024-8891",
+    "size_label": "ขนาดขวด / ปริมาตร",
+    "size_placeholder": "e.g. 30ml (1 oz)",
+    "status_label": "การจัดประเภทสถานะ",
+    "status_compliant": "เป็นไปตามข้อกำหนด (EU 2020/2081)",
+    "status_restricted": "จำกัดการใช้",
+    "status_banned": "ห้ามใช้",
+    "date_opened_label": "วันที่เปิดใช้ (ไม่บังคับ)",
+    "pao_label": "ระยะเวลาหลังเปิดใช้ (PAO)",
+    "pao_none": "ไม่มี / ไม่ได้ระบุ",
+    "pao_6m": "6 เดือน (6M)",
+    "pao_12m": "12 เดือน (12M)",
+    "pao_24m": "24 เดือน (24M)",
+    "mfg_expiry_label": "วันหมดอายุของผู้ผลิต (ไม่บังคับ)",
+    "notes_label": "บันทึก / ตำแหน่งจัดเก็บ",
+    "notes_placeholder": "e.g. Station A, drawer 2. Opened for client linework.",
+    "cancel_btn": "ยกเลิก",
+    "save_bottle_btn": "บันทึกขวดลงสต็อก",
+    "empty_heading": "ยังไม่มีการบันทึกขวดหมึกของสตูดิโอ",
+    "empty_desc": "ติดตามขวดที่เปิดแล้ว หมายเลขล็อต และวันหมดอายุ เพื่อรักษามาตรฐานความปลอดภัยด้านสุขภาพ",
+    "badge_expired": "หมดอายุ",
+    "badge_expiring_soon": "ใกล้หมดอายุ",
+    "badge_active": "ใช้งานได้",
+    "item_status": "สถานะ:",
+    "item_lot": "LOT:",
+    "item_size": "ขนาด:",
+    "item_opened": "เปิดใช้: {opened}",
+    "item_pao": "PAO: {pao}M",
+    "item_mfg": "วันหมดอายุผู้ผลิต: {date}",
+    "mark_opened_today": "ทำเครื่องหมายว่าเปิดใช้วันนี้",
+    "delete_bottle_aria": "ลบขวดหมึก",
+    "default_pao_notes": "PAO (12 เดือนหลังเปิด)",
+    "col_ink_brand": "หมึกและยี่ห้อ",
+    "col_batch_lot": "ล็อต / LOT",
+    "col_opened": "วันที่เปิดใช้",
+    "col_mfg_expiry": "วันหมดอายุผู้ผลิต",
+    "col_status": "สถานะบนชั้นวาง",
+    "col_actions": "การดำเนินการ",
+    "status_no_date": "ยังไม่ได้ตั้งวันที่",
+    "status_expired_days": "หมดอายุแล้ว ({days} วันที่แล้ว)",
+    "status_expiring_days": "ใกล้หมดอายุ (เหลือ {days} วัน)",
+    "status_good_days": "ใช้ได้ (เหลือ {days} วัน)",
+    "unopened": "ยังไม่เปิดใช้",
+    "pao_3m": "3 เดือน (3M)",
+    "pao_12m_standard": "12 เดือน (12M - มาตรฐาน)",
+    "default_stock": "สต็อกของสตูดิโอ",
+    "default_lot": "LOT-DEFAULT",
+    "action_req_expired": "ต้องทิ้ง (หมดอายุ)",
+    "expiring_within_30": "ใกล้หมดอายุภายใน 30 วัน",
+    "active_fresh_stock": "สต็อกที่ใช้งานได้ / ยังสด",
+    "bottles_require_quarantine": "ขวดที่ต้องกักแยก / ดำเนินการ {count} ขวด",
+    "view_expired_btn": "กรองสต็อกที่หมดอายุ",
+    "show_all_filter": "แสดงทั้งหมด ({count})",
+    "logged_bottles": "ขวดของสตูดิโอที่บันทึกไว้",
+    "ink_name": "ชื่อหมึก",
+    "placeholder_ink_name": "e.g. True Black",
+    "brand_mfg": "ยี่ห้อ / ผู้ผลิต",
+    "placeholder_brand": "e.g. Eternal Ink",
+    "batch_lot": "หมายเลขล็อต / Lot",
+    "opened_date": "วันที่เปิดใช้ (ตามเวลาท้องถิ่น)",
+    "pao_months": "PAO (เดือน)",
+    "factory_expiry": "วันหมดอายุจากโรงงาน"
+  },
+  "sessions": {
+    "title": "บันทึกการใช้หมึกในเซสชันการสักของลูกค้า",
+    "subtitle": "บันทึกขวดหมึก เม็ดสี และหมายเลขล็อตที่ใช้ในการสักของลูกค้าแต่ละราย รองรับข้อกำหนดการสืบย้อนกลับล็อตของหน่วยงานสาธารณสุข โดยไม่มีการจัดเก็บข้อมูลบนคลาวด์",
+    "close_logger": "ปิดการบันทึก",
+    "log_new_session": "บันทึกเซสชันใหม่",
+    "record_procedure": "บันทึกการใช้หมึกในขั้นตอนการสัก",
+    "consent_ref_label": "หมายเลขการยินยอม / อ้างอิงลูกค้า *",
+    "consent_placeholder": "e.g. CONSENT-2024-889",
+    "client_name_label": "ชื่อลูกค้า / อักษรย่อ",
+    "client_name_placeholder": "e.g. J. Doe",
+    "placement_label": "ตำแหน่งบนร่างกาย",
+    "placement_placeholder": "e.g. Left Forearm / Ribcage",
+    "attach_inks": "แนบหมึกที่ใช้ในขั้นตอน",
+    "select_ink_placeholder": "เลือกหมึกจากสินค้าคงคลังหรือการตรวจสอบ...",
+    "audited_ink_option": "[ตรวจสอบแล้ว] {brand} - {inkName} (LOT: {batch})",
+    "usage_linework": "เส้นร่าง / เส้นขอบ",
+    "usage_shading": "การลงเงา / Graywash",
+    "usage_color": "การลงสี",
+    "usage_highlight": "ไฮไลต์",
+    "add_ink_btn": "เพิ่มหมึก",
+    "remove_ink_btn": "ลบ",
+    "cancel_btn": "ยกเลิก",
+    "save_session_btn": "บันทึกข้อมูลเซสชัน",
+    "empty_heading": "ยังไม่มีการบันทึกเซสชันการสัก",
+    "empty_desc": "บันทึกขั้นตอนของลูกค้าเพื่อเชื่อมหมายเลขล็อตหมึกโดยตรงกับบันทึกการยินยอม",
+    "date_prefix": "วันที่: {date}",
+    "placement_prefix": "ตำแหน่ง: {placement}",
+    "print_card_btn": "พิมพ์การ์ด",
+    "delete_session_aria": "ลบเซสชัน",
+    "default_selected_ink": "หมึกที่เลือก",
+    "default_brand": "แบรนด์ของสตูดิโอ",
+    "default_na": "ไม่มีข้อมูล",
+    "default_lot": "LOT-N/A",
+    "default_client": "ลูกค้าที่ไม่ระบุชื่อ",
+    "default_artist": "ช่างสักของสตูดิโอ",
+    "default_studio": "สตูดิโอ",
+    "default_placement": "แขนซ้าย"
+  },
+  "metals": {
+    "title": "เครื่องคำนวณความเสี่ยงสิ่งเจือปนโลหะหนักและ PAA จากใบ COA",
+    "subtitle": "ประเมินใบรับรองผลการวิเคราะห์ (COA) ในห้องปฏิบัติการเทียบกับค่าความเข้มข้นสิ่งเจือปนสูงสุดตามกฎหมายใน Regulation (EU) 2020/2081 ภาคผนวก 13 (ตะกั่ว (Lead) ≤ 0.7 mg/kg, สารหนู (Arsenic) ≤ 0.5 mg/kg, แคดเมียม (Cadmium) ≤ 0.5 mg/kg, นิกเกิล (Nickel) ≤ 5 mg/kg, BaP ≤ 5 µg/kg)",
+    "close_calculator": "ปิดเครื่องคำนวณ",
+    "evaluate_new_coa": "ประเมิน COA ใหม่",
+    "form_heading": "การประเมินชุดผลวิเคราะห์ในห้องปฏิบัติการ (ภาคผนวก 13)",
+    "batch_label": "ล็อต / LOT # *",
+    "batch_placeholder": "เช่น LOT-2024-991",
+    "ink_name_label": "ชื่อหมึก *",
+    "ink_name_placeholder": "เช่น True Black 30ml",
+    "brand_label": "ยี่ห้อ / ผู้ผลิต",
+    "brand_placeholder": "เช่น Dynamic, Solid Ink",
+    "lab_label": "ห้องปฏิบัติการวิเคราะห์",
+    "lab_placeholder": "เช่น CTL Bielefeld",
+    "input_heading": "กรอกความเข้มข้นที่วัดได้จาก COA (หน่วย mg/kg หรือ ppm)",
+    "limit_prefix": "ค่าจำกัด: ≤ {limit} ppm",
+    "ppm_placeholder": "ppm (mg/kg)",
+    "pass": "ผ่าน",
+    "fail": "ไม่ผ่าน",
+    "cancel_btn": "ยกเลิก",
+    "calculate_save_btn": "คำนวณและบันทึกการประเมิน COA",
+    "empty_heading": "ยังไม่มีการประเมินใบรับรองผลการทดสอบจากห้องปฏิบัติการ",
+    "empty_desc": "ทดสอบรายงานชุดผลิตของผู้ผลิตเทียบกับค่าจำกัดสิ่งเจือปนตาม REACH Annex XVII Entry 75",
+    "compliant_badge": "สิ่งเจือปนทั้งหมดเป็นไปตามเกณฑ์",
+    "fail_badge": "ไม่ผ่าน - เกินค่าจำกัด REACH",
+    "lab_date_meta": "• ห้องปฏิบัติการ: {lab} • วันที่ทดสอบ: {date}",
+    "delete_coa_aria": "ลบ COA",
+    "result_pill": "{substance}: {measured} ppm (สูงสุด: {max} ppm)",
+    "default_manufacturer": "ผู้ผลิต",
+    "default_lab": "ห้องปฏิบัติการทดสอบวิเคราะห์",
+    "hide_parser": "ซ่อนตัวแยกข้อความเอกสาร",
+    "open_text_parser": "แยกข้อความ COA / รายงานห้องปฏิบัติการดิบ",
+    "parser_title": "ตัวแยกข้อความดิบและรายงาน PDF ของ COA",
+    "load_sample_coa": "โหลดตัวอย่างใบรับรองการทดสอบ",
+    "parser_placeholder": "วางรายงานการวิเคราะห์ทางเคมี ข้อความใบรับรองห้องปฏิบัติการ หรือผล OCR จาก COA...",
+    "btn_extract_data": "แยกค่าจำกัดทางเคมี",
+    "btn_apply_to_form": "กรอกแบบฟอร์มด้วยค่าที่แยกได้",
+    "parsed_detected_heading": "ผลสิ่งเจือปนที่แยกได้",
+    "metals_found_count": "พบค่าโลหะหนักที่ควบคุม {count} รายการ"
+  },
+  "bottle_qr": {
+    "title": "ฉลากล็อตขวดสำหรับพิมพ์",
+    "lot_prefix": "LOT: {batch}",
+    "audited_verified": "ตรวจสอบแล้ว: {date} - เทียบกับ EU 2020/2081",
+    "instructions": "พิมพ์และติดฉลากนี้บนขวดหรือที่จ่ายเม็ดสี ฉลากระบุหมึก แบรนด์ LOT วันที่ที่คุณตรวจสอบ และกฎระเบียบที่ใช้ตรวจสอบ เป็นบันทึกของสตูดิโอของคุณ ไม่ใช่การยืนยันจากหน่วยงานใด ๆ ใช้ 'คัดลอก JSON' เพื่อเก็บข้อมูลเดียวกันไว้ในระบบของคุณเอง",
+    "copied": "คัดลอกแล้ว",
+    "copy_json": "คัดลอก JSON",
+    "print_label": "พิมพ์ฉลาก"
+  },
+  "profile": {
+    "title": "โปรไฟล์ช่างสักและสตูดิโอ",
+    "close_aria": "ปิดหน้าต่าง",
+    "photo_processed": "ประมวลผลรูปแบบออฟไลน์แล้ว ({size} KB)",
+    "process_failed": "ประมวลผลรูปภาพไม่สำเร็จ",
+    "photo_removed": "ลบรูปโปรไฟล์แล้ว",
+    "profile_saved": "บันทึกโปรไฟล์และรูปที่กำหนดเองลงฐานข้อมูลออฟไลน์แล้ว",
+    "save_failed": "ไม่สามารถบันทึกโปรไฟล์ได้",
+    "custom_photo_heading": "รูปโปรไฟล์ที่กำหนดเอง",
+    "profile_alt": "โปรไฟล์",
+    "no_photo": "ไม่มีรูป",
+    "drop_instructions": "ลากและวางรูปโปรไฟล์ หรือคลิกด้านล่าง",
+    "processing": "กำลังประมวลผล...",
+    "upload_btn": "อัปโหลดรูป",
+    "remove_title": "ลบรูปโปรไฟล์",
+    "remove_btn": "ลบ",
+    "offline_spec": "สี่เหลี่ยมจัตุรัส 256x256 WebP · ประมวลผล 100% ออฟไลน์ในเบราว์เซอร์",
+    "name_label": "ชื่อช่างสัก / ผู้ตรวจสอบ",
+    "name_placeholder": "e.g. Alex Rivera",
+    "studio_label": "ชื่อสตูดิโอ",
+    "studio_placeholder": "e.g. Atelier Noir Tattoo",
+    "role_label": "บทบาท",
+    "role_artist": "ช่างสัก",
+    "role_owner": "เจ้าของสตูดิโอ / ผู้จัดการ",
+    "role_compliance": "หัวหน้าฝ่ายการปฏิบัติตามกฎ",
+    "role_guest": "ช่างสักรับเชิญ",
+    "role_pmu": "ผู้เชี่ยวชาญ PMU",
+    "jurisdiction_label": "เขตอำนาจ / ที่ตั้ง",
+    "jurisdiction_placeholder": "e.g. Berlin, Germany (EU 2020/2081 applicable)",
+    "notes_label": "บันทึกสตูดิโอ / ขั้นตอนมาตรฐาน",
+    "notes_placeholder": "e.g. All tattoo inks must be checked for PB15, PG7 and heavy metals before opening.",
+    "cancel_btn": "ยกเลิก",
+    "save_btn": "บันทึกโปรไฟล์ออฟไลน์",
+    "default_artist": "ช่างสัก",
+    "default_studio": "สตูดิโออิสระ",
+    "default_jurisdiction": "สหภาพยุโรป"
+  },
+  "sync": {
+    "title": "การจัดเก็บในเครื่องและการถ่ายโอนไปยังสถานี",
+    "pw_min_length": "โปรดป้อนรหัสผ่านอย่างน้อย 6 ตัวอักษรสำหรับการเข้ารหัส AES-GCM",
+    "encrypted_export_success": "ดาวน์โหลดสำเนาสำรองแบบออฟไลน์ที่เข้ารหัสแล้ว (AES-256-GCM)",
+    "standard_export_success": "ดาวน์โหลดสำเนาสำรองแบบออฟไลน์เรียบร้อยแล้ว",
+    "export_failed": "ส่งออกไม่สำเร็จ",
+    "import_success": "นำเข้าสำเนาสำรองแบบออฟไลน์และรวมเข้ากับฐานข้อมูลในเครื่องแล้ว",
+    "import_failed": "นำเข้าไม่สำเร็จ",
+    "decrypt_success": "ถอดรหัสสำเนาสำรองที่เข้ารหัสและรวมเข้ากับฐานข้อมูลในเครื่องแล้ว",
+    "decrypt_failed": "ถอดรหัสไม่สำเร็จ โปรดตรวจสอบรหัสผ่าน",
+    "clear_success": "ลบบันทึกการตรวจสอบแบบออฟไลน์ทั้งหมดแล้ว",
+    "clear_failed": "ลบไม่สำเร็จ",
+    "network_status": "สถานะเครือข่าย",
+    "online": "ออนไลน์",
+    "offline": "โหมดออฟไลน์ (ใช้งานในเครื่อง)",
+    "stored_audits": "การตรวจสอบที่จัดเก็บ",
+    "count_record": "รายการ",
+    "count_records": "รายการ",
+    "studio_inks": "หมึกของสตูดิโอ",
+    "count_item": "รายการ",
+    "count_items": "รายการ",
+    "sync_engine": "ระบบซิงค์ในเครื่อง",
+    "sync_engine_val": "IndexedDB + Storage",
+    "last_synced": "ซิงค์ครั้งล่าสุด",
+    "encrypted_detected": "ตรวจพบสำเนาสำรองที่เข้ารหัส (AES-256-GCM)",
+    "enter_pw_desc": "ป้อนรหัสผ่านที่ใช้เข้ารหัสไฟล์ของสถานีนี้ เพื่อถอดรหัสและกู้คืนบันทึก:",
+    "enter_pw_placeholder": "ป้อนรหัสผ่านสำรองข้อมูล...",
+    "decrypt_btn": "ถอดรหัส",
+    "transfer_heading": "การถ่ายโอนไปยังสถานีและการสำรองข้อมูลแบบ Air-Gapped",
+    "encrypt_checkbox": "เข้ารหัสด้วย AES-GCM",
+    "pw_label": "รหัสผ่านการเข้ารหัส (อย่างน้อย 6 ตัวอักษร)",
+    "pw_placeholder": "ตั้งรหัสผ่านสำหรับไฟล์ที่เข้ารหัส...",
+    "crypto_spec": "การสร้างคีย์ด้วย PBKDF2-SHA256 จำนวน 100,000 รอบ และการเข้ารหัสแบบยืนยันความถูกต้อง AES-256-GCM",
+    "export_encrypted": "ส่งออกแบบเข้ารหัส (.enc)",
+    "export_json": "ส่งออกสำเนาสำรอง (.json)",
+    "import_btn": "นำเข้าสำเนาสำรอง",
+    "clear_audits_btn": "ลบการตรวจสอบที่จัดเก็บทั้งหมด",
+    "confirm_clear_prompt": "แน่ใจหรือไม่?",
+    "confirm_clear_btn": "ยืนยันการลบ",
+    "cancel_btn": "ยกเลิก",
+    "tab_file_backup": "สำรองเป็นไฟล์และ JSON",
+    "tab_p2p_sync": "ซิงค์โดยตรงระหว่างสถานี (P2P)",
+    "p2p_send_heading": "ส่งออกข้อมูลซิงค์โดยตรง",
+    "p2p_send_desc": "ส่งสูตรหมึกทั้งหมด การตรวจสอบ และสินค้าคงคลังบนชั้นวางของสตูดิโอไปยังคอมพิวเตอร์อีกเครื่องโดยตรง โดยไม่ใช้พื้นที่จัดเก็บบนคลาวด์",
+    "p2p_btn_generate": "สร้างข้อมูลซิงค์แบบ Air-Gapped",
+    "p2p_send_instruction": "คัดลอกข้อมูลที่เข้ารหัสนี้แล้ววางลงในหน้าต่างของสถานีรับ:",
+    "p2p_sync_token_label": "โทเค็นการถ่ายโอนโดยตรง:",
+    "copy": "คัดลอกข้อมูล",
+    "copied": "คัดลอกแล้ว!",
+    "p2p_receive_heading": "นำเข้าข้อมูลซิงค์ของสถานี",
+    "p2p_receive_desc": "วางโทเค็นการถ่ายโอนจากคอมพิวเตอร์ที่ส่ง เพื่อรวมบันทึกของสตูดิโอเข้ากับฐานข้อมูลของเบราว์เซอร์นี้",
+    "p2p_receive_placeholder": "วางโทเค็นการถ่ายโอนที่นี่...",
+    "p2p_btn_merge_data": "รวมบันทึกเข้าสู่การจัดเก็บในเครื่อง",
+    "p2p_import_success": "นำเข้าเสร็จสิ้น: รวม {count} รายการทั้งหมดเข้าฐานข้อมูลในเครื่องแล้ว",
+    "p2p_invalid_payload": "รูปแบบโทเค็นซิงค์ไม่ถูกต้อง โปรดตรวจสอบข้อมูลต้นทาง",
+    "p2p_gen_failed": "สร้างข้อมูลไม่สำเร็จ โปรดตรวจสอบบันทึกในการจัดเก็บในเครื่อง"
+  },
+  "blue_green": {
+    "title": "Pigment Blue 15:3 และ Pigment Green 7: อธิบายวันสิ้นสุดระยะเปลี่ยนผ่านที่แยกกัน",
+    "subtitle": "เหตุใดสารสีสองชนิดนี้จึงมีกรอบเวลาของตนเอง และสถานะทางกฎหมายในปัจจุบันทั่วสหภาพยุโรปเป็นอย่างไร",
+    "date_highlight_title": "ระยะเวลาเปลี่ยนผ่านสิ้นสุดวันที่ 4 มกราคม 2023",
+    "date_highlight_body": "ภายใต้ Commission Regulation (EU) 2020/2081 Pigment Blue 15:3 (CI 74160) และ Pigment Green 7 (CI 74260) ได้รับการผ่อนผันให้เลื่อนการจำกัดการใช้จนถึงวันที่ 4 มกราคม 2023 การผ่อนผันนั้นหมดอายุแล้ว ปัจจุบันสารสีทั้งสองชนิดถูกจำกัดการใช้อย่างเต็มรูปแบบภายใต้ Entry 75",
+    "pb15_title": "Pigment Blue 15:3 (CI 74160, CAS 147-14-8)",
+    "pb15_desc": "Copper phthalocyanine blue (รูปแบบอัลฟา) ใช้กันอย่างแพร่หลายมานานหลายทศวรรษเพื่อให้ได้เฉดสีฟ้าอมเขียวและน้ำเงินสดใส ถูกห้ามภายใต้ Entry 75 เนื่องจากการจัดประเภทใน Annex II ของกฎระเบียบผลิตภัณฑ์เครื่องสำอาง (Regulation (EC) No 1223/2009) การผ่อนผันหมดอายุวันที่ 4 มกราคม 2023",
+    "pg7_title": "Pigment Green 7 (CI 74260, CAS 1328-53-6)",
+    "pg7_desc": "Polychlorinated copper phthalocyanine มาตรฐานอุตสาหกรรมสำหรับโทนสีเขียวที่เข้มและเสถียร ถูกห้ามภายใต้ Entry 75 ผ่านกลไก Annex II ของเครื่องสำอางแบบเดียวกัน การผ่อนผันหมดอายุวันที่ 4 มกราคม 2023",
+    "prohibited_since": "ห้ามใช้ตั้งแต่ 4 ม.ค. 2023",
+    "chemical_class_label": "ประเภททางเคมี:",
+    "pb15_chemical_val": "Copper phthalocyanine (รูปแบบผลึกอัลฟา)",
+    "pg7_chemical_val": "Polychlorinated copper phthalocyanine",
+    "cosmetic_annex_label": "Annex II ของเครื่องสำอาง:",
+    "pb15_cosmetic_val": "อ้างอิง 1223/2009 รายการ 1369",
+    "pg7_cosmetic_val": "อ้างอิง 1223/2009 รายการ 1370",
+    "entry75_label": "ย่อหน้าของ Entry 75:",
+    "derogation_expired_val": "ย่อหน้า 4(c) การผ่อนผันหมดอายุ 4 ม.ค. 2023",
+    "status_today_heading": "สิ่งที่หมายถึงสำหรับสตูดิโอในปัจจุบัน",
+    "status_today_item1": "หมึกที่มี Pigment Blue 15:3 หรือ Pigment Green 7 ซึ่งนำออกสู่ตลาดหรือใช้ในสหภาพยุโรปหลังวันที่ 4 มกราคม 2023 ไม่เป็นไปตาม REACH Annex XVII Entry 75",
+    "status_today_item2": "ผู้ผลิตต้องผสมโทนสีน้ำเงินและเขียวโดยใช้สารสีทางเลือกที่อนุญาตให้ใช้ หรือแสดงหลักฐานการยกเว้นที่มีเอกสารตามกฎหมายของประเทศสมาชิกที่เกี่ยวข้อง",
+    "source_reference": "แหล่งอ้างอิงทางกฎหมาย: Commission Regulation (EU) 2020/2081 ลงวันที่ 14 ธันวาคม 2020 ย่อหน้า 4(c) ของ Entry 75 แก้ไข Annex XVII ของ Regulation (EC) No 1907/2006 (REACH)",
+    "test_decoder_btn": "ทดสอบ Phthalo Blue และ Green ใน Decoder"
+  },
+  "maker_questions": {
+    "title": "สิ่งที่ควรถามผู้ผลิตหมึก: แบบสอบถามสำหรับพิมพ์",
+    "subtitle": "ภายใต้กฎหมาย EU ไม่มีสิ่งที่เรียกว่า 'ใบรับรองการปฏิบัติตามกฎ' อย่างเป็นทางการ การปฏิบัติตามข้อกำหนดได้รับการพิสูจน์จากเอกสารทางเทคนิคของผู้ผลิต เอกสารข้อมูลความปลอดภัย (SDS) และการทดสอบในห้องปฏิบัติการที่ได้รับการรับรอง พิมพ์หรือส่งออกแบบสอบถามนี้เพื่อส่งให้ผู้จำหน่ายของคุณ",
+    "print_btn": "พิมพ์แบบสอบถาม",
+    "sheet_doc_title": "แบบสอบถามการปฏิบัติตามกฎสำหรับหมึกสักและ PMU",
+    "sheet_doc_desc": "แบบสอบถามมาตรฐานของสตูดิโอสำหรับผู้ผลิตและผู้จัดจำหน่ายหมึก",
+    "studio_info_heading": "ข้อมูลสตูดิโอและผู้จำหน่าย",
+    "studio_name": "ชื่อสตูดิโอ:",
+    "studio_placeholder": "ชื่อสตูดิโอ",
+    "auditor_name": "ผู้ตรวจสอบ / ช่างสัก:",
+    "auditor_placeholder": "ช่างสักหรือผู้จัดการสตูดิโอ",
+    "ink_maker": "ผู้ผลิตหมึก / แบรนด์:",
+    "ink_maker_placeholder": "ชื่อผู้ผลิต",
+    "ink_name": "ชื่อหมึกและเฉดสี:",
+    "ink_name_placeholder": "ชื่อเฉดสี / สูตร",
+    "batch_no": "หมายเลขล็อตบนขวด:",
+    "batch_placeholder": "ล็อต / LOT #",
+    "date_checked": "วันที่ประเมิน:",
+    "date_placeholder": "YYYY-MM-DD",
+    "checklist_heading": "คำถามบังคับตาม EU Regulation 2020/2081 Entry 75",
+    "q1_title": "1. คำประกาศความสอดคล้องกับ Entry 75",
+    "q1_desc": "ผู้ผลิตได้ออกคำประกาศเป็นลายลักษณ์อักษรหรือไม่ ว่าสูตรของล็อตนี้เป็นไปตาม REACH Annex XVII Entry 75",
+    "q2_title": "2. องค์ประกอบในหัวข้อ 3 และหมายเลข CAS",
+    "q2_desc": "เอกสารข้อมูลความปลอดภัย (SDS) หัวข้อ 3 ระบุสารประกอบทั้งหมดพร้อมหมายเลข CAS และ CI ที่ถูกต้อง รวมถึงเม็ดสีที่มีอยู่เกิน 0.1% โดยน้ำหนักหรือไม่",
+    "q3_title": "3. ผลทดสอบสิ่งเจือปนโลหะหนัก (Appendix 13)",
+    "q3_desc": "ผู้ผลิตสามารถให้ผลทดสอบจากห้องปฏิบัติการอิสระที่ยืนยันว่าสิ่งเจือปนอยู่ภายในค่าจำกัดตามกฎหมายได้หรือไม่ (เช่น ตะกั่ว (Lead) ≤ 0.7 mg/kg, สารหนู (Arsenic) ≤ 0.5 mg/kg, แคดเมียม (Cadmium) ≤ 0.5 mg/kg, นิกเกิล (Nickel) ≤ 5 mg/kg, ปรอท (Mercury) ≤ 0.5 mg/kg)",
+    "q4_title": "4. การคัดกรองสารอะโรมาติกเอมีนปฐมภูมิ (Primary Aromatic Amines, PAAs)",
+    "q4_desc": "มีผลทดสอบที่ยืนยันได้หรือไม่ว่าสารอะโรมาติกเอมีนปฐมภูมิที่ระบุใน Appendix 13 (เช่น o-anisidine, 4-aminobiphenyl) แต่ละชนิดไม่เกิน 5 mg/kg",
+    "q5_title": "5. ไฮโดรคาร์บอนอะโรมาติกหลายวงควบแน่น (PAHs) ในสูตรสีดำ",
+    "q5_desc": "หากสูตรมีคาร์บอนแบล็ก (CI 77266) การวิเคราะห์ล็อตยืนยันได้หรือไม่ว่า benzo[a]pyrene ≤ 5 µg/kg (5 ppb) และ PAHs รวม ≤ 0.5 mg/kg",
+    "q6_title": "6. ข้อกำหนดการติดฉลากขวดที่บังคับ",
+    "q6_desc": "ขวดมีข้อความจริงดังต่อไปนี้หรือไม่: (a) 'Mixture for use in tattoos or permanent make-up', (b) หมายเลขอ้างอิงล็อตที่ไม่ซ้ำกัน, (c) รายการส่วนประกอบทั้งหมด, (d) คำเตือนด้านความปลอดภัยเรื่องนิกเกิล/โครเมียม หากมี, (e) วันหมดอายุหรือเครื่องหมายระยะเวลาหลังเปิดใช้",
+    "provided": "มี",
+    "missing": "ไม่มี",
+    "notes_area": "คำตอบของผู้จำหน่าย / หมายเหตุการดำเนินการ:",
+    "notes_placeholder": "บันทึกคำตอบของผู้ผลิต หมายเลขอ้างอิงรายงานการทดสอบ หรือสิ่งที่ต้องติดตาม...",
+    "signature_block": "ตรวจสอบโดย (ลายเซ็นและวันที่):",
+    "date_block": "วันที่:",
+    "inquiry_box_title": "อีเมลสอบถามถึงผู้ผลิตหมึก",
+    "inquiry_box_desc": "คัดลอกข้อความสอบถามนี้ไปวางในอีเมลถึงผู้ผลิต เพื่อขอการยืนยันส่วนประกอบที่ไม่พบในฐานข้อมูล:",
+    "copy_email_btn": "คัดลอกข้อความอีเมล",
+    "copied_email_toast": "คัดลอกไปยังคลิปบอร์ดแล้ว",
+    "unrecognised_items_heading": "ส่วนประกอบที่ไม่พบในฐานข้อมูลและต้องการคำชี้แจง:",
+    "add_unrecognised_item": "เพิ่มส่วนประกอบ",
+    "remove_item_aria": "ลบส่วนประกอบ",
+    "empty_unrecognised_items": "ยังไม่มีส่วนประกอบที่ไม่พบในฐานข้อมูล ป้อนข้อมูลหมึกและรายการด้านบน หรือส่งจากแท็บตัวถอดรหัส",
+    "standard_studio_inquiry_line": "ฉลากของคุณสำหรับ {inkName} ระบุ {items} โปรดระบุหมายเลข CAS หมายเลข CI และสถานะ REACH Entry 75 ของส่วนประกอบนี้ เพื่อให้เราจัดทำบันทึกของสตูดิโอได้ครบถ้วน",
+    "standard_studio_inquiry_prefix": "คำถามมาตรฐานจากสตูดิโอ:",
+    "item_placeholder": "e.g. CI 77999 or trade name"
+  },
+  "shortlist": {
+    "title": "รายการหมึกที่สตูดิโอบันทึกไว้",
+    "subtitle": "หมึกและสูตรที่สตูดิโอของคุณประเมิน เก็บไว้ในเบราว์เซอร์ของคุณและไม่ถูกส่งผ่านอินเทอร์เน็ต ส่งออกเป็นไฟล์ CSV มาตรฐานหรือ JSON แบบสะอาดได้",
+    "export_csv": "ดาวน์โหลดเป็น CSV",
+    "download_csv": "ดาวน์โหลดเป็น CSV",
+    "download_json": "ดาวน์โหลดเป็น JSON",
+    "download_json_title": "ดาวน์โหลดบันทึกการตรวจสอบฉบับเต็มเป็น JSON ที่มีโครงสร้าง",
+    "clear_all": "ล้างรายการ",
+    "empty_state": "ยังไม่มีหมึกที่บันทึกไว้ในรายการของสตูดิโอ ถอดรหัสรายการส่วนผสมในแท็บ ตัวถอดรหัสฉลากและ SDS แล้วคลิก 'บันทึกสูตรนี้' เพื่อเพิ่มที่นี่",
+    "col_date": "วันที่ประเมิน (เวลาท้องถิ่น)",
+    "col_brand": "ยี่ห้อ / ผู้ผลิต",
+    "col_ink": "ชื่อหมึก",
+    "col_batch": "ล็อต #",
+    "col_items": "สารที่ตรวจพบ",
+    "col_findings": "สรุปผลการตรวจ",
+    "col_actions": "การดำเนินการ",
+    "delete_item": "ลบออก",
+    "lot_prefix": "LOT: {batch}",
+    "trace_qr": "QR การตรวจสอบย้อนกลับ",
+    "print_label": "พิมพ์ฉลาก",
+    "copied_json": "คัดลอก JSON แล้ว",
+    "copy_json": "คัดลอก JSON",
+    "export_json": "ส่งออก JSON",
+    "confirm_clear": "คุณแน่ใจหรือไม่ว่าต้องการล้างรายการของสตูดิโอ?",
+    "download_csv_title": "ดาวน์โหลดส่วนผสมที่ตรวจแล้วพร้อมเวลาและสถานะกฎระเบียบเป็น CSV",
+    "loading": "กำลังโหลดหมึกที่บันทึกไว้...",
+    "date_logged": "วันที่บันทึก",
+    "batch_lot": "ล็อต / LOT",
+    "detected_substances": "สารที่ตรวจพบ",
+    "traceability_qr": "ฉลากการตรวจสอบย้อนกลับ",
+    "qr_label_title": "พิมพ์ฉลากการตรวจสอบย้อนกลับของล็อต",
+    "qr_label_btn": "ฉลากล็อต",
+    "csv_studio_label": "สตูดิโอ: {studio}",
+    "csv_export_date_label": "วันที่ส่งออก: {date}",
+    "csv_disclaimer": "รายงานนี้มีไว้เพื่อให้ข้อมูลเท่านั้น",
+    "default_studio": "สตูดิโออิสระ"
+  },
+  "session_logger": {
+    "heading": "เครื่องบันทึกหมึกสำหรับการสักของลูกค้า",
+    "subheading": "บันทึกขวดหมึก สี และหมายเลขล็อตที่ใช้จริงในขั้นตอนการสักของลูกค้าแต่ละราย ตอบโจทย์การตรวจสอบย้อนกลับของล็อตตามข้อกำหนดของหน่วยงานด้านสาธารณสุข โดยไม่เก็บข้อมูลบนคลาวด์เลย",
+    "close_logger": "ปิดเครื่องบันทึก",
+    "log_new_session": "บันทึกเซสชันใหม่",
+    "record_procedure_title": "บันทึกการใช้หมึกในขั้นตอน",
+    "client_ref_label": "การยินยอม / หมายเลขอ้างอิงลูกค้า *",
+    "client_ref_placeholder": "e.g. CONSENT-2024-889",
+    "client_name_label": "ชื่อลูกค้า / อักษรย่อ",
+    "client_name_placeholder": "e.g. J. Doe",
+    "placement_label": "ตำแหน่งบนร่างกาย",
+    "placement_placeholder": "e.g. Left Forearm / Ribcage",
+    "attach_inks_heading": "แนบหมึกที่ใช้ในขั้นตอน",
+    "select_ink_placeholder": "เลือกหมึกจากสต็อกหรือรายการตรวจสอบ...",
+    "audited_prefix": "[ตรวจสอบแล้ว]",
+    "purpose_outline": "งานเส้น / Outline",
+    "purpose_shading": "การแรเงา / เทาหมอง (Graywash)",
+    "purpose_color_fill": "การลงสีเต็ม (Color Packing)",
+    "purpose_highlight": "ไฮไลต์",
+    "add_ink_btn": "เพิ่มหมึก",
+    "remove_ink_btn": "ลบ",
+    "cancel_btn": "ยกเลิก",
+    "save_session_btn": "บันทึกรายการเซสชัน",
+    "empty_sessions_title": "ยังไม่มีการบันทึกเซสชันขั้นตอนการสัก",
+    "empty_sessions_desc": "บันทึกขั้นตอนของลูกค้าเพื่อเชื่อมหมายเลขล็อตหมึกโดยตรงกับบันทึกการยินยอม",
+    "date_label": "วันที่: {date}",
+    "placement_summary": "ตำแหน่ง: {placement}",
+    "print_card_btn": "พิมพ์การ์ด",
+    "delete_session_aria": "ลบเซสชันขั้นตอน",
+    "default_ink": "หมึกที่เลือก",
+    "default_brand": "ยี่ห้อของสตูดิโอ",
+    "default_client": "ลูกค้าไม่ระบุชื่อ",
+    "default_artist": "ช่างสักของสตูดิโอ",
+    "default_studio": "สตูดิโอ",
+    "default_placement": "แขนซ้าย",
+    "summary_bar_title": "สรุปขั้นตอนประจำเดือน",
+    "current_month_sessions_label": "เซสชันที่บันทึกในเดือนนี้",
+    "current_month_summary_desc": "บันทึกขั้นตอนการสักของลูกค้า {count} รายการในเดือน {month}",
+    "summary_all_time_total": "ทั้งหมด: {total} เซสชัน",
+    "summary_unique_clients": "ลูกค้าไม่ซ้ำ {count} ราย",
+    "summary_inks_applied": "การใช้หมึก {count} ครั้ง"
+  },
+  "plain_language_panel": {
+    "title": "สิ่งที่ REACH Annex XVII Entry 75 กำหนดจริงๆ",
+    "subtitle": "Commission Regulation (EU) 2020/2081 กำหนดข้อจำกัดทางกฎหมายต่อสารเคมีในหมึกสักและเมคอัพถาวร (permanent make-up) ทั่วสหภาพยุโรป ต่อไปนี้คือวิธีที่กฎนี้ใช้กับช่างสัก ช่างเจาะ และเจ้าของสตูดิโอ เขียนเป็นภาษาทั่วไป",
+    "section1_title": "1. ใครรับผิดชอบด้านการปฏิบัติตามกฎ?",
+    "section1_lead": "ความรับผิดชอบถูกแบ่งกันตลอดห่วงโซ่อุปทาน แต่ช่างสักมีความรับผิดทางกฎหมายโดยตรงเมื่อใช้หมึก",
+    "section1_maker_title": "ผู้จำหน่าย / ผู้นำเข้าที่นำสินค้าออกสู่ตลาด:",
+    "section1_maker_desc": "ภายใต้ REACH Article 67 และ Entry 75 ผู้ผลิตและผู้นำเข้าในสหภาพยุโรปถูกห้ามตามกฎหมายไม่ให้นำส่วนผสมที่ไม่เป็นไปตามกฎออกสู่ตลาด พวกเขามีหน้าที่ผสมสูตรให้อยู่ภายในค่าความเข้มข้นที่กำหนด ตรวจหาสิ่งเจือปน จัดทำเอกสารข้อมูลความปลอดภัย (SDS) ที่ถูกต้องและเป็นไปตาม REACH Annex II และติดฉลากภาชนะให้ถูกต้อง",
+    "section1_artist_title": "ช่างสัก / สตูดิโอ:",
+    "section1_artist_desc": "ภายใต้ย่อหน้าที่ 1 ของ Entry 75 ช่างสักถูกห้ามใช้ส่วนผสมใดๆ เพื่อการสักที่ไม่เป็นไปตามกฎระเบียบ ช่างสักไม่สามารถโยนความรับผิดชอบโดยอ้างว่า 'ผู้ผลิตบอกว่าเป็นไปตามกฎแล้ว' สตูดิโอต้องตรวจสอบว่าฉลากมีข้อความที่จำเป็น ตรวจเอกสารของแต่ละล็อต และให้แน่ใจว่าไม่มีการใช้สารสีที่ถูกห้ามกับลูกค้า",
+    "section2_title": "2. ฉลากขวดหมึกต้องแสดงอะไรบ้าง",
+    "section2_lead": "ภายใต้ย่อหน้าที่ 4 ของ Entry 75 ภาชนะหมึกต้องแสดงองค์ประกอบบังคับต่อไปนี้อย่างชัดเจน:",
+    "section2_item1": "'Mixture for use in tattoos or permanent make-up' (ส่วนผสมสำหรับใช้ในการสักหรือการสักเพื่อความงามถาวร) ระบุไว้อย่างชัดเจนบนบรรจุภัณฑ์",
+    "section2_item2": "หมายเลขล็อต (LOT number) ที่ไม่ซ้ำกัน เพื่อให้สามารถตรวจสอบย้อนกลับได้ตลอดห่วงโซ่อุปทาน",
+    "section2_item3": "รายการส่วนผสมทั้งหมดเรียงตามน้ำหนักหรือปริมาตรจากมากไปน้อย ณ ตอนผสมสูตร",
+    "section2_item4": "'Contains nickel. Can cause allergic reactions.' หากนิกเกิลเกิน 0.0005% (5 mg/kg)",
+    "section2_item5": "'Contains chromium (VI). Can cause allergic reactions.' หากโครเมียม (VI) เกิน 0.00005% (0.5 mg/kg)",
+    "section2_item6": "คำแนะนำด้านความปลอดภัยสำหรับการใช้งาน พร้อมระบุวันหมดอายุหรือระยะเวลาหลังเปิดใช้ (PAO)",
+    "section3_title": "3. SDS หัวข้อ 3 คืออะไร (และเหตุใดจึงอาจไม่แสดงทุกรายการ)",
+    "section3_lead": "เอกสารข้อมูลความปลอดภัย (SDS) หัวข้อ 3 ครอบคลุม 'Composition / Information on Ingredients'",
+    "section3_desc1": "ภายใต้ REACH Annex II ผู้ผลิตมีหน้าที่ตามกฎหมายเพียงเปิดเผยสารในหัวข้อ 3 ที่ถูกจัดประเภทว่าเป็นอันตรายภายใต้ CLP (Regulation (EC) No 1272/2008) และมีความเข้มข้นเกินเกณฑ์การจัดประเภทที่กำหนด (โดยทั่วไป 0.1% หรือ 1% w/w)",
+    "section3_desc2": "ของเหลวพาหะที่ไม่เป็นอันตราย (เช่น น้ำหรือกลีเซอรีนเกรดเภสัชกรรม) หรือส่วนผสมที่ต่ำกว่าเกณฑ์การจัดประเภท อาจไม่ปรากฏในหัวข้อ 3 แม้ว่าฉลากขวดต้องแสดงส่วนผสมเรียงจากมากไปน้อย ดังนั้นสตูดิโอจึงต้องตรวจทั้งฉลากขวดและ SDS",
+    "section4_title": "4. ห้ามใช้ / จำกัดการใช้ / ไม่อยู่ในขอบเขต",
+    "section4_prohibited_title": "ห้ามใช้ (Banned):",
+    "section4_prohibited_desc": "สารที่ระบุใน Annex II ของกฎระเบียบเครื่องสำอางของสหภาพยุโรป (EC) No 1223/2009 สารใน Annex IV ที่มีคอลัมน์เงื่อนไขเฉพาะ (ห้ามใช้กับผลิตภัณฑ์สำหรับดวงตา เยื่อเมือก หรือใช้เฉพาะแบบล้างออก) และสารที่จัดประเภทภายใต้ CLP ว่าเป็นสารก่อมะเร็ง กลายพันธุ์ หรือเป็นพิษต่อการสืบพันธุ์ (CMR) ประเภท 1A/1B/2 สารก่อความไวต่อผิวหนัง หรือสารกัดกร่อนผิวหนัง โดยไม่มีข้อยกเว้นตาม Appendix 13 สารเหล่านี้ต้องไม่ถูกเติมโดยเจตนา และต้องไม่มีอยู่เกินค่าจำกัดระดับร่องรอย",
+    "section4_restricted_title": "จำกัดการใช้ (ค่าจำกัดความเข้มข้น):",
+    "section4_restricted_desc": "สารที่ระบุใน Table 13 (Appendix 13) ของ REACH Annex XVII พร้อมค่าจำกัดความเข้มข้นเชิงตัวเลขที่เข้มงวด ตัวอย่างเช่น ตะกั่ว (Lead) (≤ 0.7 mg/kg) สารหนู (Arsenic) (≤ 0.5 mg/kg) นิกเกิล (Nickel) (≤ 5 mg/kg) และคาร์บอนแบล็ก (Carbon Black) (PAH รวม ≤ 0.5 mg/kg; benzo[a]pyrene ≤ 5 ppb) สูตรผสมจะอนุญาตเฉพาะเมื่อการทดสอบเชิงวิเคราะห์พิสูจน์ว่าสิ่งเจือปนอยู่ที่หรือต่ำกว่าค่าจำกัดเหล่านี้",
+    "section4_not_covered_title": "ไม่อยู่ในขอบเขตของ Entry 75:",
+    "section4_not_covered_desc": "สารที่ไม่มีการจัดประเภทอันตรายภายใต้ CLP และไม่ได้อยู่ในภาคผนวกของเครื่องสำอางหรือ Appendix 13 (เช่น สารสกัด Hamamelis Virginiana บริสุทธิ์ น้ำกลั่น กลีเซอรีนความบริสุทธิ์สูง)",
+    "section5_title": "5. ทำไม 'REACH Compliant' บนขวดจึงไม่ใช่การรับประกัน",
+    "section5_lead": "คำว่า 'REACH Compliant' ไม่ใช่ตราประทับจากรัฐบาลหรือใบรับรองทางกฎหมาย",
+    "section5_desc1": "ผู้ผลิตรายใดก็สามารถพิมพ์ 'REACH Compliant' บนฉลากได้ หน่วยงานกำกับดูแลสารเคมีของยุโรป (เช่น ECHA และผู้ตรวจการตลาดระดับประเทศ) ประเมินผลการทดสอบในห้องปฏิบัติการ ความบริสุทธิ์ของแต่ละล็อต และคำประกาศ SDS ฉบับสมบูรณ์ ไม่ใช่คำกล่าวทางการตลาด",
+    "section5_desc2": "เพื่อปกป้องลูกค้าและแสดงการตรวจสอบอย่างรอบคอบ สตูดิโอควรเก็บโฟลเดอร์ตรวจสอบที่ประกอบด้วย: (1) SDS พร้อมหมายเลข CAS/CI ที่ตรวจสอบแล้ว (2) รายงานผลการวิเคราะห์ (Certificate of Analysis, COA) สำหรับโลหะหนักและ PAH ของแต่ละล็อต และ (3) บันทึกขั้นตอนของลูกค้าที่เชื่อมหมายเลข LOT ของขวดกับบันทึกการยินยอมของลูกค้า",
+    "cta_test_decoder": "ทดสอบฉลากหมึกใน Decoder →"
+  },
+  "cross_links": {
+    "heading": "เครื่องมือมืออาชีพสำหรับสตูดิโอจาก Poli International",
+    "svhc": "ตัวตรวจสอบ REACH SVHC Candidate List",
+    "mixer": "เครื่องมือผสมหมึกสักและคำนวณปริมาณ",
+    "patch": "โปรโตคอลการทดสอบการแพ้ผิวหนัง (Patch Test) และการยินยอม"
+  },
+  "disclaimer": {
+    "note": "ประกาศทางกฎหมาย: เครื่องมือนี้เป็นการคัดกรองส่วนประกอบเทียบกับข้อความกฎระเบียบใน EU Regulation 2020/2081 (REACH Annex XVII, entry 75) เครื่องมือนี้ไม่ได้รับรองว่าหมึกเป็นไปตามข้อกำหนด ผ่านการทดสอบ หรือปลอดภัย มีเพียงเอกสารจากผู้ผลิต การเปิดเผย SDS อย่างครบถ้วน และการทดสอบวิเคราะห์ในห้องปฏิบัติการเท่านั้นที่สามารถยืนยันการปฏิบัติตามกฎระเบียบได้"
+  },
+  "footer": {
+    "publisher": "Poli International · เครื่องมือฟรีสำหรับช่างสัก ช่างเจาะ และเจ้าของสตูดิโอ",
+    "reg_tag": "EU Regulation 2020/2081 Entry 75",
+    "storage_tag": "ที่เก็บข้อมูลในเบราว์เซอร์",
+    "telemetry_tag": "ไม่มี Telemetry จากระยะไกล"
+  },
+  "substance_rule_modal": {
+    "close_aria": "ปิดหน้าต่าง",
+    "exact_concentration_limit_heading": "ค่าจำกัดความเข้มข้นที่แน่นอน (EU 2020/2081 Entry 75)",
+    "regulatory_quoted_provision_heading": "บทบัญญัติทางกฎระเบียบที่อ้างถึง / ภาคผนวก",
+    "reference_label": "อ้างอิง: {ref}",
+    "detailed_rationale_heading": "เหตุผลและขอบเขตโดยละเอียด:",
+    "unrecognised_box_title": "ไม่อยู่ในรายการ Entry 75 หรือทะเบียนสารให้สีที่ใช้ทั่วไป",
+    "unrecognised_box_desc1_prefix": "คำค้นหา ",
+    "unrecognised_box_desc1_suffix": " ไม่ตรงกับหมายเลข Colour Index, หมายเลข CAS หรือสารให้สีเครื่องสำอางที่ได้รับอนุมัติใด ๆ",
+    "unrecognised_box_desc2": "ภายใต้ EU Regulation 2020/2081 ส่วนผสมที่ไม่รู้จักจะไม่ถูกคาดเดาเด็ดขาด สตูดิโอควรขอการระบุทางเคมีที่ชัดเจนจากผู้ผลิตหมึก",
+    "close_btn": "ปิด"
+  },
+  "data_metals": {
+    "lead": {
+      "substance": "ตะกั่ว (Lead) และสารประกอบของตะกั่ว",
+      "description": "เป็นพิษต่อการสืบพันธุ์ (CMR 1A) ห้ามใช้เป็นส่วนประกอบโดยตั้งใจ ค่าสูงสุดของสิ่งเจือปนพื้นหลังคือ 0.7 mg/kg (ppm)"
+    },
+    "arsenic": {
+      "substance": "สารหนู (Arsenic) และสารประกอบของสารหนู",
+      "description": "ก่อมะเร็ง 1A ค่าเกณฑ์สิ่งเจือปนธาตุพื้นหลัง 0.5 mg/kg (ppm)"
+    },
+    "cadmium": {
+      "substance": "แคดเมียม (Cadmium) และสารประกอบของแคดเมียม",
+      "description": "ก่อมะเร็ง 1B, ก่อกลายพันธุ์ 1B, เป็นพิษต่อการสืบพันธุ์ 1B ค่าเกณฑ์ 0.5 mg/kg (ppm)"
+    },
+    "antimony": {
+      "substance": "พลวง (Antimony) และสารประกอบของพลวง",
+      "description": "สิ่งเจือปนที่เป็นพิษในการผลิตเม็ดสีดิบ ค่าเกณฑ์ 0.5 mg/kg (ppm)"
+    },
+    "mercury": {
+      "substance": "ปรอท (Mercury) และสารประกอบของปรอท",
+      "description": "เป็นพิษต่อการสืบพันธุ์ (Repr. 1B) และเป็นสารพิษต่อระบบประสาท ค่าเกณฑ์ 0.5 mg/kg (ppm)"
+    },
+    "nickel": {
+      "substance": "นิกเกิล (Nickel) และสารประกอบของนิกเกิล",
+      "description": "ตัวกระตุ้นความไวต่อผิวหนังระดับ 1 และสารก่อมะเร็งระดับ 2 ค่าเพดานสิ่งเจือปนสูงสุดที่ละลายได้/ทั้งหมดที่อนุญาตคือ 5.0 mg/kg (ppm)"
+    },
+    "chromium_vi": {
+      "substance": "โครเมียม VI (Chromium VI, โครเมียมเฮกซะวาเลนต์)",
+      "description": "ก่อมะเร็ง 1A, ก่อกลายพันธุ์ 1B, ตัวกระตุ้นความไวต่อผิวหนังระดับ 1 ค่าเกณฑ์สูงสุดคือ 0.5 mg/kg (ppm)"
+    },
+    "barium": {
+      "substance": "แบเรียม (Barium) และสารประกอบแบเรียมที่ละลายได้",
+      "description": "ค่าเพดานสิ่งเจือปนแบเรียมที่ละลายได้คือ 500 mg/kg (ppm)"
+    },
+    "copper": {
+      "substance": "ทองแดง (Copper, สารประกอบที่ละลายได้)",
+      "description": "ค่าจำกัดทองแดงที่ละลายได้คือ 250 mg/kg (ppm)"
+    },
+    "zinc": {
+      "substance": "สังกะสี (Zinc) และสารประกอบของสังกะสี (ที่ละลายได้)",
+      "description": "ค่าเพดานสิ่งเจือปนสังกะสีที่ละลายได้คือ 2000 mg/kg (ppm)"
+    },
+    "selenium": {
+      "substance": "ซีลีเนียม (Selenium) และสารประกอบของซีลีเนียม",
+      "description": "ค่าเกณฑ์ 2.0 mg/kg (ppm)"
+    },
+    "tin": {
+      "substance": "สารประกอบออร์กาโนสแตนนิก (ดีบุก / Tin)",
+      "description": "ค่าเกณฑ์ออร์กาโนทินคือ 0.5 mg/kg (ppm)"
+    },
+    "cobalt": {
+      "substance": "โคบอลต์ (Cobalt) และสารประกอบของโคบอลต์",
+      "description": "ก่อมะเร็ง 1B, เป็นพิษต่อการสืบพันธุ์ 1B, ตัวกระตุ้นความไวต่อผิวหนัง 1 ค่าเกณฑ์สูงสุด 0.5 mg/kg (ppm)"
+    },
+    "bap": {
+      "substance": "เบนโซ[a]ไพรีน (Benzo[a]pyrene, BaP)",
+      "description": "ไฮโดรคาร์บอนอะโรมาติกหลายวงควบแน่น (PAH) ที่พบทั่วไปในคาร์บอนแบล็กที่ยังไม่ผ่านการกลั่น ก่อมะเร็ง 1B ค่าเกณฑ์คือ 0.005 mg/kg (5 µg/kg หรือ 5 ppb)"
+    },
+    "pahs_total": {
+      "substance": "ไฮโดรคาร์บอนอะโรมาติกหลายวงควบแน่น (PAHs ผลรวม 8 ชนิด)",
+      "description": "ผลรวมของ PAH ก่อมะเร็ง 8 ชนิดตาม REACH (Chrysene, Benz[a]anthracene ฯลฯ) ค่าเพดานผลรวมสูงสุดคือ 0.5 mg/kg (ppm)"
+    }
+  },
+  "data_alternatives": {
+    "alt_pb15": {
+      "problematic_pigment": "Pigment Blue 15 / Pigment Blue 15:3",
+      "restriction_reason": "ห้ามใช้ในหมึกสักของสหภาพยุโรปตั้งแต่ 4 ม.ค. 2023 ภายใต้ REACH Entry 75 เนื่องจากการอ้างอิงถึง Annex II ของเครื่องสำอาง",
+      "legal_status": "ห้ามใช้ (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Pigment Blue 60 (Indanthrone Blue)",
+          "color_shade": "น้ำเงินเข้ม / น้ำเงินรอยัล",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สีย้อมประเภท Vat ที่มีความทนแสงและความเสถียรทางเคมีดีเยี่ยม ไม่อยู่ในรายการ Annex II ของ Regulation (EC) No 1223/2009"
+        },
+        "alt_1": {
+          "name": "Ultramarine Blue (Sodium Alumino Sulphosilicate)",
+          "color_shade": "น้ำเงินโคบอลต์สดใส",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สารสีอนินทรีย์แร่ที่ใช้อย่างแพร่หลายในสูตรเครื่องสำอาง อนุญาตภายใต้ Annex IV โดยไม่มีข้อห้ามสำหรับหมึกสัก"
+        },
+        "alt_2": {
+          "name": "Pigment Blue 28 (Cobalt Blue)",
+          "color_shade": "ฟ้าอมเขียวแบบคลาสสิก",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สปิเนลออกไซด์โลหะผสมอนินทรีย์ ต้องทดสอบเพื่อยืนยันว่าการปลดปล่อยโคบอลต์เป็นไปตามค่าจำกัดสิ่งเจือปนที่ละลายได้ใน Appendix 13 (<0.5 mg/kg)"
+        }
+      }
+    },
+    "alt_pg7": {
+      "problematic_pigment": "Pigment Green 7 (Phthalo Green)",
+      "restriction_reason": "ห้ามใช้ในหมึกสักของสหภาพยุโรปตั้งแต่ 4 ม.ค. 2023 ภายใต้ REACH Entry 75 เนื่องจากการอ้างอิงถึง Annex II",
+      "legal_status": "ห้ามใช้ (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "โครเมียมออกไซด์เขียว (Chromium Oxide Green)",
+          "color_shade": "เขียวมะกอกถึงเขียวป่า",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "ออกไซด์ของโครเมียม(III) ที่แตกต่างจากโครเมียม(VI) ซึ่งเป็นพิษโดยสิ้นเชิง มีความเฉื่อยสูงมาก ไม่ละลาย และทนแสงมาก"
+        },
+        "alt_1": {
+          "name": "Hydrated Chromium Sesquioxide (Viridian)",
+          "color_shade": "เขียวมรกตสดใส",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สารสีอนินทรีย์ที่อนุญาต ต้องเป็นไปตามค่าจำกัด Cr(VI) (<0.5 mg/kg ที่ละลายได้)"
+        },
+        "alt_2": {
+          "name": "โคบอลต์เขียว (Cobalt Green, Pigment Green 19 / 26)",
+          "color_shade": "เขียวอมน้ำเงินเย็น / เขียวเทอร์ควอยซ์",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สปิเนลโคบอลต์/สังกะสีอนินทรีย์ที่มีความเสถียรสูง ต้องวิเคราะห์ล็อตเพื่อหาสิ่งเจือปนของโลหะ"
+        }
+      }
+    },
+    "alt_pr22": {
+      "problematic_pigment": "Pigment Red 22 (Azo Red)",
+      "restriction_reason": "แตกตัวให้อะโรมาติกเอมีน p-toluidine (ก่อมะเร็ง 1B) ถูกจำกัดหรือห้ามใช้อย่างชัดเจน",
+      "legal_status": "ห้ามใช้ (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "เหล็กออกไซด์แดง (Iron Oxide Red / Synthetic Ferric Oxide)",
+          "color_shade": "แดงอิฐธรรมชาติ / เทอร์คตตา",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "ออกไซด์เหล็กอนินทรีย์มาตรฐาน ไม่ใช่ azo ไม่มีการแตกตัวของอะโรมาติกเอมีนที่ก่อมะเร็ง เป็นไปตามข้อกำหนดความบริสุทธิ์ของ REACH"
+        },
+        "alt_1": {
+          "name": "Pigment Red 254 (Pyrrole Red / DPP Red)",
+          "color_shade": "แดงสการ์เล็ตสดใสแบบ Ferrari",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "เคมี Diketopyrrolopyrrole (DPP) กลไกที่ไม่ใช่ azo มีความเสถียรสูง และอนุญาตภายใต้ Annex XVII Entry 75"
+        },
+        "alt_2": {
+          "name": "Pigment Red 122 (Quinacridone Magenta)",
+          "color_shade": "ม่วงแดงสด / แดงอมชมพู",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สารสี quinacridone แบบโพลีไซคลิก มีความเข้มสีสูงโดยไม่มีความเสี่ยงจากการแตกตัวของเอมีน"
+        }
+      }
+    },
+    "alt_py14": {
+      "problematic_pigment": "Pigment Yellow 14 (Diarylide Yellow)",
+      "restriction_reason": "ไดอารีไลด์เยลโลว์ (Diarylide Yellow) แตกตัวให้ 3,3-dichlorobenzidine (ก่อมะเร็ง 1B) ถูกห้ามภายใต้ Entry 75",
+      "legal_status": "ห้ามใช้ (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Iron Oxide Yellow (Hydrated Iron Oxide)",
+          "color_shade": "สีเหลืองดินโอเคร์ / เหลืองทองอุ่น",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "สารสีอนินทรีย์ที่เสถียร โปรไฟล์ความปลอดภัยดี ไม่มีการแตกตัวของอะโรมาติกเอมีน"
+        },
+        "alt_1": {
+          "name": "Pigment Yellow 150 (Nickel Azomethine Yellow)",
+          "color_shade": "เหลืองสดใสเรืองแสง",
+          "status": "อนุญาต (ไม่ถูกห้าม)",
+          "technical_notes": "มีความโปร่งใสและทนแสงสูง ต้องทดสอบเป็นรายล็อตเพื่อหานิกเกิลอิสระที่สกัดได้ (<5 mg/kg)"
+        }
+      }
+    }
+  },
+  "data_pigments": {
+    "pigment_blue_15": {
+      "name": "Pigment Blue 15",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg) เป็นค่าจำกัดทั่วไป; ห้ามใช้มีผลตั้งแต่ 4 ม.ค. 2023",
+      "entry_reference": "Entry 75, วรรค 1(c) และ วรรค 4(c); Annex II ของ Regulation (EC) No 1223/2009",
+      "notes": "Copper phthalocyanine blue (ทองแดงฟทาโลไซอานีน). ช่วงผ่อนผันตามวรรค 4(c) สิ้นสุดเมื่อ 4 ม.ค. 2023. ห้ามใช้ในสูตรหมึกสักและ PMU ที่นำออกจำหน่ายหรือใช้ในสหภาพยุโรป",
+      "also_known_as": [
+        "Phthalocyanine Blue",
+        "Copper Phthalocyanine",
+        "PB15",
+        "Phthalo Blue"
+      ],
+      "found_in": [
+        "หมึกสีน้ำเงินสด",
+        "หมึกสีเทอร์ควอยซ์",
+        "สูตรผสมสีเขียว"
+      ]
+    },
+    "pigment_blue_15_3": {
+      "name": "Pigment Blue 15:3",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg) เป็นค่าจำกัดทั่วไป; ห้ามใช้มีผลตั้งแต่ 4 ม.ค. 2023",
+      "entry_reference": "Entry 75, วรรค 1(c) และ วรรค 4(c); Annex II ของ Regulation (EC) No 1223/2009",
+      "notes": "ทองแดงฟทาโลไซอานีนรูปแอลฟา เลข CI 74160 และการห้ามใช้เหมือนกับ PB15. ช่วงผ่อนผันตามวรรค 4(c) สิ้นสุดเมื่อ 4 ม.ค. 2023.",
+      "also_known_as": [
+        "PB15:3",
+        "alpha-copper phthalocyanine",
+        "Phthalo Blue GS",
+        "Pigment Blue 15:3"
+      ],
+      "found_in": [
+        "หมึกสีฟ้าอมเขียวและสีน้ำเงินสด"
+      ]
+    },
+    "pigment_green_7": {
+      "name": "Pigment Green 7",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg) เป็นค่าจำกัดทั่วไป; ห้ามใช้มีผลตั้งแต่ 4 ม.ค. 2023",
+      "entry_reference": "Entry 75, วรรค 1(c) และ วรรค 4(c); Annex II ของ Regulation (EC) No 1223/2009",
+      "notes": "ทองแดงฟทาโลไซอานีนคลอรีนสีเขียว. ช่วงผ่อนผันสิ้นสุดเมื่อ 4 ม.ค. 2023. ห้ามใช้ในหมึกสักและ PMU ตาม Entry 75.",
+      "also_known_as": [
+        "Phthalo Green",
+        "PG7",
+        "Copper Chloro Phthalocyanine",
+        "Pigment Green 7"
+      ],
+      "found_in": [
+        "หมึกสักสีเขียว",
+        "สูตรผสมสีเขียวเข้มธรรมชาติ",
+        "สูตรผสมโทนเข้ม"
+      ]
+    },
+    "pigment_green_36": {
+      "name": "Pigment Green 36",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(c); Annex II ของ Regulation (EC) No 1223/2009",
+      "notes": "ทองแดงฟทาโลไซอานีนโบรโมคลอรีน. ห้ามใช้ตาม Entry 75 ผ่าน Annex II ของ Cosmetic Products Regulation.",
+      "also_known_as": [
+        "PG36",
+        "Phthalo Green (Yellow Shade)"
+      ],
+      "found_in": [
+        "หมึกสว่าง/เขียวอมเหลือง",
+        "โทนเขียวอุ่น"
+      ]
+    },
+    "pigment_violet_23": {
+      "name": "Pigment Violet 23",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75; Annex II ของ Regulation (EC) No 1223/2009",
+      "notes": "ไวโอเลตไดออกซาซีนคาร์บาโซล. มีการจำกัดการใช้ภายใต้กฎเคมีของสหภาพยุโรป",
+      "also_known_as": [
+        "PV23",
+        "Dioxazine Purple",
+        "Carbazole Violet"
+      ],
+      "found_in": [
+        "หมึกสักสีม่วง/ไวโอเลต",
+        "สูตรผสมโทนผิว",
+        "หมึกสีมาเจนต้า"
+      ]
+    },
+    "pigment_red_22": {
+      "name": "Pigment Red 22",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); CLP Annex VI (การแยกสลายเป็น Carcinogen 1B)",
+      "notes": "เม็ดสีโมโนอาโซ. ห้ามใช้เนื่องจากแยกสลายเป็นเอมีนอะโรมาติกปฐมภูมิที่ถูกจำกัด (o-toluidine / 2-amino-4-nitrotoluene).",
+      "also_known_as": [
+        "PR22",
+        "Brilliant Red",
+        "Fast Red"
+      ],
+      "found_in": [
+        "หมึกสักสีแดง",
+        "หมึกสีสการ์เล็ต"
+      ]
+    },
+    "pigment_red_17": {
+      "name": "Pigment Red 17",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); CLP Annex VI",
+      "notes": "เม็ดสีโมโนอาโซที่ห้ามใช้เพราะมีศักยภาพแยกสลายเป็นเอมีนอะโรมาติกที่เป็นอันตราย.",
+      "also_known_as": [
+        "PR17"
+      ],
+      "found_in": [
+        "หมึกสีส้มแดง"
+      ]
+    },
+    "pigment_red_149": {
+      "name": "Pigment Red 149",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a)",
+      "notes": "เม็ดสีเพอริลีนที่ห้ามใช้ตาม Entry 75.",
+      "also_known_as": [
+        "PR149"
+      ],
+      "found_in": [
+        "หมึกสีแดงสด",
+        "หมึกสีบอร์โด"
+      ]
+    },
+    "pigment_orange_13": {
+      "name": "Pigment Orange 13",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); อนุพันธ์ 3,3-dichlorobenzidine",
+      "notes": "เม็ดสีไดอาโซไดอารีลไลด์. ห้ามใช้เนื่องจากอาจแยกสลายเป็น 3,3-dichlorobenzidine (สารก่อมะเร็งประเภท 1B).",
+      "also_known_as": [
+        "PO13"
+      ],
+      "found_in": [
+        "หมึกสักสีส้ม",
+        "สูตรผสมโทนอุ่น"
+      ]
+    },
+    "pigment_orange_16": {
+      "name": "Pigment Orange 16",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); อนุพันธ์ o-dianisidine",
+      "notes": "เม็ดสีไดอาโซ. ห้ามใช้เนื่องจากโปรไฟล์เอมีนจากการแยกสลายเป็นอันตราย.",
+      "also_known_as": [
+        "PO16",
+        "Diazo Orange"
+      ],
+      "found_in": [
+        "หมึกสีส้ม/อำพัน"
+      ]
+    },
+    "pigment_yellow_1": {
+      "name": "Pigment Yellow 1",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a)",
+      "notes": "เม็ดสีโมโนอาโซ Hansa Yellow. ห้ามใช้ตาม Entry 75.",
+      "also_known_as": [
+        "PY1",
+        "Hansa Yellow G"
+      ],
+      "found_in": [
+        "หมึกสักสีเหลือง",
+        "หมึกสีทอง"
+      ]
+    },
+    "pigment_yellow_3": {
+      "name": "Pigment Yellow 3",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a)",
+      "notes": "เม็ดสีโมโนอาโซ Hansa Yellow 10G. ห้ามใช้ตาม Entry 75.",
+      "also_known_as": [
+        "PY3",
+        "Hansa Yellow 10G"
+      ],
+      "found_in": [
+        "หมึกสีเหลืองอ่อนและครีม",
+        "โทนเย็น"
+      ]
+    },
+    "carbon_black": {
+      "name": "คาร์บอนแบล็ก (Carbon Black)",
+      "exact_limit": "PAH รวม ≤ 0.5 mg/kg; Benzo[a]pyrene ≤ 0.005 mg/kg (5 ppb)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตารางสำหรับ Polycyclic Aromatic Hydrocarbons",
+      "notes": "สารให้สีดำหลัก อนุญาตในหมึกสักเฉพาะเมื่อตรวจสอบแล้วว่าเป็นไปตามค่าจำกัดสิ่งเจือปน PAH อย่างเข้มงวด (PAH รวม ≤ 0.5 mg/kg, BaP ≤ 5 ppb).",
+      "also_known_as": [
+        "PBk 7",
+        "PBk7",
+        "PBk-7",
+        "Pigment Black 7",
+        "Carbon Black CI 77266",
+        "Lamp Black",
+        "Furnace Black",
+        "CI 77266"
+      ],
+      "found_in": [
+        "หมึกสักสีดำ",
+        "สีเทาอ่อน (wash)",
+        "เส้นขอบสีดำ",
+        "wash สีดำ"
+      ]
+    },
+    "titanium_dioxide": {
+      "name": "ไทเทเนียมไดออกไซด์ (Titanium Dioxide)",
+      "exact_limit": "ดูข้อความในกฎระเบียบ",
+      "entry_reference": "Entry 75, Annex II Cosmetic Regulation; กฎข้อกำหนดด้านความบริสุทธิ์และรูปแบบอนุภาค",
+      "notes": "สารให้สีขาวหลัก อนุญาตภายใต้ข้อกำหนดความบริสุทธิ์และรูปแบบอนุภาคที่เข้มงวด. รูปแบบนาโนต้องผ่านการอนุมัติจากเอกสารกฎระเบียบโดยเฉพาะ.",
+      "also_known_as": [
+        "PW 6",
+        "PW6",
+        "PW-6",
+        "Pigment White 6",
+        "TiO2",
+        "titanium white",
+        "CI 77891"
+      ],
+      "found_in": [
+        "หมึกสีขาว",
+        "สูตรผสมโทนพาสเทล",
+        "หมึกไฮไลต์",
+        "สูตรผสมทึบแสง"
+      ]
+    },
+    "bkc": {
+      "name": "เบนซาลโคเนียมคลอไรด์ (Benzalkonium Chloride, BKC)",
+      "exact_limit": "ดูข้อความในกฎระเบียบ",
+      "entry_reference": "Entry 75, วรรค 1(a); Annex V ของ Regulation (EC) No 1223/2009",
+      "notes": "สารกันเสีย อยู่ภายใต้ค่าจำกัดความเข้มข้นตาม Annex V ของสารกันเสียเครื่องสำอางที่อ้างถึงใน Entry 75.",
+      "also_known_as": [
+        "BKC",
+        "quaternary ammonium compound",
+        "alkyldimethylbenzylammonium chloride"
+      ],
+      "found_in": [
+        "สารกันเสียในหมึกสัก",
+        "สารละลายตัวพา"
+      ]
+    },
+    "propylene_glycol": {
+      "name": "โพรพิลีนไกลคอล (Propylene Glycol)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "สารดึงความชื้นและตัวทำละลายตัวพาที่ใช้ทั่วไป ไม่ถูกจำกัดภายใต้ REACH Annex XVII Entry 75.",
+      "also_known_as": [
+        "1,2-propanediol",
+        "PG",
+        "propane-1,2-diol"
+      ],
+      "found_in": [
+        "ตัวพาในหมึกสัก",
+        "สูตร PMU",
+        "สารละลายสำหรับการแรเงา"
+      ]
+    },
+    "isopropyl_alcohol": {
+      "name": "ไอโซโพรพิลแอลกอฮอล์ (Isopropyl Alcohol)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "ตัวทำละลายและตัวพาที่ใช้ทั่วไป ไม่อยู่ในรายการสารที่ถูกจำกัดภายใต้ REACH Entry 75.",
+      "also_known_as": [
+        "IPA",
+        "isopropanol",
+        "2-propanol"
+      ],
+      "found_in": [
+        "ตัวทำละลายในหมึกสัก",
+        "ตัวพาการกระจายตัว",
+        "สารละลายปลอดเชื้อ"
+      ]
+    },
+    "glycerin": {
+      "name": "กลีเซอรีน (Glycerin)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "ตัวพามาตรฐานและสารดึงความชื้น ไม่อยู่ในขอบเขตและไม่ถูกจำกัดตาม Entry 75.",
+      "also_known_as": [
+        "glycerol",
+        "propane-1,2,3-triol",
+        "Propan-1,2,3-triol"
+      ],
+      "found_in": [
+        "ของเหลวพื้นฐานของหมึกสัก",
+        "สารละลายสำหรับบด",
+        "ตัวกลางกระจายตัว"
+      ]
+    },
+    "hamamelis": {
+      "name": "น้ำแฮมาเมลิส (Hamamelis Virginiana Water)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "น้ำแฮมาเมลิส (witch hazel). ตัวทำให้เจือจางจากสารสกัดพืชที่เป็นตัวพา ไม่ถูกจำกัดตาม Entry 75.",
+      "also_known_as": [
+        "Witch Hazel",
+        "Hamamelis water"
+      ],
+      "found_in": [
+        "สารละลาย wash สีเทา",
+        "ตัวทำให้เจือจางหมึก",
+        "น้ำสำหรับผสม"
+      ]
+    },
+    "water_aqua": {
+      "name": "น้ำ (Aqua / Water)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "ตัวพาเป็นน้ำบริสุทธิ์ ไม่อยู่ในขอบเขตของ Entry 75.",
+      "also_known_as": [
+        "Aqua",
+        "Water",
+        "Purified water"
+      ],
+      "found_in": [
+        "ของเหลวตัวพาในหมึกสัก"
+      ]
+    },
+    "formaldehyde": {
+      "name": "ฟอร์มาลดีไฮด์ (Formaldehyde)",
+      "exact_limit": "0.00005% โดยน้ำหนัก (0.5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตารางสำหรับ Carcinogen 1B / Mutagen 2",
+      "notes": "สารก่อมะเร็ง (ประเภท 1B). ห้ามใช้ในหมึกสักที่สูงกว่า 0.5 mg/kg.",
+      "also_known_as": [
+        "methanal",
+        "formalin",
+        "methylene oxide"
+      ],
+      "found_in": [
+        "สารกันเสีย",
+        "สารฆ่าเชื้อที่ปล่อยฟอร์มาลดีไฮด์"
+      ]
+    },
+    "arsenic": {
+      "name": "สารหนู (Arsenic)",
+      "exact_limit": "0.00005% โดยน้ำหนัก (0.5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Arsenic",
+      "notes": "ค่าจำกัดสิ่งเจือปนโลหะปริมาณน้อย: 0.00005% โดยน้ำหนัก (0.5 mg/kg / 0.5 ppm).",
+      "also_known_as": [
+        "As",
+        "arsenic metal"
+      ],
+      "found_in": [
+        "สิ่งเจือปนในสารให้สีดิบ"
+      ]
+    },
+    "barium": {
+      "name": "แบเรียม (Barium) ชนิดละลายได้",
+      "exact_limit": "0.05% โดยน้ำหนัก (500 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Barium (soluble)",
+      "notes": "ค่าจำกัดสิ่งเจือปนแบเรียมที่ละลายได้: 0.05% โดยน้ำหนัก (500 mg/kg). หมายเหตุ: เม็ดสีแบบ lake ต้องประเมินการปลดปล่อยแบเรียมที่ละลายได้.",
+      "also_known_as": [
+        "Ba",
+        "barium metal"
+      ],
+      "found_in": [
+        "เม็ดสีแบบ barium lake",
+        "สารให้สีแดง/ส้มบางชนิด"
+      ]
+    },
+    "cadmium_ink": {
+      "name": "แคดเมียม (Cadmium)",
+      "exact_limit": "0.00005% โดยน้ำหนัก (0.5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Cadmium",
+      "notes": "โลหะหนักที่เป็นพิษ ค่าความเข้มข้นจำกัด: 0.00005% โดยน้ำหนัก (0.5 mg/kg).",
+      "also_known_as": [
+        "Cd",
+        "cadmium metal",
+        "เกลือแคดเมียม"
+      ],
+      "found_in": [
+        "เม็ดสีแคดเมียมรุ่นเก่า",
+        "สิ่งเจือปนแร่ธาตุปริมาณน้อย"
+      ]
+    },
+    "chromium_vi": {
+      "name": "โครเมียม VI (Chromium VI)",
+      "exact_limit": "0.00005% โดยน้ำหนัก (0.5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Chromium VI",
+      "notes": "โครเมียมเฮกซะวาเลนต์. ค่าความเข้มข้นจำกัด: 0.00005% โดยน้ำหนัก (0.5 mg/kg).",
+      "also_known_as": [
+        "Cr(VI)",
+        "hexavalent chromium",
+        "chromate"
+      ],
+      "found_in": [
+        "สิ่งเจือปนในเม็ดสีโครม",
+        "สิ่งเจือปนออกไซด์ของโลหะ"
+      ]
+    },
+    "cobalt_ink": {
+      "name": "โคบอลต์ (Cobalt)",
+      "exact_limit": "0.00005% โดยน้ำหนัก (0.5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Cobalt",
+      "notes": "โลหะที่ทำให้ไวต่อการแพ้และเป็นพิษ ค่าความเข้มข้นจำกัด: 0.00005% โดยน้ำหนัก (0.5 mg/kg).",
+      "also_known_as": [
+        "Co",
+        "cobalt metal"
+      ],
+      "found_in": [
+        "สิ่งเจือปนในเม็ดสีโคบอลต์บลู",
+        "ตัวเร่งปฏิกิริยาปริมาณน้อย"
+      ]
+    },
+    "copper_ink": {
+      "name": "ทองแดง (Copper) ชนิดละลายได้",
+      "exact_limit": "0.025% โดยน้ำหนัก (250 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Copper (soluble)",
+      "notes": "ค่าจำกัดทองแดงที่ละลายได้: 0.025% โดยน้ำหนัก (250 mg/kg).",
+      "also_known_as": [
+        "Cu",
+        "copper metal"
+      ],
+      "found_in": [
+        "กากตะกอนจากการสังเคราะห์ฟทาโลไซอานีน",
+        "สารประกอบทองแดง"
+      ]
+    },
+    "lead_ink": {
+      "name": "ตะกั่ว (Lead)",
+      "exact_limit": "0.00007% โดยน้ำหนัก (0.7 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Lead",
+      "notes": "โลหะหนักที่เป็นพิษต่อการสืบพันธุ์ ค่าความเข้มข้นจำกัด: 0.00007% โดยน้ำหนัก (0.7 mg/kg / 0.7 ppm).",
+      "also_known_as": [
+        "Pb",
+        "lead metal",
+        "plumbum"
+      ],
+      "found_in": [
+        "สิ่งเจือปนปริมาณน้อยในเม็ดสีแร่และคาร์บอนแบล็ก"
+      ]
+    },
+    "mercury_ink": {
+      "name": "ปรอท (Mercury)",
+      "exact_limit": "0.00005% โดยน้ำหนัก (0.5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Mercury",
+      "notes": "โลหะหนักที่เป็นพิษ ค่าความเข้มข้นจำกัด: 0.00005% โดยน้ำหนัก (0.5 mg/kg).",
+      "also_known_as": [
+        "Hg",
+        "mercury",
+        "cinnabar"
+      ],
+      "found_in": [
+        "สิ่งเจือปนแร่ธาตุปริมาณน้อย",
+        "สิ่งเจือปน"
+      ]
+    },
+    "nickel_ink": {
+      "name": "นิกเกิล (Nickel)",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Nickel; วรรค 6(d) กำหนดให้มีฉลากเตือนหากเกิน 0.0005%",
+      "notes": "สารก่อภูมิแพ้จากการสัมผัสและสารก่อมะเร็งที่มีศักยภาพสูง ค่าจำกัด: 0.0005% โดยน้ำหนัก (5 mg/kg). หากมีอยู่ จะต้องมีฉลากเตือนบนขวดด้วย.",
+      "also_known_as": [
+        "Ni",
+        "nickel metal"
+      ],
+      "found_in": [
+        "สิ่งเจือปนปริมาณน้อยในเม็ดสีและสารเติมแต่ง",
+        "ออกไซด์ของแร่ธาตุ"
+      ]
+    },
+    "selenium_ink": {
+      "name": "ซีลีเนียม (Selenium)",
+      "exact_limit": "0.0002% โดยน้ำหนัก (2 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Selenium",
+      "notes": "ค่าความเข้มข้นจำกัด: 0.0002% โดยน้ำหนัก (2 mg/kg).",
+      "also_known_as": [
+        "Se",
+        "selenium"
+      ],
+      "found_in": [
+        "กากตกค้างจาก cadmium selenide"
+      ]
+    },
+    "aniline": {
+      "name": "อะนิลีน (Aniline)",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Aniline",
+      "notes": "เอมีนอะโรมาติกปฐมภูมิ จำกัดที่ค่า 5 mg/kg ภายใต้ Appendix 13.",
+      "also_known_as": [
+        "aminobenzene",
+        "phenylamine",
+        "benzenamine"
+      ],
+      "found_in": [
+        "ผลจากการแยกสลายของสีย้อมอะโซ",
+        "สารตั้งต้นในการสังเคราะห์สีย้อม"
+      ]
+    },
+    "o_toluidine": {
+      "name": "o-โทลูอิดีน (o-Toluidine)",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง o-Toluidine",
+      "notes": "เอมีนอะโรมาติกปฐมภูมิ (สารก่อมะเร็งประเภท 1B). ค่าจำกัด 5 mg/kg.",
+      "also_known_as": [
+        "2-aminotoluene",
+        "2-methylaniline"
+      ],
+      "found_in": [
+        "ผลิตภัณฑ์การสลายตัวของสีย้อมอะโซ",
+        "สิ่งเจือปน"
+      ]
+    },
+    "pigment_red_48_2": {
+      "name": "Pigment Red 48:2",
+      "exact_limit": "ดูข้อความในกฎระเบียบ",
+      "entry_reference": "การประเมินของ ECHA / การประเมินเกลือแบเรียม lake",
+      "notes": "สารให้สีแดงแบบ barium lake อยู่ระหว่างการตรวจสอบอย่างต่อเนื่องเกี่ยวกับการสกัดแบเรียมที่ละลายได้และความบริสุทธิ์.",
+      "also_known_as": [
+        "PR48:2",
+        "Barium Red",
+        "Lithol Rubine BK"
+      ],
+      "found_in": [
+        "หมึกสักสีแดงเข้ม/มาเจนต้า",
+        "หมึกสีมาเจนต้า"
+      ]
+    },
+    "pigment_red_53_1": {
+      "name": "Pigment Red 53:1",
+      "exact_limit": "ดูข้อความในกฎระเบียบ",
+      "entry_reference": "การประเมินของ ECHA / การประเมินเกลือแบเรียม lake",
+      "notes": "สารให้สีแดงแบบ barium lake อยู่ระหว่างการประเมินตามกฎระเบียบ.",
+      "also_known_as": [
+        "PR53:1",
+        "Red Lake C Barium Salt",
+        "D&C Red No. 9 sel de baryum"
+      ],
+      "found_in": [
+        "หมึกสีแดงสด/แดงป๊อปปี้"
+      ]
+    },
+    "pigment_yellow_74": {
+      "name": "Pigment Yellow 74",
+      "exact_limit": "ดูข้อความในกฎระเบียบ",
+      "entry_reference": "การประเมินสารของ ECHA",
+      "notes": "สารให้สีเหลืองโมโนอาโซที่ใช้กันอย่างแพร่หลาย ปัจจุบันได้รับอนุญาตในสูตรที่เป็นไปตามกฎของสหภาพยุโรป และอยู่ภายใต้การติดตามในโปรแกรมการประเมินสารของ ECHA.",
+      "also_known_as": [
+        "PY74",
+        "Arylide Yellow 5GX",
+        "Hansa Yellow 5GX"
+      ],
+      "found_in": [
+        "หมึกสีเหลืองและเขียวมะนาว",
+        "โทนสีทอง"
+      ]
+    },
+    "pigment_red_170": {
+      "name": "Pigment Red 170",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "naphthol red ประสิทธิภาพสูง เป็นสารให้สีแดงที่เป็นไปตามกฎและใช้กันอย่างแพร่หลายในหมึกสักของสหภาพยุโรป.",
+      "also_known_as": [
+        "PR 170",
+        "PR170",
+        "PR-170",
+        "Naphthol Red",
+        "CI 12475",
+        "C.I. 12475",
+        "CI12475"
+      ],
+      "found_in": [
+        "หมึกสีแดงสด",
+        "หมึกสีแดงเข้มอมส้ม",
+        "โทนสีทับทิม"
+      ]
+    },
+    "pigment_red_254": {
+      "name": "Pigment Red 254",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "เม็ดสีแดง diketopyrrolopyrrole (DPP). เป็นเม็ดสีแดงที่เป็นไปตามกฎและใช้มากในหมึกที่เป็นไปตาม REACH.",
+      "also_known_as": [
+        "PR 254",
+        "PR254",
+        "PR-254",
+        "Pyrrole Red",
+        "DPP Red",
+        "Ferrari Red",
+        "CI 56110",
+        "C.I. 56110",
+        "CI56110"
+      ],
+      "found_in": [
+        "หมึกสักสีแดงไฟ",
+        "สูตรสีแดงอุ่น"
+      ]
+    },
+    "pigment_red_101": {
+      "name": "Pigment Red 101",
+      "exact_limit": "ใช้ค่าจำกัดสิ่งเจือปนโลหะปริมาณน้อยตาม Appendix 13 (Ni ≤ 5 mg/kg, Pb ≤ 0.7 mg/kg, As ≤ 0.5 mg/kg)",
+      "entry_reference": "Entry 75, ข้อกำหนดความบริสุทธิ์ใน Appendix 13",
+      "notes": "ไอรอนออกไซด์สีแดงสังเคราะห์แบบอนินทรีย์ อนุญาตหากสิ่งเจือปนโลหะหนักเป็นไปตามค่าจำกัดใน Appendix 13.",
+      "also_known_as": [
+        "PR 101",
+        "PR101",
+        "PR-101",
+        "Iron Oxide Red",
+        "Ferric Oxide",
+        "Red Iron Oxide",
+        "CI 77491",
+        "C.I. 77491",
+        "CI77491"
+      ],
+      "found_in": [
+        "โทนดิน",
+        "สีน้ำตาล",
+        "สีคิ้ว PMU",
+        "โทนแดงธรรมชาติ"
+      ]
+    },
+    "pigment_yellow_14": {
+      "name": "Pigment Yellow 14",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); การแยกสลายเป็น 3,3-dichlorobenzidine (Carcinogen 1B)",
+      "notes": "เม็ดสีเหลืองไดอาโซไดอารีลไลด์ ห้ามใช้เนื่องจากแยกสลายเป็น 3,3-dichlorobenzidine ซึ่งเป็นอันตราย.",
+      "also_known_as": [
+        "PY 14",
+        "PY14",
+        "PY-14",
+        "Diarylide Yellow AAOT",
+        "CI 21095",
+        "C.I. 21095",
+        "CI21095"
+      ],
+      "found_in": [
+        "หมึกสีเหลืองสด",
+        "สูตรผสมหมึกเขียว"
+      ]
+    },
+    "pigment_yellow_83": {
+      "name": "Pigment Yellow 83",
+      "exact_limit": "0.1% โดยน้ำหนัก (1 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); การแยกสลายของเอมีนไดอารีลไลด์",
+      "notes": "เม็ดสีเหลืองไดอารีลไลด์ ห้ามใช้ในหมึกสักเนื่องจากความเสี่ยงการแยกสลายเป็นเอมีน.",
+      "also_known_as": [
+        "PY 83",
+        "PY83",
+        "PY-83",
+        "Diarylide Yellow HR",
+        "CI 21108",
+        "C.I. 21108",
+        "CI21108"
+      ],
+      "found_in": [
+        "หมึกสีเหลืองทอง",
+        "สูตรผสมสีส้ม"
+      ]
+    },
+    "pigment_yellow_138": {
+      "name": "Pigment Yellow 138",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "สารให้สีเหลือง quinophthalone อนุญาตและใช้กันอย่างแพร่หลายในหมึกสีเหลืองและเขียวที่เป็นไปตาม REACH.",
+      "also_known_as": [
+        "PY 138",
+        "PY138",
+        "PY-138",
+        "Quinophthalone Yellow",
+        "CI 56300",
+        "C.I. 56300",
+        "CI56300"
+      ],
+      "found_in": [
+        "หมึกสีเหลืองโทนเขียว",
+        "เขียวมะนาว"
+      ]
+    },
+    "ethanol": {
+      "name": "เอทานอล (Ethanol / Ethyl Alcohol)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "ตัวทำละลายตัวพาและตัวทำให้เจือจางที่ฆ่าเชื้อโรคที่ใช้ทั่วไป ไม่ถูกจำกัดตาม Entry 75.",
+      "also_known_as": [
+        "Ethyl Alcohol",
+        "Ethanol",
+        "Alcohol Denat",
+        "Denatured Alcohol",
+        "Alcohol"
+      ],
+      "found_in": [
+        "สารละลายตัวพา",
+        "ฐานการกระจายตัว"
+      ]
+    },
+    "benzyl_alcohol": {
+      "name": "เบนซิลแอลกอฮอล์ (Benzyl Alcohol)",
+      "exact_limit": "1.0% โดยน้ำหนัก (10 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); Annex V รายการที่ 34 ของ Regulation (EC) No 1223/2009",
+      "notes": "สารกันเสียและตัวทำละลายสำหรับเครื่องสำอาง ค่าความเข้มข้นจำกัด: 1.0% โดยน้ำหนัก.",
+      "also_known_as": [
+        "Phenylmethanol",
+        "Benzenemethanol",
+        "CAS 100-51-6"
+      ],
+      "found_in": [
+        "สารกันเสีย",
+        "ตัวทำให้เจือจางในตัวพา"
+      ]
+    },
+    "phenoxyethanol": {
+      "name": "ฟีนอกซีเอทานอล (Phenoxyethanol)",
+      "exact_limit": "1.0% โดยน้ำหนัก (10 000 mg/kg)",
+      "entry_reference": "Entry 75, วรรค 1(a); Annex V รายการที่ 29 ของ Regulation (EC) No 1223/2009",
+      "notes": "สารกันเสียสำหรับเครื่องสำอาง ความเข้มข้นสูงสุดที่อนุญาต: 1.0% โดยน้ำหนัก.",
+      "also_known_as": [
+        "2-phenoxyethanol",
+        "Ethylene glycol monophenyl ether"
+      ],
+      "found_in": [
+        "ระบบป้องกันเชื้อจุลินทรีย์"
+      ]
+    },
+    "polyethylene_glycol": {
+      "name": "โพลีเอทิลีนไกลคอล (Polyethylene Glycol, PEG)",
+      "exact_limit": "ไม่ถูกจำกัดตาม Entry 75",
+      "entry_reference": "ไม่อยู่ในรายการ Entry 75 หรือ Appendix 13",
+      "notes": "สารดึงความชื้น ตัวปรับความหนืด และตัวช่วยกระจายตัว ไม่ถูกจำกัดตาม Entry 75.",
+      "also_known_as": [
+        "PEG",
+        "PEG-8",
+        "PEG-400",
+        "Macrogol",
+        "Polyoxyethylene"
+      ],
+      "found_in": [
+        "ของเหลวตัวพา",
+        "สารช่วยเปียกเม็ดสี"
+      ]
+    },
+    "benzoic_acid": {
+      "name": "กรดเบนโซอิก / โซเดียมเบนโซเอต (Benzoic Acid / Sodium Benzoate)",
+      "exact_limit": "0.5% โดยน้ำหนัก (คำนวณเป็นกรด)",
+      "entry_reference": "Entry 75, วรรค 1(a); Annex V รายการที่ 1 ของ Regulation (EC) No 1223/2009",
+      "notes": "สารกันเสีย ความเข้มข้นสูงสุด 0.5% โดยน้ำหนักเป็นกรดเบนโซอิก.",
+      "also_known_as": [
+        "Sodium Benzoate",
+        "Benzenecarboxylic acid",
+        "E210",
+        "E211"
+      ],
+      "found_in": [
+        "ระบบสารกันเสีย"
+      ]
+    },
+    "rosin_colophonium": {
+      "name": "โรซิน / คอลโฟเนียม (Rosin / Colophonium)",
+      "exact_limit": "0.001% โดยน้ำหนัก (10 mg/kg / 10 ppm)",
+      "entry_reference": "Entry 75, วรรค 1(b); การจัดประเภท Skin Sensitiser 1B",
+      "notes": "อนุพันธ์จากยางสน สารก่อภูมิแพ้ผิวหนัง (ประเภท 1B). จำกัดที่ 0.001% โดยน้ำหนัก (10 mg/kg) ภายใต้ Entry 75.",
+      "also_known_as": [
+        "Colophony",
+        "Colophonium",
+        "Gum Rosin",
+        "Wood Rosin"
+      ],
+      "found_in": [
+        "สารเติมแต่งตัวประสาน",
+        "สูตรหมึกรุ่นเก่า"
+      ]
+    },
+    "o_anisidine": {
+      "name": "o-อะนิซิดีน (o-Anisidine)",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง o-Anisidine",
+      "notes": "เอมีนอะโรมาติกปฐมภูมิ (สารก่อมะเร็งประเภท 1B). ค่าจำกัดความเข้มข้นตาม Appendix 13: 5 mg/kg.",
+      "also_known_as": [
+        "2-methoxyaniline",
+        "2-aminoanisole"
+      ],
+      "found_in": [
+        "ผลิตภัณฑ์แยกสลายของสีย้อมอะโซ",
+        "การแยกสลายอะโซ"
+      ]
+    },
+    "benzidine": {
+      "name": "เบนซิดีน (Benzidine)",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง Benzidine",
+      "notes": "สารก่อมะเร็งในมนุษย์ที่มีศักยภาพสูง (Carcinogen 1A). ค่าจำกัดความเข้มข้นตาม Appendix 13: 5 mg/kg.",
+      "also_known_as": [
+        "[1,1'-biphenyl]-4,4'-diamine",
+        "4,4'-diaminobiphenyl"
+      ],
+      "found_in": [
+        "สารตกค้างจากการแยกสลายของสีย้อมอะโซที่ถูกห้าม"
+      ]
+    },
+    "dichlorobenzidine": {
+      "name": "3,3'-Dichlorobenzidine",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง 3,3'-Dichlorobenzidine",
+      "notes": "เอมีนอะโรมาติกที่ก่อมะเร็ง (Carcinogen 1B). ผลิตภัณฑ์จากการแยกสลายของเม็ดสีเหลืองและส้มแบบไดอารีลไลด์ ค่าจำกัดตาม Appendix 13: 5 mg/kg.",
+      "also_known_as": [
+        "3,3'-dichlorobiphenyl-4,4'-diamine",
+        "DCB"
+      ],
+      "found_in": [
+        "ผลิตภัณฑ์จากการแยกสลายของเม็ดสีไดอารีลไลด์"
+      ]
+    },
+    "chloroaniline": {
+      "name": "4-Chloroaniline",
+      "exact_limit": "0.0005% โดยน้ำหนัก (5 mg/kg)",
+      "entry_reference": "Entry 75, Appendix 13, รายการในตาราง 4-Chloroaniline",
+      "notes": "เอมีนอะโรมาติก (Carcinogen 1B). ค่าความเข้มข้นจำกัดตาม Appendix 13: 5 mg/kg.",
+      "also_known_as": [
+        "p-chloroaniline",
+        "4-chlorobenzeneamine",
+        "4-chlorobenzénamine"
+      ],
+      "found_in": [
+        "สิ่งเจือปนจากการแยกสลายของเม็ดสีอาโซ",
+        "การแยกสลายของสีย้อมอะโซ"
+      ]
+    }
+  },
+  "parser_matches": {
+    "colour_index": "Colour Index (CI {num})",
+    "colour_index_pb15_3": "Colour Index (CI 74160) · Pigment Blue 15:3",
+    "trade_shorthand": "ชื่อย่อทางการค้า ({displayLabel})",
+    "matched_synonym": "พบคำพ้องความ: {matchLabel}",
+    "fuzzy_matched": "จับคู่โดยประมาณ '{query}' → {target}",
+    "cas_reconstructed": "CAS {cas} (ประกอบจากรูปแบบที่มีช่องว่าง)",
+    "matched_via": "พบจาก '{label}'"
+  },
+  "scanner": {
+    "open_scanner_btn": "สแกนบาร์โค้ด / QR",
+    "modal_title": "ตัวสแกนบาร์โค้ดและ QR ขวดหมึก",
+    "modal_sub": "สแกนบาร์โค้ด 1 มิติหรือ QR โค้ด 2 มิติบนขวดหมึก กล่อง หรือเอกสาร SDS",
+    "aria_close": "ปิดตัวสแกน",
+    "err_no_media_devices": "ไม่สามารถเข้าถึงฮาร์ดแวร์กล้องในสภาพแวดล้อมนี้",
+    "err_camera_access": "ไม่สามารถเปิดกล้องได้ โปรดตรวจสอบการอนุญาตของเบราว์เซอร์",
+    "camera_unavailable_title": "สตรีมกล้องไม่พร้อมใช้งาน",
+    "manual_entry_prompt": "กรอกหรือวางบาร์โค้ดหรือหมายเลขล็อตด้วยตนเอง:",
+    "align_barcode": "จัดบาร์โค้ดหรือ QR โค้ดของหมึกให้อยู่ในกรอบ",
+    "scan_success": "สแกนโค้ดสำเร็จ",
+    "detected_content": "บาร์โค้ด / รหัสล็อตที่พบ:",
+    "copied": "คัดลอกแล้ว!",
+    "copy": "คัดลอก",
+    "manual_label": "กรอกรหัสด้วยตนเอง:",
+    "manual_placeholder": "เช่น 071234567890 หรือ LOT-2024-09",
+    "apply_manual": "ใช้รหัสนี้",
+    "scan_again": "สแกนอีกครั้ง",
+    "cancel": "ยกเลิก",
+    "confirm_use": "ใช้ในช่องกรอก"
+  },
+  "mixtures": {
+    "heading": "หมึกผสมและการเจือจางแบบกำหนดเอง",
+    "subheading": "บันทึกการล้างเทาหมอง (graywash) สารผสมแรเงาแบบกำหนดเอง และการผสมสีพร้อมหมายเลขล็อตของหมึกฐานที่ตรวจสอบย้อนกลับได้ และตัวทำละลายที่เป็นไปตาม REACH",
+    "btn_new_mixture": "บันทึกสูตรผสม / การล้างใหม่",
+    "btn_cancel": "ยกเลิก",
+    "form_title": "บันทึกสูตรผสมแบบกำหนดเอง / การเจือจาง",
+    "label_name": "ชื่อสูตรผสม *",
+    "placeholder_name": "e.g. 4-Drop Portrait Graywash",
+    "label_type": "ประเภทสารผสม *",
+    "type_greywash": "Graywash (การแรเงา)",
+    "type_lining_wash": "Lining Wash (ล้างเส้น)",
+    "type_color_blend": "การเจือจาง / ผสมสี",
+    "type_custom_shading": "สารแรเงาแบบกำหนดเอง",
+    "label_lot": "หมายเลขล็อต / Batch ของสารผสม *",
+    "label_prepared_date": "วันที่เตรียม (ตามเวลาท้องถิ่น) *",
+    "label_shelf_life_days": "ระยะเวลาอายุการเก็บ (วัน)",
+    "label_artist": "ช่างสักผู้เตรียม",
+    "placeholder_artist": "e.g. Studio Resident Artist",
+    "placeholder_notes": "คำแนะนำเพิ่มเติมสำหรับสูตร อัตราส่วนหยด หรือหมายเหตุโทนสีเป้าหมาย...",
+    "heading_base_inks": "ส่วนประกอบหมึกฐาน",
+    "btn_add_base_ink": "เพิ่มแถวหมึกฐาน",
+    "pick_from_stock": "เลือกจากสต็อกของสตูดิโอ...",
+    "placeholder_ink_brand": "ยี่ห้อ (e.g. Dynamic)",
+    "placeholder_ink_name": "ชื่อหมึก (e.g. Triple Black)",
+    "placeholder_ink_lot": "ล็อต # (e.g. LOT-2024-X)",
+    "placeholder_proportion": "สัดส่วน (เช่น 4 drops)",
+    "heading_diluent": "ส่วนประกอบตัวทำละลาย / ตัวพา",
+    "diluent_water": "น้ำกลั่น / น้ำปลอดเชื้อ (Ph. Eur.)",
+    "diluent_witch_hazel": "วิทช์ฮาเซล (Hamamelis Virginiana)",
+    "diluent_glycerin": "กลีเซอรีน (จากพืช EP/USP)",
+    "diluent_mixing_solution": "สารละลายแรเงาของผู้ผลิต",
+    "placeholder_diluent_brand": "ยี่ห้อ / แหล่งที่มาของตัวทำละลาย",
+    "placeholder_diluent_lot": "ล็อต / วันหมดอายุของตัวทำละลาย",
+    "placeholder_diluent_volume": "ปริมาตร / หยด (เช่น 20 drops)",
+    "btn_save_mixture": "บันทึกสูตรผสม",
+    "empty_title": "ยังไม่มีการบันทึกสูตรผสมแบบกำหนดเอง",
+    "empty_desc": "บันทึกการล้างเทาหมองและการเจือจางแบบกำหนดเองที่นี่ เพื่อรักษาการตรวจสอบย้อนกลับของล็อตลูกค้าในทุกหยดของสี",
+    "badge_days_left": "อายุการเก็บที่เหลือ {days} วัน",
+    "badge_expired": "ช่วงใช้สูตรหมดอายุแล้ว",
+    "field_prepared": "เตรียมเมื่อ",
+    "field_expires": "หมดอายุ",
+    "field_artist": "ช่าง",
+    "field_type": "ประเภท",
+    "field_notes": "บันทึก",
+    "btn_copy_recipe": "คัดลอกสูตร",
+    "btn_use_in_session": "ใช้ในเซสชัน",
+    "btn_delete": "ลบสูตรผสม",
+    "copied": "คัดลอกแล้ว!"
+  },
+  "recall": {
+    "heading": "ตรวจสอบความปลอดภัยและการเรียกคืนล็อต",
+    "subheading": "ตรวจสอบการทำขั้นตอนของลูกค้าและสินค้าคงคลังของสตูดิโอทันทีเทียบกับการเรียกคืนล็อตด้านความปลอดภัยของผู้ผลิตและประกาศตามกฎหมาย",
+    "search_placeholder": "กรอกล็อตหรือเลขล็อตที่สงสัย (เช่น LOT-2023-04)...",
+    "clear_search": "ล้าง",
+    "export_csv": "ส่งออกรายงานการตรวจสอบ CSV",
+    "copy_report": "คัดลอกรายงานการตรวจสอบย้อนกลับ",
+    "copied": "คัดลอกแล้ว!",
+    "known_studio_lots": "ล็อตที่สตูดิโอรู้จัก:",
+    "prompt_search_title": "พร้อมตรวจสอบล็อต",
+    "prompt_search_desc": "กรอกเลขล็อตการเรียกคืนของผู้ผลิตด้านบนเพื่อตรวจสอบการรักษาลูกค้าทุกครั้งที่ผ่านมาและขวดบนชั้นวาง",
+    "kpi_clients": "ลูกค้าที่ได้รับผลกระทบ",
+    "kpi_sessions": "ขั้นตอนที่ได้รับผลกระทบ",
+    "kpi_mixtures": "สูตรผสมที่กำหนดเองที่ใช้",
+    "kpi_inventory_bottles": "ขวดบนชั้นวาง",
+    "quarantine_notice_title": "ต้องดำเนินการ: ล็อตตรงกับสินค้าบนชั้นวาง",
+    "quarantine_notice_desc": "ขวดที่มีรหัสล็อตนี้ปัจจุบันถูกบันทึกอยู่ในสต็อกของสตูดิโอ ให้แยกและกักกันทันที",
+    "usage_window": "ช่วงวันที่การรักษาที่ใช้งานอยู่:",
+    "affected_sessions_heading": "ขั้นตอนของลูกค้าที่ใช้ล็อตนี้",
+    "no_affected_clients_title": "ไม่พบขั้นตอนของลูกค้า",
+    "no_affected_clients_desc": "ไม่พบการทำขั้นตอนของลูกค้าที่บันทึกไว้ในที่เก็บข้อมูลในเบราว์เซอร์ที่ใช้เลขล็อตอ้างอิงนี้",
+    "col_date": "วันที่ทำขั้นตอน",
+    "col_client_ref": "รหัสอ้างอิง / ID ลูกค้า",
+    "col_placement": "ตำแหน่ง",
+    "col_artist": "ช่างสัก",
+    "col_ink_details": "รายละเอียดหมึกที่เกี่ยวข้อง",
+    "affected_mixtures_heading": "สูตรผสมที่กำหนดเองซึ่งผสมจากล็อตนี้",
+    "mix_prepared": "จัดเตรียม:",
+    "mix_artist": "ช่างสัก:",
+    "report_title": "รายงานการตรวจสอบย้อนกลับล็อตและการเรียกคืน",
+    "report_date": "ออกรายงานการตรวจสอบ (เวลาท้องถิ่น): {date}",
+    "recalled_lot": "ล็อตที่เรียกคืน / ล็อตที่สงสัย: {lot}",
+    "affected_clients_count": "ลูกค้าที่ได้รับผลกระทบ: {count}",
+    "total_sessions_count": "จำนวนขั้นตอนที่บันทึกทั้งหมด: {count}",
+    "period_active": "ช่วงการรักษา: {start} ถึง {end}",
+    "affected_artists": "ช่างสักที่ดูแล: {artists}",
+    "disclaimer_audit": "ข้อมูลรวบรวมจากที่เก็บข้อมูลในเบราว์เซอร์ของเครื่อง Poli International ไม่ได้เก็บหรือโฮสต์ข้อมูลลูกค้า"
+  },
+  "jurisdictions": {
+    "tab_title": "ตารางเปรียบเทียบกฎระเบียบหลายเขตอำนาจ",
+    "tab_subtitle": "การเปรียบเทียบข้อกำหนดหมึกสักและหมึก PMU ตาม REACH ของสหภาพยุโรป, FDA/MoCRA ของสหรัฐฯ, AICIS ของออสเตรเลีย และเอเชียตะวันออกเฉียงใต้",
+    "btn_matrix": "ตารางกฎระเบียบ",
+    "btn_divergence": "คำอธิบายความแตกต่าง",
+    "eu": {
+      "name": "สหภาพยุโรป",
+      "region": "EU / EEA"
+    },
+    "us": {
+      "name": "สหรัฐอเมริกา",
+      "region": "อเมริกาเหนือ"
+    },
+    "au": {
+      "name": "ออสเตรเลีย",
+      "region": "ออสตราเลเซีย"
+    },
+    "asean": {
+      "name": "เอเชียตะวันออกเฉียงใต้",
+      "region": "รัฐสมาชิกอาเซียน"
+    },
+    "filter_jurisdiction_label": "กรองตามเขตอำนาจ",
+    "filter_all_regions": "เปรียบเทียบทุกเขตอำนาจ",
+    "search_placeholder": "ค้นหาตามชื่อสาร, เลข CI (เช่น CI 74160) หรือ CAS...",
+    "group_all": "สารทั้งหมด",
+    "group_pigments": "สารให้สี",
+    "group_metals": "โลหะและสิ่งเจือปน",
+    "group_carriers": "ตัวพาและตัวทำละลาย",
+    "substances_count": "ประเมินแล้ว {count} สาร",
+    "click_row_hint": "คลิกแถวเพื่อดูฐานทางกฎหมายและการดำเนินการของสตูดิโอ",
+    "matrix_action_label": "การดำเนินการของสตูดิโอ",
+    "status": {
+      "eu_compliant": "เป็นไปตาม REACH",
+      "eu_restricted": "จำกัดการใช้ตาม REACH",
+      "eu_banned": "ห้ามใช้ตาม REACH / SVHC",
+      "us_mocra_listed": "มีรายการผลิตภัณฑ์ตาม MoCRA",
+      "us_unapproved_color": "สารให้สีที่ยังไม่ได้รับอนุมัติ",
+      "us_contaminant_concern": "ข้อกังวลเรื่องสิ่งปนเปื้อน",
+      "au_aiic_listed": "สารเคมีที่อยู่ในรายการ AIIC",
+      "au_prohibited_chemical": "สารเคมีที่ห้ามใช้",
+      "au_impurity_alert": "แจ้งเตือนสิ่งเจือปน",
+      "asean_non_harmonized": "หมึกที่ยังไม่ได้ประสานมาตรฐาน",
+      "asean_acd_annex_banned": "ห้ามใช้ตามภาคผนวก II ของ ACD",
+      "asean_cosmetic_limit_applied": "ใช้ค่าจำกัดของเครื่องสำอางทาภายนอก"
+    },
+    "eval": {
+      "eu_compliant_desc": "อนุญาตให้ใช้ในการผลิตหมึกสักและ PMU ภายในค่าความเข้มข้นจำกัดของ REACH Annex XVII Entry 75",
+      "eu_compliant_action": "ตรวจสอบส่วนที่ 3 ของ SDS และเก็บบันทึกล็อตไว้ในแฟ้มลูกค้าเป็นเวลา 5 ปี",
+      "eu_bluegreen_desc": "ระยะเวลายกเว้นสำหรับ CI 74160 และ CI 74260 สิ้นสุดเมื่อวันที่ 4 มกราคม 2023 ห้ามใช้ที่เกิน 0.1% w/w ในสหภาพยุโรป",
+      "eu_bluegreen_action": "ห้ามฉีดภายในเขตสหภาพยุโรป เปลี่ยนไปใช้สูตรทางเลือกที่เป็นไปตามกฎระเบียบ",
+      "eu_banned_desc": "ห้ามใช้อย่างเด็ดขาดในส่วนผสมสำหรับการสักตาม Annex XVII Entry 75 หรือรายการ SVHC Candidate List",
+      "eu_banned_action": "นำขวดออกจากการใช้งานทันทีและแจ้งผู้จำหน่ายของสตูดิโอ",
+      "eu_restricted_desc": "อยู่ภายใต้ค่าจำกัดความเข้มข้นตามกฎหมายที่กำหนดไว้ในตารางภาคผนวก 13",
+      "eu_restricted_action": "ตรวจสอบใบรับรองผลการวิเคราะห์ (COA) เพื่อยืนยันว่าความเข้มข้นต่ำกว่าค่า ppm ตามกฎหมาย",
+      "us_standard_desc": "ควบคุมภายใต้ FD&C Act และ MoCRA ต้องลงทะเบียนสถานที่ผลิตและจดรายการผลิตภัณฑ์ตามที่กำหนด",
+      "us_standard_action": "บันทึกเลขล็อตของขวดในแฟ้มลูกค้าและเก็บไว้อย่างน้อย 3 ปีเพื่อการตรวจสอบเหตุการณ์ที่ไม่พึงประสงค์",
+      "us_color_paradox_desc": "สารให้สีภายใต้ FD&C Act ที่ยังไม่ได้รับอนุมัติจาก FDA สำหรับการฉีดหมึก ได้รับอนุญาตผ่านการใช้ดุลยพินิจในการบังคับใช้ภายใต้ MoCRA",
+      "us_color_paradox_action": "ตรวจสอบให้ผู้ผลิตได้จัดทำรายการผลิตภัณฑ์เครื่องสำอางตาม MoCRA และเอกสารยืนยันความปลอดภัยแล้ว",
+      "us_metal_desc": "FDA CFSAN ติดตามสิ่งเจือปนโลหะหนักและออกการแจ้งเตือนความปลอดภัยสำหรับล็อตที่ปนเปื้อนหรือถูกปลอมปน",
+      "us_metal_action": "ตรวจสอบเอกสารความบริสุทธิ์ของผู้ผลิตและตรวจสอบฐานข้อมูลการเรียกคืนสินค้าของ FDA ก่อนใช้งาน",
+      "au_listed_desc": "การนำเข้าอยู่ภายใต้การควบคุมของ AICIS สารเคมีนี้อยู่ในรายการสารเคมีอุตสาหกรรมของออสเตรเลีย (Australian Inventory of Industrial Chemicals) หรือ AIIC",
+      "au_listed_action": "บันทึกเลขล็อตของขวดในทะเบียนลูกค้าการเจาะผิวหนังตามที่รัฐกำหนด",
+      "au_metal_desc": "ความเป็นพิษของโลหะหนักได้รับการประเมินภายใต้กรอบความเสี่ยงของ AICIS และกฎหมายสาธารณสุขของรัฐห้ามใช้วัสดุที่ไม่ปลอดภัย",
+      "au_metal_action": "ตรวจสอบว่าผู้นำเข้าได้ยื่นการจัดประเภทการนำเข้าต่อ AICIS แล้ว และเก็บ COA ไว้ที่สถานที่",
+      "au_banned_desc": "สารนี้ถูกห้ามหรือจำกัดการใช้ตามมาตรฐานการนำเข้าสารเคมีอันตรายของ AICIS",
+      "au_banned_action": "ห้ามใช้ในขั้นตอนการเจาะผิวหนัง และแยกสินค้าคงคลังออกจากกัน",
+      "asean_standard_desc": "หมึกสักแบบฉีดเข้าชั้นผิว (intradermal) ยังไม่ได้ประสานมาตรฐานภายใต้ ASEAN Cosmetic Directive (ACD) ควบคุมโดยกฎหมายสาธารณสุขของแต่ละประเทศ",
+      "asean_standard_action": "ปฏิบัติตามใบอนุญาตสตูดิโอระดับเทศบาลและกฎเอกสารการนำเข้าของประเทศ",
+      "asean_metal_desc": "ค่าจำกัดใน Annex ของ ACD ใช้กับเครื่องสำอางทาภายนอก หน่วยงานสาธารณสุขของประเทศตรวจสอบความบริสุทธิ์ของหมึกแบบฉีดเข้าชั้นผิว",
+      "asean_metal_action": "ขอใบรับรองความบริสุทธิ์ระหว่างประเทศที่ตรงกับเกณฑ์มาตรฐานคุณภาพของ EU หรือ US",
+      "asean_banned_desc": "สารที่อยู่ในภาคผนวก II ของ ACD (สารเครื่องสำอางที่ห้ามใช้) หรือตารางสารพิษของประเทศ",
+      "asean_banned_action": "ห้ามใช้ในขั้นตอนเครื่องสำอางและความงามในทุกเขตอำนาจของประเทศสมาชิก"
+    },
+    "divergence_overview_title": "พื้นฐานทางกฎหมายและความแตกต่างของค่าจำกัดทางเคมี",
+    "divergence_overview_desc": "กฎระเบียบหมึกสักและหมึกถาวร (PMU) แตกต่างกันโดยพื้นฐานในแต่ละภูมิภาคของโลก สหภาพยุโรปใช้ค่าจำกัดทางเคมีตามกฎหมายที่แน่นอน ส่วนสหรัฐอเมริกา ออสเตรเลีย และเอเชียตะวันออกเฉียงใต้ควบคุมหมึกผ่านทะเบียนสถานที่ผลิต บัญชีสารอุตสาหกรรม หรือมาตรฐานสาธารณสุขของประเทศ",
+    "divergence": {
+      "cat_statutory": "ขอบเขตตามกฎหมาย",
+      "statutory_title": "การจัดประเภทผลิตภัณฑ์และกรอบกฎหมาย",
+      "eu_statutory_summary": "ข้อจำกัดสารเคมีเฉพาะภายใต้ REACH Annex XVII Entry 75",
+      "eu_statutory_specifics": "ส่วนผสมสำหรับการสักถูกกำหนดเป็นหมวดหมู่เฉพาะภายใต้กฎหมายเคมีของสหภาพยุโรป มีผลผูกพันกับสมาชิก EU ทั้ง 27 ประเทศ รวมถึงประเทศใน EEA",
+      "us_statutory_summary": "เครื่องสำอางภายใต้ FD&C Act และ MoCRA (2022)",
+      "us_statutory_specifics": "หมึกถูกจัดประเภททางกฎหมายเป็นเครื่องสำอาง ส่วนสารให้สีเป็นสารให้สีตามกฎหมายที่อยู่ภายใต้มาตรา 721 ของ FD&C Act",
+      "au_statutory_summary": "สารเคมีอุตสาหกรรม (ระดับรัฐบาลกลาง) และมาตรฐานการเจาะผิวหนัง (ระดับรัฐ)",
+      "au_statutory_specifics": "โครงการ AICIS ของรัฐบาลกลางควบคุมการนำเข้าและการผลิตสารเคมี ส่วนกฎหมายสาธารณสุขของรัฐควบคุมการปฏิบัติงานในสตูดิโอ",
+      "asean_statutory_summary": "เครื่องสำอางทาภายนอก (ACD) พร้อมหมึกฉีดเข้าชั้นผิวที่ยังไม่ได้ประสานมาตรฐาน",
+      "asean_statutory_specifics": "ASEAN Cosmetic Directive ควบคุมเฉพาะผลิตภัณฑ์ทาภายนอกเท่านั้น หมึกสักแบบฉีดเข้าชั้นผิวอยู่ภายใต้กฎหมายสาธารณสุขระดับเทศบาลและระดับประเทศ",
+      "cat_thresholds": "ค่าความเข้มข้นจำกัด",
+      "thresholds_title": "ค่าจำกัดทางเคมี (ppm) เทียบกับการปฏิบัติตามขั้นตอน",
+      "eu_thresholds_summary": "ค่าจำกัด ppm ตามกฎหมายที่บัญญัติไว้ในภาคผนวก 13",
+      "eu_thresholds_specifics": "บังคับใช้ 0.00005% (0.5 mg/kg) สำหรับสารก่อมะเร็งและสารก่อกลายพันธุ์ ค่าจำกัดทั่วไป 0.1% และค่าจำกัดเฉพาะสำหรับโลหะหนัก 19 ชนิด",
+      "us_thresholds_summary": "ไม่มีตาราง ppm ตามกฎหมาย เน้นการปลอมปนและการติดฉลากที่ผิด",
+      "us_thresholds_specifics": "มาตรา 601 และ 602 ห้ามสารพิษหรือสารที่ก่อความเสียหาย แต่กฎหมายของรัฐบาลกลางไม่มีตารางค่าตัวเลข ppm สำหรับสารให้สีในหมึกสัก",
+      "au_thresholds_summary": "ไม่มีตาราง ppm ตามกฎหมายภายใต้ AICIS สำหรับหมึกสัก",
+      "au_thresholds_specifics": "AICIS ประเมินการนำเข้าตามระดับความเสี่ยงต่อสุขภาพของมนุษย์ ไม่ใช่ตารางค่า ppm คงที่ของส่วนผสมสำเร็จรูป",
+      "asean_thresholds_summary": "ไม่มีค่าจำกัด ppm ระดับภูมิภาคสำหรับสูตรหมึกสักแบบฉีดเข้าชั้นผิว",
+      "asean_thresholds_specifics": "Annex ของ ACD กำหนดค่าจำกัด ppm สำหรับเครื่องสำอางทาภายนอก (เช่น ตะกั่ว (Lead) 20 ppm, สารหนู (Arsenic) 5 ppm) ซึ่งไม่มีผลผูกพันทางกฎหมายกับหมึกสัก",
+      "cat_pigments": "บัญชีอนุญาตและบัญชีห้ามของสารให้สี",
+      "pigments_title": "การอนุมัติสารให้สีและความขัดแย้งของสารให้สีในสหรัฐฯ",
+      "eu_pigments_summary": "ภาคผนวก 13 ห้ามสารหลายพันชนิดและสารให้สี CI ที่เฉพาะเจาะจง",
+      "eu_pigments_specifics": "ห้ามสีอะโซที่แตกตัวให้เป็นอะโรมาติกเอมีนที่ก่อมะเร็ง และสารให้สีใน Cosmetics Regulation Annex II และ Annex IV ที่มีเงื่อนไข",
+      "us_pigments_summary": "ความขัดแย้งของสารให้สี: ยังไม่ได้รับอนุมัติแต่จำหน่ายได้ภายใต้ MoCRA",
+      "us_pigments_specifics": "FDA ยังไม่เคยอนุมัติสารให้สีใดสำหรับการฉีดเข้าชั้นผิว หมึกหมุนเวียนอย่างถูกกฎหมายภายใต้การใช้ดุลยพินิจในการบังคับใช้ที่มีมาในอดีต",
+      "au_pigments_summary": "ต้องปฏิบัติตามบัญชีสารเคมี AIIC",
+      "au_pigments_specifics": "สารให้สีต้องอยู่ในรายการ AIIC หรือนำเข้าภายใต้หมวดหมู่ AICIS ที่ได้รับอนุมัติ ไม่มีบัญชีรายการที่อนุญาต (positive list) เฉพาะสำหรับหมึกสัก",
+      "asean_pigments_summary": "การอนุมัติการนำเข้าของประเทศและพิกัดศุลกากร",
+      "asean_pigments_specifics": "ไม่มีบัญชีรายการที่อนุญาตรวมของ ASEAN สำหรับสารให้สีในหมึกสัก สตูดิโอมักพึ่งพาสายผลิตภัณฑ์ที่นำเข้าจาก EU หรือ US ที่มีใบรับรอง",
+      "cat_metals": "โลหะหนักและสิ่งเจือปน",
+      "metals_title": "มาตรฐานโลหะหนักและสารปนเปื้อนจากจุลินทรีย์",
+      "eu_metals_summary": "โลหะหนักและสิ่งเจือปน 19 ชนิด พร้อมเพดาน ppm ตามกฎหมายที่เข้มงวด",
+      "eu_metals_specifics": "ภาคผนวก 13 กำหนดค่าสูงสุดที่แน่นอน ได้แก่ ตะกั่ว (Lead) 0.7 mg/kg, สารหนู (Arsenic) 0.5 mg/kg, แคดเมียม (Cadmium) 0.5 mg/kg และปรอท (Mercury) 0.5 mg/kg",
+      "us_metals_summary": "การแจ้งเตือนความปลอดภัยของ FDA และการติดตามการเรียกคืนสินค้าที่ปนเปื้อนจากจุลินทรีย์",
+      "us_metals_specifics": "FDA ออกคำเตือนด้านความปลอดภัยและเรียกคืนสินค้าเมื่อหมึกที่ปนเปื้อนหรือถูกปลอมปนก่อให้เกิดการติดเชื้อ non-tuberculous mycobacterial",
+      "au_metals_summary": "การประเมินความเสี่ยงทางเคมีและหน้าที่ความปลอดภัยสาธารณสุขทั่วไป",
+      "au_metals_specifics": "กรมสาธารณสุขของรัฐตรวจสอบสุขอนามัยของสตูดิโอ และสามารถยึดผลิตภัณฑ์ที่ปนเปื้อนได้ภายใต้อำนาจด้านสาธารณสุขที่กว้าง",
+      "asean_metals_summary": "ค่าความบริสุทธิ์ของเครื่องสำอางทาภายนอกใช้เป็นข้อมูลอ้างอิงโดยสมัครใจ",
+      "asean_metals_specifics": "หน่วยงานระดับภูมิภาคอาจอ้างอิงค่าจำกัดโลหะของ ACD สำหรับเครื่องสำอางทาภายนอกเป็นแนวทางในการสอบสวนเมื่อมีการร้องเรียนด้านสุขภาพ",
+      "cat_facility": "ภาระหน้าที่ของสถานที่ผลิต",
+      "facility_title": "ภาระหน้าที่การปฏิบัติตามของผู้ผลิตและผู้นำเข้า",
+      "eu_facility_summary": "การจัดประเภท CLP, SDS ตาม Annex II, การติดฉลาก INCI เต็มรูปแบบ",
+      "eu_facility_specifics": "ขวดต้องระบุข้อความ (Mixture for use in tattoos or permanent make-up) เลขล็อต และส่วนประกอบทั้งหมดเรียงตามน้ำหนักจากมากไปน้อย",
+      "us_facility_summary": "ต้องลงทะเบียนสถานที่ผลิตตาม MoCRA และจดรายการผลิตภัณฑ์",
+      "us_facility_specifics": "สถานที่ผลิตต้องลงทะเบียนกับ FDA จดรายการผลิตภัณฑ์เครื่องสำอางทุกปี เก็บเอกสารยืนยันความปลอดภัย และรายงานเหตุการณ์ไม่พึงประสงค์ที่ร้ายแรง",
+      "au_facility_summary": "การลงทะเบียนธุรกิจกับ AICIS และการยื่นแถลงประจำปี",
+      "au_facility_specifics": "ผู้นำเข้าต้องมีการลงทะเบียน AICIS ที่ยังใช้งานอยู่ ยื่นแถลงสารเคมีประจำปี และเก็บบันทึกการจัดประเภทไว้ 5 ปี",
+      "asean_facility_summary": "การจดทะเบียนบริษัทของประเทศและการแจ้งการนำเข้า",
+      "asean_facility_specifics": "ผู้นำเข้าต้องลงทะเบียนกับหน่วยงานพาณิชย์และสาธารณสุขในท้องถิ่น (เช่น Singapore HSA, Thailand FDA, Indonesia BPOM)",
+      "cat_records": "การตรวจสอบย้อนกลับในสตูดิโอ",
+      "records_title": "การเก็บบันทึกของช่างและข้อกำหนดการตรวจสอบย้อนกลับของลูกค้า",
+      "eu_records_summary": "ตรวจสอบข้อความบนฉลาก REACH และบันทึกล็อต",
+      "eu_records_specifics": "สตูดิโอต้องให้มั่นใจว่าขวดหมึกมีข้อความที่บังคับ และเก็บข้อมูลการตรวจสอบย้อนกลับของล็อตลูกค้าตามคำสั่งด้านสาธารณสุขของประเทศ",
+      "us_records_summary": "แนะนำให้เก็บเลขล็อต 3 ปีสำหรับเหตุการณ์ไม่พึงประสงค์",
+      "us_records_specifics": "ภายใต้ MoCRA สตูดิโอควรบันทึกยี่ห้อหมึกและเลขล็อตในเอกสารยินยอมของลูกค้าอย่างน้อย 3 ปี",
+      "au_records_summary": "ต้องบันทึกทะเบียนการเจาะผิวหนัง",
+      "au_records_specifics": "กฎหมายของรัฐกำหนดให้เก็บบันทึกขั้นตอนของลูกค้า บันทึกการฆ่าเชื้อ และเลขล็อตสี เพื่อการตรวจสอบสุขาภิบาลของเทศบาลท้องถิ่น",
+      "asean_records_summary": "ทะเบียนร้านระดับเทศบาลและบันทึกการยินยอมของลูกค้า",
+      "asean_records_specifics": "สตูดิโอเก็บแบบฟอร์มยินยอมของลูกค้า บันทึกขั้นตอน และใบแจ้งหนี้ของผู้จำหน่าย ตามข้อบังคับของเทศบาลท้องถิ่น",
+      "cat_pmu": "PMU และ Microblading",
+      "pmu_title": "บทบัญญัติสำหรับ Permanent Make-Up (PMU) และ Microblading",
+      "eu_pmu_summary": "ค่าจำกัดทางเคมีเดียวกันใช้กับหมึก PMU และหมึกสักตามร่างกาย",
+      "eu_pmu_specifics": "Regulation (EU) 2020/2081 ครอบคลุมส่วนผสมสีที่ฉีดเข้าชั้นผิวทั้งหมดในลักษณะเดียวกัน รวมถึง microblading และการสักเพื่อความงาม",
+      "us_pmu_summary": "ควบคุมในฐานะเครื่องสำอางภายใต้ MoCRA",
+      "us_pmu_specifics": "สารให้สีสำหรับ PMU อยู่ภายใต้การจดรายการผลิตภัณฑ์เครื่องสำอาง การรายงานเหตุการณ์ไม่พึงประสงค์ และกฎการติดฉลากการใช้งานโดยผู้เชี่ยวชาญ",
+      "au_pmu_summary": "การอนุญาตให้บริการการเจาะผิวหนังและการปรับปรุงลักษณะภายนอก",
+      "au_pmu_specifics": "ช่าง PMU ต้องมีหน่วยควบคุมการติดเชื้อที่ได้รับการรับรองตามกฎหมายสาธารณสุขของรัฐ",
+      "asean_pmu_summary": "แนวทางของร้านความงามและการปฏิบัติตาม ACD สำหรับผลิตภัณฑ์ทาภายนอก",
+      "asean_pmu_specifics": "ร้าน PMU ต้องปฏิบัติตามกฎของสภาความงามท้องถิ่น และให้มั่นใจว่าสารชาเฉพาะที่สอดคล้องกับกฎระเบียบยาของประเทศ"
+    },
+    "checklist_heading": "รายการตรวจสอบการปฏิบัติตามของสตูดิโอแยกตามภูมิภาค",
+    "checklist_subheading": "ขั้นตอนการปฏิบัติงานหลักที่จำเป็นเพื่อรักษาบันทึกที่ตรวจสอบแล้วในแต่ละเขตอำนาจด้านกฎระเบียบ",
+    "checklist_eu_title": "สหภาพยุโรป (REACH Entry 75)",
+    "checklist_eu_item_1": "ตรวจสอบว่าขวดระบุ (Mixture for use in tattoos or permanent make-up) และแสดงเลขล็อต",
+    "checklist_eu_item_2": "ขอและเก็บเอกสารข้อมูลความปลอดภัย (SDS) ของผู้ผลิต พร้อมองค์ประกอบตาม Annex II",
+    "checklist_eu_item_3": "บันทึกเลขล็อตของขวดและวันที่ทำขั้นตอนของลูกค้าในบันทึกของสตูดิโอ",
+    "checklist_us_title": "สหรัฐอเมริกา (FDA / MoCRA)",
+    "checklist_us_item_1": "ยืนยันว่าผู้ผลิตได้ลงทะเบียนสถานที่ตาม MoCRA และจดรายการผลิตภัณฑ์เครื่องสำอางแล้ว",
+    "checklist_us_item_2": "บันทึกยี่ห้อหมึก ชื่อเฉดสี และเลขล็อตในเอกสารยินยอมของลูกค้า",
+    "checklist_us_item_3": "เก็บบันทึกขั้นตอนของลูกค้าอย่างน้อย 3 ปี และจัดทำ SOP สำหรับการรายงานเหตุการณ์ไม่พึงประสงค์",
+    "checklist_au_title": "ออสเตรเลีย (AICIS และสาธารณสุขของรัฐ)",
+    "checklist_au_item_1": "ตรวจสอบว่าสารเคมีในหมึกอยู่ในรายการ AIIC หรือนำเข้าโดยธุรกิจที่ลงทะเบียนกับ AICIS",
+    "checklist_au_item_2": "บันทึกข้อมูลลูกค้า วันที่ และเลขล็อตสีในสมุดบันทึกการเจาะผิวหนัง",
+    "checklist_au_item_3": "เก็บบันทึกคุณสมบัติการควบคุมการติดเชื้อของช่างทุกคนที่ปฏิบัติงาน",
+    "checklist_asean_title": "เอเชียตะวันออกเฉียงใต้ (ASEAN / ระดับประเทศ)",
+    "checklist_asean_item_1": "เก็บใบแจ้งหนี้การค้าของผู้จำหน่ายและเอกสารแจ้งการนำเข้าไว้ในแฟ้ม",
+    "checklist_asean_item_2": "ให้มั่นใจว่าสารละลายเตรียมผิว น้ำยาทำความสะอาด และผลิตภัณฑ์ดูแลหลังทำ สอดคล้องกับมาตรฐาน ACD",
+    "checklist_asean_item_3": "เก็บแบบฟอร์มยินยอมที่ลูกค้าลงนามและใบรับรองการตรวจสุขาภิบาลของเทศบาล",
+    "modal_title": "การประเมินกฎระเบียบหลายเขตอำนาจ",
+    "modal_subtitle": "การประเมินส่วนผสมที่ได้รับการยอมรับตามกรอบสารเคมีระดับโลก",
+    "modal_summary_heading": "การเปรียบเทียบกรอบกฎระเบียบ",
+    "modal_summary_text": "ส่วนผสมหมึกสักถูกจัดประเภททางกฎหมายที่แตกต่างกันทั่วโลก ด้านล่างคือวิธีที่สารแต่ละชนิดที่ได้รับการยอมรับในสูตรนี้ถูกจัดการภายใต้ REACH ของสหภาพยุโรป MoCRA ของสหรัฐอเมริกา AICIS ของออสเตรเลีย และกฎระเบียบของเอเชียตะวันออกเฉียงใต้",
+    "modal_no_substances": "ไม่พบสารที่ได้รับการยอมรับในสูตรนี้ให้ประเมิน",
+    "col_ingredient": "ส่วนผสมและดัชนี",
+    "modal_footer_disclaimer": "ตารางกฎระเบียบเพื่อการให้ข้อมูล สตูดิโอต้องปรึกษาหน่วยงานสาธารณสุขท้องถิ่นเพื่อทราบกฎการบังคับใช้ในภูมิภาค"
+  },
+  "languages": {
+    "select_label": "ภาษา",
+    "switch_to": "เปลี่ยนภาษาเป็น {lang}",
+    "current": "ภาษาปัจจุบัน: {lang}",
+    "change_notice": "แปลอินเทอร์เฟซเป็น {lang} แล้ว",
+    "en": "อังกฤษ",
+    "de": "เยอรมัน",
+    "es": "สเปน",
+    "fr": "ฝรั่งเศส",
+    "it": "อิตาลี",
+    "nl": "ดัตช์",
+    "pt": "โปรตุเกส",
+    "th": "ไทย"
+  },
+  "qr_scanner": {
+    "modal_title": "สแกนเอกสาร QR หรือฉลาก",
+    "modal_sub": "จัดกล้องให้ตรงกับใบรับรอง QR ที่พิมพ์ แผ่นข้อมูลล็อต หรือฉลากขวด",
+    "align_qr_hint": "จัด QR code ให้อยู่ในกรอบเล็ง",
+    "err_no_media_devices": "ไม่พบกล้อง หรือ API อุปกรณ์สื่อไม่พร้อมใช้งาน",
+    "err_camera_access": "ไม่ได้รับอนุญาตให้ใช้กล้อง หรือกล้องกำลังถูกใช้โดยแอปอื่น",
+    "camera_unavailable_title": "กล้องไม่พร้อมใช้งาน",
+    "manual_entry_prompt": "คุณสามารถอัปโหลดรูปของโค้ดหรือวางข้อความ QR ดิบด้านล่างได้",
+    "detected_label": "ล็อตและสูตรที่ตรวจพบ",
+    "field_brand": "แบรนด์ / ผู้ผลิต",
+    "placeholder_brand": "e.g. Dynamic, Eternal",
+    "field_ink": "ชื่อหมึก / เฉดสี",
+    "placeholder_ink": "e.g. Lining Black",
+    "field_batch": "ล็อต / LOT #",
+    "placeholder_batch": "e.g. LOT-2024-91",
+    "field_ingredients": "ส่วนประกอบที่แยกได้",
+    "placeholder_ingredients": "ส่วนประกอบที่ดึงมาจากเอกสาร...",
+    "btn_apply_to_decoder": "นำไปใช้ในตัววิเคราะห์",
+    "btn_cancel": "ยกเลิก",
+    "scan_again": "สแกนอีกครั้ง",
+    "or_upload_photo": "หรือเลือกไฟล์รูปที่มี QR code:",
+    "btn_browse_photo": "อัปโหลดรูป",
+    "err_file_parse": "ไม่พบ QR code ในรูปที่อัปโหลด ลองใช้รูปที่ชัดกว่า หรือวางข้อความโดยตรง",
+    "manual_paste_placeholder": "วางข้อความ QR code หรือ URL ดิบที่นี่...",
+    "btn_parse": "แยกข้อความ",
+    "aria_torch": "เปิดหรือปิดไฟฉายของกล้อง",
+    "aria_switch_camera": "สลับกล้อง"
+  }
+}
