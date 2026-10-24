@@ -1,0 +1,2034 @@
+{
+  "app": {
+    "title": "REACH Tatoeage-Inkt Ingrediënten-Decoder | Poli International",
+    "subtitle": "Controleer ingrediënten van tatoeage-inkt en permanente make-up (PMU) volgens Verordening (EU) 2020/2081 (REACH Bijlage XVII vermelding 75). Plak ingrediëntenlijsten, flesetiketten of sectie 3 van het veiligheidsinformatieblad (VIB) om wettelijke status, concentratiegrenzen en verplichte etikettering te ontcijferen.",
+    "version_tag": "v2 · EU 2020/2081 vermelding 75",
+    "offline_badge": "Offline gereed"
+  },
+  "nav": {
+    "aria_nav": "App-navigatie",
+    "paste_label": "Etiket- & VIB-Decoder",
+    "database": "Stoffendatabase",
+    "alternatives": "Toegestane alternatieven",
+    "expiry": "Batches & Houdbaarheid",
+    "sessions": "Sessielogboek",
+    "metals": "Zwaremetalen-calculator",
+    "shortlist": "Studioselectie",
+    "blue_green": "Dossier Blauw 15 & Groen 7",
+    "plain_language": "Gids in duidelijke taal",
+    "maker_questions": "Vragen voor fabrikanten",
+    "mixtures": "Eigen Mengsels",
+    "recall": "Batchterugroeping",
+    "jurisdictions": "Wereldwijde Regels"
+  },
+  "status": {
+    "prohibited": "Verboden",
+    "restricted": "Beperkt",
+    "watch": "Aandachtspunt",
+    "not_covered": "Niet beperkt",
+    "unrecognised": "Onbekend bestanddeel",
+    "under_review": "In beoordeling"
+  },
+  "header": {
+    "sync_title": "Status lokale gegevensopslag",
+    "local_ready": "Lokale opslag gereed",
+    "offline": "Offline-modus",
+    "local_db_singular": "Lokale database ({count} inkt opgeslagen)",
+    "local_db_plural": "Lokale database ({count} inkten opgeslagen)",
+    "switch_light": "Lichte modus activeren",
+    "switch_dark": "Donkere modus activeren",
+    "profile_title": "Artiest- & Studioprofiel",
+    "default_artist": "Studio-artiest",
+    "default_studio": "Profielfoto"
+  },
+  "decoder": {
+    "heading": "REACH Tatoeage-Inkt Decoder",
+    "subheading": "Analyseert de chemische samenstelling van inkt aan de hand van de grenswaarden en verboden uit vermelding 75 (Verordening EU 2020/2081).",
+    "input_label": "Ingrediënten van flesetiket (CI, CAS, chemische namen of VIB-percentages):",
+    "input_placeholder": "Plak ingrediënten van etiket of sectie 3 van het VIB hier... Bijv.: Aqua, Glycerin, CI 77891, CI 74160, Hamamelis Virginiana Extract, Isopropyl Alcohol, CI 12477",
+    "load_examples": "Voorbeeldformulering laden:",
+    "sample_banned_blue": "Ftaloblauw 15:3 & Ftalogroen 7",
+    "sample_restricted_black": "Carbon Black & sporen zware metalen",
+    "sample_market_black": "Standaard zwarte inktformule",
+    "sample_unrecognised": "Etiket met onbekende handelsnamen",
+    "sample_clean_carrier": "Titaandioxide & conforme vloeistofbasis",
+    "clear_button": "Tekst wissen",
+    "decode_button": "Ingrediënten decoderen",
+    "audit_id_title": "Controlenummer: {id}",
+    "label_bottle_audit": "Etiket- & flescontrole",
+    "status_compliant": "CONFORM / NIET BEPERKT",
+    "status_restricted_sub": "EU 2020/2081 beperking onder drempelwaarde",
+    "status_restricted_exceeded": "BEPERKT - Concentratielimiet overschreden",
+    "status_prohibited": "VERBODEN (EU 2020/2081)",
+    "traceability_qr": "QR-code voor traceerbaarheid",
+    "print_label": "Etiket afdrukken",
+    "save_audit_record": "Controleverslag opslaan",
+    "saved_to_station": "Opgeslagen op werkstation",
+    "formulation_details": "Formuleringsdetails",
+    "brand_maker": "Merk / Fabrikant",
+    "brand_placeholder": "Bijv.: Dynamic, World Famous, Kuro Sumi",
+    "ink_name_shade": "Inktnaam / Kleurtint",
+    "ink_name_placeholder": "Bijv.: Triple Black 30 ml",
+    "batch_lot_label": "Batchnummer / LOT-nummer (vereist voor traceerbaarheid)",
+    "batch_lot_placeholder": "Bijv.: LOT-2024-8891",
+    "summary_title": "Samenstelling ({total} stoffen geïdentificeerd)",
+    "summary_prohibited_badge": "Verboden: {count}",
+    "summary_restricted_badge": "Beperkt: {count}",
+    "summary_not_covered_badge": "Niet beperkt: {count}",
+    "summary_unrecognised_badge": "Onbekend: {count}",
+    "extracted_items_heading": "Geëxtraheerde ingrediënten van de formulering",
+    "summary_prohibited": "Verboden volgens Vermelding 75: {count}",
+    "summary_restricted": "Beperkt (grenswaarden gelden): {count}",
+    "summary_not_covered": "Niet vallend onder Vermelding 75: {count}",
+    "summary_unrecognised": "Onbekend / niet gecatalogiseerd: {count}",
+    "table_query": "Geëxtraheerde term",
+    "table_detected": "Geïdentificeerde stof",
+    "table_ci": "Colour Index (CI)",
+    "table_cas": "CAS-nummer",
+    "table_status": "Status Vermelding 75",
+    "table_limit": "Exacte limiet (Vermelding 75)",
+    "table_quote": "Wettelijke verwijzing / Aanhangsel",
+    "save_to_shortlist": "Formulering opslaan in studioselectie",
+    "shortlist_brand_label": "Inktmerk / Fabrikant:",
+    "shortlist_name_label": "Inktnaam / Kleurtint:",
+    "shortlist_batch_label": "Batchnummer / LOT:",
+    "save_shortlist_btn": "Opslaan in studioselectie",
+    "saved_success_toast": "Succesvol opgeslagen in de studioselectie.",
+    "sds_support_note": " (Ondersteunt percentages uit sectie 3 van het VIB, bijv. 'CI 74160 8.5%')",
+    "samples_label": "Voorbeelden:",
+    "stat_prohibited": "Verboden",
+    "stat_restricted": "Beperkt",
+    "stat_not_covered": "Niet beperkt",
+    "stat_unrecognised": "Onbekend",
+    "unrecognised_desc": "Niet opgenomen in database (wordt niet willekeurig geraden)",
+    "limit_label": "Limiet:",
+    "note_label": "Opmerking:",
+    "limit_check_reg": "verordeningstekst raadplegen",
+    "verify_sds_note": "Controleer chemische identiteit in sectie 3 van fabrikant-VIB",
+    "sds_concentration_label": "Concentratie volgens VIB sectie 3:",
+    "col_ci": "Colour Index",
+    "col_cas": "CAS-nummer",
+    "col_sds_pct": "% VIB",
+    "label_limit": "Concentratielimiet: ",
+    "label_legal_ref": "Wettelijke verwijzing: ",
+    "field_brand": "Inktmerk / Fabrikant:",
+    "field_ink_name": "Inktnaam / Kleurtint:",
+    "field_batch_number": "Batchnummer / LOT:",
+    "placeholder_brand": "Bijv.: World Famous, Eternal",
+    "placeholder_ink_name": "Bijv.: Lining Black #2",
+    "placeholder_batch_number": "Bijv.: LOT-2024-001",
+    "offline_save_desc": "Slaat de volledige gecontroleerde formule op in de lokale database van het werkstation.",
+    "view_shortlist_link": "Naar studioselectie →",
+    "save_button": "Formulering opslaan",
+    "default_untitled_ink": "Naamloze inkt",
+    "default_unknown_brand": "Onbekend merk",
+    "no_substances_evaluated": "Geen stoffen geëvalueerd",
+    "prohibited_suffix": "{count} verboden",
+    "restricted_suffix": "{count} beperkt",
+    "not_covered_suffix": "{count} niet beperkt",
+    "unrecognised_suffix": "{count} onbekend",
+    "unrecognised_banner_title": "Niet-geïdentificeerde ingrediënten gedetecteerd ({count})",
+    "unrecognised_banner_desc": "Sommige namen konden niet worden gekoppeld aan een CI- of CAS-nummer in de REACH-database. Controleer de spelling of vraag de chemische specificatie op bij de fabrikant.",
+    "generate_question_sheet_btn": "Vragenlijst voor fabrikant genereren",
+    "rule_says_heading": "Wat de verordening exact voorschrijft",
+    "view_details": "Wettelijke regel & limieten inzien",
+    "hide_details": "Inklappen",
+    "matched_by_label": "Gekoppeld via:",
+    "plain_language_rule": "Praktijkuitleg voor de studio:",
+    "table_rule_details": "Details van de regel",
+    "never_guessed_note": "Geen willekeurige aannames volgens Verordening EU 2020/2081",
+    "inspect_btn": "Inspecteren",
+    "btn_multi_jurisdiction_matrix": "Internationale Matrix",
+    "qr_scan_btn": "QR / Etiket scannen",
+    "voice_dictate_btn": "Ingrediënten dicteren",
+    "voice_listening": "Luisteren...",
+    "voice_stop": "Dicteren stoppen",
+    "voice_hint": "Luisteren... noem ingrediënten (bijv. \"Aqua, CI 77266, Glycerin\")",
+    "voice_error_permission": "Microfoontoegang geweigerd. Schakel microfoonmachtigingen in via de browser.",
+    "voice_error_unsupported": "Spraakherkenning wordt niet ondersteund in deze browser.",
+    "unrecognised_reason": "Niet vermeld in vermelding 75 van bijlage XVII van EU REACH of in de gangbare index van cosmetische tatoeagepigmenten"
+  },
+  "result_card": {
+    "svhc_banned": "SVHC / Verboden",
+    "banned_eu": "Verboden (EU 2020/2081)",
+    "restricted_limits": "Beperkt (grenswaarden gelden)",
+    "under_review": "Onder wettelijke observatie",
+    "no_restriction": "Geen EU-beperking",
+    "match_cas": "Overeenkomst via CAS: {query}",
+    "match_ci": "Overeenkomst via Colour Index: {query}",
+    "match_alias": "Overeenkomst via synoniem / handelsnaam",
+    "max_limit": "Maximale drempelwaarde {ppm} µg/g",
+    "ci_label": "Colour Index: {ci}",
+    "cas_label": " · CAS: {cas}",
+    "regulatory_instrument": "Wettelijk instrument",
+    "colour_group": "Kleurgroep",
+    "restriction_rationale": "Reden van beperking & limieten",
+    "default_regulated_note": "Gereguleerd volgens Verordening EU 2020/2081.",
+    "match_method": "Detectiemethode",
+    "cas_reference": "CAS-referentie",
+    "synonyms": "Handelsnamen en synoniemen",
+    "typically_found_in": "Veelgebruikt in",
+    "echa_reference": "ECHA-referentie: CAS {cas}",
+    "in_studio_inventory": "In studio-inventaris",
+    "add_to_studio_inventory": "Toevoegen aan studio-inventaris"
+  },
+  "database": {
+    "title": "REACH Vermelding 75 Stoffendatabase",
+    "subtitle": "Doorzoek alle {count} volgens Verordening (EU) 2020/2081 gecatalogiseerde pigmenten, kleurstoffen en zware metalen.",
+    "search_placeholder": "Zoek op naam, CI-nummer (bijv. 74160), CAS-nummer of INCI-naam...",
+    "search_clear_title": "Zoekopdracht wissen",
+    "search_clear_aria": "Zoekopdracht leegmaken",
+    "status_filter_label": "Filter op wettelijke status",
+    "status_opt_all": "Alle wettelijke statussen ({count})",
+    "status_opt_compliant": "Conform / Toegestaan ({count})",
+    "status_opt_restricted": "Beperkt (Limieten Vermelding 75) ({count})",
+    "status_opt_banned": "Verboden (REACH Vermelding 75) ({count})",
+    "status_opt_watch": "Aandachtspunt / In beoordeling ({count})",
+    "group_filter_label": "Filter op chemische kleurfamilie",
+    "group_opt_all": "Alle chemische families",
+    "quick_filter_label": "Snelfilter:",
+    "pill_all": "Alle ({count})",
+    "pill_compliant": "Conform ({count})",
+    "pill_restricted": "Beperkt ({count})",
+    "pill_banned": "Verboden ({count})",
+    "pill_watch": "Aandachtspunt ({count})",
+    "reset_filters": "Filters herstellen",
+    "showing_summary": "Weergave van",
+    "of_substances": "van {total} stoffen in de lokale database",
+    "filtered_by_label": " · Gefilterd op:",
+    "group_label": " · Groep:",
+    "search_label": " · Zoekopdracht:",
+    "indexed_offline_note": "Offline geïndexeerd volgens Verordening EU 2020/2081 Vermelding 75",
+    "no_matches_title": "Geen stoffen gevonden voor deze criteria",
+    "no_matches_desc": "Pas de zoekterm aan of wis de status- en kleurfilters.",
+    "reset_all_btn": "Alle filters herstellen",
+    "search_aria": "Stoffen doorzoeken",
+    "status_filter": "Statusfilter",
+    "status_all": "Alle statussen",
+    "status_prohibited": "Verboden",
+    "status_restricted": "Beperkt",
+    "status_review": "In beoordeling",
+    "status_safe": "Geen beperking",
+    "color_group": "Kleurfamilie",
+    "color_all": "Alle kleuren",
+    "color_blue": "Blauw",
+    "color_green": "Groen",
+    "color_red": "Rood",
+    "color_yellow": "Geel",
+    "color_orange": "Oranje",
+    "color_violet": "Violet / Paars",
+    "color_black": "Zwart",
+    "color_white": "Wit",
+    "color_brown": "Bruin",
+    "showing_count_singular": "{count} stof getoond",
+    "showing_count_plural": "{count} stoffen getoond",
+    "filtered_from": "(gefilterd uit {total})",
+    "empty_heading": "Geen overeenkomende stoffen",
+    "empty_desc": "Geen enkele stof komt overeen met de huidige filters. Probeer de zoekcriteria te verruimen."
+  },
+  "alternatives": {
+    "title": "Matrix van alternatieven voor verboden & beperkte pigmenten",
+    "subtitle": "Vind conforme vervangende pigmenten en kleurstoffen volgens Verordening (EU) 2020/2081 voor verboden stoffen zoals Pigment Blue 15 en Pigment Green 7.",
+    "matrix_title": "Alternatievenmatrix voor REACH-conforme kleurstoffen",
+    "matrix_desc": "Vergelijk beperkte pigmenten (zoals Pigment Blue 15:3 en Pigment Green 7) met minerale en polycyclische kleurstoffen die wettelijk zijn toegestaan volgens Verordening (EU) 2020/2081.",
+    "matrix_badge": "Vermelding 75 Matrix",
+    "search_placeholder": "Zoek op pigmentnaam, CI-nummer (bijv. CI 74160) of alternatief...",
+    "restricted_list_heading": "Beperkte of verboden pigmenten ({count})",
+    "status_prohibited": "Verboden",
+    "prohibited_under_entry75": "Verboden volgens Vermelding 75 van REACH",
+    "ci_number_label": "Colour Index: {ci}",
+    "cas_number_label": "CAS: {cas}",
+    "transition_expired": "Overgangstermijn verstreken",
+    "legal_context_prefix": "Wettelijk kader: ",
+    "compliant_substitutes_heading": "Conforme EU-vervangingskleurstoffen",
+    "color_shade_label": "Kleurtint:",
+    "reg_status_label": "Wettelijke status:",
+    "allowed_status": "Toegestaan volgens Bijlage XVII Vermelding 75",
+    "filter_color": "Filter op kleur:",
+    "hue_all": "Alle tinten",
+    "hue_blue": "Blauw",
+    "hue_green": "Groen",
+    "hue_red": "Rood",
+    "hue_yellow": "Geel",
+    "restricted_heading": "Beperkt of verboden pigment",
+    "status_label": "Wettelijke status:",
+    "status_banned": "Verboden volgens Verordening EU 2020/2081",
+    "why_restricted": "Reden van beperking:",
+    "compliant_heading": "Conform vervangend pigment",
+    "properties_label": "Eigenschappen:",
+    "available_in": "Beschikbaar in:",
+    "inspect_btn": "In register bekijken"
+  },
+  "expiry": {
+    "title": "Beheer van inktflessen, batches en houdbaarheid",
+    "subtitle": "Beheer de inktvoorraad in de studio, bewaak de gebruiksduur na opening (PAO) en borg de batchtraceerbaarheid conform hygiënerichtlijnen en GGD-inspecties.",
+    "close_form": "Formulier sluiten",
+    "log_bottle_btn": "Inktfles registreren",
+    "overview_heading": "Overzicht studio-inventaris",
+    "total_inks": "Totaal aantal inkten geregistreerd",
+    "active_fresh": "Actief / Geldig",
+    "expiring_soon": "Verloopt binnenkort (30 dagen)",
+    "expired_action": "Af te voeren flessen bekijken",
+    "form_heading": "Nieuwe inktfles registreren",
+    "ink_name_label": "Inktnaam & kleurtint:",
+    "ink_name_placeholder": "Bijv.: True Black, Lining Red, Tribal Cyan...",
+    "brand_label": "Merk / Fabrikant:",
+    "brand_placeholder": "Bijv.: Eternal Ink, Intenze, Kuro Sumi, Panthera...",
+    "batch_label": "Batchnummer (vermeld op de fles):",
+    "batch_placeholder": "Bijv.: LOT-2024-08-99B",
+    "size_label": "Inhoud van de fles:",
+    "size_placeholder": "Bijv.: 30 ml (1 oz), 60 ml, 120 ml",
+    "status_label": "Status van naleving:",
+    "status_compliant": "REACH-conform (EU 2020/2081)",
+    "status_restricted": "Beperkt (laboratoriumanalyse controleren)",
+    "status_banned": "Niet conform (niet gebruiken)",
+    "date_opened_label": "Datum van eerste opening:",
+    "pao_label": "Gebruiksduur na opening (PAO):",
+    "pao_none": "Niet vermeld op de fles",
+    "pao_6m": "6 maanden (symbool geopend potje 6M)",
+    "pao_12m": "12 maanden (symbool geopend potje 12M)",
+    "pao_24m": "24 maanden (symbool geopend potje 24M)",
+    "mfg_expiry_label": "Fabrieks-uiterste datum (ongeopend):",
+    "notes_label": "Interne notities & opslaglocatie:",
+    "notes_placeholder": "Opslaglocatie, leverancier, factuurnummer...",
+    "cancel_btn": "Annuleren",
+    "save_bottle_btn": "Fles opslaan",
+    "empty_heading": "Nog geen inktflessen geregistreerd",
+    "empty_desc": "Registreer je inktflessen voor een betrouwbare bewaking van houdbaarheidstermijnen en sluitende batchtraceerbaarheid in de studio.",
+    "badge_expired": "VERLOPEN",
+    "badge_expiring_soon": "VERLOOPT BINNENKORT",
+    "badge_active": "ACTIEF / CONFORM",
+    "item_status": "Status:",
+    "item_lot": "Batch:",
+    "item_size": "Inhoud:",
+    "item_opened": "Geopend op: {opened}",
+    "item_pao": "PAO: {pao}M",
+    "item_mfg": "Fabrieksvervaldatum: {date}",
+    "mark_opened_today": "Vandaag geopend markeren",
+    "delete_bottle_aria": "Deze fles verwijderen",
+    "default_pao_notes": "Controleer het potjessymbool en de vervaldatum op de inktfles.",
+    "col_ink_brand": "Inkt & Fabrikant",
+    "col_batch_lot": "Batchnummer",
+    "col_opened": "Openingsdatum",
+    "col_mfg_expiry": "Houdbaarheidsdatum",
+    "col_status": "Status",
+    "col_actions": "Acties",
+    "status_no_date": "Geen datum opgegeven",
+    "status_expired_days": "Verlopen ({days} dagen geleden)",
+    "status_expiring_days": "Verloopt (over {days} dagen)",
+    "status_good_days": "Geldig (nog {days} dagen)",
+    "unopened": "Ongeopend",
+    "pao_3m": "3 maanden (3M)",
+    "pao_12m_standard": "12 maanden (Standaard)",
+    "default_stock": "Fles in hoofdvoorraad",
+    "default_lot": "BATCH-ONBEKEND",
+    "action_req_expired": "Van werkplek verwijderen",
+    "expiring_within_30": "Met voorrang gebruiken",
+    "active_fresh_stock": "Geldige voorraad",
+    "bottles_require_quarantine": "{count} fles vereist quarantaine / controle",
+    "view_expired_btn": "Filter Verlopen Voorraad",
+    "show_all_filter": "Alles Tonen ({count})",
+    "logged_bottles": "Geregistreerde Studioflessen",
+    "ink_name": "Inktnaam",
+    "placeholder_ink_name": "bijv. True Black",
+    "brand_mfg": "Merk / Fabrikant",
+    "placeholder_brand": "bijv. Eternal Ink",
+    "batch_lot": "Batchnummer",
+    "opened_date": "Openingsdatum (Lokaal)",
+    "pao_months": "PAO (Maanden)",
+    "factory_expiry": "Fabrieksvervaldatum"
+  },
+  "sessions": {
+    "title": "Sessielogboek & Klanttraceerbaarheid",
+    "subtitle": "Koppel gebruikte inktbatches aan klantsessies om een sluitende traceerbaarheid aan te tonen bij inspecties van hygiënediensten.",
+    "close_logger": "Logboek sluiten",
+    "log_new_session": "Nieuwe sessie registreren",
+    "record_procedure": "Tatoeage- of PMU-sessie vastleggen",
+    "consent_ref_label": "Referentie toestemmingsformulier (consent):",
+    "consent_placeholder": "Bijv.: CONS-2026-0412",
+    "client_name_label": "Klantnaam of klantcode:",
+    "client_name_placeholder": "Bijv.: Jan de Vries of code JDV-409",
+    "placement_label": "Plaatsing op het lichaam:",
+    "placement_placeholder": "Bijv.: Linkeronderarm, rechterschouderblad, wenkbrauwen...",
+    "attach_inks": "Gebruikte inkten & batches toewijzen aan deze sessie:",
+    "select_ink_placeholder": "Kies inkt uit de studio-inventaris...",
+    "audited_ink_option": "[Gecontroleerd] {brand} - {inkName} (BATCH: {batch})",
+    "usage_linework": "Lijnen (Outlines)",
+    "usage_shading": "Schaduw (Shading)",
+    "usage_color": "Kleurvlakken (Color Packing)",
+    "usage_highlight": "Highlights / Witte accenten",
+    "add_ink_btn": "Inkt toevoegen aan sessie",
+    "remove_ink_btn": "Verwijderen",
+    "cancel_btn": "Annuleren",
+    "save_session_btn": "Sessie opslaan",
+    "empty_heading": "Nog geen sessies geregistreerd",
+    "empty_desc": "Registreer de bij klanten gebruikte inkten en batchnummers om te voldoen aan de wettelijke bewaarplicht voor traceerbaarheid.",
+    "date_prefix": "Datum: {date}",
+    "placement_prefix": "Plaatsing: {placement}",
+    "print_card_btn": "Traceerbaarheidskaart afdrukken",
+    "delete_session_aria": "Sessie verwijderen",
+    "default_selected_ink": "Niet-gespecificeerde inkt",
+    "default_brand": "Onbekende fabrikant",
+    "default_na": "Niet van toepassing",
+    "default_lot": "BATCH-NIET-VERMELD",
+    "default_client": "Klant vertrouwelijk",
+    "default_artist": "Vaste artiest",
+    "default_studio": "Tattoostudio",
+    "default_placement": "Plaatsing niet vermeld"
+  },
+  "metals": {
+    "title": "Zwaremetalen-calculator (Aanhangsel 13)",
+    "subtitle": "Toets analyseresultaten uit veiligheidsinformatiebladen (VIB) en laboratoriumrapporten aan de wettelijke limieten van Aanhangsel 13 bij REACH Bijlage XVII.",
+    "close_calculator": "Calculator sluiten",
+    "evaluate_new_coa": "Nieuw analysecertificaat (COA) beoordelen",
+    "form_heading": "Gemeten laboratoriumwaarden invoeren",
+    "batch_label": "Geanalyseerd batchnummer:",
+    "batch_placeholder": "Bijv.: BATCH-2026-X4",
+    "ink_name_label": "Inktnaam / kleurtint:",
+    "ink_name_placeholder": "Bijv.: Pitch Black, Aztec Gold...",
+    "brand_label": "Merk / Fabrikant:",
+    "brand_placeholder": "Bijv.: Intenze, World Famous, Kuro Sumi...",
+    "lab_label": "Geaccrediteerd testlaboratorium:",
+    "lab_placeholder": "Bijv.: CTL GmbH Bielefeld, Eurofins, SGS...",
+    "input_heading": "Gemeten concentraties in laboratorium (mg/kg oftewel ppm):",
+    "limit_prefix": "Grenswaarde: ≤ {limit} ppm",
+    "ppm_placeholder": "0.0",
+    "pass": "VOLDOET",
+    "fail": "OVERSCHREDEN",
+    "cancel_btn": "Annuleren",
+    "calculate_save_btn": "Berekenen & beoordeling opslaan",
+    "empty_heading": "Nog geen metaalanalyses opgeslagen",
+    "empty_desc": "Voer meetwaarden uit certificaten in om automatische toetsing aan de grenswaarden van Aanhangsel 13 uit te voeren.",
+    "compliant_badge": "CONFORM AANHANGSEL 13",
+    "fail_badge": "GRENSWAARDE OVERSCHREDEN",
+    "lab_date_meta": "• Laboratorium: {lab} • Testdatum: {date}",
+    "delete_coa_aria": "Deze beoordeling verwijderen",
+    "result_pill": "{substance}: {measured} ppm (Max: {max} ppm)",
+    "default_manufacturer": "Fabrikant niet vermeld",
+    "default_lab": "Onafhankelijk laboratorium",
+    "hide_parser": "Tekstparser Verbergen",
+    "open_text_parser": "Parseer Ruwe Tekst COA / Labrapport",
+    "parser_title": "COA-Ruwe Tekst & PDF-Rapport Parser",
+    "load_sample_coa": "Voorbeeld Analysecertificaat Laden",
+    "parser_placeholder": "Plak chemisch analyserapport, laboratoriumcertificaat of OCR-tekst...",
+    "btn_extract_data": "Chemische Limieten Extraheren",
+    "btn_apply_to_form": "Formulier Vullen met Geëxtraheerde Waarden",
+    "parsed_detected_heading": "Geëxtraheerde Onzuiverheden",
+    "metals_found_count": "{count} gereguleerde zware metaalwaarden gedetecteerd"
+  },
+  "bottle_qr": {
+    "title": "Afdrukbaar batchetiket voor inktflessen",
+    "lot_prefix": "BATCH: {batch}",
+    "audited_verified": "Gecontroleerd op: {date} - aan EU 2020/2081",
+    "instructions": "Druk dit etiket af en plak het op de fles of de pigmentdispenser. Het vermeldt inkt, merk, batch, de datum van je controle en de verordening waaraan is getoetst. Het is je eigen studiodossier, geen verklaring van een instantie. Gebruik JSON-gegevens kopieren om dezelfde gegevens in je eigen systeem te bewaren.",
+    "copied": "Gekopieerd naar klembord!",
+    "copy_json": "JSON-gegevens kopiëren",
+    "print_label": "Zelfklevend etiket afdrukken"
+  },
+  "profile": {
+    "title": "Studioprofiel & lokale instellingen",
+    "close_aria": "Profielinstellingen sluiten",
+    "photo_processed": "Foto lokaal verwerkt ({size} KB).",
+    "process_failed": "Verwerking van foto mislukt. Probeer het opnieuw met een standaard PNG- of JPG-bestand.",
+    "photo_removed": "Profielfoto verwijderd.",
+    "profile_saved": "Profielinstellingen succesvol opgeslagen.",
+    "save_failed": "Opslaan van profiel mislukt.",
+    "custom_photo_heading": "Herkenbare foto van artiest of studio",
+    "profile_alt": "Profielfoto",
+    "no_photo": "Geen profielfoto aanwezig",
+    "drop_instructions": "Sleep een foto hierheen of klik om bestand te kiezen",
+    "processing": "Lokaal verwerken...",
+    "upload_btn": "Foto kiezen",
+    "remove_title": "Huidige foto verwijderen",
+    "remove_btn": "Verwijderen",
+    "offline_spec": "Lokale conversie naar 256x256 WebP in de browser. Er worden geen gegevens verzonden.",
+    "name_label": "Naam van de artiest of kwaliteitsverantwoordelijke:",
+    "name_placeholder": "Bijv.: Daan Bakker",
+    "studio_label": "Naam van de tattoostudio / atelier:",
+    "studio_placeholder": "Bijv.: Dutch Ink Tattoo Amsterdam",
+    "role_label": "Functie in de studio:",
+    "role_artist": "Vaste tattoo-artiest",
+    "role_owner": "Studio-eigenaar / Beheerder",
+    "role_compliance": "Hygiëne- & kwaliteitsverantwoordelijke",
+    "role_guest": "Gastartiest (Guest spot)",
+    "role_pmu": "PMU-specialist",
+    "jurisdiction_label": "Regelgevend gebied:",
+    "jurisdiction_placeholder": "Nederland (Europese Unie)",
+    "notes_label": "Interne notities & vergunningsgegevens:",
+    "notes_placeholder": "GGD-vergunningnummer, KvK-inschrijving, inspectienotities...",
+    "cancel_btn": "Annuleren",
+    "save_btn": "Wijzigingen opslaan",
+    "default_artist": "Studio-artiest",
+    "default_studio": "Tattoostudio",
+    "default_jurisdiction": "Europese Unie (REACH)"
+  },
+  "sync": {
+    "title": "Lokale back-up & veilige gegevensoverdracht",
+    "pw_min_length": "Het wachtwoord moet minimaal 8 tekens lang zijn om de back-up te versleutelen.",
+    "encrypted_export_success": "Versleutelde back-up succesvol geëxporteerd (AES-GCM 256-bit).",
+    "standard_export_success": "Standaard JSON-back-up succesvol geëxporteerd.",
+    "export_failed": "Exporteren van lokale gegevens mislukt.",
+    "import_success": "Gegevens succesvol geïmporteerd in lokale opslag.",
+    "import_failed": "Ongeldig of beschadigd importbestand.",
+    "decrypt_success": "Back-up succesvol ontsleuteld en hersteld.",
+    "decrypt_failed": "Onjuist wachtwoord of beschadigde gegevens.",
+    "clear_success": "Alle lokale studiogegevens zijn gewist.",
+    "clear_failed": "Wissen van gegevens mislukt.",
+    "network_status": "Verbindingsstatus:",
+    "online": "Online (Lokale autonome modus)",
+    "offline": "Offline (Volledig operationeel zonder netwerk)",
+    "stored_audits": "Opgeslagen conformiteitscontroles:",
+    "count_record": "verslag",
+    "count_records": "verslagen",
+    "studio_inks": "Geregistreerde inktflessen:",
+    "count_item": "fles",
+    "count_items": "flessen",
+    "sync_engine": "Opslagtechnologie:",
+    "sync_engine_val": "Versleutelde IndexedDB-database in de browser",
+    "last_synced": "Laatst lokaal opgeslagen:",
+    "encrypted_detected": "Versleutelde back-up gedetecteerd",
+    "enter_pw_desc": "Dit bestand is beveiligd met een wachtwoord. Voer het wachtwoord in om de gegevens te herstellen:",
+    "enter_pw_placeholder": "Ontsleutelingswachtwoord...",
+    "decrypt_btn": "Ontsleutelen & Importeren",
+    "transfer_heading": "Back-up & Herstel",
+    "encrypt_checkbox": "Back-up beveiligen met wachtwoord (AES-GCM)",
+    "pw_label": "Beveiligingswachtwoord:",
+    "pw_placeholder": "Kies een veilig wachtwoord...",
+    "crypto_spec": "PBKDF2-sleutelafleiding (100.000 iteraties SHA-256) + AES-GCM 256-bit lokaal via de Web Crypto API.",
+    "export_encrypted": "Versleutelde back-up downloaden",
+    "export_json": "Eenvoudige JSON-back-up downloaden",
+    "import_btn": "Back-up importeren",
+    "clear_audits_btn": "Alle lokale studiofiches wissen",
+    "confirm_clear_prompt": "Weet je zeker dat je alle controles en batchgegevens van dit apparaat wilt wissen? Dit kan niet ongedaan worden gemaakt.",
+    "confirm_clear_btn": "Definitief wissen bevestigen",
+    "cancel_btn": "Annuleren",
+    "tab_file_backup": "Bestandsbackup & JSON",
+    "tab_p2p_sync": "Directe Werkstation-naar-Werkstation Synchronisatie (P2P)",
+    "p2p_send_heading": "Direct Sync-Pakket Exporteren",
+    "p2p_send_desc": "Draag recepturen, audits en voorraad direct over naar een ander computerstation in de studio zonder cloudopslag.",
+    "p2p_btn_generate": "Offline Sync-Pakket Genereren",
+    "p2p_send_instruction": "Kopieer dit beveiligde pakket en plak het op het ontvangende station:",
+    "p2p_sync_token_label": "Directe Overdrachtstoken:",
+    "copy": "Pakket Kopiëren",
+    "copied": "Gekopieerd!",
+    "p2p_receive_heading": "Sync-Pakket Importeren",
+    "p2p_receive_desc": "Plak het overdrachtstoken van de zendende computer om gegevens samen te voegen in deze lokale database.",
+    "p2p_receive_placeholder": "Plak overdrachtstoken hier...",
+    "p2p_btn_merge_data": "Gegevens Samenvoegen in Lokale Database",
+    "p2p_import_success": "Import voltooid: {count} records samengevoegd in de lokale database.",
+    "p2p_invalid_payload": "Ongeldig tokenformaat. Controleer het bronpakket.",
+    "p2p_gen_failed": "Aanmaken van pakket mislukt. Controleer lokale gegevens."
+  },
+  "blue_green": {
+    "title": "Vakdossier: Pigment Blue 15 & Pigment Green 7",
+    "subtitle": "Achtergronden en chronologie van het EU-brede verbod op koperftalocyanine-kleurstoffen in tatoeage-inkt conform Verordening (EU) 2020/2081.",
+    "date_highlight_title": "Peildatum: 4 januari 2023",
+    "date_highlight_body": "De overgangstermijn van 24 maanden volgens lid 4 onder c van vermelding 75 eindigde op 4 januari 2023. Sinds die datum is elke inkt die Pigment Blue 15 (CI 74160) of Pigment Green 7 (CI 74260) boven 0,1% bevat, strikt verboden voor verkoop en gebruik in de EU.",
+    "pb15_title": "Pigment Blue 15 / 15:3 (Koperftalocyanine-blauw)",
+    "pb15_desc": "Decennialang toegepaste helderblauwe kleurstof voor cyaan-, turquoise- en diepblauwtinten. Verboden vanwege historische opname in Bijlage II van de Cosmeticaverordening (EG) nr. 1223/2009 voor producten op slijmvliezen.",
+    "pg7_title": "Pigment Green 7 (Gepolychloreerd koperftalocyanine-groen)",
+    "pg7_desc": "Briljante groene kleurstof die in vrijwel alle traditionele tatoeagegroenen zat. Onderhevig aan hetzelfde verbod via de verwijzing naar Bijlage II van de Cosmeticaverordening als Pigment Blue 15.",
+    "prohibited_since": "In de EU verboden sinds: 4 januari 2023",
+    "chemical_class_label": "Chemische stofklasse:",
+    "pb15_chemical_val": "Koperftalocyanine (alfa- / bèta-modificatie)",
+    "pg7_chemical_val": "Gepolychloreerd koperftalocyanine",
+    "cosmetic_annex_label": "Verwijzing Cosmeticaverordening:",
+    "pb15_cosmetic_val": "Verordening (EG) nr. 1223/2009, Bijlage II, volgnummer 1368",
+    "pg7_cosmetic_val": "Verordening (EG) nr. 1223/2009, Bijlage II, volgnummer 1369",
+    "entry75_label": "Bepalingen onder Vermelding 75:",
+    "derogation_expired_val": "Lid 4 onder c: overgangsregeling verstreken",
+    "status_today_heading": "Huidige juridische situatie in Europese studio's:",
+    "status_today_item1": "Elke fles die Pigment Blue 15 of Pigment Green 7 bevat, mag in de Europese Unie onder geen beding worden gebruikt voor tatoeages of permanente make-up.",
+    "status_today_item2": "Toezichthouders zoals de NVWA en gezondheidsinspecties controleren deze CI-codes (74160 en 74260) gericht tijdens studio-inspecties.",
+    "source_reference": "Officiële bron: Publicatieblad van de Europese Unie, L 423/6, Verordening (EU) 2020/2081 van de Commissie van 14 december 2020.",
+    "test_decoder_btn": "Blauw voorbeeld testen in decoder"
+  },
+  "maker_questions": {
+    "title": "Vragen voor de inktfabrikant: Auditformulier",
+    "subtitle": "Er bestaat geen officieel 'REACH-certificaat' van de EU. Conformiteit wordt uitsluitend aangetoond via technische dossiers, een correct veiligheidsinformatieblad (VIB) en geaccrediteerde testrapporten. Gebruik deze vragenlijst voor leveranciers.",
+    "print_btn": "Vragenlijst voor fabrikant afdrukken",
+    "sheet_doc_title": "Conformiteitsaanvraag tatoeage-inkten & PMU",
+    "sheet_doc_desc": "Standaard vragenlijst voor tatoeëerders en studio's ter voorlegging aan inktfabrikanten en distributeurs.",
+    "studio_info_heading": "Studio- & leveranciersgegevens",
+    "studio_name": "Naam van de studio:",
+    "studio_placeholder": "Naam van jouw tattoostudio",
+    "auditor_name": "Controlerend artiest / beheerder:",
+    "auditor_placeholder": "Naam van artiest of eigenaar",
+    "ink_maker": "Inktfabrikant / Merk:",
+    "ink_maker_placeholder": "Naam van merk of laboratorium",
+    "ink_name": "Inktnaam & kleurtint:",
+    "ink_name_placeholder": "Exacte naam van de kleurtint",
+    "batch_no": "Batchnummer op de fles:",
+    "batch_placeholder": "LOT- / Batchnummer",
+    "date_checked": "Controledatum:",
+    "date_placeholder": "JJJJ-MM-DD",
+    "checklist_heading": "Verplichte controles volgens Verordening (EU) 2020/2081 Vermelding 75",
+    "q1_title": "1. Conformiteitsverklaring Vermelding 75 van REACH",
+    "q1_desc": "Beschikt de fabrikant over een schriftelijke verklaring dat deze specifieke batch voldoet aan alle grenswaarden en verboden van Bijlage XVII vermelding 75?",
+    "q2_title": "2. Volledige samenstelling & CAS-nummers (Sectie 3 VIB)",
+    "q2_desc": "Vermeldt sectie 3 van het VIB alle ingrediënten met exacte CAS- en CI-nummers, inclusief alle kleurstoffen vanaf 0,1%?",
+    "q3_title": "3. Testrapporten voor zware metalen van geaccrediteerde laboratoria (Aanhangsel 13)",
+    "q3_desc": "Kan de fabrikant laboratoriumrapporten overleggen die aantonen dat Lood (≤ 0,7 ppm), Arseen (≤ 0,5 ppm), Cadmium (≤ 0,5 ppm), Nikkel (≤ 5 ppm) en Kwik (≤ 0,5 ppm) niet worden overschreden?",
+    "q4_title": "4. Onderzoek naar primaire aromatische aminen (PAA)",
+    "q4_desc": "Zijn er laboratoriumbewijzen dat kankerverwekkende aromatische aminen uit Aanhangsel 13 (zoals o-anisidine, 4-aminobifenyl) individueel onder 5 mg/kg blijven?",
+    "q5_title": "5. Polycyclische aromatische koolwaterstoffen (PAK) in zwarte inkt",
+    "q5_desc": "Garandeert de batchanalyse bij koolstofzwart (Carbon Black / CI 77266) een benzo[a]pyreengehalte ≤ 5 µg/kg (5 ppb) en een totale som van 8 PAK ≤ 0,5 mg/kg?",
+    "q6_title": "6. Verplichte aanduidingen op het fysieke flesetiket",
+    "q6_desc": "Staat er op de fles: (a) de verplichte Nederlandse tekst 'Mengsel voor gebruik in tatoeages of permanente make-up', (b) een uniek batchnummer, (c) de volledige ingrediëntenlijst, (d) veiligheidswaarschuwingen voor nikkel en chroom, (e) houdbaarheidsdatum of potjessymbool?",
+    "provided": "Aanwezig",
+    "missing": "Ontbreekt",
+    "notes_area": "Reactie van leverancier & aantekeningen:",
+    "notes_placeholder": "Noteer hier antwoorden van de fabrikant, certificaatnummers of openstaande verzoeken...",
+    "signature_block": "Gecontroleerd door (Handtekening & Datum):",
+    "date_block": "Datum:",
+    "inquiry_box_title": "Voorbeeld-e-mail voor vragen aan de fabrikant",
+    "inquiry_box_desc": "Kopieer deze tekst in een e-mail naar de inktfabrikant of distributeur om conformiteitsdocumenten op te vragen:",
+    "copy_email_btn": "E-mailtekst kopiëren",
+    "copied_email_toast": "E-mailtekst naar klembord gekopieerd",
+    "unrecognised_items_heading": "Onbekende ingrediënten ter opheldering:",
+    "add_unrecognised_item": "Ingrediënt toevoegen",
+    "remove_item_aria": "Dit bestanddeel verwijderen",
+    "empty_unrecognised_items": "Geen ongehelderde ingrediënten. Voer inktgegevens hierboven in of importeer ze uit de Decoder.",
+    "standard_studio_inquiry_line": "Op het etiket van uw inkt {inkName} staat {items} vermeld. Wij verzoeken u vriendelijk om het CAS-nummer, CI-nummer en de classificatie volgens REACH vermelding 75 aan te leveren ter completering van ons traceerbaarheidsdossier.",
+    "standard_studio_inquiry_prefix": "Standaard studio-aanvraag:",
+    "item_placeholder": "Bijv.: CI 77999 of handelsnaam"
+  },
+  "shortlist": {
+    "title": "Studioselectie van geverifieerde tatoeage-inkten",
+    "subtitle": "Bekijk, beheer en exporteer de selectie van goedgekeurde en conforme inkten voor gebruik in jouw studio.",
+    "export_csv": "Selectie exporteren (CSV)",
+    "download_csv": "CSV downloaden",
+    "download_json": "JSON downloaden",
+    "download_json_title": "Lijstgegevens downloaden in JSON-formaat",
+    "clear_all": "Lijst leegmaken",
+    "empty_state": "De studioselectie is momenteel leeg. Controleer inkten in de decoder en klik op 'Opslaan in studioselectie' om ze hier toe te voegen.",
+    "col_date": "Controledatum",
+    "col_brand": "Merk",
+    "col_ink": "Inkt & Kleurtint",
+    "col_batch": "Batchnummer",
+    "col_items": "Ingrediënten",
+    "col_findings": "Resultaat",
+    "col_actions": "Acties",
+    "delete_item": "Verwijderen uit selectie",
+    "lot_prefix": "BATCH: {batch}",
+    "trace_qr": "Traceerbaarheids-QR",
+    "print_label": "Etiket afdrukken",
+    "copied_json": "JSON-gegevens gekopieerd!",
+    "copy_json": "Als JSON kopiëren",
+    "export_json": "Als JSON exporteren",
+    "confirm_clear": "Weet je zeker dat je alle items uit de studioselectie wilt verwijderen?",
+    "download_csv_title": "Studioselectie exporteren als CSV-bestand",
+    "loading": "Selectie laden...",
+    "date_logged": "Registratiedatum:",
+    "batch_lot": "Batch:",
+    "detected_substances": "Gedetecteerde stoffen:",
+    "traceability_qr": "Fles-traceerbaarheidsetiket",
+    "qr_label_title": "Inkt-traceerbaarheidsetiket",
+    "qr_label_btn": "Batch-etiket",
+    "csv_studio_label": "Studio: {studio}",
+    "csv_export_date_label": "Exportdatum: {date}",
+    "csv_disclaimer": "Dit rapport is uitsluitend bedoeld voor informatieve doeleinden.",
+    "default_studio": "Onafhankelijke Studio"
+  },
+  "session_logger": {
+    "heading": "Sessielogboek voor tatoeages",
+    "subheading": "Koppel inktflessen en batchnummers aan klanten om te voldoen aan de wettelijke eisen voor hygiëne en traceerbaarheid.",
+    "close_logger": "Logboek sluiten",
+    "log_new_session": "Sessie registreren",
+    "record_procedure_title": "Nieuwe sessiefiche",
+    "client_ref_label": "Klantreferentie of code:",
+    "client_ref_placeholder": "Bijv.: Klantcode of naam",
+    "client_name_label": "Naam van de klant:",
+    "client_name_placeholder": "Naam van de klant",
+    "placement_label": "Lichaamslocatie:",
+    "placement_placeholder": "Bijv.: Rechterbovenbeen, onderarm...",
+    "attach_inks_heading": "Gebruikte inkten selecteren:",
+    "select_ink_placeholder": "Kies uit studio-inventaris...",
+    "audited_prefix": "[Gecontroleerd]",
+    "purpose_outline": "Lijnen",
+    "purpose_shading": "Schaduw",
+    "purpose_color_fill": "Kleurvlakken",
+    "purpose_highlight": "Highlights / Wit",
+    "add_ink_btn": "Inkt toevoegen",
+    "remove_ink_btn": "Verwijderen",
+    "cancel_btn": "Annuleren",
+    "save_session_btn": "Sessie opslaan",
+    "empty_sessions_title": "Nog geen sessies geregistreerd",
+    "empty_sessions_desc": "Geregistreerde sessies met bijbehorende inktbatches worden hier weergegeven.",
+    "date_label": "Datum: {date}",
+    "placement_summary": "Locatie: {placement}",
+    "print_card_btn": "Traceerbaarheidsfiche afdrukken",
+    "delete_session_aria": "Sessie verwijderen",
+    "default_ink": "Standaardinkt",
+    "default_brand": "Niet-gespecificeerd merk",
+    "default_client": "Klant vertrouwelijk",
+    "default_artist": "Studio-artiest",
+    "default_studio": "Studio",
+    "default_placement": "Locatie niet vermeld",
+    "summary_bar_title": "Maandelijks procedureoverzicht",
+    "current_month_sessions_label": "Sessies vastgelegd deze maand",
+    "current_month_summary_desc": "{count} klantentatoeageprocedures gedocumenteerd in {month}",
+    "summary_all_time_total": "Totaal: {total} sessies in totaal",
+    "summary_unique_clients": "{count} unieke klanten",
+    "summary_inks_applied": "{count} inkttoepassingen"
+  },
+  "plain_language_panel": {
+    "title": "De REACH-verordening voor tatoeage-inkt begrijpen",
+    "subtitle": "Duidelijke praktijkgids over Verordening (EU) 2020/2081 (Bijlage XVII, vermelding 75) voor tatoeëerders, piercers en PMU-professionals.",
+    "section1_title": "1. Wie is waarvoor verantwoordelijk?",
+    "section1_lead": "De Europese wetgeving maakt een strikt onderscheid tussen de verplichtingen van producenten en gebruikers.",
+    "section1_maker_title": "Verplichtingen van fabrikant en distributeur:",
+    "section1_maker_desc": "Zij moeten conforme inkten produceren, onzuiverheden laten testen in geaccrediteerde laboratoria, een volledig veiligheidsinformatieblad (VIB) leveren en de verplichte vermeldingen op het etiket aanbrengen.",
+    "section1_artist_title": "Verplichtingen van tatoeëerder en studio-eigenaar:",
+    "section1_artist_desc": "Het is strikt verboden om niet-conforme inkt te gebruiken. Studio's moeten etiketten controleren, toezien op verplichte teksten en de gebruikte batchnummers per klant registreren.",
+    "section2_title": "2. Verplichte vermeldingen op elke inktfles",
+    "section2_lead": "Controleer vóór het openen van een fles in de studio of de volgende informatie fysiek aanwezig is op het etiket:",
+    "section2_item1": "De exacte Nederlandse vermelding: 'Mengsel voor gebruik in tatoeages of permanente make-up'.",
+    "section2_item2": "Een uniek batch- of lotnummer dat herleidbaar is naar de productie- en testrapporten.",
+    "section2_item3": "De volledige lijst van ingrediënten in afnemende volgorde van gewicht.",
+    "section2_item4": "De waarschuwing 'Bevat nikkel. Kan een allergische reactie veroorzaken.' indien nikkel boven 0,0005% ligt.",
+    "section2_item5": "De waarschuwing 'Bevat chroom (VI). Kan een allergische reactie veroorzaken.' indien zeswaardig chroom boven 0,00005% ligt.",
+    "section2_item6": "Veiligheidsinstructies, de uiterste gebruiksdatum of het potjessymbool voor de houdbaarheid na opening (PAO).",
+    "section3_title": "3. De waarheid over zogenaamde 'REACH-certificaten'",
+    "section3_lead": "Wees alert op misleidende commerciële certificaten in de handel.",
+    "section3_desc1": "Geen enkele instantie van de Europese Unie geeft individuele goedkeuringscertificaten af voor tatoeage-inkten. Documenten met ronkende titels zoals 'Official REACH Certificate' zijn reclamemateriaal zonder juridische geldigheid.",
+    "section3_desc2": "Conformiteit wordt uitsluitend aangetoond via het technisch dossier van de fabrikant, de conformiteitsverklaring met vermelding 75, een REACH-conform VIB en officiële analyserapporten van een onafhankelijk testlab.",
+    "section4_title": "4. De drie categorieën van chemische stoffen",
+    "section4_prohibited_title": "Verboden stoffen:",
+    "section4_prohibited_desc": "Kankerverwekkende, mutagene of reproductietoxische stoffen (CMR 1A/1B), kleurstoffen die verboden zijn in cosmetica (Bijlage II van Cosmeticaverordening 1223/2009), inclusief Pigment Blue 15 en Pigment Green 7.",
+    "section4_restricted_title": "Beperkte stoffen (maximale concentratiegrenzen):",
+    "section4_restricted_desc": "Zware metalen (lood, arseen, cadmium, kwik, enz.), primaire aromatische aminen en conserveermiddelen. Deze worden uitsluitend getolereerd als technisch onvermijdelijke residuen onder de limieten van Aanhangsel 13.",
+    "section4_not_covered_title": "Toegestane / niet-beperkte stoffen:",
+    "section4_not_covered_desc": "Veilige dragervloeistoffen en oplosmiddelen (gezuiverd water, plantaardige glycerine, isopropanol, toverhazelaarextract) en toegelaten minerale of organische pigmenten.",
+    "section5_title": "5. Wat te doen bij inspectie door toezichthouders (NVWA / GGD)?",
+    "section5_lead": "Tijdens een inspectiebezoek van toezichthoudende instanties:",
+    "section5_desc1": "Toon het sessielogboek met geregistreerde batches, actuele veiligheidsinformatiebladen van de leveranciers en de controleformulieren van de inktflessen.",
+    "section5_desc2": "Zet verlopen of nog niet gecontroleerde flessen direct apart in een afgesloten bak met het duidelijke opschrift 'Niet voor gebruik' om verwisseling te voorkomen.",
+    "cta_test_decoder": "Etiket testen in decoder"
+  },
+  "cross_links": {
+    "heading": "Andere gratis tools van Poli International voor studio's:",
+    "svhc": "REACH SVHC-kandidaatstoffen-controle",
+    "mixer": "Tatoeage-inkt meng- & verdunningscalculator",
+    "patch": "Allergie-plaktestprotocol & documentatie"
+  },
+  "disclaimer": {
+    "note": "Technisch hulpmiddel ter ondersteuning van de naleving van regelgeving in tatoeage- en piercingstudio's. Aangeboden door Poli International, fabrikant van BioFlex(R) lichaamssieraden."
+  },
+  "footer": {
+    "publisher": "Poli International • Gratis instrumenten voor tatoeëerders, piercers en studio-eigenaren",
+    "reg_tag": "Referentie: Verordening (EU) 2020/2081 tot wijziging van REACH Bijlage XVII",
+    "storage_tag": "100% lokale gegevensopslag in de browser • Geen doorgifte naar onze servers",
+    "telemetry_tag": "Geen cookies van derden of externe trackers"
+  },
+  "substance_rule_modal": {
+    "close_aria": "Stofkaart sluiten",
+    "exact_concentration_limit_heading": "Wettelijke maximale concentratielimiet:",
+    "regulatory_quoted_provision_heading": "Toepasselijke wettelijke bepaling (Verordening EU 2020/2081):",
+    "reference_label": "Wettelijke referentie: {ref}",
+    "detailed_rationale_heading": "Toxicologische motivering & wettelijke classificatie:",
+    "unrecognised_box_title": "Stof niet opgenomen in REACH-database",
+    "unrecognised_box_desc1_prefix": "Dit bestanddeel kon niet worden gekoppeld aan een gereguleerd pigment of additief onder vermelding 75.",
+    "unrecognised_box_desc1_suffix": "Controleer of het om een merknaam of een typefout op het etiket gaat.",
+    "unrecognised_box_desc2": "Vraag bij de fabrikant het exacte CAS-nummer of het bijbehorende veiligheidsinformatieblad op.",
+    "close_btn": "Sluiten"
+  },
+  "data_metals": {
+    "lead": {
+      "substance": "Lood en loodverbindingen",
+      "description": "Reproductietoxisch (CMR 1A). Verboden als opzettelijk ingrediënt; maximaal toegelaten concentratie van residu-onzuiverheden: 0,7 mg/kg (ppm)."
+    },
+    "arsenic": {
+      "substance": "Arseen en arseenverbindingen",
+      "description": "Kankerverwekkend 1A. Maximale drempelwaarde voor elementaire onzuiverheden: 0,5 mg/kg (ppm)."
+    },
+    "cadmium": {
+      "substance": "Cadmium en cadmiumverbindingen",
+      "description": "Kankerverwekkend 1B, Mutageen 1B, Reproductietoxisch 1B. Maximale limiet voor onzuiverheden: 0,5 mg/kg (ppm)."
+    },
+    "antimony": {
+      "substance": "Antimoon en antimoonverbindingen",
+      "description": "Toxische onzuiverheid afkomstig van grondstofsynthese. Maximale limiet: 0,5 mg/kg (ppm)."
+    },
+    "mercury": {
+      "substance": "Kwik en kwikverbindingen",
+      "description": "Reproductietoxisch (Repr. 1B) en krachtig neurotoxisch. Maximale limiet: 0,5 mg/kg (ppm)."
+    },
+    "nickel": {
+      "substance": "Nikkel en nikkelverbindingen",
+      "description": "Huidsensibiliserend categorie 1 en kankerverwekkend 2. Maximale oplosbare / totale onzuiverheidstolerantie: 5,0 mg/kg (ppm)."
+    },
+    "chromium_vi": {
+      "substance": "Chroom VI (Zeswaardig chroom)",
+      "description": "Kankerverwekkend 1A, Mutageen 1B, Huidsensibiliserend 1. Strikte maximale limiet: 0,5 mg/kg (ppm)."
+    },
+    "barium": {
+      "substance": "Barium en oplosbare bariumverbindingen",
+      "description": "Maximale toelaatbare concentratie voor oplosbaar barium als onzuiverheid: 500 mg/kg (ppm)."
+    },
+    "copper": {
+      "substance": "Koper (oplosbare koperverbindingen)",
+      "description": "Maximale concentratie van oplosbaar koper: 250 mg/kg (ppm)."
+    },
+    "zinc": {
+      "substance": "Zink en oplosbare zinkverbindingen",
+      "description": "Maximale toelaatbare onzuiverheid voor oplosbaar zink: 2 000 mg/kg (ppm)."
+    },
+    "selenium": {
+      "substance": "Seleen en seleenverbindingen",
+      "description": "Maximale toelaatbare onzuiverheidslimiet: 2,0 mg/kg (ppm)."
+    },
+    "tin": {
+      "substance": "Organotinverbindingen (Tin)",
+      "description": "Maximale limiet voor organotinverbindingen: 0,5 mg/kg (ppm)."
+    },
+    "cobalt": {
+      "substance": "Kobalt en kobaltverbindingen",
+      "description": "Kankerverwekkend 1B, Reproductietoxisch 1B, Huidsensibiliserend 1. Maximale limiet: 0,5 mg/kg (ppm)."
+    },
+    "bap": {
+      "substance": "Benzo[a]pyreen (BaP)",
+      "description": "Polycyclische aromatische koolwaterstof (PAK) in ongezuiverd koolstofzwart. Kankerverwekkend 1B. Maximale grenswaarde: 0,005 mg/kg (5 µg/kg oftewel 5 ppb)."
+    },
+    "pahs_total": {
+      "substance": "Polycyclische aromatische koolwaterstoffen (PAK's, som van 8)",
+      "description": "Totale som van de 8 kankerverwekkende REACH-PAK's (Chryseen, Benzo[a]antraceen, etc.). Maximale cumulatieve limiet: 0,5 mg/kg (ppm)."
+    }
+  },
+  "data_alternatives": {
+    "alt_pb15": {
+      "problematic_pigment": "Pigment Blue 15 / Pigment Blue 15:3",
+      "restriction_reason": "In de EU sinds 4 januari 2023 verboden in tatoeage-inkten volgens REACH vermelding 75 via de kruisverwijzing naar Cosmetica Bijlage II.",
+      "legal_status": "Verboden (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Pigment Blue 60 (Indantronblauw)",
+          "color_shade": "Diep marineblauw / koningsblauw",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Kuipkleurstof met uitstekende lichtechtheid en buitengewone chemische stabiliteit; niet opgenomen in Bijlage II van Verordening (EG) nr. 1223/2009."
+        },
+        "alt_1": {
+          "name": "Ultramarijnblauw (Natriumaluminosilicaat met polysulfide)",
+          "color_shade": "Briljant mineraal kobaltblauw",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Veelgebruikt anorganisch mineraalpigment in cosmetische formules; toegelaten volgens Bijlage IV zonder tatoeagebeperking."
+        },
+        "alt_2": {
+          "name": "Pigment Blue 28 (Kobaltblauw)",
+          "color_shade": "Klassiek mineraal cyaanblauw",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Anorganische gemengde metaaloxidespinel. Moet worden getest om te verifiëren dat kobaltuitloging binnen de limieten voor oplosbare onzuiverheden uit Aanhangsel 13 blijft (<0,5 mg/kg)."
+        }
+      }
+    },
+    "alt_pg7": {
+      "problematic_pigment": "Pigment Green 7 (Ftalocyaninegroen)",
+      "restriction_reason": "Sinds 4 januari 2023 verboden in tatoeage-inkten in de EU volgens REACH vermelding 75 via kruisverwijzing naar Bijlage II.",
+      "legal_status": "Verboden (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Chroomoxidegroen",
+          "color_shade": "Olijfgroen tot bosgroen",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Driewaardig chroom(III)oxide. Volledig verschillend van giftig zeswaardig chroom Cr(VI). Uitzonderlijk inert, onoplosbaar en lichtecht."
+        },
+        "alt_1": {
+          "name": "Gehydrateerd chroomsesquioxide (Viridiaan / Smaragdgroen)",
+          "color_shade": "Helder smaragdgroen",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Toegestaan anorganisch pigment. Moet voldoen aan de grenswaarde voor Cr(VI)-residuen (<0,5 mg/kg oplosbaar)."
+        },
+        "alt_2": {
+          "name": "Kobaltgroen (Pigment Green 19 / 26)",
+          "color_shade": "Koud blauwgroen / turkooisgroen",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Zeer stabiele anorganische kobalt-zinkspinel; vereist batchcontrole op zwaremetalenonzuiverheden."
+        }
+      }
+    },
+    "alt_pr22": {
+      "problematic_pigment": "Pigment Red 22 (Azorood)",
+      "restriction_reason": "Splitst door reductieve ontleding af in het aromatische amine p-toluïdine (Kankerverwekkend 1B). Formeel beperkt en verboden.",
+      "legal_status": "Verboden (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Rood ijzeroxide (Synthetisch ijzer(III)oxide)",
+          "color_shade": "Aards baksteenrood / terracotta",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Standaard anorganisch mineraal ijzeroxide. Niet-azo, geen risico op kankerverwekkende aminesplitsing. Voldoet aan REACH-zuiverheidscriteria."
+        },
+        "alt_1": {
+          "name": "Pigment Red 254 (Pyrroolrood / DPP Rood)",
+          "color_shade": "Helder briljant scharlakenrood",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Diketopyrrolopyrrool (DPP) chemie. Niet-azo-mechanisme; buitengewoon stabiel en toegelaten onder Bijlage XVII vermelding 75."
+        },
+        "alt_2": {
+          "name": "Pigment Red 122 (Quinacridonemagenta)",
+          "color_shade": "Briljant magenta / rozig rood",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Polycyclisch quinacridonepigment. Krachtige kleurkracht zonder enig risico op aminedecompositie."
+        }
+      }
+    },
+    "alt_py14": {
+      "problematic_pigment": "Pigment Yellow 14 (Diarylidegeel)",
+      "restriction_reason": "Diarylidegeel splitst bij degradatie af in 3,3'-dichloorbenziïdine (Kankerverwekkend 1B). Verboden onder vermelding 75.",
+      "legal_status": "Verboden (EU 2020/2081)",
+      "alternatives": {
+        "alt_0": {
+          "name": "Geel ijzeroxide (Gehydrateerd ijzeroxide)",
+          "color_shade": "Oker / warm goudgeel",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Stabiel anorganisch pigment. Veilig profiel, geen splitsing van aromatische aminen."
+        },
+        "alt_1": {
+          "name": "Pigment Yellow 150 (Nikkel-azomethinegeel)",
+          "color_shade": "Briljant heldergeel",
+          "status": "Toegestaan zonder verbod",
+          "technical_notes": "Hoge transparantie en uitstekende lichtechtheid; vereist batchtests op vrij extraheerbaar nikkel (<5 mg/kg)."
+        }
+      }
+    }
+  },
+  "data_pigments": {
+    "pigment_blue_15": {
+      "name": "Pigment Blue 15",
+      "exact_limit": "Algemene limiet van 0,1 gewichtsprocent (1 000 mg/kg); verbod van kracht sinds 4 januari 2023",
+      "entry_reference": "Vermelding 75, lid 1 onder c en lid 4 onder c; Bijlage II van Verordening (EG) nr. 1223/2009",
+      "notes": "Koperftalocyanine-blauw. De overgangsregeling volgens lid 4 onder c is op 4 januari 2023 verstreken. Verboden in alle tatoeage- en PMU-inkten die in de EU worden verhandeld of gebruikt.",
+      "also_known_as": [
+        "Ftalocyanineblauw",
+        "Koperftalocyanine",
+        "PB15",
+        "Ftaloblauw"
+      ],
+      "found_in": [
+        "blauwe tatoeage-inkten",
+        "turkooistinten",
+        "groene mengkleuren"
+      ]
+    },
+    "pigment_blue_15_3": {
+      "name": "Pigment Blue 15:3",
+      "exact_limit": "Algemene limiet van 0,1 gewichtsprocent (1 000 mg/kg); verbod van kracht sinds 4 januari 2023",
+      "entry_reference": "Vermelding 75, lid 1 onder c en lid 4 onder c; Bijlage II van Verordening (EG) nr. 1223/2009",
+      "notes": "Koperftalocyanine in alfa-kristalmodificatie. Zelfde CI 74160 en zelfde verbod als PB15. De tijdelijke vrijstelling eindigde op 4 januari 2023.",
+      "also_known_as": [
+        "PB15:3",
+        "Koperftalocyanine alfa",
+        "Ftaloblauw groenige tint",
+        "Pigment Blue 15:3"
+      ],
+      "found_in": [
+        "cyaan en helderblauwe tatoeage-inkten"
+      ]
+    },
+    "pigment_green_7": {
+      "name": "Pigment Green 7",
+      "exact_limit": "Algemene limiet van 0,1 gewichtsprocent (1 000 mg/kg); verbod van kracht sinds 4 januari 2023",
+      "entry_reference": "Vermelding 75, lid 1 onder c en lid 4 onder c; Bijlage II van Verordening (EG) nr. 1223/2009",
+      "notes": "Gepolychloreerd koperftalocyanine-groen. De overgangsperiode van 24 maanden liep af op 4 januari 2023. Verboden in de EU in alle tatoeage-inkten en PMU.",
+      "also_known_as": [
+        "Ftalogroen",
+        "PG7",
+        "Koperchloorftalocyanine",
+        "Pigment Green 7"
+      ],
+      "found_in": [
+        "groentinten",
+        "blauwgroene tinten",
+        "donkere mengkleuren"
+      ]
+    },
+    "pigment_green_36": {
+      "name": "Pigment Green 36",
+      "exact_limit": "Algemene limiet van 0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder c; Bijlage II van Verordening (EG) nr. 1223/2009",
+      "notes": "Gebromeerd en gechloreerd koperftalocyanine. Viel niet onder de tijdelijke overgangsregeling voor PG7; verboden in mengsels voor tatoeages in de EU sinds 4 januari 2022.",
+      "also_known_as": [
+        "PG36",
+        "Ftalogroen gelige tint"
+      ],
+      "found_in": [
+        "limoengroene tinten",
+        "warme groenen"
+      ]
+    },
+    "pigment_violet_23": {
+      "name": "Pigment Violet 23",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; CLP-verordening (EG) nr. 1272/2008 Bijlage VI",
+      "notes": "Dioxazineviolet. Beperkt volgens geharmoniseerde indelingen en synthese-onzuiverheden.",
+      "also_known_as": [
+        "PV23",
+        "Dioxazineviolet",
+        "Carbazolviolet"
+      ],
+      "found_in": [
+        "violette inkten",
+        "paarse tinten",
+        "magentamengsels"
+      ]
+    },
+    "pigment_red_22": {
+      "name": "Pigment Red 22",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13 (Primaire aromatische aminen)",
+      "notes": "Azokleurstof. Kan afbreken met vorming van 2-methyl-5-nitroaniline of andere aromatische aminen. Verboden volgens vermelding 75.",
+      "also_known_as": [
+        "PR22",
+        "Briljantrood",
+        "Echtrood"
+      ],
+      "found_in": [
+        "felle rode tatoeage-inkten",
+        "scharlakenrode tinten"
+      ]
+    },
+    "pigment_red_17": {
+      "name": "Pigment Red 17",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Naftol AS azokleurstof. Risico op splitsing met vrijkomen van kankerverwekkende aromatische aminen.",
+      "also_known_as": [
+        "PR17"
+      ],
+      "found_in": [
+        "traditionele rode inkten"
+      ]
+    },
+    "pigment_red_149": {
+      "name": "Pigment Red 149",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Peryleenpigment. Over het algemeen niet onderworpen aan specifiek verbod, afhankelijk van de zuiverheid van de grondstof.",
+      "also_known_as": [
+        "PR149"
+      ],
+      "found_in": [
+        "donkerrode inkten",
+        "bordeauxrode tinten"
+      ]
+    },
+    "pigment_orange_13": {
+      "name": "Pigment Orange 13",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13 (Primaire aromatische aminen)",
+      "notes": "Disazodiarylidekleurstof. Splitst af met vorming van 3,3'-dichloorbenziïdine (Kankerverwekkend 1B). Verboden in de EU.",
+      "also_known_as": [
+        "PO13"
+      ],
+      "found_in": [
+        "oranje tinten",
+        "warme mengsels"
+      ]
+    },
+    "pigment_orange_16": {
+      "name": "Pigment Orange 16",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Dianisidine-oranje. Disazokleurstof die o-dianisidine afsplitst (Kankerverwekkend 1B). Verboden volgens vermelding 75.",
+      "also_known_as": [
+        "PO16",
+        "Diazo-oranje"
+      ],
+      "found_in": [
+        "heldere oranje inkten"
+      ]
+    },
+    "pigment_yellow_1": {
+      "name": "Pigment Yellow 1",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Monoazogeel (Hansa Yellow G). Kan o-nitroaniline vrijmaken. Onderworpen aan strenge beperkingen voor aromatische aminen.",
+      "also_known_as": [
+        "PY1",
+        "Hansa Yellow G"
+      ],
+      "found_in": [
+        "gele tinten",
+        "goudgeel"
+      ]
+    },
+    "pigment_yellow_3": {
+      "name": "Pigment Yellow 3",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Monoazogeel (Hansa Yellow 10G). Risico op vrijkomen van chlooraniline.",
+      "also_known_as": [
+        "PY3",
+        "Hansa Yellow 10G"
+      ],
+      "found_in": [
+        "citroengeel",
+        "koele gelen"
+      ]
+    },
+    "carbon_black": {
+      "name": "Koolstofzwart (Carbon Black)",
+      "exact_limit": "Totale PAK's ≤ 0,5 mg/kg; Benzo[a]pyreen ≤ 5 µg/kg (5 ppb)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13 (PAK-onzuiverheden)",
+      "notes": "Standaard zwartpigment. Volledig conform mits voldaan wordt aan de strenge zuiverheidseisen voor polycyclische aromatische koolwaterstoffen (PAK) en benzo[a]pyreen.",
+      "also_known_as": [
+        "CI 77266",
+        "Gasroet",
+        "Thermisch zwart",
+        "Acetyleenzwart",
+        "Carbon Black CI 77266",
+        "Lamp Black",
+        "Furnace Black",
+        "CI 77266"
+      ],
+      "found_in": [
+        "Lining Black",
+        "Shading Black",
+        "grijstinten",
+        "Black Wash"
+      ]
+    },
+    "titanium_dioxide": {
+      "name": "Titaandioxide",
+      "exact_limit": "Niet verboden in vloeibare toestand voor tatoeages; metaalzuiverheidslimieten van Aanhangsel 13",
+      "entry_reference": "Verordening (EG) nr. 1272/2008; Verordening (EU) 2020/2081",
+      "notes": "Hét referentiewitpigment. De Carc. 2 classificatie bij inademing geldt uitsluitend voor inhaleerbaar poeder; gebruik in vloeibare tatoeage-inkten is volledig legaal en conform.",
+      "also_known_as": [
+        "CI 77891",
+        "Titaanwit",
+        "Titaan(IV)oxide",
+        "Anataas",
+        "Rutiel",
+        "titanium white",
+        "CI 77891"
+      ],
+      "found_in": [
+        "witte inkten",
+        "highlights",
+        "pasteltinten",
+        "dekkende mengsels"
+      ]
+    },
+    "bkc": {
+      "name": "Benzalkoniumchloride (BKC)",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; CLP-indeling",
+      "notes": "Kationogene oppervlakteactieve stof en quat-conserveermiddel. Bij hogere concentraties bijtend voor de huid en ernstig oogirriterend.",
+      "also_known_as": [
+        "BKC",
+        "Alkyldimethylbenzylammoniumchloride",
+        "alkyldimethylbenzylammonium chloride"
+      ],
+      "found_in": [
+        "conserveermiddelen in inkt",
+        "antiseptische oplossingen"
+      ]
+    },
+    "propylene_glycol": {
+      "name": "Propyleenglycol",
+      "exact_limit": "Niet specifiek beperkt in Vermelding 75; toegelaten dragervloeistof",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Veelgebruikt bevochtigingsmiddel, drager en oplosmiddel in tatoeage-inkt. Conform vermelding 75.",
+      "also_known_as": [
+        "1,2-propaandiol",
+        "Methylethyleenglycol",
+        "propane-1,2-diol"
+      ],
+      "found_in": [
+        "inktdragers",
+        "verdunners",
+        "shading solutions"
+      ]
+    },
+    "isopropyl_alcohol": {
+      "name": "Isopropylalcohol",
+      "exact_limit": "Niet verboden in Vermelding 75; toegelaten oplosmiddel",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Vluchtig drageroplosmiddel en antimicrobieel hulpmiddel in standaardformuleringen.",
+      "also_known_as": [
+        "Isopropanol",
+        "IPA",
+        "Propaan-2-ol"
+      ],
+      "found_in": [
+        "inktdragers",
+        "vluchtige vloeistoffen",
+        "steriele mengsels"
+      ]
+    },
+    "glycerin": {
+      "name": "Plantaardige glycerine",
+      "exact_limit": "Niet beperkt in Vermelding 75; toegelaten dragervloeistof",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Natuurlijk bevochtigingsmiddel dat viscositeit reguleert en voorkomt dat inkt voortijdig indroogt in het inktcupje.",
+      "also_known_as": [
+        "Glycerine",
+        "Glycerol",
+        "Propaan-1,2,3-triol"
+      ],
+      "found_in": [
+        "inktdragers",
+        "dispersies",
+        "vloeibaarheidsregelaars"
+      ]
+    },
+    "hamamelis": {
+      "name": "Toverhazelaarextract (Hamamelis / Witch Hazel)",
+      "exact_limit": "Niet beperkt in Vermelding 75; toegelaten plantenextract",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Adstringerend plantenextract dat veelvuldig als verdunner voor schaduwen en wash-oplossingen wordt ingezet.",
+      "also_known_as": [
+        "Hamamelis Virginiana",
+        "Toverhazelaarwater"
+      ],
+      "found_in": [
+        "Washing Solutions",
+        "Shading Solutions",
+        "mengwater"
+      ]
+    },
+    "water_aqua": {
+      "name": "Gezuiverd water (Aqua)",
+      "exact_limit": "Niet beperkt; primair waterig oplosmiddel",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Hoofdbestanddeel in inktformuleringen op waterbasis.",
+      "also_known_as": [
+        "Aqua",
+        "Gedeïoniseerd water",
+        "Steriel water"
+      ],
+      "found_in": [
+        "alle watergedragen tatoeage-inkten"
+      ]
+    },
+    "formaldehyde": {
+      "name": "Formaldehyde",
+      "exact_limit": "0,05 gewichtsprocent (500 mg/kg); strikt gereguleerd conserveermiddel",
+      "entry_reference": "Vermelding 75, Aanhangsel 13; Verordening (EU) 2020/2081",
+      "notes": "Kankerverwekkend 1B en krachtig huidsensibiliserend. Soms aanwezig als residu van formaldehydedonoren.",
+      "also_known_as": [
+        "Formol",
+        "Methanal",
+        "Methyleenoxide"
+      ],
+      "found_in": [
+        "conserveermiddelonzuiverheden",
+        "biociden"
+      ]
+    },
+    "arsenic": {
+      "name": "Arseen en arseenverbindingen",
+      "exact_limit": "Maximale onzuiverheidslimiet: 0,5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Uiterst toxisch en kankerverwekkend zwaar metaal. Verboden als bewust ingrediënt; onzuiverheden strikt gelimiteerd.",
+      "also_known_as": [
+        "Elementair arseen",
+        "Arseenverbindingen"
+      ],
+      "found_in": [
+        "onzuiverheden in ruwe minerale pigmenten"
+      ]
+    },
+    "barium": {
+      "name": "Barium (oplosbare verbindingen)",
+      "exact_limit": "Limiet voor oplosbaar barium: 500 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Oplosbaar barium is systemisch giftig. Onoplosbaar bariumsulfaat is toegestaan mits het vrije bariumgehalte binnen de norm valt.",
+      "also_known_as": [
+        "Oplosbaar barium",
+        "Bariumzouten"
+      ],
+      "found_in": [
+        "onzuiverheden in verflakken en kleurstoffen",
+        "some red/orange colorants"
+      ]
+    },
+    "cadmium_ink": {
+      "name": "Cadmium en cadmiumverbindingen",
+      "exact_limit": "Maximale onzuiverheidslimiet: 0,5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Kankerverwekkend 1B en reproductietoxisch. Historische cadmiumsulfidepigmenten zijn verboden.",
+      "also_known_as": [
+        "Cadmiumgeel",
+        "Cadmiumrood",
+        "Cadmiumzouten"
+      ],
+      "found_in": [
+        "onzuiverheden in gele en rode minerale pigmenten",
+        "trace mineral impurities"
+      ]
+    },
+    "chromium_vi": {
+      "name": "Chroom VI (Zeswaardig chroom)",
+      "exact_limit": "Maximale onzuiverheidslimiet: 0,5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Kankerverwekkend 1A, mutageen en zeer krachtig huidallergeen. Moet strikt worden onderscheiden van onschadelijk onoplosbaar driewaardig chroom Cr(III).",
+      "also_known_as": [
+        "Zeswaardig chroom",
+        "Cr(VI)",
+        "Chromaten"
+      ],
+      "found_in": [
+        "onzuiverheden in ruwe chroomoxiden",
+        "metal oxide impurities"
+      ]
+    },
+    "cobalt_ink": {
+      "name": "Kobalt en kobaltverbindingen",
+      "exact_limit": "Limiet voor oplosbaar kobalt: 0,5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Kankerverwekkend 1B en huidsensibiliserend. Kobaltspinelpigmenten mogen geen vrije ionen boven de drempelwaarde afgeven.",
+      "also_known_as": [
+        "Kobaltblauw",
+        "Kobaltzouten"
+      ],
+      "found_in": [
+        "blauwe minerale pigmenten",
+        "metaalonzuiverheden"
+      ]
+    },
+    "copper_ink": {
+      "name": "Koper (oplosbare verbindingen)",
+      "exact_limit": "Limiet voor oplosbaar koper: 250 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Oplosbaar koper is beperkt tot 250 mg/kg. Koper dat vast in het ftalocyanine-rooster is gebonden telde vóór het totaalverbod niet mee als oplosbaar.",
+      "also_known_as": [
+        "Oplosbaar koper",
+        "Koperzouten"
+      ],
+      "found_in": [
+        "onzuiverheden in synthetische pigmenten",
+        "copper complexes"
+      ]
+    },
+    "lead_ink": {
+      "name": "Lood en loodverbindingen",
+      "exact_limit": "Maximale onzuiverheidslimiet: 0,7 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Krachtig neurotoxisch en reproductietoxisch (CMR 1A). Technisch onvermijdelijke sporen zijn gemaximeerd op 0,7 ppm.",
+      "also_known_as": [
+        "Elementair lood",
+        "Loodzouten",
+        "plumbum"
+      ],
+      "found_in": [
+        "onzuiverheden in verouderde minerale pigmenten"
+      ]
+    },
+    "mercury_ink": {
+      "name": "Kwik en kwikverbindingen",
+      "exact_limit": "Maximale onzuiverheidslimiet: 0,5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Bioaccumulerend zwaar metaal en ernstig neurotoxine. Traditioneel vermiljoen (kwiksulfide) is strikt verboden.",
+      "also_known_as": [
+        "Cinnaber",
+        "Kwikzouten",
+        "cinnabar"
+      ],
+      "found_in": [
+        "oude traditionele inkten",
+        "sporen"
+      ]
+    },
+    "nickel_ink": {
+      "name": "Nikkel en nikkelverbindingen",
+      "exact_limit": "Maximale onzuiverheidslimiet: 5,0 mg/kg (ppm); verplichte waarschuwing vanaf 0,0005% (5 ppm)",
+      "entry_reference": "Vermelding 75, lid 6 onder d en Aanhangsel 13",
+      "notes": "Voornaamste oorzaak van metaalcontactallergie. Indien het nikkelgehalte 5 ppm of meer bedraagt, moet de fles de verplichte waarschuwingszin dragen.",
+      "also_known_as": [
+        "Elementair nikkel",
+        "Nikkelzouten"
+      ],
+      "found_in": [
+        "onzuiverheden in ijzeroxiden",
+        "minerale oxiden"
+      ]
+    },
+    "selenium_ink": {
+      "name": "Seleen en seleenverbindingen",
+      "exact_limit": "Maximale onzuiverheidslimiet: 2,0 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Spoorelement dat in hogere concentraties toxisch is. Maximale limiet vastgesteld op 2,0 mg/kg.",
+      "also_known_as": [
+        "Elementair seleen",
+        "Seleenverbindingen"
+      ],
+      "found_in": [
+        "onzuiverheden in minerale kleurstoffen"
+      ]
+    },
+    "aniline": {
+      "name": "Aniline",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; CLP-verordening",
+      "notes": "Kankerverwekkend 2 en mutageen 2. Synthesegrondstof en afbraakproduct van primaire aromatische aminen.",
+      "also_known_as": [
+        "Fenylamine",
+        "Aminobenzeen",
+        "benzenamine"
+      ],
+      "found_in": [
+        "syntheseresiduen van azokleurstoffen",
+        "dye synthesis precursor"
+      ]
+    },
+    "o_toluidine": {
+      "name": "o-Toluïdine",
+      "exact_limit": "Maximale onzuiverheidsconcentratie: 5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13 (Primaire aromatische amine)",
+      "notes": "Bewezen kankerverwekkend (1B). Primair aromatisch amine dat ontstaat bij reductieve afbraak van rode en gele azopigmenten.",
+      "also_known_as": [
+        "2-methylaniline",
+        "ortho-toluïdine"
+      ],
+      "found_in": [
+        "azodegradatieproducten",
+        "onzuiverheden"
+      ]
+    },
+    "pigment_red_48_2": {
+      "name": "Pigment Red 48:2",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Calciumentzout van Pigment Red 48. Beperkt volgens de zuiverheidseisen voor amineprecursoren.",
+      "also_known_as": [
+        "PR48:2",
+        "Permanent Red 2B calciumzout",
+        "Lithol Rubine BK"
+      ],
+      "found_in": [
+        "robijnrode tinten",
+        "magentamengsels"
+      ]
+    },
+    "pigment_red_53_1": {
+      "name": "Pigment Red 53:1",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg); splitst af in 2-chloor-5-toluïdine",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Bariumlak van Pigment Red 53 (Red Lake C). Verboden wegens aanwezigheid van oplosbaar barium en risico op aromatische aminedekompositie.",
+      "also_known_as": [
+        "PR53:1",
+        "Red Lake C",
+        "D&C Red No. 9 bariumzout"
+      ],
+      "found_in": [
+        "felle oranjerode inkten"
+      ]
+    },
+    "pigment_yellow_74": {
+      "name": "Pigment Yellow 74",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Modern monoazogeel. Toegestaan mits vrije aromatische aminen binnen de grenzen van Aanhangsel 13 blijven.",
+      "also_known_as": [
+        "PY74",
+        "Permanent Yellow 5GX",
+        "Hansa Yellow 5GX"
+      ],
+      "found_in": [
+        "primaire gelen",
+        "goudgele tinten"
+      ]
+    },
+    "pigment_red_170": {
+      "name": "Pigment Red 170",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Zeer lichtecht naftolrood pigment. Veelvuldig gebruikt in REACH-conforme inkten onder voorbehoud van batchzuiverheidstests.",
+      "also_known_as": [
+        "PR170",
+        "Naftolrood F5RK",
+        "PR-170",
+        "Naphthol Red",
+        "CI 12475",
+        "C.I. 12475",
+        "CI12475"
+      ],
+      "found_in": [
+        "karmijnrood",
+        "neutrale roden",
+        "ruby shades"
+      ]
+    },
+    "pigment_red_254": {
+      "name": "Pigment Red 254 (DPP Rood)",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Diketopyrrolopyrrool (DPP) pigment. Niet-azo, uitmuntende lichtechtheid en geen vrijkomen van kankerverwekkende aminen. Volledig conform REACH.",
+      "also_known_as": [
+        "PR254",
+        "Ferrari-rood",
+        "Pyrroolrood",
+        "DPP Red",
+        "DPP Red",
+        "Ferrari Red",
+        "CI 56110",
+        "C.I. 56110",
+        "CI56110"
+      ],
+      "found_in": [
+        "heldere roden",
+        "dekkend scharlaken"
+      ]
+    },
+    "pigment_red_101": {
+      "name": "Rood ijzeroxide (CI 77491)",
+      "exact_limit": "Niet verboden; metaalzuiverheidslimieten van Aanhangsel 13",
+      "entry_reference": "Vermelding 75, Aanhangsel 13",
+      "notes": "Synthetisch of natuurlijk anorganisch mineraalpigment. Veilig en chemisch inert mits de gehalten aan zware metalen aan de eisen voldoen.",
+      "also_known_as": [
+        "CI 77491",
+        "IJzer(III)oxide",
+        "Engels rood",
+        "IJzeroxide",
+        "Ferric Oxide",
+        "Red Iron Oxide",
+        "CI 77491",
+        "C.I. 77491",
+        "CI77491"
+      ],
+      "found_in": [
+        "aardetinten",
+        "bruinen",
+        "huidtinten",
+        "PMU-inkten"
+      ]
+    },
+    "pigment_yellow_14": {
+      "name": "Pigment Yellow 14",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Disazodiarylidekleurstof. Splitst af met vorming van 3,3'-dichloorbenziïdine (Kankerverwekkend 1B). Verboden in tatoeage-inkten in de EU.",
+      "also_known_as": [
+        "PY14",
+        "Diarylide Yellow AAOT",
+        "PY-14",
+        "Diarylide Yellow AAOT",
+        "CI 21095",
+        "C.I. 21095",
+        "CI21095"
+      ],
+      "found_in": [
+        "oudere felle gele inktformules",
+        "green ink mixes"
+      ]
+    },
+    "pigment_yellow_83": {
+      "name": "Pigment Yellow 83",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; Aanhangsel 13",
+      "notes": "Diarylidegeel HR. Verboden wegens het risico op azosplitsing met vrijkomen van kankerverwekkende aromatische aminen.",
+      "also_known_as": [
+        "PY83",
+        "Diarylide Yellow HR",
+        "PY-83",
+        "Diarylide Yellow HR",
+        "CI 21108",
+        "C.I. 21108",
+        "CI21108"
+      ],
+      "found_in": [
+        "verouderde warme gelen en oranjes",
+        "orange blends"
+      ]
+    },
+    "pigment_yellow_138": {
+      "name": "Pigment Yellow 138",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Chinofthalongeel pigment. Niet-azo, uitzonderlijke lichtbestendigheid en uitstekende chemische weerstand.",
+      "also_known_as": [
+        "PY138",
+        "Chinofthalongeel",
+        "PY-138",
+        "Quinophthalone Yellow",
+        "CI 56300",
+        "C.I. 56300",
+        "CI56300"
+      ],
+      "found_in": [
+        "groenachtige heldergele tinten",
+        "lime greens"
+      ]
+    },
+    "ethanol": {
+      "name": "Ethanol (Ethylalcohol)",
+      "exact_limit": "Niet verboden in Vermelding 75; toegelaten farmaceutisch oplosmiddel",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Klassiek alcoholisch oplosmiddel ter bevordering van inktvloei en microbiële stabiliteit.",
+      "also_known_as": [
+        "Ethylalcohol",
+        "Gedenatureerde alcohol",
+        "Alcohol Denat",
+        "Denatured Alcohol",
+        "Alcohol"
+      ],
+      "found_in": [
+        "kleurdispersies",
+        "oplosmiddelen"
+      ]
+    },
+    "benzyl_alcohol": {
+      "name": "Benzylalcohol",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg); declareerbaar conserveermiddel",
+      "entry_reference": "Vermelding 75; Verordening (EU) 2023/1545",
+      "notes": "Aromatisch conserveermiddel en medeoplosmiddel. Kan bij hogere gehalten huidsensibiliserend werken.",
+      "also_known_as": [
+        "Fenylcarbinol",
+        "Benzylalcohol",
+        "CAS 100-51-6"
+      ],
+      "found_in": [
+        "conserveringssystemen",
+        "kleurstabilisatoren"
+      ]
+    },
+    "phenoxyethanol": {
+      "name": "Fenoxyethanol",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Glycolether die veelvuldig wordt ingezet als breedspectrum antimicrobieel conserveermiddel.",
+      "also_known_as": [
+        "2-fenoxyethanol",
+        "Ethyleenglycolmonofenylether"
+      ],
+      "found_in": [
+        "conserveermiddelen in watergedragen inkt"
+      ]
+    },
+    "polyethylene_glycol": {
+      "name": "Polyethyleenglycol (PEG)",
+      "exact_limit": "Niet specifiek beperkt; toegelaten polymeerdrager",
+      "entry_reference": "Verordening (EG) nr. 1907/2006",
+      "notes": "Emulgator, bevochtiger en verdikkingsmiddel in cosmetische en farmaceutische producten.",
+      "also_known_as": [
+        "PEG",
+        "Macrogol",
+        "Polyoxyethyleen",
+        "Macrogol",
+        "Polyoxyethylene"
+      ],
+      "found_in": [
+        "viscositeitsregelaars",
+        "stabilisatoren"
+      ]
+    },
+    "benzoic_acid": {
+      "name": "Benzoëzuur",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1",
+      "notes": "Organisch conserveermiddel dat fungeert als pH-regelaar en remmer van bacteriële groei.",
+      "also_known_as": [
+        "Benzeencarbonzuur",
+        "E210",
+        "E210",
+        "E211"
+      ],
+      "found_in": [
+        "zure conserveringssystemen"
+      ]
+    },
+    "rosin_colophonium": {
+      "name": "Colofonium (Rosin)",
+      "exact_limit": "0,1 gewichtsprocent (1 000 mg/kg)",
+      "entry_reference": "Vermelding 75, lid 1 onder a; CLP-classificatie (Skin Sens. 1)",
+      "notes": "Natuurlijke dennenhars. Krachtig huidallergeen (veelvoorkomende oorzaak van contacteczeem). Strikt beperkt in tatoeage-inkt.",
+      "also_known_as": [
+        "Colofonium",
+        "Dennenkophars",
+        "Vioolhars",
+        "Wood Rosin"
+      ],
+      "found_in": [
+        "bindmiddelen in oude traditionele inktformules",
+        "legacy ink formulations"
+      ]
+    },
+    "o_anisidine": {
+      "name": "o-Anisidine",
+      "exact_limit": "Maximale onzuiverheidsconcentratie: 5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13 (Primaire aromatische amine)",
+      "notes": "Kankerverwekkend 1B en mutageen 2. Primair aromatisch amine dat ontstaat bij reductieve ontleding van azokleurstoffen.",
+      "also_known_as": [
+        "2-methoxyaniline",
+        "ortho-anisidine"
+      ],
+      "found_in": [
+        "synthese-onzuiverheden",
+        "azosplitsing"
+      ]
+    },
+    "benzidine": {
+      "name": "Benziïdine",
+      "exact_limit": "Maximale onzuiverheidsconcentratie: 5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13 (Primaire aromatische amine)",
+      "notes": "Bewezen kankerverwekkend voor de mens (1A) (blaaskanker). Kleurstoffen afgeleid van benziïdine zijn categorisch verboden.",
+      "also_known_as": [
+        "4,4'-diaminobifenyl",
+        "1,1'-bifenyl-4,4'-diamine"
+      ],
+      "found_in": [
+        "afbraakproducten van verboden azokleurstoffen"
+      ]
+    },
+    "dichlorobenzidine": {
+      "name": "3,3'-Dichloorbenziïdine",
+      "exact_limit": "Maximale onzuiverheidsconcentratie: 5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13 (Primaire aromatische amine)",
+      "notes": "Bewezen kankerverwekkend 1B. Amine dat vrijkomt bij de afbraak van diarylide-azopigmenten (geel en oranje).",
+      "also_known_as": [
+        "3,3'-dichloorbifenyl-4,4'-diamine",
+        "DCB"
+      ],
+      "found_in": [
+        "ontledingsproduct van Pigment Yellow 14, 83 en Orange 13"
+      ]
+    },
+    "chloroaniline": {
+      "name": "4-Chlooraniline (p-Chlooraniline)",
+      "exact_limit": "Maximale onzuiverheidsconcentratie: 5 mg/kg (ppm)",
+      "entry_reference": "Vermelding 75, Aanhangsel 13 (Primaire aromatische amine)",
+      "notes": "Bewezen kankerverwekkend 1B. Primair aromatisch amine afkomstig van de afbraak van gechloreerde monoazopigmenten.",
+      "also_known_as": [
+        "para-chlooraniline",
+        "PCA",
+        "4-chloorbenzenamine"
+      ],
+      "found_in": [
+        "synthese-onzuiverheden",
+        "azosplitsingsproduct"
+      ]
+    }
+  },
+  "parser_matches": {
+    "colour_index": "Colour Index (CI {num})",
+    "colour_index_pb15_3": "Colour Index (CI 74160) · Pigment Blue 15:3",
+    "trade_shorthand": "Handelsnaam ({displayLabel})",
+    "matched_synonym": "Herkend synoniem: {matchLabel}",
+    "fuzzy_matched": "Benaderende overeenkomst '{query}' → {target}",
+    "cas_reconstructed": "CAS {cas} (hersteld uit spatie-formaat)",
+    "matched_via": "Gekoppeld via '{label}'"
+  },
+  "scanner": {
+    "open_scanner_btn": "Barcode / QR Scannen",
+    "modal_title": "Barcode- & Fles-QR-Scanner",
+    "modal_sub": "Scan 1D-barcodes of 2D-QR-codes op inktflessen, verpakkingen of veiligheidsinformatiebladen.",
+    "aria_close": "Scanner sluiten",
+    "err_no_media_devices": "Camerahardware niet toegankelijk in deze omgeving.",
+    "err_camera_access": "Kan optische camera niet activeren. Controleer browserrechten.",
+    "camera_unavailable_title": "Camerabeeld Niet Beschikbaar",
+    "manual_entry_prompt": "Voer de barcode of het batchnummer handmatig in of plak deze:",
+    "align_barcode": "Plaats de barcode of QR-code in het zoekvenster",
+    "scan_success": "Code Succesvol Gescand",
+    "detected_content": "Gedetecteerde Barcode / Batchcode:",
+    "copied": "Gekopieerd!",
+    "copy": "Kopiëren",
+    "manual_label": "Handmatige Code-Invoer:",
+    "manual_placeholder": "bijv. 071234567890 of LOT-2024-09",
+    "apply_manual": "Code Toepassen",
+    "scan_again": "Nog Een Scannen",
+    "cancel": "Annuleren",
+    "confirm_use": "Toepassen op Invoer"
+  },
+  "mixtures": {
+    "heading": "Eigen Inktmengsels & Verdunningen",
+    "subheading": "Registreer graywashes, schaduwoplossingen en kleurmengsels met volledige traceerbaarheid van basisinkt-batchnummers en REACH-conforme verdunners.",
+    "btn_new_mixture": "Nieuw Mengsel Registreren",
+    "btn_cancel": "Annuleren",
+    "form_title": "Eigen Receptuur / Verdunning Vastleggen",
+    "label_name": "Naam Mengsel *",
+    "placeholder_name": "bijv. 4-Druppels Portret Graywash",
+    "label_type": "Type Mengsel *",
+    "type_greywash": "Graywash (Schaduw)",
+    "type_lining_wash": "Lining Wash (Lijnen)",
+    "type_color_blend": "Kleurverdunning / Mengsel",
+    "type_custom_shading": "Aangepaste Schaduwoplossing",
+    "label_lot": "Toegewezen Batchnummer *",
+    "label_prepared_date": "Bereidingsdatum (Lokaal) *",
+    "label_shelf_life_days": "Houdbaarheidsduur (Dagen)",
+    "label_artist": "Bereidende Artiest",
+    "placeholder_artist": "bijv. Studio Artiest",
+    "placeholder_notes": "Dosering, druppelverhoudingen of kleurnuances...",
+    "heading_base_inks": "Gebruikte Basisinkten",
+    "btn_add_base_ink": "Rij Basisinkt Toevoegen",
+    "pick_from_stock": "Kies uit studio-voorraad...",
+    "placeholder_ink_brand": "Merk (bijv. Dynamic)",
+    "placeholder_ink_name": "Inktnaam (bijv. Triple Black)",
+    "placeholder_ink_lot": "Batch (bijv. LOT-2024-X)",
+    "placeholder_proportion": "Verhouding (bijv. 4 druppels)",
+    "heading_diluent": "Gebruikt Verdunningsmiddel",
+    "diluent_water": "Gedestilleerd / Steriel Water (Ph. Eur.)",
+    "diluent_witch_hazel": "Toverhazelaar (Hamamelis Virginiana)",
+    "diluent_glycerin": "Glycerine (Plantaardig EP/USP)",
+    "diluent_mixing_solution": "Mengoplossing van Fabrikant",
+    "placeholder_diluent_brand": "Merk / Bron Verdunningsmiddel",
+    "placeholder_diluent_lot": "Batch / Vervaldatum Verdunner",
+    "placeholder_diluent_volume": "Volume / Druppels (bijv. 20 druppels)",
+    "btn_save_mixture": "Mengselrecept Opslaan",
+    "empty_title": "Geen Eigen Mengsels Geregistreerd",
+    "empty_desc": "Leg graywashes en verdunningen hier vast voor volledige traceerbaarheid naar uw klanten.",
+    "badge_days_left": "nog {days} d houdbaar",
+    "badge_expired": "Houdbaarheidstermijn Verlopen",
+    "field_prepared": "Bereid",
+    "field_expires": "Vervalt",
+    "field_artist": "Artiest",
+    "field_type": "Type",
+    "field_notes": "Notities",
+    "btn_copy_recipe": "Recept Kopiëren",
+    "btn_use_in_session": "In Sessie Gebruiken",
+    "btn_delete": "Mengsel Verwijderen",
+    "copied": "Gekopieerd!"
+  },
+  "recall": {
+    "heading": "Veiligheids- & Batchterugroepingsauditor",
+    "subheading": "Controleer klantsessies en studio-voorraad direct tegen terugroepacties van fabrikanten en officiële waarschuwingen.",
+    "search_placeholder": "Voer verdacht batchnummer in (bijv. LOT-2023-04)...",
+    "clear_search": "Wissen",
+    "export_csv": "CSV-Audit Exporteren",
+    "copy_report": "Traceerbaarheidsrapport Kopiëren",
+    "copied": "Gekopieerd!",
+    "known_studio_lots": "Geregistreerde Studiobatches:",
+    "prompt_search_title": "Klaar voor Batchcontrole",
+    "prompt_search_desc": "Voer hierboven een teruggeroepen batchnummer in om behandelde klanten en voorraadflessen te controleren.",
+    "kpi_clients": "Betrokken Klanten",
+    "kpi_sessions": "Uitgevoerde Behandelingen",
+    "kpi_mixtures": "Betrokken Mengsels",
+    "kpi_inventory_bottles": "Flessen in Voorraad",
+    "quarantine_notice_title": "ACTIE VEREIST: Batch Aangetroffen in Voorraad",
+    "quarantine_notice_desc": "Flessen met dit batchnummer bevinden zich in de actieve voorraad. Isoleer deze direct en plaats ze in quarantaine.",
+    "usage_window": "Periode van Behandelingen:",
+    "affected_sessions_heading": "Klantsessies met deze Batch",
+    "no_affected_clients_title": "Geen Behandelingen Gevonden",
+    "no_affected_clients_desc": "Er zijn op dit apparaat geen klantsessies geregistreerd met dit batchnummer.",
+    "col_date": "Behandeldatum",
+    "col_client_ref": "Klant-Ref / ID",
+    "col_placement": "Plaatsing",
+    "col_artist": "Artiest",
+    "col_ink_details": "Inktgegevens",
+    "affected_mixtures_heading": "Mengsels Bereid met deze Batch",
+    "mix_prepared": "Bereid:",
+    "mix_artist": "Artiest:",
+    "report_title": "BATCHTRACEERBAARHEIDS- EN AUDITRAPPORT",
+    "report_date": "Audit Gegenereerd (Lokaal): {date}",
+    "recalled_lot": "Teruggeroepen / Verdachte Batch: {lot}",
+    "affected_clients_count": "Betrokken Klanten: {count}",
+    "total_sessions_count": "Totaal Gedocumenteerde Sessies: {count}",
+    "period_active": "Behandelperiode: {start} tot {end}",
+    "affected_artists": "Behandelende Artiesten: {artists}",
+    "disclaimer_audit": "Gegevens samengesteld uit lokale browseropslag. Poli International bewaart geen klantgegevens."
+  },
+  "jurisdictions": {
+    "tab_title": "Regelgevingsmatrix voor Meerdere Rechtsgebieden",
+    "tab_subtitle": "Vergelijkende analyse van vereisten voor tatoeage- en PMU-inkten in de EU (REACH), de VS (FDA/MoCRA), Australie (AICIS) en Zuidoost-Azie",
+    "btn_matrix": "Regelgevingsmatrix",
+    "btn_divergence": "Divergentiegids",
+    "eu": {
+      "name": "Europese Unie",
+      "region": "EU / EER"
+    },
+    "us": {
+      "name": "Verenigde Staten",
+      "region": "Noord-Amerika"
+    },
+    "au": {
+      "name": "Australie",
+      "region": "Australasie"
+    },
+    "asean": {
+      "name": "Zuidoost-Azie",
+      "region": "ASEAN-lidstaten"
+    },
+    "filter_jurisdiction_label": "Filteren op Rechtsgebied",
+    "filter_all_regions": "Vergelijking van Alle Regio's",
+    "search_placeholder": "Zoeken op stofnaam, CI-nummer (bijv. CI 74160) of CAS...",
+    "group_all": "Alle Stoffen",
+    "group_pigments": "Kleurpigmenten",
+    "group_metals": "Metalen en Onzuiverheden",
+    "group_carriers": "Draagstoffen en Oplosmiddelen",
+    "substances_count": "{count} stoffen beoordeeld",
+    "click_row_hint": "Klik op rij voor wettelijke basis en studio-actie",
+    "matrix_action_label": "Studio-actie",
+    "status": {
+      "eu_compliant": "REACH-conform",
+      "eu_restricted": "REACH-beperkt",
+      "eu_banned": "REACH-verboden / SVHC",
+      "us_mocra_listed": "MoCRA-product vermeld",
+      "us_unapproved_color": "Niet-goedgekeurde Kleurstof",
+      "us_contaminant_concern": "Verontreinigingswaarschuwing",
+      "au_aiic_listed": "AIIC-geregistreerde Stof",
+      "au_prohibited_chemical": "Verboden Chemische Stof",
+      "au_impurity_alert": "Onzuiverheidswaarschuwing",
+      "asean_non_harmonized": "Niet-geharmoniseerde Inkt",
+      "asean_acd_annex_banned": "Verboden onder Bijlage II ACD",
+      "asean_cosmetic_limit_applied": "Topische Cosmetische Limiet"
+    },
+    "eval": {
+      "eu_compliant_desc": "Toegestaan voor tatoeage- en PMU-formuleringen binnen de concentratiegrenzen van REACH Bijlage XVII Vermelding 75.",
+      "eu_compliant_action": "Controleer Veiligheidsinformatieblad Rubriek 3 en bewaar het partijnummer 5 jaar in het klantendossier.",
+      "eu_bluegreen_desc": "De overgangsperiode voor CI 74160 en CI 74260 liep af op 4 januari 2023. Verboden boven 0,1 gewichtsprocent in de EU.",
+      "eu_bluegreen_action": "Niet injecteren op EU-grondgebied. Overstappen op conforme alternatieve formuleringen.",
+      "eu_banned_desc": "Strikt verboden in mengsels voor tatoeage volgens Vermelding 75 of de SVHC-kandidaatslijst.",
+      "eu_banned_action": "Fles direct in quarantaine plaatsen en de leverancier op de hoogte stellen.",
+      "eu_restricted_desc": "Onderworpen aan een expliciete wettelijke grenswaarde in de tabel van Aanhangsel 13.",
+      "eu_restricted_action": "Controleer het analysecertificaat (COA) om zeker te zijn dat de concentratie onder de drempelwaarde ligt.",
+      "us_standard_desc": "Gereguleerd onder de FD&C Act en MoCRA. Verplichte faciliteitregistratie en productnotering van toepassing.",
+      "us_standard_action": "Noteer het partijnummer in het klantendossier en bewaar minstens 3 jaar voor traceerbaarheid.",
+      "us_color_paradox_desc": "Kleurstof onder FD&C Act zonder FDA-injectiegoedkeuring. Verhandeld onder handhavingstolerantie onder MoCRA.",
+      "us_color_paradox_action": "Verifieer dat de fabrikant de MoCRA-productregistratie en veiligheidsbeoordeling heeft afgerond.",
+      "us_metal_desc": "FDA CFSAN bewaakt zware metalen en geeft waarschuwingen af bij verontreinigde partijen.",
+      "us_metal_action": "Controleer zuiverheidsrapporten van de fabrikant en raadpleeg de FDA-terugroepdatabase voor gebruik.",
+      "au_listed_desc": "Introductie gereguleerd door AICIS. De chemische stof staat vermeld in de Australische inventaris (AIIC).",
+      "au_listed_action": "Partijnummer noteren in het wettelijk verplichte huidpenetratieregister van de staat.",
+      "au_metal_desc": "Zware metalen worden beoordeeld onder het AICIS-risicokader; volksgezondheidswetten verbieden onveilige stoffen.",
+      "au_metal_action": "Controleer of de importeur de AICIS-categorisering heeft ingediend en bewaar het COA in de studio.",
+      "au_banned_desc": "Stof verboden of beperkt volgens de AICIS-introductienormen voor gevaarlijke chemicalien.",
+      "au_banned_action": "Niet gebruiken bij huidpenetratieprocedures. Voorraad apart zetten.",
+      "asean_standard_desc": "Intradermale tatoeage-inkten zijn niet geharmoniseerd onder de ASEAN Cosmetic Directive (ACD). Nationale wetten gelden.",
+      "asean_standard_action": "Houd u aan lokale studiovergunningen en nationale importvereisten.",
+      "asean_metal_desc": "ACD-grenzen gelden voor cosmetica; gezondheidsautoriteiten inspecteren intradermale zuiverheid bij controles.",
+      "asean_metal_action": "Vraag internationale zuiverheidscertificaten op conform EU- of VS-referentiewaarden.",
+      "asean_banned_desc": "Stof opgenomen in ACD Bijlage II (verboden cosmetica-ingredienten) of nationale vergiflijsten.",
+      "asean_banned_action": "Verboden voor cosmetische en esthetische ingrepen in de lidstaten."
+    },
+    "divergence_overview_title": "Wettelijke Grondslagen en Divergentie in Chemische Grenswaarden",
+    "divergence_overview_desc": "De regelgeving voor tatoeage- en PMU-inkten verschilt wereldwijd wezenlijk. Terwijl de Europese Unie werkt met bindende chemische grenswaarden in ppm, reguleren de Verenigde Staten, Australie en Zuidoost-Azie inkten primair via faciliteitregistraties, industriele inventarissen of algemene hygienevoorschriften.",
+    "divergence": {
+      "cat_statutory": "Wettelijk Toepassingsgebied",
+      "statutory_title": "Productclassificatie en Juridisch Kader",
+      "eu_statutory_summary": "Specifieke chemische beperking onder REACH Bijlage XVII Vermelding 75.",
+      "eu_statutory_specifics": "Tatoeagemengsels vormen een eigen categorie in het EU-stoffenrecht, bindend voor 27 lidstaten en de EER.",
+      "us_statutory_summary": "Cosmetica onder FD&C Act en MoCRA (2022).",
+      "us_statutory_specifics": "Inkten gelden juridisch als cosmetica; pigmenten zijn kleuradditieven onder Sectie 721 van de FD&C Act.",
+      "au_statutory_summary": "Industriele chemicalien (federaal) en huidpenetratie-eisen (staten).",
+      "au_statutory_specifics": "Het federale AICIS-stelsel reguleert import en fabricage; wetgeving van de staten stuurt de praktijk in de studio.",
+      "asean_statutory_summary": "Topische cosmetica (ACD) zonder geharmoniseerde regels voor intradermale inkt.",
+      "asean_statutory_specifics": "De ASEAN Cosmetic Directive dekt uitsluitend topische middelen; intradermale inkt valt onder nationale wetten.",
+      "cat_thresholds": "Concentratiegrenzen",
+      "thresholds_title": "Chemische Drempelwaarden (ppm) versus Procedurele Naleving",
+      "eu_thresholds_summary": "Precieze wettelijke ppm-grenzen vastgelegd in Aanhangsel 13.",
+      "eu_thresholds_specifics": "Stelt 0,00005 % voor CMR-stoffen, 0,1 % als algemene norm en specifieke ppm-grenzen voor 19 zware metalen.",
+      "us_thresholds_summary": "Geen wettelijke ppm-tabel; toezicht op vervalsing en misleidende etikettering.",
+      "us_thresholds_specifics": "Secties 601 en 602 verbieden schadelijke stoffen, maar de federale wet bevat geen numerieke ppm-tabel voor pigmenten.",
+      "au_thresholds_summary": "Geen ppm-tabel voor tatoeage-inkten onder AICIS.",
+      "au_thresholds_specifics": "AICIS beoordeelt introducties op basis van gezondheidsrisicobanden in plaats van vaste ppm-eisen in het eindproduct.",
+      "asean_thresholds_summary": "Geen regionale ppm-grenswaarden voor intradermale formules.",
+      "asean_thresholds_specifics": "ACD-bijlagen bepalen normen voor topische cosmetica die niet bindend zijn voor tatoeage-inkten.",
+      "cat_pigments": "Pigmenttoelatingen",
+      "pigments_title": "Pigmentregels en de Kleurstofparadox in de Verenigde Staten",
+      "eu_pigments_summary": "Aanhangsel 13 verbiedt duizenden stoffen en specifieke CI-kleurstoffen.",
+      "eu_pigments_specifics": "Verbiedt azokleurstoffen die kankerverwekkende aromatische aminen afsplitsen en stoffen uit Bijlage II en IV cosmetica.",
+      "us_pigments_summary": "De Paradox: niet goedgekeurd, maar verhandeld onder MoCRA.",
+      "us_pigments_specifics": "Geen enkele kleurstof is door de FDA goedgekeurd voor injectie in de huid. Verkoop geschiedt onder gedoogbeleid.",
+      "au_pigments_summary": "Naleving van AIIC-stoffenlijst verplicht.",
+      "au_pigments_specifics": "Pigmenten moeten in AIIC staan of via een goedgekeurde AICIS-categorie worden ingevoerd. Geen positieflijst.",
+      "asean_pigments_summary": "Nationale douaneafhandeling en invoervergunningen.",
+      "asean_pigments_specifics": "Geen gezamenlijke positieflijst; studio's vertrouwen hoofdzakelijk op EU- of VS-gecertificeerde lijnen.",
+      "cat_metals": "Zware Metalen",
+      "metals_title": "Normen voor Zware Metalen en Bacteriele Besmetting",
+      "eu_metals_summary": "19 zware metalen en onzuiverheden met strikte ppm-plafonds.",
+      "eu_metals_specifics": "Aanhangsel 13 stelt bindende grenzen, waaronder Lood 0,7 mg/kg, Arseen 0,5 mg/kg en Cadmium 0,5 mg/kg.",
+      "us_metals_summary": "Veiligheidswaarschuwingen van de FDA en microbiologisch terugroeptoezicht.",
+      "us_metals_specifics": "De FDA publiceert waarschuwingen en initieert terugroepingen bij besmettingen met bacterien zoals mycobacterien.",
+      "au_metals_summary": "Chemische risicobeoordeling en algemene zorgplicht voor volksgezondheid.",
+      "au_metals_specifics": "Inspecteurs van de staten controleren studio's en kunnen gevaarlijke inkten in beslag nemen.",
+      "asean_metals_summary": "Topische cosmeticagrenzen dienen als vrijwillige richtlijn.",
+      "asean_metals_specifics": "Autoriteiten kunnen ACD-criteria gebruiken ter orientatie bij klachten of inspecties.",
+      "cat_facility": "Verplichtingen Fabrikant",
+      "facility_title": "Verplichtingen voor Fabrikanten en Importeurs",
+      "eu_facility_summary": "CLP-indeling, SDS conform Bijlage II, volledige INCI-vermelding.",
+      "eu_facility_specifics": "Flessen moeten vermelden 'Mengsel voor gebruik in tatoeages of permanente make-up' en ingredienten op gewicht.",
+      "us_facility_summary": "Verplichte MoCRA-registratie van vestigingen en producten.",
+      "us_facility_specifics": "Faciliteiten moeten zich bij de FDA registreren, producten aanmelden en ernstige bijwerkingen rapporteren.",
+      "au_facility_summary": "Zakelijke AICIS-registratie en jaarlijkse introductieverklaringen.",
+      "au_facility_specifics": "Importeurs moeten geregistreerd zijn bij AICIS, jaarlijks verklaringen indienen en bewijzen 5 jaar bewaren.",
+      "asean_facility_summary": "Nationale bedrijfsinrichting en douaneaangiften.",
+      "asean_facility_specifics": "Importeurs registreren zich bij de nationale handels- en volksgezondheidsinstanties.",
+      "cat_records": "Traceerbaarheid in Studio",
+      "records_title": "Traceerbaarheids- en Registratieverplichtingen in de Studio",
+      "eu_records_summary": "Verificatie van REACH-aanduiding en partijregistratie per klant.",
+      "eu_records_specifics": "De studio moet het etiket controleren en partijgegevens archiveren volgens nationale volksgezondheidswetten.",
+      "us_records_summary": "3 jaar bewaren van partijnummers aanbevolen.",
+      "us_records_specifics": "Onder MoCRA dienen studio's merk en partijnummer minstens 3 jaar op te slaan bij het toestemmingsformulier.",
+      "au_records_summary": "Verplichte registratie in het huidpenetratielogboek.",
+      "au_records_specifics": "Wetten van de staten vereisen dossiervorming van klanten, sterilisatiegegevens en partijnummers voor audits.",
+      "asean_records_summary": "Gemeentelijke klantregisters en toestemmingsverklaringen.",
+      "asean_records_specifics": "Studio's bewaren ondertekende formulieren en inkoopfacturen conform gemeentelijke voorschriften.",
+      "cat_pmu": "PMU & Microblading",
+      "pmu_title": "Bepalingen voor Permanente Make-Up en Microblading",
+      "eu_pmu_summary": "Identieke chemische grenzen voor PMU en lichaamsdecoratie.",
+      "eu_pmu_specifics": "Verordening (EU) 2020/2081 omvat alle intradermale kleurstoffen zonder onderscheid.",
+      "us_pmu_summary": "Gereguleerd als cosmetica onder MoCRA.",
+      "us_pmu_specifics": "PMU-pigmenten vallen onder dezelfde registratie- en meldplichten als reguliere tatoeage-inkten.",
+      "au_pmu_summary": "Gereglementeerd via vergunningen voor huidpenetratiediensten.",
+      "au_pmu_specifics": "PMU-behandelaars moeten geaccrediteerde certificaten voor infectiepreventie bezitten.",
+      "asean_pmu_summary": "Richtlijnen voor schoonheidssalons en topische ACD-eisen.",
+      "asean_pmu_specifics": "Salons moeten lokale voorschriften volgen; verdovingsmiddelen vallen onder de geneesmiddelenwetgeving."
+    },
+    "checklist_heading": "Studio-nalevingschecklists per Regio",
+    "checklist_subheading": "Essentiele operationele stappen om geverifieerde dossiers bij te houden in elk rechtsgebied",
+    "checklist_eu_title": "Europese Unie (REACH Vermelding 75)",
+    "checklist_eu_item_1": "Controleer of de fles 'Mengsel voor gebruik in tatoeages of permanente make-up' en een partijnummer vermeldt.",
+    "checklist_eu_item_2": "Vraag het Veiligheidsinformatieblad (VIB) van de fabrikant op en bewaar het met de samenstelling.",
+    "checklist_eu_item_3": "Registreer flespartijnummer en behandeldatum in het dossier van elke klant.",
+    "checklist_us_title": "Verenigde Staten (FDA / MoCRA)",
+    "checklist_us_item_1": "Bevestig dat de fabrikant de MoCRA-faciliteitsregistratie en productaanmelding heeft voltooid.",
+    "checklist_us_item_2": "Noteer inktmerk, kleurnaam en partijnummer op het toestemmingsformulier van de klant.",
+    "checklist_us_item_3": "Bewaar klantdossiers minstens 3 jaar en stel een protocol op voor het melden van bijwerkingen.",
+    "checklist_au_title": "Australie (AICIS & Gezondheid van de Staten)",
+    "checklist_au_item_1": "Verifieer dat chemische stoffen in de AIIC staan of door een geregistreerde importeur zijn binnengebracht.",
+    "checklist_au_item_2": "Noteer klantgegevens, datum en pigmentpartijnummer in het logboek voor huidpenetratie.",
+    "checklist_au_item_3": "Houd bewijzen van infectiepreventiekwalificaties voor alle werkende artiesten actueel.",
+    "checklist_asean_title": "Zuidoost-Azie (ASEAN / Nationaal)",
+    "checklist_asean_item_1": "Bewaar handelsfacturen van leveranciers en douaneaangiften in de studioadministratie.",
+    "checklist_asean_item_2": "Zorg ervoor dat reinigers en nazorgproducten voldoen aan de geldende ACD-normen.",
+    "checklist_asean_item_3": "Houd getekende toestemmingsformulieren en lokale inspectiecertificaten overzichtelijk bewaard.",
+    "modal_title": "Regelgevingsbeoordeling voor Meerdere Rechtsgebieden",
+    "modal_subtitle": "Analyse van herkende ingredienten in het kader van wereldwijde chemische wetgeving",
+    "modal_summary_heading": "Vergelijking van Regelgevingssystemen",
+    "modal_summary_text": "Ingredienten van tatoeage-inkten vallen wereldwijd onder uiteenlopende juridische kaders. Hieronder ziet u hoe elke herkende stof wordt behandeld in de EU (REACH), de VS (MoCRA), Australie (AICIS) en Zuidoost-Azie.",
+    "modal_no_substances": "Geen herkende stoffen gevonden in deze formulering om te beoordelen.",
+    "col_ingredient": "Ingredient en Identificatie",
+    "modal_footer_disclaimer": "Informatieve matrix. Studio's dienen de lokale gezondheidsautoriteiten te raadplegen voor geldende handhavingsregels in hun regio."
+  },
+  "languages": {
+    "select_label": "Taal",
+    "switch_to": "Wijzig taal naar {lang}",
+    "current": "Huidige taal: {lang}",
+    "change_notice": "Interface vertaald naar het {lang}",
+    "en": "Engels",
+    "de": "Duits",
+    "es": "Spaans",
+    "fr": "Frans",
+    "it": "Italiaans",
+    "nl": "Nederlands",
+    "pt": "Portugees",
+    "th": "Thais"
+  },
+  "qr_scanner": {
+    "modal_title": "QR-documentatie of etiket scannen",
+    "modal_sub": "Richt camera op afgedrukt QR-certificaat, batchblad of flesetiket",
+    "align_qr_hint": "Lijn QR-code uit in het vizier",
+    "err_no_media_devices": "Geen camera gevonden of Media Devices API niet beschikbaar.",
+    "err_camera_access": "Cameratoegang geweigerd of camera in gebruik door een andere app.",
+    "camera_unavailable_title": "Camera niet beschikbaar",
+    "manual_entry_prompt": "U kunt een foto van de code uploaden of de QR-tekst hieronder plakken.",
+    "detected_label": "Gedetecteerde batch & formulering",
+    "field_brand": "Merk / Fabrikant",
+    "placeholder_brand": "bijv. Dynamic, Eternal",
+    "field_ink": "Inktnaam / Kleurtint",
+    "placeholder_ink": "bijv. Lining Black",
+    "field_batch": "Batch- / LOT-nummer",
+    "placeholder_batch": "bijv. LOT-2024-91",
+    "field_ingredients": "Geëxtraheerde ingrediënten",
+    "placeholder_ingredients": "Ingrediënten uit documentatie...",
+    "btn_apply_to_decoder": "Toepassen op decoder & analyseren",
+    "btn_cancel": "Annuleren",
+    "scan_again": "Opnieuw scannen",
+    "or_upload_photo": "Of kies een afbeeldingsbestand met een QR-code:",
+    "btn_browse_photo": "Afbeelding uploaden",
+    "err_file_parse": "Geen QR-code gevonden in afbeelding. Probeer een scherpere foto of plak tekst.",
+    "manual_paste_placeholder": "Plak QR-codetekst of URL hier...",
+    "btn_parse": "Tekst verwerken",
+    "aria_torch": "Camerazaklamp in-/uitschakelen",
+    "aria_switch_camera": "Camera wisselen"
+  }
+}
